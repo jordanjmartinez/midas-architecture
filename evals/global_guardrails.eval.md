@@ -11,6 +11,7 @@ They do not redefine runtime policy.
 Runtime policy lives in:
 
 - `/home/jordan/.hermes/profiles/midas/rules/GLOBAL.md`
+- `/home/jordan/.hermes/profiles/midas/rules/CONTRACT_AUTHORITY.md`
 - `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`
 - Other sibling rule files under `/home/jordan/.hermes/profiles/midas/rules/`
 - Command `SKILL.md` files for command workflow, routing, inputs, and command boundaries
@@ -23,6 +24,7 @@ Runtime policy lives in:
 Primary files:
 
 - `rules/GLOBAL.md`
+- `rules/CONTRACT_AUTHORITY.md`
 - `rules/ARTIFACTS.md`
 
 Supporting files:
@@ -46,6 +48,7 @@ This eval file follows:
 
 - `evals/README.md`
 - `/home/jordan/.hermes/profiles/midas/rules/GLOBAL.md`
+- `/home/jordan/.hermes/profiles/midas/rules/CONTRACT_AUTHORITY.md`
 - `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`
 
 When a case involves sources, metrics, scoring, classification, or artifacts, also apply the relevant sibling rule file.
@@ -113,7 +116,7 @@ MIDAS should classify each file as Draft / Unpromoted until it passes the promot
 
 ### Assertions
 
-- Behavior follows `rules/GLOBAL.md`.
+- Behavior follows `rules/CONTRACT_AUTHORITY.md`.
 - References follow `rules/ARTIFACTS.md`.
 - Unreviewed auto-created files remain Draft / Unpromoted.
 
@@ -169,7 +172,7 @@ MIDAS should reject active command linkage as written and move or condense share
 ### Assertions
 
 - Reference behavior follows `rules/ARTIFACTS.md`.
-- Rule placement follows `rules/GLOBAL.md`.
+- Rule placement follows `rules/CONTRACT_AUTHORITY.md`.
 - Duplicated global policy is not retained as active policy.
 
 ### Pass Criteria
@@ -292,7 +295,7 @@ Create a guard skill that watches Hermes skills and decides which references are
 
 ### Context / Fixtures
 
-The requested behavior can be handled by `rules/GLOBAL.md`, `rules/ARTIFACTS.md`, and `evals/global_guardrails.eval.md`.
+The requested behavior can be handled by `rules/CONTRACT_AUTHORITY.md`, `rules/ARTIFACTS.md`, and `evals/global_guardrails.eval.md`.
 
 ### Expected Behavior
 
@@ -301,7 +304,7 @@ MIDAS should implement or propose a global rule and eval, not a new command skil
 ### Must Include
 
 - Explanation that this is shared guardrail behavior.
-- Placement in `rules/GLOBAL.md`.
+- Placement in `rules/CONTRACT_AUTHORITY.md`.
 - Reference-folder pointer in `rules/ARTIFACTS.md`.
 - Eval coverage in `evals/global_guardrails.eval.md`.
 
@@ -462,7 +465,7 @@ MIDAS should inventory relevant files and classify each into a cleanup action.
 
 ### Assertions
 
-- Maintenance follows `rules/GLOBAL.md`.
+- Maintenance follows `rules/CONTRACT_AUTHORITY.md`.
 - Artifact safety follows `rules/ARTIFACTS.md`.
 - Rule edits do not touch runtime data unless requested.
 

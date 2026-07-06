@@ -148,6 +148,12 @@ workspace/
 │       ├── full.md
 │       ├── scorecard.md
 │       └── versions/
+├── gems/
+│   ├── index.md
+│   ├── general.md
+│   └── [theme]/
+│       ├── general.md
+│       └── [subtheme].md
 ├── trackers/
 │   ├── managers/
 │   ├── insiders/
@@ -302,6 +308,28 @@ Tracker artifacts may include:
 Tracker artifacts must not imply copy-trading.
 
 Tracked activity is a research lead, not a buy/sell signal.
+
+---
+
+# Gems Artifact Mapping
+
+`!gems` discovery artifacts use:
+
+```md
+Broad mode:            workspace/gems/general.md
+Theme mode:            workspace/gems/[theme]/general.md
+Theme/subtheme mode:   workspace/gems/[theme]/[subtheme].md
+Index:                 workspace/gems/index.md
+```
+
+Use `general.md` when no subtheme exists.
+
+Do not save new scans to legacy flat files such as `workspace/gems/space.md`.
+
+Theme/subtheme normalization, index mechanics, and write behavior are
+command-local and live in the `!gems` command files
+(`skills/stock-analysis/gems/references/artifact-index.md`, `SKILL.md`,
+`OUTPUT.md`); this section defines only the canonical paths.
 
 ---
 

@@ -11,6 +11,21 @@ metadata:
 
 # MIDAS Maintenance Skill Loader
 
+## Registry Metadata
+
+Command: `maintenance` (skill trigger; no `!` command syntax)
+Aliases: `None`
+Category: `System / Utility`
+Status: `Active`
+Skill Path: `skills/maintenance/SKILL.md`
+Output Path: `skills/maintenance/OUTPUT.md`
+Eval File: `evals/maintenance.eval.md`
+Uses Classification: `Not used`
+Uses Scoring: `Not used`
+Uses Metrics: `Not used`
+Writes Artifacts: `No` (edits MIDAS profile files under the maintenance contracts; does not write workspace research artifacts)
+Primary Global Rules: `GLOBAL.md, CONTRACT_AUTHORITY.md, ARTIFACTS.md, COMMAND_INTERFACE.md`
+
 Use this skill for MIDAS maintenance, refactors, audits, installs, verification, command lifecycle work, registry cleanup, eval maintenance, shared-rule cleanup, and artifact-policy maintenance.
 
 Do not substitute the protected `hermes-agent` skill for MIDAS profile maintenance. Load `hermes-agent` only when the user is configuring, troubleshooting, or extending Hermes Agent itself; for MIDAS skills/rules/contracts/reference cleanup, this maintenance skill is the governing umbrella.
