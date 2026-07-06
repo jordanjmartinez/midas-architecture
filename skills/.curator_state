@@ -1,0 +1,9 @@
+{
+  "last_report_path": "/home/jordan/.hermes/profiles/midas/logs/curator/20260703-050209",
+  "last_run_at": "2026-07-03T05:02:09.391462+00:00",
+  "last_run_duration_seconds": 55.774484,
+  "last_run_summary": "auto: no changes; llm: Processed the full provided agent-created candidate list.\n\nFindings:\n- Candidate count: 1\n- Prefix/domain clusters with 2+ members: none\n- Skills inspected as complete packages:\n  - `filing-backed-stock-research`\n    - `SKILL.md`\n    - `ref…",
+  "last_run_summary_shown_at": null,
+  "paused": false,
+  "run_count": 5
+}
