@@ -185,47 +185,16 @@ They should not contain command-specific workflows.
 
 ## Current Rule Files
 
-### `rules/GLOBAL.md`
+The canonical index of shared rule files is the Shared Rule Library section of
+`rules/GLOBAL.md`. This document does not maintain its own copy of that list.
+If the two ever disagree, `rules/GLOBAL.md` is correct.
 
-Master operating policy.
-
-Defines core behavior, rule precedence, agent operating loop, guardrails, risk discipline, no copy-trading rules, tool discipline, file/artifact discipline, and uncertainty behavior.
-
-### `rules/SOURCES.md`
-
-Evidence and source policy.
-
-Defines source hierarchy, filing-first rules, claim-to-source mapping, freshness rules, conflict rules, social/crowding limits, tracker-source behavior, and source display principles.
-
-### `rules/CLASSIFICATIONS.md`
-
-Setup classification policy.
-
-Defines primary setup classifications, optional modifiers, when classifications should be used, and how classifications relate to scoring and source quality.
-
-### `rules/SCORING.md`
-
-Scoring architecture.
-
-Defines Global Research Score, overlay scores, evidence confidence, score caps, and relationship between scores and classifications.
-
-### `rules/METRICS.md`
-
-Financial metric standards.
-
-Defines formulas, period conventions, GAAP vs non-GAAP discipline, valuation multiple rules, sector-specific metrics, red flags, and metric quality grades.
-
-### `rules/OUTPUT.md`
-
-Shared output standards.
-
-Defines output modes, formatting standards, classification display, score display, evidence confidence display, source notes, as-of dates, risk display, and failure output.
-
-### `rules/ARTIFACTS.md`
-
-Artifact standards.
-
-ARTIFACTS.md — artifact paths, save/update/append/replace behavior, workspace organization, and reference-folder policy.
+At a high level the rules layer covers: master operating policy and precedence
+(GLOBAL), governance and rule placement (CONTRACT_AUTHORITY), command parsing
+and output modes (COMMAND_INTERFACE), evidence and sources (SOURCES), market
+data (MARKET_DATA), rerating and setup discipline (RERATING), setup
+classifications (CLASSIFICATIONS), scoring (SCORING), financial metrics
+(METRICS), output standards (OUTPUT), and artifacts (ARTIFACTS).
 
 ## Rule Layer Boundary
 

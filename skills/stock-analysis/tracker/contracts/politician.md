@@ -4,6 +4,27 @@ Stage: Active politician intelligence contract for `!track` politician mode.
 
 This contract governs politician and senior-public-official disclosure triage for `!track`. It does not create a new command, does not change watchlist paths, and does not override global MIDAS source, scoring, classification, output, or artifact rules.
 
+## Authority Boundaries
+
+This contract owns the command-local intelligence logic for `!track` politician mode:
+
+- Source scope, the source reconciliation ladder, and the P0 promotion source contract.
+- Disclosure mechanics, managed-account / blind-trust treatment, and issuer / security identity resolution.
+- The politician candidate gate, ranked-lead evidence pack, five P0 promotion gates, ranked-lead minimum bar, and Best Stock Leads promotion verdict.
+- The internal triage model, Best Stock Leads ranking, politician candidate cards, and demotion / lower-signal handling.
+- Command-local guardrail application for politician mode, without weakening global guardrails.
+
+This contract does not own:
+
+- Output templates or visible section shapes, which belong in the tracker `OUTPUT.md`; the Output Relationship section defers there.
+- Trigger syntax, routing, inputs, workflow, or fund-manager mode, which belong in `SKILL.md` and `contracts/fund-manager.md`.
+- Artifact paths or write mechanics, except by reference to the active artifact authorities.
+- Watchlist or roster mutation, including `data/tracker_watchlist.json` handling defined in `SKILL.md`.
+- Registry status or eval cases.
+- Global source, metric, scoring, classification, output, artifact, or copy-trading guardrail definitions.
+
+Follow `/home/jordan/.hermes/profiles/midas/rules/CONTRACT_AUTHORITY.md` when deciding whether future additions belong here, in `SKILL.md`, in `OUTPUT.md`, in evals, in docs, in schemas, or in shared global rules. Tracked activity framing follows the no-copy-trading rule in `rules/GLOBAL.md`; this contract applies that rule and must not weaken it.
+
 ## Purpose
 
 Politician `!track` is a policy/event disclosure triage tool that ranks company-level research leads based on jurisdiction, regulation, procurement, timing, disclosure strength, and noise discount.

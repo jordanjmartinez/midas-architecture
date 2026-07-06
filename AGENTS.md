@@ -10,13 +10,9 @@ This file is the first file an AI/coding agent should read before modifying MIDA
 
 Before editing commands or behavior, read:
 
-1. `rules/GLOBAL.md`
-2. `rules/SOURCES.md`
-3. `rules/CLASSIFICATIONS.md`
-4. `rules/SCORING.md`
-5. `rules/METRICS.md`
-6. `rules/OUTPUT.md`
-7. `rules/CONTRACT_AUTHORITY.md` when adding, moving, expanding, or deduplicating rules, contracts, references, templates, docs, eval requirements, or command-local instructions
+1. `rules/GLOBAL.md` first. Its Shared Rule Library section is the canonical index of all shared rule files.
+2. Every rule file listed in that index, prioritizing the ones relevant to the edit.
+3. `rules/CONTRACT_AUTHORITY.md` in full when adding, moving, expanding, or deduplicating rules, contracts, references, templates, docs, eval requirements, or command-local instructions
 
 When editing a specific command, also read that command’s skill folder.
 

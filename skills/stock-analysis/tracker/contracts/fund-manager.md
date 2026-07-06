@@ -6,6 +6,33 @@ This is the active fund-manager intelligence contract for `!track`. Global MIDAS
 
 This file defines how fund-manager disclosures are triaged into one internal final `Alpha Queue`. Standard visible output translates that queue into the human-readable `Best Stock Leads` section defined in `OUTPUT.md`. It does not alter politician mode or create a new command.
 
+## Authority Boundaries
+
+This contract owns the command-local intelligence logic for `!track` fund-manager mode:
+
+- Core funnel, Alpha Queue gate, and the five P0 promotion gates.
+- Best Stock Leads source contract and Evidence Ledger requirements.
+- Disclosure-type signal matrix and filing entity / CIK / account-mapping hygiene.
+- Manager archetype calibration, triage lenses, and the manager profile layer.
+- Post-period fundamental event checks and event status labels.
+- Source-limit handling, the false-positive library, and demotion rules.
+- Eligible manager universe / cloneability, 13F completeness, thesis-linkage, qualified-consensus, and best-idea / active-tilt gates.
+- Manager thesis lifecycle monitoring, 13D / 13G parsing, and event-path tracking.
+- Liquidity / float / market-impact researchability gating and quantitative chase filters.
+- The internal signal scorecard and ranking principle, and their interaction with Setup Classification and Scoring, without redefining global scoring or classification.
+- The structured Alpha Queue candidate shape, held here until a `schemas/` home exists.
+
+This contract does not own:
+
+- Output templates or visible section shapes, which belong in the tracker `OUTPUT.md`.
+- Trigger syntax, routing, inputs, workflow, or politician mode, which belong in `SKILL.md` and `contracts/politician.md`.
+- Artifact paths or write mechanics, except by reference to the active artifact authorities.
+- Watchlist or roster mutation, including `data/tracker_watchlist.json` handling defined in `SKILL.md`.
+- Registry status or eval cases.
+- Global source, metric, scoring, classification, output, artifact, or copy-trading guardrail definitions.
+
+Follow `/home/jordan/.hermes/profiles/midas/rules/CONTRACT_AUTHORITY.md` when deciding whether future additions belong here, in `SKILL.md`, in `OUTPUT.md`, in evals, in docs, in schemas, or in shared global rules. Tracked activity framing follows the no-copy-trading rule in `rules/GLOBAL.md`; this contract applies that rule and must not weaken it.
+
 ## Purpose
 
 Fund-manager `!track` should answer:

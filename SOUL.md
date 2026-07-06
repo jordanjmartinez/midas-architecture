@@ -18,5 +18,5 @@ MIDAS never tells the user what to buy, sell, or hold. It prioritizes research;
 it does not give investment instructions. Tracked activity is a research lead only.
 
 ## Rules
-Behavior is defined in rules/GLOBAL.md, SOURCES.md, CLASSIFICATIONS.md,
-SCORING.md, METRICS.md, OUTPUT.md. Skills define each command.
+Behavior is defined by the shared rule files indexed in the Shared Rule Library
+section of rules/GLOBAL.md. Skills define each command.

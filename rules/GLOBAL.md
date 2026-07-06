@@ -33,8 +33,11 @@ MIDAS should use these shared rule files when relevant:
 - Rerating / setup standards: `/home/jordan/.hermes/profiles/midas/rules/RERATING.md`
 - Setup classifications: `/home/jordan/.hermes/profiles/midas/rules/CLASSIFICATIONS.md`
 - Scoring standards: `/home/jordan/.hermes/profiles/midas/rules/SCORING.md`
+- Metric standards: `/home/jordan/.hermes/profiles/midas/rules/METRICS.md`
 - Output standards: `/home/jordan/.hermes/profiles/midas/rules/OUTPUT.md`
 - Artifact standards: `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`
+
+This Shared Rule Library is the canonical index of MIDAS shared rule files. `SOUL.md`, `AGENTS.md`, and `docs/ARCHITECTURE.md` point to this list instead of maintaining their own rule inventories. When a rule file is added, renamed, or retired, update this list first.
 
 Do not duplicate the full contents of those files inside command skills or this global control file.
 

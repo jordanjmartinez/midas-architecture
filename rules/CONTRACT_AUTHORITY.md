@@ -30,7 +30,7 @@ Contract Authority Check:
 - Existing command authority checked: [files]
 - Proposed new or changed behavior: [summary]
 - Applies to: [one command / multiple commands / global]
-- Correct home: [rules / SKILL.md / OUTPUT.md / evals / docs / templates / schemas / references / archive]
+- Correct home: [rules / SKILL.md / OUTPUT.md / contracts / evals / docs / templates / schemas / references / archive]
 - Reason: [why]
 - Duplication risk: [none / possible / confirmed]
 - Action: [point to existing rule / create global rule / create command-local rule / archive / defer]
@@ -169,6 +169,35 @@ Not allowed:
 - artifact policy beyond command-specific display behavior
 - command workflow steps
 - cross-command output standards that belong in `rules/OUTPUT.md`
+
+### Command `contracts/`
+
+Use for command-local intelligence contracts: decision logic too large or too dense for `SKILL.md`.
+
+A command-local contract governs how one command reasons. Examples: promotion and demotion gates, eligibility filters, triage lenses, signal matrices, evidence-pack requirements, false-positive libraries, and ranking discipline for a single command.
+
+Requirements for every file in a command `contracts/` folder:
+
+- Lives at `skills/[category]/[command]/contracts/[name].md`.
+- Linked from that command's `SKILL.md` with an explicit "must follow" statement.
+- Begins with an `## Authority Boundaries` section listing what the contract owns and what it does not own.
+- Defers to global rules by path for shared behavior and defines only command-local logic and deltas.
+
+Allowed:
+
+- command-local promotion, demotion, gating, triage, and ranking logic
+- command-local signal interpretation and evidence-pack requirements
+- interaction clauses with global scoring, classification, and rerating rules, without redefining them
+
+Not allowed:
+
+- cross-command behavior
+- redefinition of global source, metric, scoring, classification, output, artifact, or guardrail rules
+- output section templates, which belong in the command `OUTPUT.md`
+- trigger syntax, routing, inputs, or workflow, which belong in the command `SKILL.md`
+- large machine-readable data shapes, which belong in `schemas/`
+
+Named command-local contract files outside a `contracts/` folder (for example a maintenance skill's `MAINTENANCE.md` or `PLAN.md`) follow the same requirements.
 
 ### `evals/`
 
