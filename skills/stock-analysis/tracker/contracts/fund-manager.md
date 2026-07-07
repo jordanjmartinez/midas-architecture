@@ -2,7 +2,7 @@
 
 Stage: Active fund-manager intelligence contract for `!track`.
 
-This is the active fund-manager intelligence contract for `!track`. Global MIDAS rules govern shared source, scoring, classification, output, and artifact standards. This contract governs fund-manager Alpha Queue triage.
+This is the active fund-manager intelligence contract for `!track`. Global Midas rules govern shared source, scoring, classification, output, and artifact standards. This contract governs fund-manager Alpha Queue triage.
 
 This file defines how fund-manager disclosures are triaged into one internal final `Alpha Queue`. Standard visible output translates that queue into the human-readable `Best Stock Leads` section defined in `OUTPUT.md`. It does not alter politician mode or create a new command.
 
@@ -37,7 +37,7 @@ Follow `rules/CONTRACT_AUTHORITY.md` when deciding whether future additions belo
 
 Fund-manager `!track` should answer:
 
-> Which disclosed fund-manager moves are still useful enough to become MIDAS research leads today?
+> Which disclosed fund-manager moves are still useful enough to become Midas research leads today?
 
 It should not answer:
 
@@ -74,7 +74,7 @@ A ticker may enter the Alpha Queue only when all gate items are satisfied:
 2. **Disclosure support:** The source supports the event type: latest 13F-HR, 13F/A, 13D/G, 13D/A or 13G/A, Form 4, fund letter, company filing, or official investor communication.
 3. **Materiality:** The event is meaningful enough to be more than noise: new, increased, concentrated, repeated, activist-related, thesis-supported, or large enough relative to the disclosed portfolio to matter.
 4. **Manager signal plausibility:** The signal fits the manager's known style or disclosed thesis, or the filing change is sufficiently unusual to merit research. Quant/index-like, factor, or ultra-diversified managers require a higher bar.
-5. **Company-level research question:** There is a specific question MIDAS can research with `!research`, `!financials`, `!risk`, `!thesis`.
+5. **Company-level research question:** There is a specific question Midas can research with `!research`, `!financials`, `!risk`, `!thesis`.
 6. **Source caveats manageable:** Source limitations do not overwhelm the signal. If the source is too stale, ambiguous, amended without clarity, options-heavy, or unmappable, demote.
 7. **Chase Filter acceptable:** Price/action/context does not require demotion. A strong filing signal can still fail as a current research lead if the market has already chased it vertically.
 8. **Consensus quality clean:** Any ownership overlap is qualified independent accumulation rather than broad crowding, hedge-fund-hotel ownership, or social hype. Broad holder count alone does not validate a lead.
@@ -100,7 +100,7 @@ Every promoted fund-manager ticker must have an internal evidence ledger before 
 - Every promoted ticker must map to one or more evidence IDs.
 - Every evidence ID must map to one or more source IDs from the source contract.
 - Every material promotion claim must be traceable to an evidence ID and source ID, including disclosure type, filing period/date, filer/entity match, position/change math, security identity, amendment status, source limitation, thesis/catalyst support, company-level research question, price/rerating context when used, and demotion/caveat reasoning.
-- Inferred manager intent, current ownership after stale disclosure, undisclosed activity, future returns, investment attractiveness, or a fund manager's motive must not be ledgered as fact. If no primary source states the manager thesis, label the thesis as MIDAS inference or omit it.
+- Inferred manager intent, current ownership after stale disclosure, undisclosed activity, future returns, investment attractiveness, or a fund manager's motive must not be ledgered as fact. If no primary source states the manager thesis, label the thesis as Midas inference or omit it.
 - If a material claim cannot be ledgered, remove the claim, demote the candidate, or route it as a verification item rather than promoting it.
 
 Keep the evidence ledger internal in standard output. Surface only compact implications through the existing `Why it matters:`, `Why it might not be a strong signal:`, `Why These Ranked`, `Lower-Signal Items`, and `Source Caveat` fields unless detailed/audit output is explicitly requested.
@@ -112,7 +112,7 @@ Before a fund-manager candidate can enter visible `Best Stock Leads`, it must ex
 1. **Source Authority Gate:** official/primary sources support the disclosure event and material promotion claims; convenience sources are not the sole promotion basis; source IDs, source dates, filing/accession IDs when available, filer/entity match, and limitations are captured.
 2. **Disclosure Signal Gate:** the event is company-level and meaningful: new, increased, concentrated, activist/event-related, repeated, thesis-supported, or otherwise material after position normalization. Broad ETFs, index/options baskets, stale rows, noise-sized positions, and ambiguous derivatives fail by default.
 3. **Person Relevance / Authority Gate:** the named manager, adviser, fund, reporting entity, or beneficial owner is correctly mapped to the filing or disclosure, and the signal plausibly fits the manager/entity's strategy, authority, or disclosed role.
-4. **Company Materiality / Researchability Gate:** the disclosure creates a testable company-level MIDAS research question and there is source-backed evidence that the position/change/event could matter to the issuer, setup, capital structure, governance, fundamentals, or rerating path.
+4. **Company Materiality / Researchability Gate:** the disclosure creates a testable company-level Midas research question and there is source-backed evidence that the position/change/event could matter to the issuer, setup, capital structure, governance, fundamentals, or rerating path.
 5. **Integrity / Noise Discount Gate:** 13F delay, amendment/completeness risk, shared-discretion ambiguity, options/hedge ambiguity, stale or overextended price action, crowding, social hype, and source conflicts do not overwhelm the research signal.
 
 If any P0 gate fails, the candidate cannot appear in visible `Best Stock Leads`. It may appear only as lower-signal context when useful, clearly caveated, and not framed as a promoted research lead.
@@ -313,7 +313,7 @@ A high-quality filing signal may still be lower-priority if the internal Chase F
 
 Before final Alpha Queue ranking, check whether material company-specific events after the 13F report-period end or disclosure date strengthen, weaken, invalidate, or reframe the filing signal.
 
-A fund-manager disclosure can be stale or less useful if the company changed materially after the relevant reporting period. The purpose of this check is to decide whether the disclosed move is still useful enough to become a MIDAS research lead today.
+A fund-manager disclosure can be stale or less useful if the company changed materially after the relevant reporting period. The purpose of this check is to decide whether the disclosed move is still useful enough to become a Midas research lead today.
 
 Check for material post-period events when available and relevant:
 
@@ -547,7 +547,7 @@ Schema rules:
 - `manager_eligibility` is the run-level snapshot of the Eligible Manager Universe / Cloneability Gate. It should be derived from the Manager Profile when available, refreshed when stale, and set to `Unknown` rather than guessed when manager-level evidence is insufficient.
 - `discretion_type` should identify shared-discretion or other-manager reporting when available so positions are not double-counted as separate conviction signals.
 - Share, value, portfolio-weight, and rank fields should use current versus prior filing comparisons when available. Do not treat value change alone as conviction change.
-- `thesis_linkage` is required for any candidate eligible for visible Best Stock Leads. It should separate the filing-backed signal from MIDAS inference, identify any explicit manager-thesis source, state the variant view or `Unknown`, define a company-level research question, list disconfirming evidence to check, and route to the best next command only when a specific diligence gap exists.
+- `thesis_linkage` is required for any candidate eligible for visible Best Stock Leads. It should separate the filing-backed signal from Midas inference, identify any explicit manager-thesis source, state the variant view or `Unknown`, define a company-level research question, list disconfirming evidence to check, and route to the best next command only when a specific diligence gap exists.
 - `consensus_quality` is required when consensus/crowding is material to ranking, demotion, or caveats. It should distinguish qualified independent accumulation by eligibility-cleared or properly excepted managers from broad 13F ownership, hedge-fund-hotel risk, or social hype. Use `Unknown` rather than treating broad holder counts as qualified consensus.
 - `best_idea_signal` should identify whether the candidate is one of the manager's likely best disclosed ideas or merely a routine portfolio row. Use position rank, portfolio-weight percentile, top-3/top-5/top-10/top-quartile flags, benchmark-relative active weight when available, and manager profile context. Use `Unknown` when the portfolio universe, benchmark, or position-rank data cannot be verified; do not invent benchmark weights or percentiles.
 - `source_confidence` follows the Evidence Confidence Grade standard from `rules/SCORING.md`; `source_citations` should store concise source handles internally and raw links only when needed for audit/artifact support.
@@ -564,7 +564,7 @@ Schema rules:
 - `demotion_reason` is required when `alpha_queue_status` is `Watch`, `Demote`, or `Omit`.
 - `best_next_command` should be `None` unless the candidate is a clean company-level research lead with a specific diligence gap. Follow shared best-next-command routing from `rules/OUTPUT.md` and artifact-state inputs from `rules/ARTIFACTS.md`.
 
-The schema is a data discipline layer, not an output requirement and not an automatic ranking engine. A structurally complete candidate can still be demoted if the signal is stale, crowded, unmappable, options-heavy, not company-specific, or lacks a clear MIDAS research question.
+The schema is a data discipline layer, not an output requirement and not an automatic ranking engine. A structurally complete candidate can still be demoted if the signal is stale, crowded, unmappable, options-heavy, not company-specific, or lacks a clear Midas research question.
 
 ## Manager Profile Layer
 
@@ -602,7 +602,7 @@ manager_profile:
   13D_frequency: Frequent | Occasional | Rare | None | Unknown
   13F_signal_quality_history: High | Medium | Low | Mixed | Unknown
   common_false_positive_patterns: list[string]
-  prior_MIDAS_leads: list[string]
+  prior_Midas_leads: list[string]
   prior_lead_quality_notes: string | Unknown
   profile_status: New | Established | Stale | Needs Review
   profile_confidence: High | Medium | Low
@@ -615,8 +615,8 @@ manager_profile:
 
 Profile rules:
 
-- Build or refresh the profile from public evidence such as firm strategy disclosures, investor letters, historical 13F concentration, number of positions, turnover, 13D/13G frequency, Form 4/related disclosures when relevant, sector exposure, and prior MIDAS tracker notes when available.
-- `prior_MIDAS_leads` and `prior_lead_quality_notes` measure research usefulness only. They must not become performance claims, copy-trading claims, or proof that future disclosed positions will work.
+- Build or refresh the profile from public evidence such as firm strategy disclosures, investor letters, historical 13F concentration, number of positions, turnover, 13D/13G frequency, Form 4/related disclosures when relevant, sector exposure, and prior Midas tracker notes when available.
+- `prior_Midas_leads` and `prior_lead_quality_notes` measure research usefulness only. They must not become performance claims, copy-trading claims, or proof that future disclosed positions will work.
 - `average_position_count`, `top_10_concentration`, `median_position_weight`, and `typical_turnover` should calibrate materiality. A routine small position from a broad quant manager should face a higher bar than a new meaningful position from a concentrated fundamental manager.
 - `manager_eligibility` stores the reusable manager-level eligibility view. It should be evidence-backed by historical holding period, turnover, position count, filing lag, thesis availability, and strategy purity. Refresh it when the manager's strategy, disclosure behavior, or profile evidence changes.
 - `sector_specialty`, `activist_history`, and `13D_frequency` should calibrate whether a disclosure is inside the manager's plausible edge. Do not infer activism from a passive 13G or manager reputation alone.
@@ -630,7 +630,7 @@ Profile rules:
 
 Use this hard pre-ranking gate to decide whether a manager is eligible to produce high-priority Alpha Queue leads from 13F-only evidence. This is P0 fund-manager tracker discipline because serious 13F research depends on the manager universe: long-term, concentrated, lower-turnover, thesis-driven managers produce cleaner public-disclosure research signals than high-turnover, multi-strategy, quant, passive, or disclosure-noisy filers.
 
-The gate is about public-disclosure signal quality and cloneability of the filing evidence, not copy-trading. `Cloneability` means the manager's public disclosures are more likely to contain durable, researchable, company-level signal. It does not mean MIDAS should copy holdings, forecast manager returns, or treat manager ownership as a recommendation.
+The gate is about public-disclosure signal quality and cloneability of the filing evidence, not copy-trading. `Cloneability` means the manager's public disclosures are more likely to contain durable, researchable, company-level signal. It does not mean Midas should copy holdings, forecast manager returns, or treat manager ownership as a recommendation.
 
 Required internal object is embedded in both `manager_profile.manager_eligibility` and the run-level `alpha_queue_candidate.manager_eligibility` snapshot:
 
@@ -715,9 +715,9 @@ Completeness-risk rules:
 
 ## Thesis Linkage / Variant-View Extraction Gate
 
-Use this gate for every candidate before Best Stock Leads promotion. This is P0 fund-manager tracker discipline because the Alpha Queue should be a research queue of testable company-level hypotheses, not a smarter-looking holdings list. The central question is not only "what did the manager disclose?" but "what company-level question might this disclosure point MIDAS toward, and what evidence would disconfirm it?"
+Use this gate for every candidate before Best Stock Leads promotion. This is P0 fund-manager tracker discipline because the Alpha Queue should be a research queue of testable company-level hypotheses, not a smarter-looking holdings list. The central question is not only "what did the manager disclose?" but "what company-level question might this disclosure point Midas toward, and what evidence would disconfirm it?"
 
-This gate separates filing-backed evidence from MIDAS inference. A filing may prove a disclosed position, ownership event, size, rank, change, filing date, and source type. It does not by itself prove manager intent, current ownership, future returns, company quality, mispricing, or attractiveness. If no explicit manager-thesis source exists, describe the hypothesis as MIDAS inference, not as the manager's stated thesis.
+This gate separates filing-backed evidence from Midas inference. A filing may prove a disclosed position, ownership event, size, rank, change, filing date, and source type. It does not by itself prove manager intent, current ownership, future returns, company quality, mispricing, or attractiveness. If no explicit manager-thesis source exists, describe the hypothesis as Midas inference, not as the manager's stated thesis.
 
 Required internal object is embedded in `alpha_queue_candidate.thesis_linkage`:
 
@@ -735,7 +735,7 @@ thesis_linkage:
 Gate rules:
 
 - `filing_backed_signal` must state only what the source evidence supports, such as disclosed new position, increased share count, ownership percentage, Item 4 language, matched fund-letter exposure, or corrected/amended filing evidence.
-- `inferred_manager_hypothesis` may state what MIDAS thinks the manager might be underwriting, but must be labeled as inference unless backed by `explicit_manager_thesis_source`.
+- `inferred_manager_hypothesis` may state what Midas thinks the manager might be underwriting, but must be labeled as inference unless backed by `explicit_manager_thesis_source`.
 - `explicit_manager_thesis_source` should be `none` when there is no manager-stated thesis source; do not upgrade inference into stated intent.
 - `variant_view` should identify the plausible research angle versus consensus or obvious surface narrative when available. `Unknown` is allowed, but weakens Alpha Queue attractiveness unless the company research question and disconfirming checks are strong.
 - `company_research_question` must be a specific filing-aware company-level question, not a promotional conclusion. It should point to a business-model, financial-quality, risk, scenario, or full-packet diligence need.
@@ -796,7 +796,7 @@ Consensus-quality rules:
 
 ## Best-Idea / Active-Tilt Gate
 
-Use this gate internally to decide whether a disclosed name is likely one of the manager's best ideas or merely a portfolio row. This is P0 fund-manager tracker discipline because broad all-holdings data is much noisier than concentrated, active-tilt, high-conviction holdings. MIDAS should not promote routine disclosed holdings as if they were high-conviction manager signals.
+Use this gate internally to decide whether a disclosed name is likely one of the manager's best ideas or merely a portfolio row. This is P0 fund-manager tracker discipline because broad all-holdings data is much noisier than concentrated, active-tilt, high-conviction holdings. Midas should not promote routine disclosed holdings as if they were high-conviction manager signals.
 
 The gate measures disclosure-signal quality only. It is not a buy/sell recommendation, expected-return claim, manager-performance claim, or instruction to copy a manager's portfolio. Best-idea status means the position is more relevant as a research lead, not that the stock is attractive today.
 
@@ -854,14 +854,14 @@ Lifecycle rules:
 - A one-quarter new position should usually rank below repeat accumulation or a matched thesis disclosure unless the new position is already a top active idea, unusually large for that manager, tied to a live event, supported by explicit manager-thesis evidence, or has an unusually strong company-level research question with clean source context.
 - `New` means newly disclosed in the reviewed source period. It is a fresh signal, but not automatically a durable manager thesis.
 - `Accumulating` requires source-backed repeated adds, portfolio-weight increases, or position becoming more meaningful across multiple filings or related disclosures. Do not infer accumulation from market-value appreciation alone.
-- `Thesis stated` requires an explicit manager source such as a fund letter, investor presentation, interview, public thesis note, or 13D Item 4 language. MIDAS inference alone does not qualify.
+- `Thesis stated` requires an explicit manager source such as a fund letter, investor presentation, interview, public thesis note, or 13D Item 4 language. Midas inference alone does not qualify.
 - `Confirmed by company evidence` means later company filings, earnings, contract wins, regulatory milestones, financing, settlement, or other company-level evidence supports the research question. It does not mean the stock is a buy or that the manager thesis is proven.
 - `Holding steady` means the position appears maintained without material add/reduction. It can support context but is usually weaker than fresh accumulation, explicit thesis, or live event escalation.
 - `Reduced` and `Exited` usually Watch/Demote/Omit as forward tracker leads unless the reduction/exit itself creates a useful research question or separate fresh company-level evidence keeps the setup relevant.
 - `Thesis stale` applies when the last manager thesis mention is old, no follow-through appears in filings, company evidence has moved on, or the original event/research premise no longer has a current proof point.
 - `Unknown` is not positive. If multi-quarter history, thesis-source date, or exit/reduction status cannot be checked and the lifecycle matters, caveat, cap, Watch, or Demote rather than treating the candidate as clean.
 - `quarters_held`, `consecutive_adds`, and `consecutive_reductions` should use comparable source periods when available. Use `Unknown` if prior filings are missing, incomparable, confidential-treatment-limited, or affected by unresolved ticker/CUSIP mapping.
-- `last_manager_thesis_mention_date` should be `Not applicable` when no explicit manager-thesis source exists; do not invent dates from MIDAS inference.
+- `last_manager_thesis_mention_date` should be `Not applicable` when no explicit manager-thesis source exists; do not invent dates from Midas inference.
 - `last_company_evidence_update` should reference the latest material company evidence checked when it affects lifecycle status. Use `Unknown` if material company evidence could not be checked.
 - `thesis_lifecycle_implication` feeds final Alpha Queue treatment: `Rank` for clean lifecycle-supported leads, `Watch` for interesting but incomplete lifecycle evidence, `Demote` for reduced/stale/one-quarter-only weak leads, and `Omit` for exited or non-researchable items.
 - `lifecycle_caveat` is required when lifecycle status is `Reduced`, `Exited`, `Thesis stale`, `Unknown`, or otherwise materially limits ranking.
@@ -930,7 +930,7 @@ Parser rules:
 - `amendment_number` and `prior_13d_g_relationship` should identify whether the filing is a fresh ownership/event signal, a continuation, a passive-to-activist transition, an activist-to-passive transition, or a mechanical amendment.
 - `event_type` should classify the dominant event path. Use `Mixed / unclear` when several possible paths exist without enough specificity.
 - A high-signal 13D can still be demoted by Chase Filter, weak company-level setup, stale amendment content, derivative-heavy exposure, unresolved issuer mapping, or lack of a clear diligence question.
-- A 13G can still become a useful research lead when the ownership signal is fresh, large, source-clean, company-specific, undercovered, and tied to a clear MIDAS research question.
+- A 13G can still become a useful research lead when the ownership signal is fresh, large, source-clean, company-specific, undercovered, and tied to a clear Midas research question.
 - Missing facts must be `Unknown` or `Not applicable`. Do not invent percentages, group members, amendment numbers, plans, proposals, agreements, event dates, or prior relationships.
 
 Scorecard integration:
@@ -1077,7 +1077,7 @@ Scorecard integration:
 
 Use these defaults internally when price data is available to make the Chase Filter more consistent. The thresholds are starting points, not rigid automatic decisions. They should discipline Alpha Queue ranking without turning market price action into a filing-backed business-quality judgment.
 
-The Chase Filter evaluates whether the disclosure signal remains useful as a fresh MIDAS research lead today. A Chase Filter demotion is not a view that the company is bad. It means the filing signal is less useful as a fresh MIDAS research lead today. A strong company can still be a poor setup if the market has already priced in most of the thesis.
+The Chase Filter evaluates whether the disclosure signal remains useful as a fresh Midas research lead today. A Chase Filter demotion is not a view that the company is bad. It means the filing signal is less useful as a fresh Midas research lead today. A strong company can still be a poor setup if the market has already priced in most of the thesis.
 
 Standard visible output should not show raw `Pass`, `Watch`, or `Demote` labels by default. Translate the result into plain-English caveats in `Why it might not be a strong signal:`, `Lower-Signal Items`, or rank order when material.
 
@@ -1103,7 +1103,7 @@ Application rules:
 
 ## Formal Internal Signal Scorecard
 
-Use this scorecard internally to make Alpha Queue ranking more consistent and computable. It scores the quality of the fund-manager disclosure as a MIDAS research lead, not expected return, buy/sell attractiveness, current ownership, or portfolio suitability.
+Use this scorecard internally to make Alpha Queue ranking more consistent and computable. It scores the quality of the fund-manager disclosure as a Midas research lead, not expected return, buy/sell attractiveness, current ownership, or portfolio suitability.
 
 Standard visible output should not show the numeric scorecard by default. Show it only in full/audit mode or when the user explicitly asks for scoring detail. In normal output, translate the scorecard into rank order, `Why it matters:`, `Why it might not be a strong signal:`, `Lower-Signal Items`, and candidate-level best-next-command routing.
 

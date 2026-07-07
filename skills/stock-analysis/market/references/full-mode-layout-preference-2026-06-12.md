@@ -19,7 +19,7 @@ For normal successful full/expanded market snapshots:
 ## Preferred full-mode order
 
 ```md
-[TICKER] | [Company Name] Full Market Snapshot
+[Display Name] ($[TICKER]) Full Market Snapshot
 As of: [timestamp]
 Source: [provider]
 

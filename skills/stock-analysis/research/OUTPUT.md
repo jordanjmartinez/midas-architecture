@@ -1,4 +1,4 @@
-# MIDAS Command Output Contract — !research
+# Midas Command Output Contract — !research
 
 Template source: `templates/COMMAND_OUTPUT_TEMPLATE.md`
 
@@ -75,7 +75,7 @@ This file should not answer:
 
 ## Global Output Inheritance
 
-`!research` must follow the global MIDAS output rules in:
+`!research` must follow the global Midas output rules in:
 
 - `rules/GLOBAL.md`
 - `rules/OUTPUT.md`
@@ -190,11 +190,11 @@ Normal output should include, in this order:
 
 #### Report Title
 
-`# 📜 [TICKER] | [Company Name] Business Analysis`
+`# 🔍 [Display Name] ($[TICKER]) | Business Analysis`
 
 Example:
 
-`# 📜 HOOD | Robinhood Markets, Inc. Business Analysis`
+`# 🔍 Robinhood Markets ($HOOD) | Business Analysis`
 
 If a saved artifact includes the metadata header required by `rules/ARTIFACTS.md`, preserve that artifact header first, then begin the visible report body with this required report title.
 
@@ -284,7 +284,7 @@ Audit output is no-write verification output. It must not claim that an artifact
 ### Audit Format
 
 ```md
-# [TICKER] | !research Audit
+# 🔍 $[TICKER] | Research Audit
 
 ## Audit Result
 
@@ -427,7 +427,7 @@ If classification is not used, omit the classification section unless the user a
 
 ## Scoring Behavior
 
-Use this section only if the command applies MIDAS scoring.
+Use this section only if the command applies Midas scoring.
 
 Follow:
 
@@ -485,7 +485,7 @@ Command-specific metric notes:
 
 ## Best Next Command
 
-When useful in normal output, end with the next most logical MIDAS command as its own section before the saved-path confirmation. Preserve command-first body format.
+When useful in normal output, end with the next most logical Midas command as its own section before the saved-path confirmation. Preserve command-first body format.
 
 Allowed examples:
 

@@ -40,7 +40,7 @@ The response should be readable in Telegram/terminal and should not dump raw API
 Normal successful output must use this shape:
 
 ```md
-[TICKER] | [Company Name] Market Snapshot
+📈 [Display Name] ($[TICKER]) | Market Snapshot
 As of: [human-readable timestamp, e.g. Jun 5, 2026, 1:36 AM ET]
 Source: [provider]
 
@@ -91,8 +91,8 @@ Do not use `Full Market Snapshot` in the title. The richer former full-style lay
 
 ## Title Rules
 
-- If helper output includes `company_name`, use `[TICKER] | [Company Name] Market Snapshot`.
-- If helper output does not include `company_name`, use `[TICKER] | Market Snapshot`.
+- If helper output includes `company_name`, use `📈 [Display Name] ($[TICKER]) | Market Snapshot`.
+- If helper output does not include `company_name`, use `📈 $[TICKER] | Market Snapshot`.
 - Do not include `!market` in the title.
 - Do not use an em dash in the title.
 - Do not include `Full` in the title.
@@ -232,7 +232,7 @@ Do not include:
 - Buy/Sell/Hold
 - price targets
 - sizing or trade instructions
-- MIDAS score
+- Midas score
 - setup classification
 - thesis conclusion
 - valuation conclusion by default, including cheap/expensive/fair-value language

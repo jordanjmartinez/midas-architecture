@@ -136,13 +136,13 @@ Clarifications:
 Use:
 
 ```md
-# 🏛 [TICKER] | [Company Name] Thesis
+# 🏛 [Display Name] ($[TICKER]) | Thesis
 ```
 
 Example:
 
 ```md
-# 🏛 HOOD | Robinhood Markets, Inc. Thesis
+# 🏛 Robinhood Markets ($HOOD) | Thesis
 ```
 
 ---
@@ -153,7 +153,7 @@ Every successful normal `!thesis [ticker]` response should include the Standard-
 
 Required section order:
 
-1. `# 🏛 [TICKER] | [Company Name] Thesis`
+1. `# 🏛 [Display Name] ($[TICKER]) | Thesis`
 2. `## Introduction`
 3. `## Summary`
 4. `## Core Thesis`
@@ -176,7 +176,7 @@ Normal output must not collapse into a compact summary, completion receipt, arti
 ### Normal Standard Template
 
 ```md
-# 🏛 [TICKER] | [Company Name] Thesis
+# 🏛 [Display Name] ($[TICKER]) | Thesis
 
 ## Introduction
 [2–4 sentence clean scope statement covering company name/ticker, source basis in plain English, thesis scope, and non-recommendation boundary. Do not display CIK, accession numbers, raw SEC URLs, primary document filenames, internal tool paths, source-recovery metadata, or long filing metadata blocks.]
@@ -198,7 +198,7 @@ Normal output must not collapse into a compact summary, completion receipt, arti
    [Repeat for 3–6 pillars when useful.]
 
 ## Evidence
-[Selective source-backed evidence supporting or weakening the thesis. Separate reported facts, management claims, MIDAS interpretation, and unproven assumptions.]
+[Selective source-backed evidence supporting or weakening the thesis. Separate reported facts, management claims, Midas interpretation, and unproven assumptions.]
 
 ## Financial Support
 [Conclusion-first discussion of whether financials support, weaken, or do not yet prove the thesis. Use only thesis-relevant metrics. Follow METRICS.md.]
@@ -241,7 +241,7 @@ Every successful `!thesis update [ticker]` response should include the Standard-
 
 Required section order:
 
-1. `# 🏛 [TICKER] | [Company Name] Thesis`
+1. `# 🏛 [Display Name] ($[TICKER]) | Thesis`
 2. `## Introduction`
 3. `## Summary`
 4. `## Update Notes`
@@ -264,7 +264,7 @@ Update output must be a refreshed clean thesis, not just a changelog. It must lo
 ### Update Template
 
 ```md
-# 🏛 [TICKER] | [Company Name] Thesis
+# 🏛 [Display Name] ($[TICKER]) | Thesis
 
 ## Introduction
 [2–4 sentence clean scope statement covering company name/ticker, living-thesis refresh scope, source basis in plain English, prior thesis review, and non-recommendation boundary. Do not display CIK, accession numbers, raw SEC URLs, primary document filenames, internal tool paths, source-recovery metadata, or long filing metadata blocks.]

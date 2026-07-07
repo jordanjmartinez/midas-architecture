@@ -1,6 +1,6 @@
 # Exact-Scope Edits
 
-Use this playbook when the user approves specific MIDAS maintenance edits or gives exact target files.
+Use this playbook when the user approves specific Midas maintenance edits or gives exact target files.
 
 ## Principle
 

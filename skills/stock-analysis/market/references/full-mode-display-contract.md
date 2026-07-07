@@ -7,8 +7,8 @@ Session learning captured after implementing explicit `!market [ticker] full` / 
 - Default `!market [ticker]` output is accepted and should remain clean/compact.
 - Do not reintroduce provider metadata blocks by default on normal success.
 - Default title should include company name when helper output includes `company_name`:
-  - `[TICKER] | [Company Name] Market Snapshot`
-  - fallback: `[TICKER] | Market Snapshot`
+  - `📈 [Display Name] ($[TICKER]) | Market Snapshot`
+  - fallback: `📈 $[TICKER] | Market Snapshot`
 - Full mode must be explicit only:
   - `!market [ticker] full`
   - `!market [ticker] expanded`
@@ -47,7 +47,7 @@ Missing full-mode fields should render as `Not available` or be omitted cleanly.
 Expected sections:
 
 1. Header
-   - `[TICKER] | [Company Name] Full Market Snapshot`
+   - `[Display Name] ($[TICKER]) Full Market Snapshot`
    - human-readable as-of timestamp
    - `Source: [provider]` directly below `As of:`
 2. Profile

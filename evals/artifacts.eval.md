@@ -1,4 +1,4 @@
-# MIDAS Global Artifact Eval
+# Midas Global Artifact Eval
 
 ## Purpose
 
@@ -17,7 +17,7 @@ Mode: `Command-generated artifact`
 
 ### Purpose
 
-Verify that any MIDAS command that generates a research artifact validates the complete draft before the first artifact write, rather than saving an invalid artifact and patching it afterward as cleanup.
+Verify that any Midas command that generates a research artifact validates the complete draft before the first artifact write, rather than saving an invalid artifact and patching it afterward as cleanup.
 
 ### User Input
 
@@ -80,7 +80,7 @@ Ensure the save-order rule does not block transparent user-requested edits, upda
 
 ### Expected Behavior
 
-MIDAS may edit, update, append, replace, or correct the existing artifact when the user explicitly asks or when a separate maintenance task requires it, but the response should label the action accurately.
+Midas may edit, update, append, replace, or correct the existing artifact when the user explicitly asks or when a separate maintenance task requires it, but the response should label the action accurately.
 
 ### Must Include
 

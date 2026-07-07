@@ -1,8 +1,8 @@
-# MIDAS Command Interface Rules
+# Midas Command Interface Rules
 
 ## Purpose
 
-`COMMAND_INTERFACE.md` defines shared command invocation and output-mode resolution behavior for MIDAS commands.
+`COMMAND_INTERFACE.md` defines shared command invocation and output-mode resolution behavior for Midas commands.
 
 Its job is to keep command parsing consistent without forcing every command `SKILL.md` to duplicate the same mode-alias and default-mode rules.
 
@@ -46,7 +46,7 @@ Use those files instead:
 
 `COMMAND_INTERFACE.md` is a shared rule file.
 
-It sits beside other global MIDAS rule files and should be referenced from `rules/GLOBAL.md`.
+It sits beside other global Midas rule files and should be referenced from `rules/GLOBAL.md`.
 
 Command-specific skills should inherit this file rather than duplicating it.
 
@@ -125,7 +125,7 @@ Shared mode-word behavior belongs here, not duplicated in every command skill.
 
 ## Supported Shared Output Modes
 
-MIDAS research and analysis commands may support three shared output modes:
+Midas research and analysis commands may support three shared output modes:
 
 | Mode | Meaning |
 |---|---|
@@ -143,7 +143,7 @@ If a command does not support a requested mode, it should use the closest suppor
 
 ## Default Mode Rule
 
-For MIDAS research and analysis commands that support output modes, Standard mode is the default.
+For Midas research and analysis commands that support output modes, Standard mode is the default.
 
 Plain command usage should therefore use Standard mode unless the user explicitly requests another supported mode.
 
@@ -240,7 +240,7 @@ These examples are parser examples only. They are not ticker recommendations and
 
 ## Output Mode Conflict Rule
 
-MIDAS commands use these broad output modes:
+Midas commands use these broad output modes:
 
 - Standard: default complete command output.
 - Compact: short summary / quick triage output.
@@ -394,6 +394,6 @@ Treat the following as command-interface drift:
 
 ## Final Rule
 
-`COMMAND_INTERFACE.md` standardizes how MIDAS interprets command invocation and output modes.
+`COMMAND_INTERFACE.md` standardizes how Midas interprets command invocation and output modes.
 
 It should make command behavior consistent without taking over command workflows or output templates.

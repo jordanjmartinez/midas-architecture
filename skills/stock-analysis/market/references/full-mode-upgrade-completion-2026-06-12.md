@@ -41,11 +41,11 @@ python3 evals/market_stage6_validation.py
 python3 skills/stock-analysis/market/scripts/verify_finnhub_supplement_mock.py
 ```
 
-Run both from the MIDAS profile root.
+Run both from the Midas profile root.
 
 ## Stage 7 cleanup result
 
-Stage 7 was documentation/cleanup only for the user-facing helper path. It did not change provider behavior, helper logic, compact/full rendering logic, watchlist data, or ticker artifacts. It also fixed the reusable Stage 5 mock verifier path so the documented validation command runs from the MIDAS profile root.
+Stage 7 was documentation/cleanup only for the user-facing helper path. It did not change provider behavior, helper logic, compact/full rendering logic, watchlist data, or ticker artifacts. It also fixed the reusable Stage 5 mock verifier path so the documented validation command runs from the Midas profile root.
 
 Stage 7 cleaned stale handoff language, marked the implementation plan as completed through Stage 7, and preserved detailed implementation/testing notes in references rather than bloating `SKILL.md`.
 

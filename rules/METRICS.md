@@ -1,8 +1,8 @@
-# MIDAS Metrics Standards
+# Midas Metrics Standards
 
 ## Purpose
 
-METRICS.md defines how MIDAS should calculate, label, interpret, and display financial metrics across research commands.
+METRICS.md defines how Midas should calculate, label, interpret, and display financial metrics across research commands.
 
 The goal is to prevent inconsistent calculations, stale data, false precision, bad peer comparisons, and misuse of financial ratios.
 
@@ -44,7 +44,7 @@ Every financial metric should be:
 - Compared only to relevant peers or history
 - Separated into reported, adjusted, estimated, guided, or inferred
 
-MIDAS should not use a metric if it cannot tell what the metric means.
+Midas should not use a metric if it cannot tell what the metric means.
 
 ---
 
@@ -168,7 +168,7 @@ Enterprise Value uses latest available market cap plus cash/debt from the latest
 
 # GAAP / Non-GAAP Discipline
 
-MIDAS must distinguish GAAP from non-GAAP metrics.
+Midas must distinguish GAAP from non-GAAP metrics.
 
 Common non-GAAP or adjusted metrics include:
 
@@ -758,7 +758,7 @@ Rules:
 - Use P/E for profitable companies with meaningful earnings.
 - Do not use P/E for companies with negative or temporarily distorted earnings.
 - Check whether EPS is GAAP or adjusted.
-- Check whether forward EPS is consensus, company guidance, or MIDAS estimate.
+- Check whether forward EPS is consensus, company guidance, or Midas estimate.
 - P/E is affected by leverage because earnings are after interest.
 - For capital-intensive or highly leveraged companies, EV-based multiples may be more useful.
 - For cyclical companies, use normalized or mid-cycle earnings.
@@ -1238,7 +1238,7 @@ Rules:
 - Compare guidance to prior guidance and actual results.
 - If guidance is withdrawn, reduced, or made more uncertain, flag it.
 - Consensus estimates are market expectations, not company facts.
-- When using estimates, state whether they are consensus, company guidance, or MIDAS estimates.
+- When using estimates, state whether they are consensus, company guidance, or Midas estimates.
 
 ---
 
@@ -1596,7 +1596,7 @@ Rules:
 
 # Red Flags in Metrics
 
-MIDAS should flag:
+Midas should flag:
 
 - Revenue growth without cash conversion
 - Adjusted EBITDA growth while GAAP losses widen
@@ -1622,7 +1622,7 @@ MIDAS should flag:
 
 # Metric Quality Grades
 
-MIDAS may grade metric quality when useful.
+Midas may grade metric quality when useful.
 
 Use:
 
@@ -1736,7 +1736,7 @@ Rules:
 
 # Final Metric Checklist
 
-Before using a financial metric, MIDAS should ask:
+Before using a financial metric, Midas should ask:
 
 - What is the exact formula?
 - What is the source?
@@ -1757,4 +1757,4 @@ Before using a financial metric, MIDAS should ask:
 
 Metrics should clarify the business, not decorate the output.
 
-If a metric is stale, mismatched, poorly defined, or misleading, MIDAS should say so or avoid using it.
+If a metric is stale, mismatched, poorly defined, or misleading, Midas should say so or avoid using it.

@@ -6,7 +6,7 @@
 
 Use this file for command-specific presentation. Do not duplicate the full global rules here. Apply these shared standards by reference:
 
-- `rules/OUTPUT.md` for general MIDAS output style and market-data display.
+- `rules/OUTPUT.md` for general Midas output style and market-data display.
 - `rules/SOURCES.md` for source discipline.
 - `rules/CLASSIFICATIONS.md` for approved setup classifications and modifiers.
 - `rules/SCORING.md` for Hidden-Gem Overlay and Evidence Confidence behavior.
@@ -46,7 +46,7 @@ Summary:
 
 [Use `## Hidden-Gem Candidates` only when candidates actually clear clean hidden-gem gates. Use `## Researchable Leads` when candidates are researchable but not clean hidden gems. Use exactly one of these headings.]
 
-1. [TICKER] | [Company]
+1. [Display Name] ($[TICKER])
 
 Why it matters:
 [Short business/setup reason.]
@@ -65,7 +65,7 @@ Best next command:
 
 ## Watch Only
 
-- [TICKER] | [Company] — [short reason.]
+- [Display Name] ($[TICKER]) — [short reason.]
 
 Not included: [TICKER] — [short reason, only when there is a specific user-facing reason to mention a screened-out name.]
 
@@ -82,7 +82,7 @@ Do not force every section if it would add clutter. The candidate list, Source N
 Title and opening rules:
 
 - Use `# 💎 Hidden Gems | [Theme]` as the visible chat title.
-- Do not use `MIDAS Gems` as the visible report title.
+- Do not use `Midas Gems` as the visible report title.
 - Use a pipe separator, not an em dash.
 - Keep the theme Title Case when possible.
 - Place the short `Summary:` directly under the title.
@@ -118,7 +118,7 @@ Section-title rules:
 Preferred chat format:
 
 ```md
-1. [TICKER] | [Company]
+1. [Display Name] ($[TICKER])
 
 Why it matters:
 [Short business/setup reason.]
@@ -138,7 +138,7 @@ Best next command:
 
 Use this thesis-first order by default:
 
-- `[TICKER] | [Company]`
+- `[Display Name] ($[TICKER])`
 - `Why it matters:`
 - `Evidence:`
 - `Founder-led:` for main candidates; include when relevant and source-supported elsewhere
@@ -358,7 +358,7 @@ Rules:
 Allowed:
 
 ```md
-Best next command: `!wl add TICKER`
+Best next command: `!list add TICKER`
 ```
 
 only if the user explicitly asks for watchlist-oriented next steps or if it is clearly framed as an optional manual action.
@@ -393,7 +393,7 @@ No clean hidden-gem candidates surfaced under the current screen. [Short explana
 
 ## Watch Only
 
-- [TICKER] | [Company] — [optional concise reason if useful.]
+- [Display Name] ($[TICKER]) — [optional concise reason if useful.]
 
 Best next step: [adjust screen or run research on a specific ticker.]
 
@@ -420,7 +420,7 @@ Other next commands may be used only when they fit the candidate’s information
 - `!financials TICKER` for financial-statement quality or balance-sheet questions.
 - `!risk TICKER` for risk-first diligence.
 - `!thesis TICKER` only after enough evidence exists to frame a thesis.
-- `!wl add TICKER` only as an optional manual action, not as an automatic command.
+- `!list add TICKER` only as an optional manual action, not as an automatic command.
 
 Do not run the next command unless the user explicitly asks.
 
@@ -480,10 +480,10 @@ Audit output may include an optional `Candidate Pool / Discovery Provenance` sec
 Discovery provenance rules:
 
 - Discovery remains flexible; do not create a static universe, hard-code a candidate pool, or restrict discovery to the labels below.
-- Use exactly one of these controlled discovery-source labels when the provenance section is shown: `User theme/subtheme text`, `Prior MIDAS artifact/index`, `Filing/company keyword hit`, `Company business-segment match`, `Market-data/screener result`, `Secondary/news context`, `Manual theme adjacency`, `Social/crowding discovery`, `Model/general knowledge`, or `Unknown`.
+- Use exactly one of these controlled discovery-source labels when the provenance section is shown: `User theme/subtheme text`, `Prior Midas artifact/index`, `Filing/company keyword hit`, `Company business-segment match`, `Market-data/screener result`, `Secondary/news context`, `Manual theme adjacency`, `Social/crowding discovery`, `Model/general knowledge`, or `Unknown`.
 - Discovery labels are not proof labels, classifications, recommendations, source hierarchy changes, or scoring changes.
 - A discovery source can seed a candidate; a validation source must support material claims.
-- Prior MIDAS artifacts are prior context, not fresh proof.
+- Prior Midas artifacts are prior context, not fresh proof.
 - Social/crowding can help discovery but cannot prove a thesis.
 - Market data supports rerating, price-action, liquidity, valuation, or screen context; it does not validate the business by itself.
 - When market data is used for rerating context, identify the provider/source name and retrieval date or as-of date, and label it context-only. Example: `Yahoo Finance chart data, retrieved 2026-06-20; used only for price-performance context.`

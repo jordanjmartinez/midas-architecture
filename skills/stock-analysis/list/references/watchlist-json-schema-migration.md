@@ -35,7 +35,7 @@ The class-level `wl` skill expects richer objects:
 }
 ```
 
-Future `!wl` handlers should accept both shapes. On load:
+Future `!list` handlers should accept both shapes. On load:
 
 1. If an entry is a string, treat it as a ticker.
 2. Strip a leading `$` and uppercase the ticker.

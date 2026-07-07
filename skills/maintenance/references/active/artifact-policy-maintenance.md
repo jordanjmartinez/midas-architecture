@@ -1,6 +1,6 @@
 # Artifact Policy Maintenance
 
-Use this playbook when maintaining MIDAS artifact standards, workspace conventions, save-path rules, or artifact-related command behavior.
+Use this playbook when maintaining Midas artifact standards, workspace conventions, save-path rules, or artifact-related command behavior.
 
 ## Authority Split
 

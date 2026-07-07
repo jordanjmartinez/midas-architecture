@@ -47,7 +47,7 @@ Fixture:
 Expected:
 
 - Standard Market Snapshot is returned.
-- Title uses `[TICKER] | [Company Name] Market Snapshot` when `company_name` is available; otherwise `[TICKER] | Market Snapshot`.
+- Title uses `📈 [Display Name] ($[TICKER]) | Market Snapshot` when `company_name` is available; otherwise `📈 $[TICKER] | Market Snapshot`.
 - Title does not include `Full`.
 - Output shows `As of:` and `Source: Financial Modeling Prep` directly below the title.
 - Output includes exactly these normal sections: `## Profile`, `## Price Action`, `## Liquidity`, and `## Trend`.
@@ -331,7 +331,7 @@ Input:
 
 Expected:
 
-- No MIDAS score.
+- No Midas score.
 - No setup classification.
 - No cheap/expensive/fair-value default conclusion.
 - Response may route scoring/classification to appropriate research workflows if needed, but must not auto-run them.

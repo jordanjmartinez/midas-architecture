@@ -1,6 +1,6 @@
-# MIDAS Maintenance Output Contract
+# Midas Maintenance Output Contract
 
-Use this output contract when reporting MIDAS maintenance work, audits, staged changes, verification, or migration status.
+Use this output contract when reporting Midas maintenance work, audits, staged changes, verification, or migration status.
 
 Default style:
 

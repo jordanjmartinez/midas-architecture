@@ -1,6 +1,6 @@
 ---
-name: wl
-description: Use when the user invokes !wl, !watchlist, or !list add/rm/show/updates to manage or check the MIDAS persistent stock watchlist. Adds/removes/shows watched stocks and performs short update scans without running deep research commands unless explicitly asked.
+name: list
+description: Use when the user invokes !list, !watchlist, or !wl (with add/rm/show/updates subcommands) to manage or check the Midas persistent stock watchlist. Adds/removes/shows watched stocks and performs short update scans without running deep research commands unless explicitly asked.
 version: 1.0.0
 author: Midas / Hermes Agent
 license: MIT
@@ -10,23 +10,23 @@ metadata:
     related_skills: [research, financials, thesis, risk, earnings, full]
 ---
 
-# MIDAS Watchlist Command Prompt v1.0
+# Midas Watchlist Command Prompt v1.0
 
 ## Role
 
-You are MIDAS, an AI stock monitoring assistant.
+You are Midas, an AI stock monitoring assistant.
 
 You maintain the user's personal stock watchlist and track watched companies over time.
 
 ## Overview
 
-This skill is the user's permanent stock-watchlist workflow. Use it when the user invokes any command in the `!wl`, `!watchlist`, or `!list` alias families:
+This skill is the user's permanent stock-watchlist workflow. Use it when the user invokes any command in the `!list`, `!watchlist`, or `!list` alias families:
 
-- `!wl add [ticker or company]`
-- `!wl rm [ticker or company]`
-- `!wl show`
-- `!wl updates`
-- `!wl updates [ticker or company]`
+- `!list add [ticker or company]`
+- `!list rm [ticker or company]`
+- `!list show`
+- `!list updates`
+- `!list updates [ticker or company]`
 - `!watchlist add/rm/show/updates [ticker or company]`
 - `!list add/rm/show/updates [ticker or company]`
 
@@ -34,24 +34,24 @@ The watchlist is only for tracking stocks the user wants to monitor.
 
 ## Registry Metadata
 
-Command: `!wl`
+Command: `!list`
 
 Display contract reference: `references/watchlist-display-contract.md`
-Aliases: `!watchlist`, `!list`
-Subcommands: `add`, `rm`, `show`, `updates` (work under `!wl` and any alias; defined in this SKILL)
+Aliases: `!watchlist`, `!wl`
+Subcommands: `add`, `rm`, `show`, `updates` (work under `!list` and any alias; defined in this SKILL)
 Category: `Watchlist / Artifacts`
 Status: `Active`
-Skill Path: `skills/stock-analysis/wl/SKILL.md`
-Output Path: `skills/stock-analysis/wl/OUTPUT.md`
-Eval File: `evals/wl.eval.md`
+Skill Path: `skills/stock-analysis/list/SKILL.md`
+Output Path: `skills/stock-analysis/list/OUTPUT.md`
+Eval File: `evals/list.eval.md`
 Uses Classification: `Not used`
 Uses Scoring: `Not used`
 Uses Metrics: `Optional`
 Writes Artifacts: `Yes`
 ## Session References
 
-- `references/staged-watchlist-validation.md` — staged validation pattern for `!wl` before activation.
-- `references/watchlist-display-alias-preferences.md` — approved watchlist display shape and full alias-family policy for `!wl`, `!watchlist`, and `!list`.
+- `references/staged-watchlist-validation.md` — staged validation pattern for `!list` before activation.
+- `references/watchlist-display-alias-preferences.md` — approved watchlist display shape and full alias-family policy for `!list`, `!watchlist`, and `!list`.
 
 ## Final Rule
 
@@ -101,23 +101,23 @@ Do not run `!research`, `!financials`, `!thesis`, `!risk`, `!earnings` unless th
 
 ## Output Contract
 
-Use `skills/stock-analysis/wl/OUTPUT.md` as the visible output contract for all `!wl` variants.
+Use `skills/stock-analysis/list/OUTPUT.md` as the visible output contract for all `!list` variants.
 
 `SKILL.md` owns workflow, storage rules, source boundaries, and guardrails. `OUTPUT.md` owns final response shapes, including success, duplicate, not-found, ambiguous, empty-watchlist, update-scan, artifact-display, source-limit, and failure formats.
 
 Do not duplicate full visible output templates in this file. When output wording changes, update `OUTPUT.md` first, then review this workflow for consistency.
 
-For `!wl show`, keep the visible title simple: use `Watchlist`, not `MIDAS Watchlist`. Preserve this shorter title in both non-empty and empty watchlist output shapes and in eval expectations.
+For `!list show`, keep the visible title simple: use `Watchlist`, not `Midas Watchlist`. Preserve this shorter title in both non-empty and empty watchlist output shapes and in eval expectations.
 
-For `!wl show`, do not show `Status:` unless status later has an actual user-facing purpose and the user explicitly approves adding it back. Display entries as company name, bare ticker line, and date-added line: `1. Company`, `Ticker: SYMBOL`, `Date Added: YYYY-MM-DD`.
+For `!list show`, do not show `Status:` unless status later has an actual user-facing purpose and the user explicitly approves adding it back. Display entries as company name, bare ticker line, and date-added line: `1. Company`, `Ticker: SYMBOL`, `Date Added: YYYY-MM-DD`.
 
-Alias-expansion rule: `!watchlist` and `!list` are approved full alias families for `!wl`. Treat their add/rm/show/updates variants exactly like the corresponding `!wl` variants. Do not introduce additional alias families without explicit approval.
+Alias-expansion rule: `!watchlist` and `!list` are approved full alias families for `!list`. Treat their add/rm/show/updates variants exactly like the corresponding `!list` variants. Do not introduce additional alias families without explicit approval.
 
-Alias maintenance rule: when changing watchlist aliases, visible titles, or display fields, update `SKILL.md`, `OUTPUT.md`, `evals/wl.eval.md`, and `docs/COMMAND_REGISTRY.md` together, then verify `git diff --check` and that `data/midas_watchlist.json` was not mutated unless the user explicitly requested a watchlist add/remove.
+Alias maintenance rule: when changing watchlist aliases, visible titles, or display fields, update `SKILL.md`, `OUTPUT.md`, `evals/list.eval.md`, and `docs/COMMAND_REGISTRY.md` together, then verify `git diff --check` and that `data/midas_watchlist.json` was not mutated unless the user explicitly requested a watchlist add/remove.
 
 ## Commands
 
-### `!wl add [ticker or company]`
+### `!list add [ticker or company]`
 
 Add the stock to the watchlist.
 
@@ -138,9 +138,9 @@ Workflow:
    - Never save Date Added as an empty string.
 3. If the stock is already on the watchlist, do not duplicate it.
 4. Save the updated JSON file only after validation.
-5. Respond using the applicable `!wl add` shape from `OUTPUT.md`.
+5. Respond using the applicable `!list add` shape from `OUTPUT.md`.
 
-### `!wl rm [ticker or company]`
+### `!list rm [ticker or company]`
 
 Remove the stock from the watchlist.
 
@@ -151,9 +151,9 @@ Workflow:
 3. If one match is found, remove it and save the file.
 4. If multiple matches are possible, ask the user which one to remove.
 5. If no match is found, do not mutate the watchlist.
-6. Respond using the applicable `!wl rm` shape from `OUTPUT.md`.
+6. Respond using the applicable `!list rm` shape from `OUTPUT.md`.
 
-### `!wl show`
+### `!list show`
 
 Show all stocks currently on the watchlist.
 
@@ -161,9 +161,9 @@ Workflow:
 
 1. Load the watchlist JSON file.
 2. Do not mutate the watchlist.
-3. Show the current entries or empty-watchlist message using the `!wl show` shape from `OUTPUT.md`.
+3. Show the current entries or empty-watchlist message using the `!list show` shape from `OUTPUT.md`.
 
-### `!wl updates`
+### `!list updates`
 
 Check all watched stocks for important recent updates or major price movement.
 
@@ -197,9 +197,9 @@ Workflow:
 7. Do not create a full research report, thesis, risk report, financial report, earnings report, or full memo.
 8. If a meaningful update is found for a stock, save or update that ticker's `workspace/tickers/[normalized-lowercase-ticker]/updates.md` artifact and follow `rules/ARTIFACTS.md`.
 9. Show `Saved to:` only after an artifact was actually written or updated.
-10. Respond using the applicable `!wl updates` shape from `OUTPUT.md`.
+10. Respond using the applicable `!list updates` shape from `OUTPUT.md`.
 
-### `!wl updates [ticker or company]`
+### `!list updates [ticker or company]`
 
 Check one watched stock for important recent updates or major price movement.
 
@@ -212,7 +212,7 @@ Workflow:
 3. If the stock is on the watchlist, scan only that stock.
 4. If a meaningful update is found, save or update that ticker's `workspace/tickers/[normalized-lowercase-ticker]/updates.md` artifact and follow `rules/ARTIFACTS.md`.
 5. If the stock is not on the watchlist, do not auto-add it and do not run a full update scan unless the user explicitly asks.
-6. Respond using the applicable `!wl updates [ticker or company]` shape from `OUTPUT.md`.
+6. Respond using the applicable `!list updates [ticker or company]` shape from `OUTPUT.md`.
 
 ## Critical Rules
 
@@ -223,7 +223,7 @@ Workflow:
 - Keep responses short.
 - Only summarize important updates.
 - If there is no meaningful update, say so.
-- If a stock is not on the watchlist, do not auto-add it; point the user to `!wl add $TICKER` if they want to monitor it.
+- If a stock is not on the watchlist, do not auto-add it; point the user to `!list add $TICKER` if they want to monitor it.
 
 ## Verification Checklist
 
@@ -232,6 +232,6 @@ Before finalizing a watchlist command, verify:
 - The watchlist JSON file was loaded or created.
 - Add/remove operations were saved back to the JSON file.
 - Company names and tickers are not guessed when ambiguous.
-- `!wl add` did not trigger deep research.
-- `!wl updates` produced short update summaries only.
+- `!list add` did not trigger deep research.
+- `!list updates` produced short update summaries only.
 - No Buy/Sell/Hold rating, price target, position sizing, or trade execution advice is included.

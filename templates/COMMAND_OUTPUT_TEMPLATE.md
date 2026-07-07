@@ -1,6 +1,6 @@
 # COMMAND_OUTPUT_TEMPLATE.md
 
-Template for building command-specific `OUTPUT.md` files in MIDAS.
+Template for building command-specific `OUTPUT.md` files in Midas.
 
 Use this when creating a command-specific output contract:
 
@@ -96,7 +96,7 @@ This file should not answer:
 
 ## Global Output Inheritance
 
-`![command]` must follow the global MIDAS output rules in:
+`![command]` must follow the global Midas output rules in:
 
 - `rules/GLOBAL.md`
 - `rules/OUTPUT.md`
@@ -276,7 +276,7 @@ If classification is not used, state:
 
 ### 5. Scoring Behavior
 
-Use this section only if the command applies MIDAS scoring.
+Use this section only if the command applies Midas scoring.
 
 Follow:
 
@@ -359,7 +359,7 @@ For utility-only commands, this section may be omitted.
 
 ### 8. Best Next Command
 
-When useful, end with the next most logical MIDAS command.
+When useful, end with the next most logical Midas command.
 
 Format:
 

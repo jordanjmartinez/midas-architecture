@@ -34,7 +34,7 @@ Use plain labels such as `not disclosed`, `not verified`, `possible but not veri
 
 ## Evidence discipline
 
-- Treat prior MIDAS artifacts as secondary synthesis inputs, not primary proof.
+- Treat prior Midas artifacts as secondary synthesis inputs, not primary proof.
 - Treat management optimism as a claim to test, not risk reduction by itself.
 - Treat social, promotional, or sentiment sources as discovery/context only, not proof of company-specific risk.
 - Separate risk evidence from recommendation framing. Overall Risk Level is a research label, not buy/sell/hold guidance.

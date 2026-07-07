@@ -136,11 +136,11 @@ Pick the closest existing category. Don't invent new top-level categories casual
 - **Adding supporting files:** `write_file` to `skills/<category>/<name>/references/<file>.md`, `templates/<file>`, or `scripts/<file>`. `skill_manage(action='write_file')` also works and enforces the references/templates/scripts/assets subdir allowlist.
 - **Always commit** the edit — in-repo skills are source, not runtime state.
 
-## Profile-Local MIDAS Authoring
+## Profile-Local Midas Authoring
 
-For MIDAS profile-local skill/rule edits under ``, see `references/midas-profile-local-authoring.md`. It covers exact `SKILL.md` replacements, shared `rules/*.md` files, command-menu patches, tracker-skill boundaries, runtime artifact prohibitions, and exact confirmation-only responses.
+For Midas profile-local skill/rule edits under ``, see `references/midas-profile-local-authoring.md`. It covers exact `SKILL.md` replacements, shared `rules/*.md` files, command-menu patches, tracker-skill boundaries, runtime artifact prohibitions, and exact confirmation-only responses.
 
-For MIDAS command runtime-test failures where the user asks to patch the output contract without rebuilding the command, see `references/midas-runtime-test-contract-patches.md`.
+For Midas command runtime-test failures where the user asks to patch the output contract without rebuilding the command, see `references/midas-runtime-test-contract-patches.md`.
 
 ## Common Pitfalls
 

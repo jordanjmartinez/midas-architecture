@@ -53,7 +53,7 @@ If an earnings review surfaces a non-earnings material event that needs separate
 - a full financial statement analysis
 - a full thesis memo
 - a full risk memo
-- a full MIDAS packet
+- a full Midas packet
 - a price-action recap
 - a social hype recap
 - a Buy/Sell/Hold recommendation
@@ -68,7 +68,7 @@ Do not modify watchlist state.
 Use this standard visible format unless the user asks for a different mode:
 
 ```md
-# [TICKER] | [Company Name] Earnings Review
+# 📅 [Display Name] ($[TICKER]) | Earnings Review
 
 [Short lead paragraph: what happened this quarter and whether it matters.]
 

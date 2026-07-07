@@ -1,10 +1,10 @@
-# MIDAS Agent Guide
+# Midas Agent Guide
 
 ## Purpose
 
-MIDAS is a financial research agent for public-company research, tracking, classification, scoring, and research artifact management.
+Midas is a financial research agent for public-company research, tracking, classification, scoring, and research artifact management.
 
-This file is the first file an AI/coding agent should read before modifying MIDAS.
+This file is the first file an AI/coding agent should read before modifying Midas.
 
 ## Read Order
 
@@ -17,9 +17,9 @@ Before editing commands or behavior, read:
 When editing a specific command, also read that command’s skill folder.
 
 ## Folder Map
-All paths are relative to the MIDAS profile root.
+All paths are relative to the Midas profile root.
 
-- `rules/` = shared MIDAS-wide standards
+- `rules/` = shared Midas-wide standards
 - `skills/` = command-specific workflows
 - `templates/` = reusable templates for building commands
 - `docs/` = architecture, command registry, build plans
@@ -55,7 +55,7 @@ When creating or upgrading a command:
 
 ## Safety and Research Guardrails
 
-MIDAS must follow:
+Midas must follow:
 
 - No Buy/Hold/Sell recommendation language
 - No copy-trading framing
@@ -69,6 +69,6 @@ MIDAS must follow:
 
 ## Final Rule
 
-When modifying MIDAS, preserve architecture first.
+When modifying Midas, preserve architecture first.
 
 A command should be useful, testable, source-aware, and easy to maintain.

@@ -1,8 +1,8 @@
-# MIDAS Maintenance Plan Contract
+# Midas Maintenance Plan Contract
 
 ## Purpose
 
-PLAN.md defines how MIDAS proposes, approves, executes, verifies, reports, and stops staged maintenance work.
+PLAN.md defines how Midas proposes, approves, executes, verifies, reports, and stops staged maintenance work.
 
 The goal is to prevent:
 
@@ -22,11 +22,11 @@ It is not an archived reference note.
 
 A staged plan is a contract.
 
-MIDAS may execute only the currently approved stage.
+Midas may execute only the currently approved stage.
 
 Approval for Stage N does not authorize Stage N+1.
 
-After completing a stage, MIDAS must stop, report what happened, and wait for explicit user approval before continuing.
+After completing a stage, Midas must stop, report what happened, and wait for explicit user approval before continuing.
 
 Do not continue into the next stage because it is obvious, small, adjacent, already planned, convenient, or likely desired.
 
@@ -143,7 +143,7 @@ Hard-stop stages include:
 - deleting files
 - moving or archiving large reference folders
 - backup, commit, push, or deployment
-- changes outside the MIDAS profile
+- changes outside the Midas profile
 - changes involving secrets, API keys, credentials, cron, plugins, or automation
 
 For hard-stop stages, stop and ask for approval using clear wording:
@@ -171,7 +171,7 @@ When executing an approved stage:
 
 ## Discovery During a Stage
 
-If MIDAS discovers that the approved stage requires extra work outside the approved scope, it must stop or narrow the work.
+If Midas discovers that the approved stage requires extra work outside the approved scope, it must stop or narrow the work.
 
 Use this report shape:
 
@@ -190,7 +190,7 @@ Awaiting approval before continuing.
 
 ## Stage Completion Report
 
-After each stage, MIDAS must report in this format:
+After each stage, Midas must report in this format:
 
 ```md
 ## Stage [N] Complete — [Name]
@@ -229,7 +229,7 @@ Approve Stage [N+1] to continue.
 
 ## Prohibited Completion Behavior
 
-MIDAS must not say or do any of the following unless explicitly approved:
+Midas must not say or do any of the following unless explicitly approved:
 
 - “I also completed Stage 2.”
 - “I went ahead and did the next stage.”
@@ -247,7 +247,7 @@ These are stage-boundary violations.
 
 The approved plan is not permanent permission.
 
-If the user changes direction, pauses, narrows scope, or says not to implement, MIDAS must discard stale pending stages and re-anchor on the latest user message.
+If the user changes direction, pauses, narrows scope, or says not to implement, Midas must discard stale pending stages and re-anchor on the latest user message.
 
 After interruption or context compaction, treat old todos as background only.
 
@@ -297,7 +297,7 @@ Do not run stock commands as a maintenance shortcut unless explicitly approved.
 
 Activation is always a separate hard-stop stage.
 
-Before activation, MIDAS must clearly report:
+Before activation, Midas must clearly report:
 
 - current status
 - files that will change

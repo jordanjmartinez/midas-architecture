@@ -1,6 +1,6 @@
-# MIDAS Profile-Local Skill and Rule Authoring
+# Midas Profile-Local Skill and Rule Authoring
 
-Use this when editing MIDAS profile-local files under ``, especially `skills/stock-analysis/*/SKILL.md` and shared rules under `rules/`.
+Use this when editing Midas profile-local files under ``, especially `skills/stock-analysis/*/SKILL.md` and shared rules under `rules/`.
 
 ## Exact-content replacements
 
@@ -13,9 +13,9 @@ When the user says to replace a profile-local skill with exact content:
 5. Do not create runtime data files, watchlists, workspace artifacts, cron jobs, alerts, or background jobs unless explicitly asked.
 6. If the user requests an exact confirmation line, final response must be exactly that line.
 
-## Shared MIDAS architecture/support files
+## Shared Midas architecture/support files
 
-When the user asks to create or replace MIDAS profile-local support files such as `SOUL.md`, `AGENTS.md`, `docs/*.md`, `templates/*.md`, `evals/*.md`, or `schemas/*.md`:
+When the user asks to create or replace Midas profile-local support files such as `SOUL.md`, `AGENTS.md`, `docs/*.md`, `templates/*.md`, `evals/*.md`, or `schemas/*.md`:
 
 1. Use the exact requested path under ``.
 2. Create missing parent folders when needed.
@@ -26,9 +26,9 @@ When the user asks to create or replace MIDAS profile-local support files such a
 7. Verify the file exists and contains the requested top-level sections or key metadata fields.
 8. If a template gains registry or lifecycle metadata, verify those exact checklist items are present.
 
-## Shared MIDAS rules files
+## Shared Midas rules files
 
-When the user asks to create a shared MIDAS rules file under `rules/`:
+When the user asks to create a shared Midas rules file under `rules/`:
 
 1. Treat it as a shared vocabulary/rule document, not a command skill.
 2. Create the requested Markdown file exactly in the requested path.
@@ -36,7 +36,7 @@ When the user asks to create a shared MIDAS rules file under `rules/`:
 4. Do not create runtime artifacts or alter watchlist JSON files.
 5. Verify that the file exists and contains the requested top-level sections.
 
-Current MIDAS shared rule files:
+Current Midas shared rule files:
 
 - `rules/GLOBAL.md` — master operating policy for rule precedence, shared operating principles, guardrails, risk discipline, artifact discipline, and command/global separation.
 - `rules/SOURCES.md` — filing-first source hierarchy, freshness/conflict handling, claim-to-source mapping, social/crowding guardrails, no-hype rules, and source display behavior.
@@ -51,9 +51,9 @@ When creating or replacing a shared rule file from user-supplied content:
 2. Keep the file as a global rule document, not a command skill.
 3. Do not duplicate the full contents of sibling rule files; reference them by absolute path when the user asks for a concise control-layer file.
 4. Verify required headings and cross-file references after writing.
-5. Update compact durable memory when a new shared rule file becomes part of the MIDAS standard library.
+5. Update compact durable memory when a new shared rule file becomes part of the Midas standard library.
 
-When the user later asks to connect command skills to a shared MIDAS rules file:
+When the user later asks to connect command skills to a shared Midas rules file:
 
 1. Patch each named skill lightly with a short section that references the shared file by absolute path.
 2. Do not duplicate the shared rule definitions inside each command skill.
@@ -61,9 +61,9 @@ When the user later asks to connect command skills to a shared MIDAS rules file:
 4. Verify that each target skill contains the shared rule path exactly once.
 5. If the shared rule is meant to apply only when a command produces an evaluation/ranking/final view/research lead/setup summary, state that condition explicitly so raw data-only outputs are not over-classified.
 
-## MIDAS templates, evals, and registry maintenance
+## Midas templates, evals, and registry maintenance
 
-When creating or replacing MIDAS support files such as command templates, eval templates, eval README files, or command registries:
+When creating or replacing Midas support files such as command templates, eval templates, eval README files, or command registries:
 
 - Treat user-supplied content as an exact clean replacement for the requested file.
 - Keep these files in `templates/`, `evals/`, or `docs/` as requested; do not move them into command skills.
@@ -73,7 +73,7 @@ When creating or replacing MIDAS support files such as command templates, eval t
 - When a template gains registry metadata, verify that the corresponding stability checklist includes registry-update requirements.
 - When a command registry is created or replaced, verify the registry table, metadata standard, freshness rule, drift checks, and relationships to `!commands`, evals, and architecture.
 
-When the user requests a patch/update-only change to a MIDAS template or support file:
+When the user requests a patch/update-only change to a Midas template or support file:
 
 - Patch the existing file instead of rewriting the whole file unless a targeted patch is not feasible.
 - Do not edit adjacent templates or sibling files that the user explicitly excluded.
@@ -83,7 +83,7 @@ When the user requests a patch/update-only change to a MIDAS template or support
 
 ## Command-menu maintenance
 
-When updating the MIDAS `commands` skill:
+When updating the Midas `commands` skill:
 
 - Patch only the visible menu lines requested.
 - Keep it short and Telegram-friendly.
@@ -92,7 +92,7 @@ When updating the MIDAS `commands` skill:
 
 ## Tracker skill maintenance
 
-When updating the MIDAS `tracker` skill:
+When updating the Midas `tracker` skill:
 
 - Respect the current version's command model; remove stale old-command behavior when the user replaces the skill.
 - Do not create `tracker_watchlist.json`, tracker workspace artifacts, or modify `midas_watchlist.json` while merely editing the skill.

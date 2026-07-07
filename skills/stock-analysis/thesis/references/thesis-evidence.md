@@ -24,7 +24,7 @@ Separate these layers clearly:
 
 - reported facts,
 - management claims,
-- MIDAS interpretation,
+- Midas interpretation,
 - future assumptions,
 - unproven requirements.
 

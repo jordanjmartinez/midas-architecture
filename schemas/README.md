@@ -1,4 +1,4 @@
-# MIDAS Schemas
+# Midas Schemas
 
 ## Purpose
 
@@ -38,7 +38,7 @@ each as its own approved change:
   `skills/stock-analysis/tracker/contracts/fund-manager.md` (its Authority
   Boundaries section notes it is held there until this layer hosts it).
 - `data/midas_watchlist.json` shape, currently described in
-  `skills/stock-analysis/wl/references/`.
+  `skills/stock-analysis/list/references/`.
 - `data/tracker_watchlist.json` roster shape, currently described in
   `skills/stock-analysis/tracker/SKILL.md`.
 

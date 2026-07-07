@@ -1,4 +1,4 @@
-# MIDAS Command Eval — !risk
+# Midas Command Eval — !risk
 
 Template source: `templates/COMMAND_EVAL_TEMPLATE.md`
 
@@ -147,7 +147,7 @@ Critical failures include:
 Normal successful `!risk [ticker]` output must follow this shape:
 
 ```md
-# ⚖️ [TICKER] | [Company Name] Risk Assessment
+# ⚖️ [Display Name] ($[TICKER]) | Risk Assessment
 
 ## Introduction
 
@@ -209,7 +209,7 @@ The command should produce the Standard-only risk assessment, surface material r
 
 ### Must Include
 
-- Required title format: `# ⚖️ HOOD | Robinhood Markets, Inc. Risk Assessment`.
+- Required title format: `# ⚖️ Robinhood Markets ($HOOD) | Risk Assessment`.
 - `## Introduction` stating risk-assessment scope and no recommendation / no valuation-model boundary.
 - `## Summary`.
 - `## Key Risks`.
@@ -238,7 +238,7 @@ The command should produce the Standard-only risk assessment, surface material r
 - Full financial statement review.
 - Bull/base/bear thesis memo.
 - Hidden-gem ranking.
-- Complete MIDAS packet.
+- Complete Midas packet.
 - Unsupported source claims.
 - Fabricated risks, metrics, or citations.
 - Live market data fetched by default solely because normal `!risk` was used.
@@ -697,7 +697,7 @@ Verify that `!risk` stays within risk-assessment scope and routes broader reques
 
 ### Expected Behavior
 
-The command should perform or preserve risk-assessment scope, briefly redirect out-of-scope parts to the appropriate MIDAS commands, and avoid producing a full combined report or investment recommendation.
+The command should perform or preserve risk-assessment scope, briefly redirect out-of-scope parts to the appropriate Midas commands, and avoid producing a full combined report or investment recommendation.
 
 ### Must Include
 
@@ -712,7 +712,7 @@ The command should perform or preserve risk-assessment scope, briefly redirect o
 - Full business model report.
 - Full financial statement review.
 - Bull/base/bear thesis memo.
-- Complete MIDAS packet.
+- Complete Midas packet.
 - Hidden-gem ranking.
 - Price target or recommendation.
 - Auto-run of `!research`, `!financials`, `!thesis`, `!earnings`, or `!gems`.

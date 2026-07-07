@@ -1,6 +1,6 @@
 # Dirty-Worktree Verification
 
-Use this playbook when verifying MIDAS maintenance work in a profile that already has unrelated dirty or untracked files.
+Use this playbook when verifying Midas maintenance work in a profile that already has unrelated dirty or untracked files.
 
 ## Principle
 
@@ -22,7 +22,7 @@ Do not revert, clean, or explain unrelated dirt unless the user asks.
 Use scoped checks such as:
 
 ```bash
-git status --short -- path/to/scope   # run from the MIDAS profile root
+git status --short -- path/to/scope   # run from the Midas profile root
 ```
 
 Prefer targeted file reads when the user requested narrow verification.

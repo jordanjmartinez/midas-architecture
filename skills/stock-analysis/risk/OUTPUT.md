@@ -1,4 +1,4 @@
-# MIDAS Command Output Contract — !risk
+# Midas Command Output Contract — !risk
 
 ## Command
 
@@ -87,7 +87,7 @@ This file should not answer:
 
 ## Global Output Inheritance
 
-`!risk` must follow the global MIDAS output rules in:
+`!risk` must follow the global Midas output rules in:
 
 - `rules/GLOBAL.md`
 - `rules/OUTPUT.md`
@@ -183,7 +183,7 @@ Normal output should be complete but bounded. It should not become a full filing
 ### Normal Format
 
 ```md
-#🗡️ [TICKER] | [Company Name] Risk Assessment
+# ⚖️ [Display Name] ($[TICKER]) | Risk Assessment
 
 ## Introduction
 
@@ -265,7 +265,7 @@ For normal output, `Saved to: workspace/tickers/[ticker]/risk.md` must appear ex
 
 The following sections are required for normal Standard-only output, in order:
 
-1. `# ⚖️ [TICKER] | [Company Name] Risk Assessment`
+1. `# ⚖️ [Display Name] ($[TICKER]) | Risk Assessment`
 2. `## Introduction`
 3. `## Summary`
 4. `## Key Risks`
@@ -290,7 +290,7 @@ Optional content may be included inside the required sections when useful, but d
 Required title format:
 
 ```md
-# ⚖️ [TICKER] | [Company Name] Risk Assessment
+# ⚖️ [Display Name] ($[TICKER]) | Risk Assessment
 ```
 
 The introduction should usually be 2–4 sentences and explain:

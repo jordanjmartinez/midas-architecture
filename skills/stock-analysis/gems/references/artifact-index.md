@@ -4,7 +4,7 @@
 
 This file owns `!gems` command-local artifact/index mechanics.
 
-It is subordinate to `rules/ARTIFACTS.md`, which owns MIDAS-wide artifact standards.
+It is subordinate to `rules/ARTIFACTS.md`, which owns Midas-wide artifact standards.
 
 This file does not own global artifact standards.
 
@@ -202,7 +202,7 @@ Use the actual canonical path written in any visible confirmation.
 
 Watchlist data remains separate from generated research artifacts.
 
-A manual next command such as `!wl add TICKER` may be suggested only when appropriate and only as an optional manual action.
+A manual next command such as `!list add TICKER` may be suggested only when appropriate and only as an optional manual action.
 
 Do not claim a ticker was added to a watchlist unless a separate approved watchlist command actually ran and succeeded.
 

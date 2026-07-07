@@ -79,7 +79,7 @@ Use `## Lower-Signal Items` only when there are material disclosures worth keepi
 
 Avoid fame-based promotional language by default. Do not show a routine `Signal Frame:` line in standard fund-manager output; keep that framing internal unless full/audit mode or the user asks for it.
 
-Best next commands must route to MIDAS diligence commands such as `!research`, `!risk`, `!financials`, `!thesis`; do not use trading guidance and do not auto-run the command. For both fund-manager and politician standard output, place the best next command inside Best Stock Leads cards. If no ranked candidate exists, omit best-next-command wording and say no clean company-level tracker lead was found. Routing logic follows the shared workspace-aware Best Next Command standard in `rules/OUTPUT.md`, with artifact-state inputs from `rules/ARTIFACTS.md`; this file only controls the tracker-specific candidate-card display placement.
+Best next commands must route to Midas diligence commands such as `!research`, `!risk`, `!financials`, `!thesis`; do not use trading guidance and do not auto-run the command. For both fund-manager and politician standard output, place the best next command inside Best Stock Leads cards. If no ranked candidate exists, omit best-next-command wording and say no clean company-level tracker lead was found. Routing logic follows the shared workspace-aware Best Next Command standard in `rules/OUTPUT.md`, with artifact-state inputs from `rules/ARTIFACTS.md`; this file only controls the tracker-specific candidate-card display placement.
 
 For raw Markdown templates and saved Markdown artifacts, section headings should use proper Markdown heading syntax. For Telegram/chat output, do not require literal `##` markers if the platform strips or renders Markdown; require visually clear section titles separated by blank lines. Never render a section heading immediately after a bullet list or paragraph without a blank line.
 
@@ -115,7 +115,7 @@ Runtime tracker output must not print conditional verification instructions as i
 
 ## Best Stock Leads
 
-1. [TICKER] | [Company Name]
+1. [Display Name] ($[TICKER])
 
 Why it matters:
 [Why this is a useful company-level research lead based on the manager disclosure.]
@@ -126,7 +126,7 @@ Why it might not be a strong signal:
 Best next command:
 `![research/risk/financials/thesis/full] [ticker]`
 
-2. [TICKER] | [Company Name]
+2. [Display Name] ($[TICKER])
 
 Why it matters:
 [Answer]
@@ -137,7 +137,7 @@ Why it might not be a strong signal:
 Best next command:
 `![research/risk/financials/thesis/full] [ticker]`
 
-3. [TICKER] | [Company Name]
+3. [Display Name] ($[TICKER])
 
 Why it matters:
 [Answer]
@@ -163,7 +163,7 @@ Manager disclosures, especially 13F data, can be delayed, incomplete, hedged, or
 
 Candidate entries in visible fund-manager `Best Stock Leads` should usually use:
 
-- `[TICKER] | [Company Name]`
+- `[Display Name] ($[TICKER])`
 - `Why it matters:`
 - `Why it might not be a strong signal:`
 - `Best next command:`
@@ -283,7 +283,7 @@ When no candidate enters `Best Stock Leads`, omit `## Why These Ranked`. Use the
 
 ## Best Stock Leads
 
-1. [TICKER] | [Company Name]
+1. [Display Name] ($[TICKER])
 
 Why it matters:
 [Why this is a useful company-level research lead based on the disclosure pattern.]
@@ -294,7 +294,7 @@ Why it is not a strong signal:
 Best next command:
 `![research/risk/full] [ticker]`
 
-2. [TICKER] | [Company Name]
+2. [Display Name] ($[TICKER])
 
 Why it matters:
 [Answer]
@@ -305,7 +305,7 @@ Why it is not a strong signal:
 Best next command:
 `![research/risk/full] [ticker]`
 
-3. [TICKER] | [Company Name]
+3. [Display Name] ($[TICKER])
 
 Why it matters:
 [Answer]
@@ -331,7 +331,7 @@ Politician trade disclosures can be delayed, source-dependent, and value ranges 
 
 Politician candidate entries in `Best Stock Leads` should use:
 
-- `[TICKER] | [Company Name]`
+- `[Display Name] ($[TICKER])`
 - `Why it matters:`
 - `Why it is not a strong signal:`
 - `Best next command:`
@@ -416,7 +416,7 @@ Tracking Audit | [Person / Fund Name]
 
 [Maps to `p0_gate_results`. Best Stock Leads is blocked unless all five required P0 gates pass.]
 
-### [TICKER] | [Company / Security Name]
+### [Display Name / Security Name] ($[TICKER])
 
 • Source Authority Gate: [Pass / Fail / Partial / Unknown] — [blocker reason if relevant]
 • Disclosure Signal Gate: [Pass / Fail / Partial / Unknown] — [blocker reason if relevant]

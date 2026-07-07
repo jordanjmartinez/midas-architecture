@@ -23,7 +23,7 @@ Example pattern from the RCAT smoke check:
 A compact successful fallback snapshot should still use the normal snapshot shape:
 
 ```md
-[TICKER] | [Company Name] Market Snapshot
+📈 [Display Name] ($[TICKER]) | Market Snapshot
 As of: [timestamp]
 
 Price: [price]

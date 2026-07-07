@@ -1,8 +1,8 @@
-# MIDAS Scoring Standards
+# Midas Scoring Standards
 
 ## Purpose
 
-MIDAS scoring is used to prioritize research, compare candidates, and support setup classification.
+Midas scoring is used to prioritize research, compare candidates, and support setup classification.
 
 Scores are not investment recommendations.
 
@@ -20,7 +20,7 @@ Scoring should not replace judgment, source review, valuation work, or risk revi
 
 ## Architecture Overview
 
-MIDAS uses a four-layer scoring architecture:
+Midas uses a four-layer scoring architecture:
 
 1. **Global Research Score**
    - A broad 100-point score that can work across most public-company research.
@@ -46,7 +46,7 @@ Scoring must follow:
 
 # 1. Global Research Score
 
-Use the Global Research Score when MIDAS gives a final research view on a stock.
+Use the Global Research Score when Midas gives a final research view on a stock.
 
 Total score: **100 points**
 
@@ -696,7 +696,7 @@ Do not let the score alone override classification judgment.
 
 Use `rules/RERATING.md` when interpreting valuation/rerating setup, variant-view strength, information gap, crowding, and rerating caps.
 
-RERATING.md does not add new scoring buckets, rubrics, caps, or gates; this file remains the authority for MIDAS scoring.
+RERATING.md does not add new scoring buckets, rubrics, caps, or gates; this file remains the authority for Midas scoring.
 
 ---
 

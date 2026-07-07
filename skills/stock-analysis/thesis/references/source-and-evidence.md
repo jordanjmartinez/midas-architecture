@@ -39,7 +39,7 @@ SOURCES.md owns source hierarchy, source confidence, freshness, amendment handli
 
 - State when the source base is stale, incomplete, unaudited, limited, or not directly comparable.
 - If a material thesis fact is not disclosed, say it is not disclosed rather than inferring it as fact.
-- Separate reported facts, management claims, MIDAS interpretation, and assumptions.
+- Separate reported facts, management claims, Midas interpretation, and assumptions.
 - Management TAM, targets, guidance, or long-term goals are claims or assumptions until supported by reported results or other primary evidence.
 
 ## Source Notes discipline

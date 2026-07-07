@@ -1,10 +1,10 @@
-# MIDAS Profile Command Memory Sync
+# Midas Profile Command Memory Sync
 
-Use this reference when MIDAS stock-analysis command wording, preferred aliases, or artifact behavior changes.
+Use this reference when Midas stock-analysis command wording, preferred aliases, or artifact behavior changes.
 
 ## Why this exists
 
-MIDAS command behavior is encoded in skills, but the Midas profile memory also carries a compact command summary that is injected into future sessions. If command wording changes only in skills, later sessions can still start with stale preferred commands from `USER.md`.
+Midas command behavior is encoded in skills, but the Midas profile memory also carries a compact command summary that is injected into future sessions. If command wording changes only in skills, later sessions can still start with stale preferred commands from `USER.md`.
 
 ## Files to keep aligned
 
@@ -22,14 +22,14 @@ MIDAS command behavior is encoded in skills, but the Midas profile memory also c
 
 ## Verification examples
 
-- Search `commands/SKILL.md` for deprecated visible menu aliases such as `!help`, `!update-thesis`, or `!wl check`.
+- Search `commands/SKILL.md` for deprecated visible menu aliases such as `!help`, `!update-thesis`, or `!list check`.
 - Search `USER.md` for the same aliases and confirm they are absent from the preferred-command list.
 - Confirm new preferred commands appear in both the command menu and the Midas profile memory when they are durable preferences.
 
-## Current MIDAS command-memory convention
+## Current Midas command-memory convention
 
 The current preferred thesis-update command is `!thesis update [ticker]`; `!update-thesis [ticker]` is only a deprecated fallback.
 
-The current watchlist update command is `!wl updates`; `!wl check` is not preferred.
+The current watchlist update command is `!list updates`; `!list check` is not preferred.
 
 The current command menu command is `!commands`; `!help` is not preferred.

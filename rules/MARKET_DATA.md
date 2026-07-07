@@ -1,10 +1,10 @@
-# MIDAS Market Data Standards
+# Midas Market Data Standards
 
 ## Purpose
 
-`MARKET_DATA.md` is the global MIDAS rule file for live market-data usage, similar in authority to `SOURCES.md` and `METRICS.md`.
+`MARKET_DATA.md` is the global Midas rule file for live market-data usage, similar in authority to `SOURCES.md` and `METRICS.md`.
 
-It governs how MIDAS retrieves, labels, displays, and uses live/current market snapshots across commands.
+It governs how Midas retrieves, labels, displays, and uses live/current market snapshots across commands.
 
 Market data is useful context. It is not filing-backed evidence, not a recommendation engine, and not a replacement for SEC filings or company primary disclosures.
 
@@ -42,7 +42,7 @@ If market data conflicts with SEC filings or company primary disclosures for fin
 
 ---
 
-## Relationship to Other MIDAS Rules
+## Relationship to Other Midas Rules
 
 This file specializes but does not replace:
 
@@ -59,7 +59,7 @@ Market data can support rerating context, price-performance context, liquidity, 
 
 ## Command vs Helper Architecture
 
-`MARKET_DATA.md` governs live market-data behavior across MIDAS.
+`MARKET_DATA.md` governs live market-data behavior across Midas.
 
 `tools/market_data_snapshot.py` is the canonical read-only helper for retrieving live market snapshots.
 
@@ -244,7 +244,7 @@ Include when relevant:
 
 When available, helper output may preserve:
 
-- `retrieved_at`: when MIDAS/helper retrieved the data
+- `retrieved_at`: when Midas/helper retrieved the data
 - `provider_data_as_of`: provider-supplied quote or trading timestamp
 - `as_of`: displayed timestamp used by command output
 
@@ -389,6 +389,6 @@ If a provider returns stale, delayed, end-of-day, or plan-limited data, label th
 
 ## Final Rule
 
-Market data should make MIDAS valuation and rerating context more current and useful.
+Market data should make Midas valuation and rerating context more current and useful.
 
-It must stay separate from filing-backed evidence and must not turn MIDAS into a trading system, recommendation engine, price-target machine, or API dump.
+It must stay separate from filing-backed evidence and must not turn Midas into a trading system, recommendation engine, price-target machine, or API dump.

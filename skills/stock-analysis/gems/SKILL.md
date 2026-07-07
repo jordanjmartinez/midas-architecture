@@ -1,6 +1,6 @@
 ---
 name: gems
-description: Use when the user invokes !gems, !gems [theme], !gems [theme] [subtheme], or canonical -audit variants to discover or audit potentially overlooked, misunderstood, underfollowed, or asymmetric small/mid-cap public companies for further research. Applies MIDAS hidden-gem quality controls, saves discovery artifacts to the Midas workspace for standard runs only, and follows OUTPUT.md for visible chat formatting.
+description: Use when the user invokes !gems, !gems [theme], !gems [theme] [subtheme], or canonical -audit variants to discover or audit potentially overlooked, misunderstood, underfollowed, or asymmetric small/mid-cap public companies for further research. Applies Midas hidden-gem quality controls, saves discovery artifacts to the Midas workspace for standard runs only, and follows OUTPUT.md for visible chat formatting.
 version: 1.14.0
 author: Midas / Hermes Agent
 license: MIT
@@ -25,11 +25,11 @@ related_skills:
   - wl
 ---
 
-# MIDAS Gems Command Prompt
+# Midas Gems Command Prompt
 
 ## Purpose
 
-`!gems` is MIDAS' asymmetric small/mid-cap discovery engine. Use it to find potentially overlooked, misunderstood, underfollowed, or mispriced public companies that may deserve deeper research.
+`!gems` is Midas' asymmetric small/mid-cap discovery engine. Use it to find potentially overlooked, misunderstood, underfollowed, or mispriced public companies that may deserve deeper research.
 
 This skill produces **research candidates only**. It does not make investment recommendations, build a full research memo, add tickers to the watchlist, give Buy/Sell/Hold ratings, give price targets, give position sizing, or provide trade-execution advice.
 
@@ -125,7 +125,7 @@ Apply these command-local and global authorities by reference. Do not duplicate 
 * `contracts/hidden-gems.md` — active `!gems` intelligence authority for source contract, eligibility, entity/security resolution, promotion gates, demotion/blocking, scoring interaction, classification usage, disconfirming evidence, and no-clean-candidate behavior.
 * `OUTPUT.md` — visible chat/output authority for candidate cards, score/confidence display, source/evidence caveats, failure/no-candidate output, visible saved/index confirmation wording, and final response shape.
 * `references/artifact-index.md` — active `!gems` command-local artifact/index mechanics for artifact paths, theme/subtheme parsing, slug behavior, folder creation, duplicate/cross-theme handling, saved-artifact requirements, and `workspace/gems/index.md` behavior.
-* `rules/GLOBAL.md` — shared MIDAS operating rules.
+* `rules/GLOBAL.md` — shared Midas operating rules.
 * `rules/SOURCES.md` — global source standards.
 * `rules/CLASSIFICATIONS.md` — approved setup classifications and modifiers.
 * `rules/SCORING.md` — global scoring, Evidence Confidence, Hidden-Gem Overlay, and score-cap standards.
@@ -284,7 +284,7 @@ Do not call candidates recommendations.
 
 Do not treat social, crowding, promotional, influencer, or famous-investor signals as thesis proof.
 
-Do not automatically add candidates to the MIDAS watchlist or modify `data/midas_watchlist.json`.
+Do not automatically add candidates to the Midas watchlist or modify `data/midas_watchlist.json`.
 
 Do not run these commands unless the user explicitly asks:
 
@@ -295,7 +295,7 @@ Do not run these commands unless the user explicitly asks:
 * `!risk`
 * `!earnings`
 * `!updates`
-* `!wl add`
+* `!list add`
 
 It is okay to suggest the best next command when `OUTPUT.md` calls for it.
 

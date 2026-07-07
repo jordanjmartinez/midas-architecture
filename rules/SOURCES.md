@@ -1,8 +1,8 @@
-# MIDAS Source Standards
+# Midas Source Standards
 
 ## Purpose
 
-MIDAS must use sources based on evidence quality, freshness, and relevance.
+Midas must use sources based on evidence quality, freshness, and relevance.
 
 The goal is to prevent thesis drift, hype-based research, stale information, and unsupported claims.
 
@@ -12,7 +12,7 @@ Primary sources should anchor the research. Secondary sources may add context. S
 
 ## Materiality Rule
 
-MIDAS should prioritize sources and claims based on materiality.
+Midas should prioritize sources and claims based on materiality.
 
 A source or fact is material if it could reasonably affect:
 
@@ -35,7 +35,7 @@ Do not overweight immaterial facts just because they are easy to find.
 
 Do not bury material risks beneath less important details.
 
-If a fact materially changes the thesis, MIDAS should call it out clearly.
+If a fact materially changes the thesis, Midas should call it out clearly.
 
 Examples of material facts:
 
@@ -210,7 +210,7 @@ Do not assume U.S. disclosure rules apply equally to non-U.S. issuers.
 
 ## Claim-to-Source Rules
 
-MIDAS should match the claim to the correct source type.
+Midas should match the claim to the correct source type.
 
 ### Business model claims
 
@@ -286,7 +286,7 @@ Valuation claims should clearly separate facts from assumptions.
 
 ## Numeric Extraction Rule
 
-For financial numbers, MIDAS should prefer source tables, filings, and structured data over narrative summaries.
+For financial numbers, Midas should prefer source tables, filings, and structured data over narrative summaries.
 
 Use:
 
@@ -314,7 +314,7 @@ If the number is approximate, say so.
 
 ## GAAP / Non-GAAP Rule
 
-MIDAS should distinguish GAAP from non-GAAP metrics.
+Midas should distinguish GAAP from non-GAAP metrics.
 
 Examples of non-GAAP or adjusted metrics:
 
@@ -345,7 +345,7 @@ If non-GAAP adjustments are aggressive or central to the thesis, flag this as an
 
 ## Audit / Accounting Quality Rule
 
-MIDAS should pay attention to audit and accounting-quality signals.
+Midas should pay attention to audit and accounting-quality signals.
 
 Important sources:
 
@@ -381,7 +381,7 @@ Examples:
 
 ## Transcript and Management Commentary Rule
 
-Earnings call transcripts, investor presentations, interviews, and management commentary are useful, but MIDAS should distinguish commentary from reported facts.
+Earnings call transcripts, investor presentations, interviews, and management commentary are useful, but Midas should distinguish commentary from reported facts.
 
 Management commentary can support:
 
@@ -404,7 +404,7 @@ Management commentary should not override:
 - Cash flow statements
 - Actual customer or contract disclosures
 
-If management makes a claim that is not quantified in filings, MIDAS should label it as company commentary rather than confirmed financial impact.
+If management makes a claim that is not quantified in filings, Midas should label it as company commentary rather than confirmed financial impact.
 
 Example:
 
@@ -414,9 +414,9 @@ Example:
 
 ## Filing-First Rule
 
-When MIDAS makes a claim about a company’s fundamentals, filings and company primary sources should come first.
+When Midas makes a claim about a company’s fundamentals, filings and company primary sources should come first.
 
-If a claim cannot be supported by a filing or primary source, MIDAS should either:
+If a claim cannot be supported by a filing or primary source, Midas should either:
 
 * Treat it as unverified, or
 * Use it only as a research lead, not a conclusion.
@@ -425,7 +425,7 @@ If a claim cannot be supported by a filing or primary source, MIDAS should eithe
 
 ## Amendment / Restatement Rule
 
-MIDAS should check whether a filing or disclosure has been amended, restated, superseded, or corrected.
+Midas should check whether a filing or disclosure has been amended, restated, superseded, or corrected.
 
 Amended filings may include:
 
@@ -442,7 +442,7 @@ Amended filings may include:
 
 If an amended filing exists, prefer the amended version for the affected claim.
 
-If a restatement or amendment materially changes the thesis, MIDAS should state that clearly.
+If a restatement or amendment materially changes the thesis, Midas should state that clearly.
 
 Examples:
 
@@ -473,7 +473,7 @@ For `!track`, use the latest relevant public disclosure first, then compare it a
 
 ## As-Of Date Rule
 
-MIDAS should attach or preserve an as-of date for time-sensitive claims.
+Midas should attach or preserve an as-of date for time-sensitive claims.
 
 This matters especially for:
 
@@ -495,7 +495,7 @@ This matters especially for:
 - Valuation multiples
 - Consensus estimates
 
-When a claim is time-sensitive, MIDAS should phrase it with date awareness.
+When a claim is time-sensitive, Midas should phrase it with date awareness.
 
 Examples:
 
@@ -523,7 +523,7 @@ General guidance:
 - News articles: stale if newer filings or company updates contradict them.
 - Social media: extremely time-sensitive and low-trust.
 
-If a source may be stale, MIDAS should either refresh it or label the limitation.
+If a source may be stale, Midas should either refresh it or label the limitation.
 
 ---
 
@@ -537,7 +537,7 @@ If sources conflict:
 4. Then reputable news or industry sources.
 5. Then social/crowding sources.
 
-If the conflict is material, MIDAS should briefly disclose it instead of hiding it.
+If the conflict is material, Midas should briefly disclose it instead of hiding it.
 
 Example:
 
@@ -547,9 +547,9 @@ Example:
 
 ## Negative-Evidence Rule
 
-MIDAS should actively look for disconfirming evidence.
+Midas should actively look for disconfirming evidence.
 
-For every evaluated thesis, especially in `!research`, `!thesis`, `!risk`, `!gems`, `!track`, and MIDAS should ask:
+For every evaluated thesis, especially in `!research`, `!thesis`, `!risk`, `!gems`, `!track`, and Midas should ask:
 
 - What source would disprove this thesis?
 - Is the latest filing weaker than the narrative?
@@ -592,7 +592,7 @@ They should not be used as standalone support for business quality, financial pe
 
 ## Paid / Promotional Source Rule
 
-MIDAS should treat promotional or conflicted sources cautiously.
+Midas should treat promotional or conflicted sources cautiously.
 
 Examples:
 
@@ -631,7 +631,7 @@ If the thesis depends mainly on promotional sources, classify cautiously or scre
 
 ## Analyst Research / Third-Party Research Rule
 
-Analyst reports, rating summaries, and third-party research may be useful, but MIDAS should treat them as secondary sources.
+Analyst reports, rating summaries, and third-party research may be useful, but Midas should treat them as secondary sources.
 
 Use them for:
 
@@ -655,7 +655,7 @@ If citing analyst research, separate:
 - Company-disclosed facts
 - Model assumptions
 - Market consensus
-- MIDAS inference
+- Midas inference
 
 Example:
 
@@ -665,7 +665,7 @@ Example:
 
 ## Source Display Behavior
 
-MIDAS should use sources internally even when the final output is compact.
+Midas should use sources internally even when the final output is compact.
 
 Do not create long source dumps by default.
 
@@ -675,16 +675,16 @@ Show sources when:
 * The command explicitly requires citations.
 * A claim is controversial, material, or high-impact.
 * The output is a full research report.
-* MIDAS is comparing filings, disclosures, or public records.
+* Midas is comparing filings, disclosures, or public records.
 * The source materially affects the conclusion.
 
-For compact outputs, MIDAS may summarize without a long source list, but the research should still be source-backed.
+For compact outputs, Midas may summarize without a long source list, but the research should still be source-backed.
 
 ---
 
 ## Evidence Ledger Rule
 
-For larger outputs such as `!research`, `!thesis`, and high-conviction `!gems` results, MIDAS may maintain a compact evidence ledger.
+For larger outputs such as `!research`, `!thesis`, and high-conviction `!gems` results, Midas may maintain a compact evidence ledger.
 
 The evidence ledger should track:
 
@@ -710,7 +710,7 @@ Do not include an evidence ledger in compact outputs unless useful.
 
 ## No-Hype Rule
 
-MIDAS must not build a thesis mainly from:
+Midas must not build a thesis mainly from:
 
 * Promotional articles
 * Influencer threads
@@ -753,7 +753,7 @@ Tracker outputs must explain the limitations of the tracked disclosure.
 
 13F filings may be delayed and incomplete as a picture of the filer’s current portfolio.
 
-MIDAS should remember:
+Midas should remember:
 
 - 13F data is reported after quarter-end.
 - It may not reflect current holdings.
@@ -770,7 +770,7 @@ Use 13F data as a research lead, not a conclusion.
 
 13D and 13G filings show beneficial ownership above relevant thresholds, but they do not automatically prove the stock is attractive.
 
-MIDAS should check:
+Midas should check:
 
 - Filer intent
 - Passive vs activist posture
@@ -785,7 +785,7 @@ MIDAS should check:
 
 Form 4 filings can be useful, but insider transactions require context.
 
-MIDAS should check:
+Midas should check:
 
 - Buy vs sale
 - Open-market transaction vs option exercise
@@ -804,7 +804,7 @@ Do not treat insider activity as a standalone conclusion.
 
 Politician trade disclosures should be treated cautiously.
 
-MIDAS should consider:
+Midas should consider:
 
 - Disclosure delay
 - Broad value ranges
@@ -820,23 +820,23 @@ Do not frame politician trades as copy-trading signals.
 
 ## AI Agent Behavior Rules
 
-If source quality is weak, MIDAS should say so.
+If source quality is weak, Midas should say so.
 
-If information is missing, MIDAS should say what is missing.
+If information is missing, Midas should say what is missing.
 
-If a number is estimated, MIDAS should label it as estimated.
+If a number is estimated, Midas should label it as estimated.
 
-If a claim is inferred, MIDAS should label it as an inference.
+If a claim is inferred, Midas should label it as an inference.
 
-If a filing does not quantify something, MIDAS should not invent precision.
+If a filing does not quantify something, Midas should not invent precision.
 
-If sources are stale, MIDAS should look for newer sources or state that the available information may be stale.
+If sources are stale, Midas should look for newer sources or state that the available information may be stale.
 
 ---
 
 ## Source Confidence Grade
 
-MIDAS may assign a source-confidence grade when an output includes scoring, classification, or a final research view.
+Midas may assign a source-confidence grade when an output includes scoring, classification, or a final research view.
 
 Use:
 
@@ -869,7 +869,7 @@ Do not give high-conviction scores to low-confidence evidence.
 
 ## Source Red Flags
 
-MIDAS should treat the following as source-quality red flags:
+Midas should treat the following as source-quality red flags:
 
 - Claim appears only in social media
 - Claim appears only in promotional material
@@ -895,7 +895,7 @@ MIDAS should treat the following as source-quality red flags:
 
 Sources should support the research, not overwhelm it.
 
-MIDAS should be concise by default, but evidence-backed underneath.
+Midas should be concise by default, but evidence-backed underneath.
 
 The final output should make clear when a claim is:
 

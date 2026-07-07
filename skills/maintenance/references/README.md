@@ -29,7 +29,7 @@ Do not treat deleted historical references as active routing law.
 
 ## Active Playbooks
 
-Active playbooks should be reusable across future MIDAS maintenance tasks.
+Active playbooks should be reusable across future Midas maintenance tasks.
 
 They should be short, operational, and general enough to guide repeated work.
 
@@ -61,7 +61,7 @@ Planned archive buckets:
 - `risk-thesis/` — risk/thesis readability, rerating, market-context, and best-next-command work
 - `commands-menu/` — `!commands` menu/output/eval/readiness history
 - `updates/` — updates output/eval/fixture cleanup history
-- `watchlist/` — `!wl`, `!watchlist`, and `!list` output/eval/alias staging history
+- `watchlist/` — `!list`, `!watchlist`, and `!list` output/eval/alias staging history
 - `earnings/` — earnings output/eval/activation history
 - `gems/` — gems output polish and validation history
 - `registry/` — registry cleanup, metadata normalization, and command maturity audit history

@@ -1,11 +1,11 @@
 # Watchlist Display and Alias Preferences
 
-Session learning from hardening `!wl` / `!watchlist` / `!list`.
+Session learning from hardening `!list` / `!watchlist` / `!list`.
 
 ## Durable display preferences
 
-- The visible watchlist title should be `Watchlist`, not `MIDAS Watchlist`.
-- `!wl show`, `!watchlist show`, and `!list show` should use the same simple display shape:
+- The visible watchlist title should be `Watchlist`, not `Midas Watchlist`.
+- `!list show`, `!watchlist show`, and `!list show` should use the same simple display shape:
 
 ```md
 ## Watchlist
@@ -20,18 +20,18 @@ Session learning from hardening `!wl` / `!watchlist` / `!list`.
 
 ## Alias policy
 
-The user approved both `!watchlist` and `!list` as full alias families for `!wl`:
+The user approved both `!watchlist` and `!list` as full alias families for `!list`:
 
 - `!watchlist`, `!watchlist add`, `!watchlist rm`, `!watchlist show`, `!watchlist updates`
 - `!list`, `!list add`, `!list rm`, `!list show`, `!list updates`
 
-These aliases should preserve the same behavior, mutation rules, output contract, and artifact rules as the equivalent `!wl` commands.
+These aliases should preserve the same behavior, mutation rules, output contract, and artifact rules as the equivalent `!list` commands.
 
 ## Maintenance pitfall
 
 When changing visible watchlist output, patch both:
 
-- `skills/stock-analysis/wl/OUTPUT.md`
-- `evals/wl.eval.md`
+- `skills/stock-analysis/list/OUTPUT.md`
+- `evals/list.eval.md`
 
 Do not mutate `data/midas_watchlist.json` for display-only changes.

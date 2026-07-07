@@ -1,8 +1,8 @@
 # Staged Contract Authority Checks
 
-This is an active maintenance playbook. It supports staged MIDAS maintenance work and does not replace `rules/CONTRACT_AUTHORITY.md` or `skills/maintenance/PLAN.md`.
+This is an active maintenance playbook. It supports staged Midas maintenance work and does not replace `rules/CONTRACT_AUTHORITY.md` or `skills/maintenance/PLAN.md`.
 
-Use this reference when maintaining MIDAS profile contracts, command templates, or reference-library structure.
+Use this reference when maintaining Midas profile contracts, command templates, or reference-library structure.
 
 Lesson captured from maintenance-contract cleanup:
 

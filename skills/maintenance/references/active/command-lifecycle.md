@@ -1,6 +1,6 @@
 # Command Lifecycle
 
-Use this playbook when creating, refactoring, validating, or activating a MIDAS command.
+Use this playbook when creating, refactoring, validating, or activating a Midas command.
 
 ## Authority Split
 

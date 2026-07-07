@@ -1,10 +1,10 @@
-# MIDAS Architecture
+# Midas Architecture
 
 ## Purpose
 
-ARCHITECTURE.md explains how MIDAS is organized.
+ARCHITECTURE.md explains how Midas is organized.
 
-It is the system map for the MIDAS profile.
+It is the system map for the Midas profile.
 
 It should help the user, future agents, and command builders understand:
 
@@ -12,7 +12,7 @@ It should help the user, future agents, and command builders understand:
 - How global rules connect to command skills
 - How templates, evals, schemas, docs, and artifacts fit together
 - How to build new commands without duplicating rules
-- How to keep MIDAS modular, maintainable, and testable
+- How to keep Midas modular, maintainable, and testable
 
 ARCHITECTURE.md is not a command skill.
 
@@ -24,7 +24,7 @@ ARCHITECTURE.md should not duplicate the full contents of global rule files.
 
 # Core Architecture Principle
 
-MIDAS uses a layered architecture.
+Midas uses a layered architecture.
 
 Each layer has one job.
 
@@ -54,7 +54,7 @@ Reusable design helpers should live in `templates/`, `evals/`, `schemas/`, and `
 
 # High-Level Folder Map
 
-Recommended MIDAS profile structure:
+Recommended Midas profile structure:
 
 ```bash
 
@@ -106,7 +106,7 @@ Recommended MIDAS profile structure:
 
 Not every folder needs to be fully built immediately.
 
-The architecture should grow as MIDAS grows.
+The architecture should grow as Midas grows.
 
 ---
 
@@ -120,7 +120,7 @@ SOUL.md
 
 ## Purpose
 
-SOUL.md defines who MIDAS is.
+SOUL.md defines who Midas is.
 
 It should capture:
 
@@ -147,7 +147,7 @@ AGENTS.md
 
 ## Purpose
 
-AGENTS.md tells future AI agents, coding agents, or maintainers how to work on MIDAS safely.
+AGENTS.md tells future AI agents, coding agents, or maintainers how to work on Midas safely.
 
 It is an onboarding guide.
 
@@ -176,7 +176,7 @@ rules/
 
 ## Purpose
 
-The `rules/` folder defines shared MIDAS-wide standards.
+The `rules/` folder defines shared Midas-wide standards.
 
 These rules apply across multiple commands.
 
@@ -325,7 +325,7 @@ docs/
 
 The `docs/` folder stores design documents, maps, registries, and planning files.
 
-Docs are for understanding and maintaining MIDAS.
+Docs are for understanding and maintaining Midas.
 
 Docs are not runtime rules unless explicitly referenced by a rule or skill.
 
@@ -335,7 +335,7 @@ Docs are not runtime rules unless explicitly referenced by a rule or skill.
 
 System map.
 
-Explains how MIDAS is organized.
+Explains how Midas is organized.
 
 ### `docs/COMMAND_REGISTRY.md`
 
@@ -395,7 +395,7 @@ evals/
 
 Evals are regression tests and golden examples.
 
-They help ensure MIDAS commands continue behaving correctly after changes.
+They help ensure Midas commands continue behaving correctly after changes.
 
 Evals should test:
 
@@ -445,7 +445,7 @@ schemas/
 
 Schemas define shared artifact and data-shape conventions.
 
-Schemas are useful when MIDAS starts saving structured research artifacts.
+Schemas are useful when Midas starts saving structured research artifacts.
 
 They help prevent inconsistent watchlist items, research reports, scorecards, and tracker leads.
 
@@ -509,7 +509,7 @@ Commands should define command-specific artifact behavior in their skill file an
 
 # Command Lifecycle
 
-Every MIDAS command should move through a simple lifecycle.
+Every Midas command should move through a simple lifecycle.
 
 ## 1. Idea
 
@@ -816,7 +816,7 @@ Recommended build order:
 
 Do not build council/multi-agent complexity too early.
 
-Maximize the single-agent MIDAS workflow first.
+Maximize the single-agent Midas workflow first.
 
 ---
 
@@ -954,7 +954,7 @@ Every command skill should explicitly reference relevant global rules.
 
 # Stability Standard
 
-A MIDAS component is stable when:
+A Midas component is stable when:
 
 - Its purpose is clear
 - Its file location is correct
@@ -995,7 +995,7 @@ Add them when they solve a real problem.
 
 # Final Rule
 
-Architecture should make MIDAS easier to build, not harder.
+Architecture should make Midas easier to build, not harder.
 
 Keep the system modular.
 

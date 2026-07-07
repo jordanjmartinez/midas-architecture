@@ -1,6 +1,6 @@
-# MIDAS Command Storage Transparency
+# Midas Command Storage Transparency
 
-Use this note when a user asks whether a MIDAS command stores information, or when a command creates artifacts/caches beyond the final chat response.
+Use this note when a user asks whether a Midas command stores information, or when a command creates artifacts/caches beyond the final chat response.
 
 ## General answer pattern
 
@@ -20,4 +20,4 @@ Use this note when a user asks whether a MIDAS command stores information, or wh
 
 ## Example concise answer
 
-"Yes. For `!gems`, the full scan is saved to `workspace/gems/[theme]/[subtheme].md` and the gems dashboard is updated at `workspace/gems/index.md`. It does not add names to the watchlist unless you run `!wl add [ticker]`."
+"Yes. For `!gems`, the full scan is saved to `workspace/gems/[theme]/[subtheme].md` and the gems dashboard is updated at `workspace/gems/index.md`. It does not add names to the watchlist unless you run `!list add [ticker]`."

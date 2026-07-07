@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Stage 6 mock validation harness for MIDAS !market helper.
+"""Stage 6 mock validation harness for Midas !market helper.
 
 This harness is intentionally offline: it monkeypatches provider functions in
 ``tools/market_data_snapshot.py`` and verifies provider policy, rendering

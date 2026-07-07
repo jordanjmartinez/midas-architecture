@@ -1,15 +1,15 @@
-# `!wl` Output Contract
+# `!list` Output Contract
 
 Status: Active
-Command: `!wl`
-Aliases: `!wl add`, `!wl rm`, `!wl show`, `!wl updates`, `!watchlist`, `!watchlist add`, `!watchlist rm`, `!watchlist show`, `!watchlist updates`, `!list`, `!list add`, `!list rm`, `!list show`, `!list updates`
-Purpose: Define the visible output shape for the MIDAS watchlist command.
+Command: `!list`
+Aliases: `!list add`, `!list rm`, `!list show`, `!list updates`, `!watchlist`, `!watchlist add`, `!watchlist rm`, `!watchlist show`, `!watchlist updates`, `!list`, `!list add`, `!list rm`, `!list show`, `!list updates`
+Purpose: Define the visible output shape for the Midas watchlist command.
 
-`!wl` manages the persistent MIDAS stock watchlist stored at:
+`!list` manages the persistent Midas stock watchlist stored at:
 
 `data/midas_watchlist.json`
 
-`!watchlist` and `!list` are full alias families for `!wl`; their add/rm/show/updates variants use the same output shapes and guardrails as the corresponding `!wl` variant.
+`!watchlist` and `!list` are full alias families for `!list`; their add/rm/show/updates variants use the same output shapes and guardrails as the corresponding `!list` variant.
 
 The watchlist JSON file is the source of truth. Do not store watchlist entries in memory.
 
@@ -20,20 +20,20 @@ The watchlist JSON file is the source of truth. Do not store watchlist entries i
 - Use ticker format with one leading `$`, for example `$RKLB`.
 - Do not give Buy, Sell, Hold, price targets, position sizing, or trade execution advice.
 - Do not describe watchlist entries as recommendations.
-- Do not run or imply deep research from `!wl add`, `!wl rm`, or `!wl show`.
+- Do not run or imply deep research from `!list add`, `!list rm`, or `!list show`.
 - Do not auto-add tickers from `!gems`, `!track`, `!research`, or any other command.
 - Show saved artifact paths only when an artifact was actually written or updated.
 - If no artifact was written, do not show a fake `Saved to:` line.
 - If company identity or ticker mapping is ambiguous, ask for clarification instead of guessing.
 
-## `!wl add [ticker or company]`
+## `!list add [ticker or company]`
 
 Use when adding a stock to the persistent watchlist.
 
 ### Success
 
 ```md
-Added to Watchlist: [Company Name] ($TICKER)
+📋 Added to Watchlist: [Display Name] ($[TICKER])
 Status: Monitoring
 Date Added: [YYYY-MM-DD]
 ```
@@ -41,7 +41,7 @@ Date Added: [YYYY-MM-DD]
 ### Already on watchlist
 
 ```md
-Already on Watchlist: [Company Name] ($TICKER)
+📋 Already on Watchlist: [Display Name] ($[TICKER])
 Status: [Status]
 Date Added: [YYYY-MM-DD or Unknown]
 ```
@@ -69,14 +69,14 @@ I could not confidently resolve `[input]` to a public-company ticker.
 Try again with the ticker symbol or official company name.
 ```
 
-## `!wl rm [ticker or company]`
+## `!list rm [ticker or company]`
 
 Use when removing a stock from the persistent watchlist.
 
 ### Success
 
 ```md
-Removed from Watchlist: [Company Name] ($TICKER)
+📋 Removed from Watchlist: [Display Name] ($[TICKER])
 ```
 
 ### Not found
@@ -84,7 +84,7 @@ Removed from Watchlist: [Company Name] ($TICKER)
 ```md
 Not on Watchlist: [input]
 
-No matching ticker or company name was found in the MIDAS watchlist.
+No matching ticker or company name was found in the Midas watchlist.
 ```
 
 ### Ambiguous match
@@ -100,7 +100,7 @@ I found multiple watchlist matches for `[input]`:
 Which one should I remove?
 ```
 
-## `!wl show`
+## `!list show`
 
 Use when displaying the current watchlist.
 
@@ -127,7 +127,7 @@ Watchlist
 ```md
 Watchlist
 
-Your MIDAS watchlist is currently empty.
+Your Midas watchlist is currently empty.
 ```
 
 ### Storage unavailable or unreadable
@@ -135,13 +135,13 @@ Your MIDAS watchlist is currently empty.
 ```md
 Watchlist Unavailable
 
-I could not read the MIDAS watchlist file.
+I could not read the Midas watchlist file.
 
 Source of truth: `data/midas_watchlist.json`
 Issue: [short explanation]
 ```
 
-## `!wl updates`
+## `!list updates`
 
 Use when checking all watched stocks for important recent updates.
 
@@ -184,17 +184,17 @@ No meaningful watchlist updates found.
 ```md
 Watchlist Updates
 
-Your MIDAS watchlist is currently empty.
+Your Midas watchlist is currently empty.
 ```
 
-## `!wl updates [ticker or company]`
+## `!list updates [ticker or company]`
 
 Use when checking one watchlist entry for important recent updates.
 
 ### Stock is on watchlist
 
 ```md
-Watchlist Update | [Company Name] ($TICKER)
+📋 Watchlist Update | [Display Name] ($[TICKER])
 
 As of: [YYYY-MM-DD]
 
@@ -208,17 +208,17 @@ Saved to: `workspace/tickers/[normalized-lowercase-ticker]/updates.md` [only if 
 ### Stock is not on watchlist
 
 ```md
-Not on Watchlist: [Company Name or input] ($TICKER if resolved)
+📋 Not on Watchlist: [Display Name or input] ($[TICKER] if resolved)
 
-This ticker is not currently in the MIDAS watchlist.
+This ticker is not currently in the Midas watchlist.
 
 If you want to monitor it, use:
-`!wl add $TICKER`
+`!list add $TICKER`
 ```
 
 ## Update Scan Boundaries
 
-`!wl updates` may summarize:
+`!list updates` may summarize:
 
 - Major price movement.
 - New 10-K, 10-Q, or 8-K filings.
@@ -233,7 +233,7 @@ If you want to monitor it, use:
 - Management changes.
 - Major product, customer, or platform issues.
 
-`!wl updates` must not create:
+`!list updates` must not create:
 
 - A full research report.
 - A thesis.
@@ -250,12 +250,12 @@ Route deeper work to the relevant command only when useful:
 - `!thesis [ticker]`
 - `!earnings [ticker]`
 
-Do not auto-run those commands from `!wl`.
+Do not auto-run those commands from `!list`.
 
 ## Artifact Display Rules
 
 - Add/remove/show operations do not create ticker research artifacts.
-- `!wl updates` may write `workspace/tickers/[normalized-lowercase-ticker]/updates.md` only when a meaningful update is found.
+- `!list updates` may write `workspace/tickers/[normalized-lowercase-ticker]/updates.md` only when a meaningful update is found.
 - Show `Saved to:` only after the artifact was actually written or updated.
 - If no meaningful update was found, do not create or claim an artifact.
 - Follow `rules/ARTIFACTS.md` for save-order and path discipline.

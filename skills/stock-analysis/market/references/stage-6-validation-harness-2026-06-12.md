@@ -8,7 +8,7 @@ Use this reference when validating future `!market` provider-policy or rendering
 evals/market_stage6_validation.py
 ```
 
-Run from the MIDAS profile root:
+Run from the Midas profile root:
 
 ```bash
 python3 evals/market_stage6_validation.py

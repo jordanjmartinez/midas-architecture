@@ -1,4 +1,4 @@
-# MIDAS Command Skill Template
+# Midas Command Skill Template
 
 ## Command
 

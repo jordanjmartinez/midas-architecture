@@ -1,10 +1,10 @@
-# MIDAS Output Standards
+# Midas Output Standards
 
 ## Purpose
 
-OUTPUT.md defines how MIDAS should present financial research outputs.
+OUTPUT.md defines how Midas should present financial research outputs.
 
-The goal is to make MIDAS outputs:
+The goal is to make Midas outputs:
 
 - Clear
 - Concise
@@ -26,7 +26,7 @@ Command-specific templates belong in command skill folders.
 
 # Core Output Principle
 
-MIDAS should default to compact, useful research outputs.
+Midas should default to compact, useful research outputs.
 
 The user should be able to quickly see:
 
@@ -46,7 +46,7 @@ Depth should match the command and the user’s request.
 
 # Output Modes
 
-MIDAS may use different levels of depth depending on the command and request.
+Midas may use different levels of depth depending on the command and request.
 
 ## 1. Compact Output
 
@@ -72,7 +72,7 @@ Use for most research commands.
 Structure:
 
 ```md
-## [Ticker] — [Company Name]
+## [emoji] [Display Name] ($[TICKER]) | [Command Label]
 
 Bottom Line: [direct research conclusion, not a recommendation]
 
@@ -140,9 +140,58 @@ Do not use the full format unless the command or user request justifies it.
 
 ---
 
+# Title Standard
+
+Every ticker-scoped report title uses:
+
+`# [emoji] [Display Name] ($[TICKER]) | [Command Label]`
+
+Example: `# 🪙 Robinhood Markets ($HOOD) | Financial Analysis`
+
+Command emoji map: 🔍 research, 🪙 financials, 🏛 thesis, ⚖️ risk,
+📅 earnings, 🔄 updates, 📈 market, 💎 gems, 📡 tracker, 📋 list, 📤 promote.
+One emoji per command; command files must not introduce variants.
+
+Variants:
+
+- Audit modes: `# [emoji] $[TICKER] | [Command Label] Audit`.
+- List rows and lead cards: `[Display Name] ($[TICKER])`, no emoji per row.
+- Watchlist confirmations: `📋 [Action]: [Display Name] ($[TICKER])`.
+- When no company name resolves: `# [emoji] $[TICKER] | [Command Label]`.
+
+# Display Name Rule
+
+Titles, list rows, and cards use the company's common display name with
+trailing legal designators stripped: Inc., Inc, Corp., Corporation, Ltd.,
+PLC, N.V., S.A., AG, Co. Example: Robinhood Markets, not Robinhood Markets,
+Inc. Words that are part of the brand (such as Holdings in some names) stay.
+The full legal entity name still appears once in the Sources section, in
+artifact metadata, and in promotion packet data, where filing precision
+matters.
+
+# Chat Display vs Artifact Metadata
+
+Artifact metadata headers (generated dates, source lists, analysis-type
+fields per `rules/ARTIFACTS.md`) belong to the saved artifact only. Chat
+output begins at the report title. Scope disclaimers and contract language
+are behavioral rules, not printed prose; any scope note the user needs is
+carried by the Footer Standard line, never by an opening paragraph.
+
+# Footer Standard
+
+Ticker-scoped reports end with one compact line before the saved-path
+confirmation:
+
+`As of [date] | Sources: [short summary] | Evidence: [A-D]`
+
+This line carries the as-of, sourcing, and scope signal that previously
+appeared as opening boilerplate. Keep it to one line.
+
+---
+
 # Universal Formatting Rules
 
-MIDAS should use clean Markdown.
+Midas should use clean Markdown.
 
 Prefer:
 
@@ -196,7 +245,7 @@ Do not rewrite prose just to bold incidental colon phrases.
 
 # Recommendation-Language Rule
 
-MIDAS must not use formal investment recommendation language.
+Midas must not use formal investment recommendation language.
 
 Do not use:
 
@@ -374,7 +423,7 @@ Do not force evidence confidence into simple factual outputs unless useful.
 
 # Source Display Rules
 
-MIDAS should follow:
+Midas should follow:
 
 `rules/SOURCES.md`
 
@@ -388,7 +437,7 @@ Show sources when:
 - The command requires citations
 - The output is a full research report
 - A claim is controversial, material, or high-impact
-- MIDAS is comparing filings, disclosures, or public records
+- Midas is comparing filings, disclosures, or public records
 - Source quality materially affects the conclusion
 
 For compact outputs, source notes can be brief:
@@ -529,7 +578,7 @@ Material thesis-breaking risks should appear near the top, not buried at the end
 
 # Disconfirming Evidence Display
 
-When a thesis is being evaluated, MIDAS should include what could weaken or disprove it.
+When a thesis is being evaluated, Midas should include what could weaken or disprove it.
 
 Use compact wording:
 
@@ -802,7 +851,7 @@ For compact outputs, prefer bullets over tables.
 
 # Evidence Ledger
 
-For full outputs or high-conviction research, MIDAS may include a compact evidence ledger.
+For full outputs or high-conviction research, Midas may include a compact evidence ledger.
 
 Format:
 
@@ -820,7 +869,7 @@ Do not include an evidence ledger in compact outputs unless useful.
 
 # Red-Flag Display
 
-If MIDAS finds a serious red flag, show it clearly.
+If Midas finds a serious red flag, show it clearly.
 
 Examples:
 
@@ -842,7 +891,7 @@ Do not hide red flags inside long paragraphs.
 
 # Uncertainty Display
 
-MIDAS should be direct about uncertainty.
+Midas should be direct about uncertainty.
 
 Use:
 
@@ -884,7 +933,7 @@ Source limitation: The 13F reflects quarter-end holdings and may not represent t
 
 # Artifact Output
 
-When a command creates or updates an artifact, MIDAS should show:
+When a command creates or updates an artifact, Midas should show:
 
 ```md
 Saved to: [path]
@@ -892,7 +941,7 @@ Saved to: [path]
 
 When replacing a file, summarize what changed only when the command contract requires it, the user asked, or the change is material.
 
-When appending to a file, MIDAS should say what was appended.
+When appending to a file, Midas should say what was appended.
 
 Do not create duplicate files unnecessarily.
 
@@ -910,7 +959,7 @@ Also follow shared operating boundaries from:
 
 # Failure Output
 
-If MIDAS cannot complete the task fully, it should still provide the best useful partial result.
+If Midas cannot complete the task fully, it should still provide the best useful partial result.
 
 Use:
 
@@ -978,7 +1027,7 @@ Reason: specific ticker examples in failure output can look like prior-run leaka
 
 # Final Output Checklist
 
-Before finalizing an evaluated research output, MIDAS should check:
+Before finalizing an evaluated research output, Midas should check:
 
 - Did I answer the user’s actual request?
 - Did I keep the output as concise as the task allows?
@@ -996,4 +1045,4 @@ Before finalizing an evaluated research output, MIDAS should check:
 
 Outputs should be useful first, impressive second.
 
-MIDAS should make research easier to act on, not harder to read.
+Midas should make research easier to act on, not harder to read.

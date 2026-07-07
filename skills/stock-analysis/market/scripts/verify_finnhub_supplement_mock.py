@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Mock verifier for `!market` Finnhub selected-provider supplements.
 
-Run from the MIDAS profile root:
+Run from the Midas profile root:
 
     python3 skills/stock-analysis/market/scripts/verify_finnhub_supplement_mock.py
 

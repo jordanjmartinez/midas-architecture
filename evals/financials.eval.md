@@ -39,7 +39,7 @@ Registry drift is a P0 issue.
 
 This eval file tests whether `!financials` behaves according to its command contract. It verifies correct routing, source discipline, metric quality, output structure, artifact behavior, guardrails, runtime boundedness, state isolation, and registry metadata consistency.
 
-This file should not redefine global MIDAS rules.
+This file should not redefine global Midas rules.
 
 ---
 
@@ -150,7 +150,7 @@ The command should produce the Standard-only financial statement and metric-qual
 
 ### Must Include
 
-- Required title format: `# 🪙 HOOD | Robinhood Markets, Inc. Financial Analysis`
+- Required title format: `# 🪙 Robinhood Markets ($HOOD) | Financial Analysis`
 - `## Introduction` stating the scope is financial-statement and metric-quality review, not business-model research, full valuation, price target, or buy/sell recommendation
 - `## Summary`
 - `## Revenue`
@@ -292,7 +292,7 @@ The command should reframe the answer as a financial-quality research view and r
 
 - Response follows `rules/GLOBAL.md` and `rules/OUTPUT.md` guardrails.
 - Financial review remains evidence-backed.
-- Guardrail-style response language avoids implying that MIDAS is advising what the user should do with capital.
+- Guardrail-style response language avoids implying that Midas is advising what the user should do with capital.
 
 ### Pass Criteria
 
@@ -459,7 +459,7 @@ The command should not produce a Full or Deep mode report. It should route or bo
 - Claim that Full mode or Deep mode ran
 - Full/Deep output contract
 - Auto-running `!thesis`, `!risk`, `!research`, or `!earnings`
-- Complete MIDAS packet inside `!financials`
+- Complete Midas packet inside `!financials`
 - Bull/base/bear thesis
 - Full business-model report
 - Downside-only risk report
@@ -810,7 +810,7 @@ Valid source fixture.
 
 ### Expected Behavior
 
-The command should perform a financial review, briefly redirect out-of-scope parts to the appropriate MIDAS commands, and avoid producing a full combined report.
+The command should perform a financial review, briefly redirect out-of-scope parts to the appropriate Midas commands, and avoid producing a full combined report.
 
 ### Must Include
 
@@ -824,7 +824,7 @@ The command should perform a financial review, briefly redirect out-of-scope par
 - Full business model report
 - Bull/base/bear thesis
 - Downside-only risk report
-- Complete MIDAS packet
+- Complete Midas packet
 - Hidden-gem ranking
 - Price target or recommendation
 
@@ -1007,7 +1007,7 @@ The command should produce the Standard-only output in the required section orde
 
 ### Must Include
 
-- Report title using `# 🪙 [TICKER] | [Company Name] Financial Analysis`
+- Report title using `# 🪙 [Display Name] ($[TICKER]) | Financial Analysis`
 - `## Introduction`
 - `## Summary`
 - `## Revenue`
@@ -1026,7 +1026,7 @@ The command should produce the Standard-only output in the required section orde
 
 ### Expected Standard Section Order
 
-1. `# 🪙 [TICKER] | [Company Name] Financial Analysis`
+1. `# 🪙 [Display Name] ($[TICKER]) | Financial Analysis`
 2. `## Introduction`
 3. `## Summary`
 4. `## Revenue`
@@ -1147,7 +1147,7 @@ Ensure `!financials [ticker]` defaults to Standard-only output for every ticker,
 
 For every normal Standard case, the output must contain these sections in this exact order:
 
-1. `# 🪙 [TICKER] | [Company Name] Financial Analysis`
+1. `# 🪙 [Display Name] ($[TICKER]) | Financial Analysis`
 2. `## Introduction`
 3. `## Summary`
 4. `## Revenue`
@@ -1287,7 +1287,7 @@ Each default invocation routes to normal Standard-only output, resolves the firs
 
 ### Must Include
 
-- `# 🪙 [TICKER] | [Company Name] Financial Analysis`
+- `# 🪙 [Display Name] ($[TICKER]) | Financial Analysis`
 - Exact heading order: `## Introduction`, `## Summary`, `## Revenue`, `## Margins`, `## Profitability`, `## Cash Flow`, `## Balance Sheet`, `## Dilution`, `## Capital Returns`, `## Metric Quality`, `## Financial Quality Score`, `## Financial Risks`, `## What To Verify Next`, `## Source Notes`, `## Best Next Command` when useful
 - `## Financial Quality Score`
 - A score line formatted as `[score]/10 - [Assessment]` using a plain hyphen after the score
@@ -1360,7 +1360,7 @@ Mode: `Unsupported full/deep terms`
 
 ### Purpose
 
-Verify every former Full/Deep alias is handled as an unsupported mode term or routing hint and does not drift into other MIDAS commands unless only recommending the correct command.
+Verify every former Full/Deep alias is handled as an unsupported mode term or routing hint and does not drift into other Midas commands unless only recommending the correct command.
 
 ### User Inputs
 

@@ -10,7 +10,7 @@ metadata:
     related_skills: [research, financials, thesis, risk]
 ---
 
-# MIDAS Command Skill: !promote
+# Midas Command Skill: !promote
 
 ## Registry Metadata
 
@@ -30,11 +30,11 @@ Primary Global Rules: `GLOBAL.md, COMMAND_INTERFACE.md, SOURCES.md, CLASSIFICATI
 
 ## Purpose
 
-`!promote [ticker]` is the MIDAS pipeline exit. When the four core artifacts
+`!promote [ticker]` is the Midas pipeline exit. When the four core artifacts
 for a ticker are complete and fresh, it synthesizes them into one promotion
 packet, registers the packet in the Pathos Library, and records the promotion
-in the MIDAS workspace. Downstream Pathos agents consume registered packets;
-they never read the MIDAS workspace.
+in the Midas workspace. Downstream Pathos agents consume registered packets;
+they never read the Midas workspace.
 
 `!promote` synthesizes existing artifacts. It never runs `!research`,
 `!financials`, `!thesis`, `!risk`, or any other command, and never gathers
@@ -47,7 +47,7 @@ The shared space is governed by `library/LIBRARY.md` (reachable through the
 `library` symlink in the profile root). That constitution wins over this file
 for everything under the library root. Key obligations restated as deltas:
 
-- MIDAS writes only inside `library/intake/midas/`.
+- Midas writes only inside `library/intake/midas/`.
 - `library/registry/` is written only by `library/tools/register_packet.py`.
   Never edit registry contents directly.
 - Registered packets are immutable. Corrections are a new dated version.
@@ -106,7 +106,7 @@ report every failed gate, not just the first.
    intake/midas/[TICKER]/[YYYY-MM-DD]`.
 8. If the tool fails: report its FAIL lines verbatim in the failure output,
    leave the intake files in place for inspection, and write nothing to the
-   MIDAS workspace. Never retry silently and never bypass the tool.
+   Midas workspace. Never retry silently and never bypass the tool.
 9. On success: write `workspace/tickers/[ticker]/promotion.md` per
    `OUTPUT.md`, then display the standard success output.
 

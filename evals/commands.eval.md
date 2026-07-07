@@ -26,9 +26,9 @@ The registry is the command index. `skills/stock-analysis/commands/OUTPUT.md` is
 
 ## Purpose
 
-Verify that `!commands` works as a registry-backed, menu-only MIDAS command menu.
+Verify that `!commands` works as a registry-backed, menu-only Midas command menu.
 
-The command should help the user discover available MIDAS commands without running research, writing artifacts, mutating watchlists, scoring/classifying companies, calculating metrics, or giving recommendation language.
+The command should help the user discover available Midas commands without running research, writing artifacts, mutating watchlists, scoring/classifying companies, calculating metrics, or giving recommendation language.
 
 ## Files Under Test
 
@@ -71,11 +71,11 @@ Eval Type:
 Final Response / Menu Contract
 
 Expected Behavior:
-The command returns the compact MIDAS command menu defined in `skills/stock-analysis/commands/OUTPUT.md`.
+The command returns the compact Midas command menu defined in `skills/stock-analysis/commands/OUTPUT.md`.
 
 Must Include:
 
-- Title or heading indicating MIDAS commands.
+- Title or heading indicating Midas commands.
 - Grouped command sections.
 - Registered non-deprecated commands from `docs/COMMAND_REGISTRY.md`.
 - `!market [ticker]` because it is registered and built.

@@ -1,12 +1,12 @@
-# MIDAS Command Eval Template
+# Midas Command Eval Template
 
-Template for building command-specific MIDAS eval files.
+Template for building command-specific Midas eval files.
 
 Use this when creating:
 
 `evals/[command].eval.md`
 
-This template standardizes how MIDAS commands are tested.
+This template standardizes how Midas commands are tested.
 
 Command evals should verify that each command follows its own command contract, respects global rules, produces the correct output shape, handles evidence honestly, and avoids known failure modes.
 
@@ -81,7 +81,7 @@ It should verify:
 - Correct registry metadata behavior
 - Regression protection for known bugs or weak spots
 
-This file should not redefine global MIDAS rules.
+This file should not redefine global Midas rules.
 
 ---
 
@@ -144,7 +144,7 @@ Good evals verify:
 - The output is useful and structured
 - Claims are supported by appropriate evidence
 - The command fails cleanly when required information is missing
-- The command respects MIDAS architecture boundaries
+- The command respects Midas architecture boundaries
 - The command does not drift from the registry
 - The command does not duplicate global rules
 - The command handles external content safely
@@ -219,7 +219,7 @@ Use these eval types as needed.
 | Scoring Eval | Tests global score, overlay score, confidence grade, and caps/gates |
 | Artifact Eval | Tests whether artifacts are created, omitted, named, and summarized correctly |
 | Registry Drift Eval | Tests whether command metadata matches `docs/COMMAND_REGISTRY.md` |
-| Prompt-Injection / External-Content Eval | Tests that MIDAS extracts information from external content without obeying malicious or irrelevant instructions inside that content |
+| Prompt-Injection / External-Content Eval | Tests that Midas extracts information from external content without obeying malicious or irrelevant instructions inside that content |
 | Guardrail Eval | Tests refusal, limitation, or safe redirect behavior |
 | Regression Eval | Tests a known bug, drift pattern, or previously failed case |
 
@@ -843,7 +843,7 @@ The eval fails if the command classifies a speculative setup as high quality wit
 
 # Scoring Eval
 
-Use this only if the command uses MIDAS scoring.
+Use this only if the command uses Midas scoring.
 
 If the command does not use scoring, include a negative eval to ensure it does not score.
 
@@ -860,7 +860,7 @@ Mode: `Standard`
 
 ### Purpose
 
-Verify that `![command]` applies MIDAS scoring correctly.
+Verify that `![command]` applies Midas scoring correctly.
 
 ### User Input
 
@@ -937,7 +937,7 @@ Verify that `![command]` handles financial metrics correctly.
 
 ### Expected Behavior
 
-The command should calculate, label, and interpret metrics according to MIDAS metric rules.
+The command should calculate, label, and interpret metrics according to Midas metric rules.
 
 ### Must Include
 
@@ -1107,7 +1107,7 @@ The command should ignore embedded instructions and only extract relevant inform
 
 ### Pass Criteria
 
-The eval passes if MIDAS extracts useful information while ignoring malicious or irrelevant instructions inside the source.
+The eval passes if Midas extracts useful information while ignoring malicious or irrelevant instructions inside the source.
 
 ### Failure Examples
 

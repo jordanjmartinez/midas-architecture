@@ -10,7 +10,7 @@ It answers:
 - Is it material or just noise?
 - Does it affect thesis direction?
 - Does it affect risk direction?
-- What should the user run next in MIDAS?
+- What should the user run next in Midas?
 
 It is not a full report command.
 
@@ -80,7 +80,7 @@ Do not auto-run `!earnings`.
 Preferred visible format:
 
 ```md
-# [TICKER] | [Company Name] Updates
+# 🔄 [Display Name] ($[TICKER]) | Updates
 
 [Short lead paragraph: what changed recently and whether it matters.]
 
@@ -131,7 +131,7 @@ Rules:
 Use this shape when no material company-specific update is found:
 
 ```md
-# [TICKER] | [Company Name] Updates
+# 🔄 [Display Name] ($[TICKER]) | Updates
 
 No meaningful company-specific update was found in the reviewed period.
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Read-only MIDAS live market-data snapshot helper.
+"""Read-only Midas live market-data snapshot helper.
 
 v1 provider policy:
 1. Call FMP first.
@@ -320,7 +320,7 @@ def get_fmp_snapshot(symbol: str) -> dict:
             week_52_low="FMP quote.yearLow/week52Low" if first_float(quote, "yearLow", "week52Low", "52WeekLow") is not None else None,
             shares_outstanding="FMP quote.sharesOutstanding" if first_int(quote, "sharesOutstanding", "shares_outstanding") is not None else None,
             average_volume=average_volume_source,
-            relative_volume="MIDAS derived: volume / average_volume" if relative_volume(volume, average_volume) is not None else None,
+            relative_volume="Midas derived: volume / average_volume" if relative_volume(volume, average_volume) is not None else None,
             beta="FMP profile.beta" if first_float(profile, "beta") is not None else None,
             sector="FMP profile.sector" if profile.get("sector") else None,
             industry="FMP profile.industry" if profile.get("industry") else None,
@@ -329,8 +329,8 @@ def get_fmp_snapshot(symbol: str) -> dict:
             issuer_flags="FMP profile.isEtf/isAdr/isFund/isActivelyTrading" if issuer_flags is not None else None,
             price_avg_50="FMP quote.priceAvg50" if price_avg_50 is not None else None,
             price_avg_200="FMP quote.priceAvg200" if price_avg_200 is not None else None,
-            price_vs_50d_avg_percentage="MIDAS derived: (price - price_avg_50) / price_avg_50" if percentage_vs_value(price, price_avg_50) is not None else None,
-            price_vs_200d_avg_percentage="MIDAS derived: (price - price_avg_200) / price_avg_200" if percentage_vs_value(price, price_avg_200) is not None else None,
+            price_vs_50d_avg_percentage="Midas derived: (price - price_avg_50) / price_avg_50" if percentage_vs_value(price, price_avg_50) is not None else None,
+            price_vs_200d_avg_percentage="Midas derived: (price - price_avg_200) / price_avg_200" if percentage_vs_value(price, price_avg_200) is not None else None,
             performance_5d_percentage="FMP stock-price-change.5D" if first_float(price_change, "5D") is not None else None,
             performance_1m_percentage="FMP stock-price-change.1M" if first_float(price_change, "1M") is not None else None,
             performance_3m_percentage="FMP stock-price-change.3M" if first_float(price_change, "3M") is not None else None,
@@ -483,8 +483,8 @@ def get_finnhub_snapshot(symbol: str) -> dict:
             ipo_date="Finnhub stock/profile2.ipo" if profile.get("ipo") else None,
             price_avg_50="Finnhub stock/metric.50DayMovingAverage" if price_avg_50 is not None else None,
             price_avg_200="Finnhub stock/metric.200DayMovingAverage" if price_avg_200 is not None else None,
-            price_vs_50d_avg_percentage="MIDAS derived: (price - price_avg_50) / price_avg_50" if percentage_vs_value(price, price_avg_50) is not None else None,
-            price_vs_200d_avg_percentage="MIDAS derived: (price - price_avg_200) / price_avg_200" if percentage_vs_value(price, price_avg_200) is not None else None,
+            price_vs_50d_avg_percentage="Midas derived: (price - price_avg_50) / price_avg_50" if percentage_vs_value(price, price_avg_50) is not None else None,
+            price_vs_200d_avg_percentage="Midas derived: (price - price_avg_200) / price_avg_200" if percentage_vs_value(price, price_avg_200) is not None else None,
             performance_5d_percentage="Finnhub stock/metric.5DayPriceReturnDaily" if performance_5d is not None else None,
             performance_3m_percentage="Finnhub stock/metric.13WeekPriceReturnDaily" if performance_3m is not None else None,
             performance_6m_percentage="Finnhub stock/metric.26WeekPriceReturnDaily" if performance_6m is not None else None,
@@ -883,7 +883,7 @@ def render_market_snapshot(payload: dict, mode: str = "standard") -> str:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Read-only MIDAS market-data snapshot helper")
+    parser = argparse.ArgumentParser(description="Read-only Midas market-data snapshot helper")
     parser.add_argument("ticker", nargs="?", help="Ticker symbol")
     parser.add_argument("mode", nargs="?", choices=["standard", "compact", "full", "expanded"], help="Optional render compatibility token; all render the Standard snapshot")
     parser.add_argument("--render", choices=["standard", "compact", "full", "expanded"], help="Render human-readable Standard output instead of JSON")

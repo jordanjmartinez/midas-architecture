@@ -6,7 +6,7 @@
 
 **Architecture:** Keep `!market` as a thin consumer of `tools/market_data_snapshot.py`. Add selected-provider supplements only after a provider has already returned a usable price. Do not call fallback providers solely to fill missing fields. Compact success must still end at `Source: [provider]`.
 
-**Tech Stack:** Python helper (`tools/market_data_snapshot.py`), MIDAS Markdown rules/skills/evals, provider APIs via existing environment keys.
+**Tech Stack:** Python helper (`tools/market_data_snapshot.py`), Midas Markdown rules/skills/evals, provider APIs via existing environment keys.
 
 ---
 
@@ -16,7 +16,7 @@
 - No changes may mutate `data/midas_watchlist.json`.
 - No API keys, raw credential-bearing URLs, Authorization headers, or secret values may be printed, saved, or logged.
 - Default compact success output must remain unchanged and end at `Source: [provider]`.
-- No Buy/Sell/Hold, price targets, sizing, entries, exits, trade instructions, MIDAS scores, setup classifications, or thesis conclusions.
+- No Buy/Sell/Hold, price targets, sizing, entries, exits, trade instructions, Midas scores, setup classifications, or thesis conclusions.
 - Market data remains Tier 2 context and must not be presented as evidence of business quality.
 - New endpoint calls must be selected-provider supplements, not field-level fallback enrichment.
 
@@ -283,7 +283,7 @@ python3 tools/market_data_snapshot.py KEEL --render full
 3. Updated eval run log only after Stage 6 validation had passed.
 4. Removed stale active handoff wording that still described Stage 5 as the next recommended stage.
 5. Did not promote unrelated commands or alter registry status.
-6. Fixed the Stage 5 mock verifier's profile-root path so the documented validation command runs from the MIDAS profile root.
+6. Fixed the Stage 5 mock verifier's profile-root path so the documented validation command runs from the Midas profile root.
 
 **Expected result:** The implementation is documented without prompt bloat or policy drift.
 

@@ -10,7 +10,7 @@ metadata:
     related_skills: [financials, thesis, risk, full]
 ---
 
-# MIDAS Command Skill — !research
+# Midas Command Skill — !research
 
 ## Command References
 
@@ -400,7 +400,7 @@ Follow the command-specific output contract:
 
 Normal `!research [ticker]` has one Standard-only output shape. Required sections must appear in this order:
 
-- Report title, formatted as `# 📜 [TICKER] | [Company Name] Business Analysis`
+- Report title, formatted as `# 🔍 [Display Name] ($[TICKER]) | Business Analysis`
 - Introduction
 - Summary
 - Why It Matters
@@ -489,8 +489,8 @@ Audit `!research [ticker] -audit`:
 - If the ticker folder does not exist, create it only when saving a normal artifact.
 - Save only the clean final Markdown output after analysis is complete and verified.
 - Use the required artifact header from `rules/ARTIFACTS.md`, with Analysis Type set to `Business Analysis`.
-- Saved normal artifacts must include the required report title and `Introduction` section; if a metadata header is present, the visible report body immediately after the header must begin with `# 📜 [TICKER] | [Company Name] Business Analysis`, then `## Introduction`, then `## Summary`.
-- Artifact header pitfall: do not add an extra ad-hoc H1 such as `# Company (TICKER) — Business Analysis` before the canonical visible report title. Use the required `ARTIFACTS.md` metadata/header pattern if needed, then begin the visible body directly with the canonical `# 📜 [TICKER] | [Company Name] Business Analysis` title.
+- Saved normal artifacts must include the required report title and `Introduction` section; if a metadata header is present, the visible report body immediately after the header must begin with `# 🔍 [Display Name] ($[TICKER]) | Business Analysis`, then `## Introduction`, then `## Summary`.
+- Artifact header pitfall: do not add an extra ad-hoc H1 such as `# Company (TICKER) — Business Analysis` before the canonical visible report title. Use the required `ARTIFACTS.md` metadata/header pattern if needed, then begin the visible body directly with the canonical `# 🔍 [Display Name] ($[TICKER]) | Business Analysis` title.
 - Normal user-facing responses must not include a separate Artifact section by default. End with exactly one saved-path confirmation line only after the artifact was actually written:
 
 ```md

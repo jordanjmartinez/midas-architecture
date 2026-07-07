@@ -10,7 +10,7 @@ metadata:
     related_skills: [research, financials, thesis, full, earnings]
 ---
 
-# MIDAS Command Skill — !risk
+# Midas Command Skill — !risk
 
 ## Command
 
@@ -35,7 +35,7 @@ Primary Global Rules: `GLOBAL.md, COMMAND_INTERFACE.md, SOURCES.md, MARKET_DATA.
 
 `!risk` produces one filing-backed company risk assessment for a public company or ticker. It identifies the risks most likely to weaken or break a thesis, connects them to primary-source evidence, highlights missing or uncertain evidence, and recommends the best next research step.
 
-This command is a focused company-risk command. It is not a business-model report, financial-statement review, thesis memo, complete MIDAS packet, hidden-gem ranking, valuation model, price-target output, or buy/sell recommendation.
+This command is a focused company-risk command. It is not a business-model report, financial-statement review, thesis memo, complete Midas packet, hidden-gem ranking, valuation model, price-target output, or buy/sell recommendation.
 
 ---
 
@@ -205,7 +205,7 @@ Follow this command-specific workflow:
 33. Before finalizing Best Next Command, perform a workspace-aware routing check for same-ticker canonical artifacts using path existence and header/source-period freshness only. Do not edit artifacts during this routing check, and do not deep-parse existing artifacts unless they were already loaded for risk analysis.
 34. Preserve issue-driven logic first: identify whether the risk review naturally points to business-model research, financial-statement work, thesis construction/update, earnings update, or full packet integration.
 35. Apply artifact state as a routing guardrail: avoid recommending a repeat command when the relevant same-ticker artifact already exists and appears current enough by header/source-period review.
-36. Recommend completing the remaining core artifacts only when packet completion is useful or when the user explicitly wants the complete MIDAS packet.
+36. Recommend completing the remaining core artifacts only when packet completion is useful or when the user explicitly wants the complete Midas packet.
 37. Before final response, perform a ticker-consistency finalization check: requested ticker/company, resolved issuer, report title, artifact path, saved-path line, and source state must all match the current command.
 38. End normal responses with exactly one saved-path confirmation as the final line after successful artifact write verification under `ARTIFACTS.md`.
 
@@ -360,7 +360,7 @@ Follow shared output standards:
 
 Normal `!risk [ticker/company]` must use the mandatory Standard-only template in `OUTPUT.md` as the source of truth. The required section order is:
 
-1. Report title: `# ⚖️ [TICKER] | [Company Name] Risk Assessment`
+1. Report title: `# ⚖️ [Display Name] ($[TICKER]) | Risk Assessment`
 2. `## Introduction`
 3. `## Summary`
 4. `## Key Risks`

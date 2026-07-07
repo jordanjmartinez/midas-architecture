@@ -1,12 +1,12 @@
-# MIDAS Contract Authority
+# Midas Contract Authority
 
 ## Purpose
 
-CONTRACT_AUTHORITY.md defines where MIDAS rules, contracts, references, templates, schemas, docs, eval requirements, and command-specific behavior belong.
+CONTRACT_AUTHORITY.md defines where Midas rules, contracts, references, templates, schemas, docs, eval requirements, and command-specific behavior belong.
 
 The goal is to prevent secondary law: command-local files, output contracts, evals, references, templates, docs, or archived notes becoming hidden global rulebooks.
 
-Every MIDAS rule should have one authoritative home.
+Every Midas rule should have one authoritative home.
 
 Command files may specialize global behavior, but they must not become hidden global law.
 
@@ -18,9 +18,9 @@ Do not preserve stale local rules after a behavior has been globalized.
 
 ## Core Rule
 
-Before adding, expanding, or editing any MIDAS rule, contract, reference, template, schema, doc, eval requirement, or command-local instruction, MIDAS must answer the Contract Authority Check.
+Before adding, expanding, or editing any Midas rule, contract, reference, template, schema, doc, eval requirement, or command-local instruction, Midas must answer the Contract Authority Check.
 
-If MIDAS cannot answer the check, it must stop and ask before patching.
+If Midas cannot answer the check, it must stop and ask before patching.
 
 ## Required Contract Authority Check
 
@@ -317,7 +317,7 @@ Secondary law includes:
 - archived incident notes treated as current instructions
 - duplicated global rules that drift from the authoritative file
 
-When secondary law is found, MIDAS should propose one of:
+When secondary law is found, Midas should propose one of:
 
 - point to the existing global rule
 - promote the reusable rule to `rules/`
@@ -345,7 +345,7 @@ If a reference contains reusable cross-command behavior, promote the reusable pa
 
 Hermes may create skills, references, lessons, notes, support files, or migration files during command work.
 
-These files are not automatically active MIDAS policy.
+These files are not automatically active Midas policy.
 
 Auto-created files are Draft / Unpromoted by default unless they pass this promotion gate.
 
@@ -357,7 +357,7 @@ This rule exists to prevent:
 - Command-local references duplicating global policy
 - Hidden rule systems inside references/
 - Contradictory output, source, metric, artifact, scoring, classification, or registry behavior
-- Auto-created maintenance files changing MIDAS behavior without review
+- Auto-created maintenance files changing Midas behavior without review
 
 ### Authority Principle
 
@@ -373,7 +373,7 @@ The following do not make a file authoritative by themselves:
 - It captures a runtime lesson from one ticker or one command test.
 - It was created as part of a migration or refactor.
 
-Active MIDAS behavior must come from one of these approved locations:
+Active Midas behavior must come from one of these approved locations:
 
 - `rules/` for shared runtime behavior
 - A command `SKILL.md` for command workflow, routing, inputs, and command boundaries
@@ -385,11 +385,11 @@ Active MIDAS behavior must come from one of these approved locations:
 
 ### Guard Agent Role
 
-When maintaining MIDAS files, the Guard Agent role is to reduce rule surface area, not create more of it.
+When maintaining Midas files, the Guard Agent role is to reduce rule surface area, not create more of it.
 
-Before creating, linking, promoting, or retaining any auto-created skill/reference/support file, MIDAS must ask:
+Before creating, linking, promoting, or retaining any auto-created skill/reference/support file, Midas must ask:
 
-1. Is this file solving a recurring MIDAS problem, not just documenting one session?
+1. Is this file solving a recurring Midas problem, not just documenting one session?
 2. Is it command-local, or does it apply across commands?
 3. Does an existing global rule, command skill, output contract, template, doc, or eval already cover this?
 4. Does it introduce new behavior, or only examples/support?
@@ -439,7 +439,7 @@ For a doc/template/schema:
 
 ### Prohibited Auto-Promotion
 
-MIDAS must not auto-promote:
+Midas must not auto-promote:
 
 - A new `SKILL.md` created only to manage other skills or references.
 - A reference file that defines global policy.
@@ -485,14 +485,14 @@ Do not create a new file when a smaller patch to an existing file is enough.
 Any retained command-local reference that touches shared behavior should begin with a notice like:
 
 ```text
-This is a command-local support reference. It is not a global MIDAS policy. If this file conflicts with the applicable files listed in `rules/GLOBAL.md` under Shared Rule Library, the global rule files control.
+This is a command-local support reference. It is not a global Midas policy. If this file conflicts with the applicable files listed in `rules/GLOBAL.md` under Shared Rule Library, the global rule files control.
 ```
 
 Use a narrower notice when only one or two global rule files are relevant.
 
 ### Conflict Rule
 
-If an auto-created skill, reference, note, or migration file conflicts with an active MIDAS rule or command contract:
+If an auto-created skill, reference, note, or migration file conflicts with an active Midas rule or command contract:
 
 1. Do not follow the conflicting file as policy.
 2. Treat the conflict as drift.
@@ -502,11 +502,11 @@ If an auto-created skill, reference, note, or migration file conflicts with an a
 
 ### Self-Improvement Write Gate
 
-MIDAS may notice reusable lessons during research, maintenance, audits, regressions, or command work, but noticing a lesson is not permission to change architecture.
+Midas may notice reusable lessons during research, maintenance, audits, regressions, or command work, but noticing a lesson is not permission to change architecture.
 
-Do not create, patch, promote, link, or reorganize MIDAS skills, rules, contracts, active references, templates, schemas, docs, or evals as a self-improvement action unless the user explicitly asks for that change or explicitly confirms it after it is proposed.
+Do not create, patch, promote, link, or reorganize Midas skills, rules, contracts, active references, templates, schemas, docs, or evals as a self-improvement action unless the user explicitly asks for that change or explicitly confirms it after it is proposed.
 
-During read-only audits, MIDAS must not perform self-improvement writes. In read-only mode, self-improvement should be limited to a recommendation in the final response.
+During read-only audits, Midas must not perform self-improvement writes. In read-only mode, self-improvement should be limited to a recommendation in the final response.
 
 If a lesson would affect command behavior, output shape, routing, source standards, scoring, classifications, artifacts, watchlist behavior, or maintenance architecture, treat it as an architecture change and route it through the Contract Authority Check before editing.
 
@@ -527,7 +527,7 @@ A new skill is allowed only when the user explicitly asks for or confirms the ne
 
 ### Maintenance Sweep Rule
 
-During MIDAS maintenance, refactors, migrations, or command activation work, check for newly created or recently modified skill/reference/support files.
+During Midas maintenance, refactors, migrations, or command activation work, check for newly created or recently modified skill/reference/support files.
 
 For each suspicious file, decide:
 
@@ -543,11 +543,11 @@ Do not leave many narrow near-duplicate files active by default.
 
 ### Promotion Gate Final Rule
 
-MIDAS should learn from repeated failures, but learning should make the system smaller, clearer, and more reliable.
+Midas should learn from repeated failures, but learning should make the system smaller, clearer, and more reliable.
 
 Auto-created files are notes until promoted.
 
-References support commands; they do not govern MIDAS.
+References support commands; they do not govern Midas.
 
 Global behavior belongs in global rules.
 
@@ -557,7 +557,7 @@ Command behavior belongs in command skills and command output contracts.
 
 ## Maintenance Behavior
 
-When maintaining MIDAS contracts, prefer this order:
+When maintaining Midas contracts, prefer this order:
 
 1. point to existing global rule
 2. create or update a global rule if the behavior is shared
@@ -570,6 +570,6 @@ Do not create a new command-local contract just because it is faster.
 
 ## Final Rule
 
-Every MIDAS rule should have one authoritative home.
+Every Midas rule should have one authoritative home.
 
 The command files may specialize, but they must not become hidden global law.

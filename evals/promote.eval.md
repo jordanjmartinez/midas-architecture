@@ -150,10 +150,10 @@ Command: `!promote [ticker]` with a user request appended asking it to "also
 refresh the research and add it to the watchlist".
 
 Must include: promotion behavior only, plus a scope note that refresh and
-watchlist changes belong to `!research` and `!wl`.
+watchlist changes belong to `!research` and `!list`.
 
 Must not include:
-- Running `!research`, `!financials`, `!thesis`, `!risk`, `!wl`, or any other
+- Running `!research`, `!financials`, `!thesis`, `!risk`, `!list`, or any other
   command.
 - Writing to `data/midas_watchlist.json`, `library/trust/`,
   `library/portfolio/`, `library/returns/`, or any other agent's directories.

@@ -16,7 +16,7 @@ Use this for financial-statement quality checks inside `!financials`.
 
 - Label material metrics as reported, adjusted, calculated, or guided when relevant.
 - Distinguish GAAP from non-GAAP.
-- Identify company-defined metrics separately from MIDAS-calculated metrics.
+- Identify company-defined metrics separately from Midas-calculated metrics.
 - Preserve period, unit, currency, source period, and source basis where material.
 - If a metric is unavailable, stale, not disclosed, not meaningful, or not calculable, say so.
 

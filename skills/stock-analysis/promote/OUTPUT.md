@@ -1,4 +1,4 @@
-# MIDAS Command Output Contract: !promote
+# Midas Command Output Contract: !promote
 
 This file owns the visible output shapes and the promotion artifact shapes for
 `!promote`. Shared display standards inherit from `rules/OUTPUT.md`. Packet
@@ -8,7 +8,7 @@ does not redefine it.
 ## Standard Success Output
 
 ```md
-Promotion Registered: [COMPANY NAME] ($[TICKER])
+📤 [Display Name] ($[TICKER]) | Promotion Registered
 
 Registered: library/registry/promotions/[ticker]/[YYYY-MM-DD]/
 Score: [n]/100 | Classification: [primary] | Evidence: [A-D]
@@ -66,9 +66,10 @@ artifact was written.
 Header block first:
 
 ```md
-# Promotion Packet: [Company Name] ($[TICKER])
+# 📤 [Display Name] ($[TICKER]) | Promotion Packet
 
 Producer: midas | Produced: [ISO date-time]
+Legal entity: [Company Name]
 Score: [n]/100 | Classification: [primary; modifiers] | Evidence: [A-D]
 Artifact as-of: research [date] | financials [date] | thesis [date] | risk [date]
 Framing: research only. This packet contains no trade instructions.
@@ -89,7 +90,7 @@ Then, in order (inherited from the promote seed template in
 10. Final Research View
 11. Sources
 
-The packet must be self-contained: downstream agents never read the MIDAS
+The packet must be self-contained: downstream agents never read the Midas
 workspace, so nothing in the packet may depend on it. Final Research View
 stays within research framing per `rules/GLOBAL.md`: setup quality and
 evidence assessment, never a trade call.
@@ -100,7 +101,7 @@ Conforms to `library/schemas/promotion-packet.schema.json`. The `ticker`
 field is the only value downstream agents may ever treat as an executable
 parameter, per `library/LIBRARY.md`.
 
-## promotion.md (MIDAS workspace record)
+## promotion.md (Midas workspace record)
 
 ```md
 # [TICKER] Promotion Record

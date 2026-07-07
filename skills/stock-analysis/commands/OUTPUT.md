@@ -4,7 +4,7 @@
 
 `OUTPUT.md` defines the user-facing display contract for `!commands`.
 
-`!commands` is a menu-only command. It shows the registered MIDAS command menu and does not run research, perform lookup, write artifacts, classify, score, calculate metrics, or give recommendations.
+`!commands` is a menu-only command. It shows the registered Midas command menu and does not run research, perform lookup, write artifacts, classify, score, calculate metrics, or give recommendations.
 
 ## Authority
 
@@ -45,7 +45,7 @@ Do not use `!help` as a trigger. `!help` is intentionally unsupported to avoid T
 
 - analyze a company;
 - fetch filings, market data, earnings, disclosures, or news;
-- run another MIDAS command;
+- run another Midas command;
 - create, modify, or delete artifacts;
 - modify the watchlist;
 - classify a setup;
@@ -82,7 +82,7 @@ Return the menu in this grouping and order.
 Use concise descriptions. Show status labels as `Active`, `Draft`, or `Planned`. Show artifact behavior as `writes artifacts`, `may write artifacts`, or `no artifacts`.
 
 ```md
-# MIDAS Commands
+# Midas Commands
 
 ## Core Research
 
@@ -120,8 +120,9 @@ Variants: `!track show`, `!track profile [person name]`, `!track positions [pers
 
 ## Watchlist / System
 
-`!wl add [ticker]` — Draft — Add a ticker to the watchlist. Writes artifacts.
-Variants: `!wl rm [ticker]`, `!wl show`, `!wl updates`, `!wl updates [ticker]`
+`!list add [ticker]` — Draft — Add a ticker to the watchlist. Writes artifacts.
+Variants: `!list rm [ticker]`, `!list show`, `!list updates`, `!list updates [ticker]`
+Aliases: `!watchlist`, `!wl`
 
 `!commands` — Active — Show this menu. No artifacts.
 
@@ -131,7 +132,7 @@ Variants: `!wl rm [ticker]`, `!wl show`, `!wl updates`, `!wl updates [ticker]`
 - Bang command names are case-insensitive; display them lowercase.
 - `!commands` is menu-only for now; command lookup is deferred.
 - Use `!commands`, not `!help`.
-- MIDAS outputs are research aids, not Buy/Hold/Sell recommendations.
+- Midas outputs are research aids, not Buy/Hold/Sell recommendations.
 ```
 
 ## Display Rules

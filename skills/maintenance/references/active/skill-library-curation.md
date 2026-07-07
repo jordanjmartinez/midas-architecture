@@ -1,10 +1,10 @@
 # Skill Library Curation Playbook
 
-Use this when maintaining MIDAS skills after a session or after restructuring a maintenance skill.
+Use this when maintaining Midas skills after a session or after restructuring a maintenance skill.
 
 ## Core rule
 
-MIDAS skills should be class-level operating contracts, not session logs. Preserve lessons, but do not promote every patch note, regression, activation, or incident into active routing law.
+Midas skills should be class-level operating contracts, not session logs. Preserve lessons, but do not promote every patch note, regression, activation, or incident into active routing law.
 
 When the user explicitly constrains available tools for a skill-library review, obey that constraint first. If only memory and skill-management tools are allowed, do not inspect the filesystem, run commands, or verify with unrelated tools; use `skill_view`, `skills_list`, `skill_manage`, and memory only.
 

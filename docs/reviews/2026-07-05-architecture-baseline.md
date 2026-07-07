@@ -1,4 +1,4 @@
-# MIDAS Architecture Baseline Review
+# Midas Architecture Baseline Review
 
 Status: Approved as architecture baseline (Jordan, 2026-07-05)
 Reviewer: Claude, external architecture and direction review
@@ -16,7 +16,7 @@ templates, tools, and the eval suite.
 ## Authority Notice
 
 This document is a findings tracker and design record. Per `rules/CONTRACT_AUTHORITY.md`,
-docs must not contain hidden runtime rules. Nothing in this file is active MIDAS policy.
+docs must not contain hidden runtime rules. Nothing in this file is active Midas policy.
 Every remediation listed here must be applied through the normal Contract Authority
 process (Contract Authority Check, correct authority layer, eval coverage where relevant)
 before it changes behavior.
@@ -52,7 +52,7 @@ than the constitution that governs them. Nothing requires redesign.
 | 1.2 | P1       | Global            | `schemas/` is a ghost layer                                   | In Progress | layer established; shape migrations pending |
 | 1.3 | P1       | Global            | Two overlapping governance systems                            | Closed | P1 fixes commit |
 | 2.3 | P2       | Commands          | `!full` lacks OUTPUT.md and eval coverage                     | Closed | P2: removed entirely; template preserved as promote seed; !promote registered Planned |
-| 2.4 | P2       | Commands          | Legacy filing-backed skill claims MIDAS command triggers      | Closed | found post-baseline; routing note added in P2 fixes |
+| 2.4 | P2       | Commands          | Legacy filing-backed skill claims Midas command triggers      | Closed | found post-baseline; routing note added in P2 fixes |
 | 1.4 | P2       | Global            | RERATING.md is Draft but mandatory                            | Closed | P2 fixes commit |
 | 4.2 | P2       | Artifacts         | Second data store not enumerated globally                     | Closed | P2 fixes commit |
 | 6.1 | P2       | Evals             | Verify earnings/updates mode-routing eval coverage            | Closed | verified: no output modes; explicit declaration added |
@@ -72,7 +72,7 @@ than the constitution that governs them. Nothing requires redesign.
 
 Evidence: CONTRACT_AUTHORITY.md defines these layers: rules, SKILL.md, OUTPUT.md, evals,
 docs, templates, schemas, references, references/archive. It never defines `contracts/`.
-Meanwhile `tracker/contracts/fund-manager.md` (107KB, largest file in MIDAS),
+Meanwhile `tracker/contracts/fund-manager.md` (107KB, largest file in Midas),
 `tracker/contracts/politician.md` (60KB), and `gems/contracts/hidden-gems.md` (26KB) hold
 about 194KB of the densest behavioral law in the system. The gems contract self-remedies
 with an explicit Authority Boundaries section (owns / does not own) and path deferrals to
@@ -275,7 +275,7 @@ These are working as designed and should not be casually refactored:
 4. P3 set: batchable in a single hygiene commit.
 
 Every change routes through the Contract Authority Check and receives eval coverage where
-it prevents a regression, per existing MIDAS doctrine.
+it prevents a regression, per existing Midas doctrine.
 
 ---
 
@@ -299,7 +299,7 @@ Status log:
   Planned in the registry, replacing the !full row. All 117 live-surface
   references were removed or rewritten (enumeration drops, suggestion rewrites
   to the four-command path, eval routing updates); dated historical reference
-  files were left untouched as records. New finding 2.4 closed via a MIDAS
+  files were left untouched as records. New finding 2.4 closed via a Midas
   Routing Note in the legacy filing-backed skill. 1.4 closed: RERATING
   promoted to Active. 4.2 closed: both data stores enumerated in ARTIFACTS.
   6.1 closed: earnings and updates declare no output modes. Remaining open:

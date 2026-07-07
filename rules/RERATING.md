@@ -1,4 +1,4 @@
-# MIDAS Rerating / Setup Standards
+# Midas Rerating / Setup Standards
 
 ## Status
 
@@ -8,9 +8,9 @@ Promoted from Draft on 2026-07-05. This file was already binding in practice: `r
 
 ## Purpose
 
-Define MIDAS standards for stock setup, expectations, rerating stage, and valuation/rerating risk.
+Define Midas standards for stock setup, expectations, rerating stage, and valuation/rerating risk.
 
-This file should help MIDAS separate:
+This file should help Midas separate:
 
 - business quality,
 - financial quality,
@@ -125,7 +125,7 @@ Define the following stages as setup interpretation, not recommendations:
 
 ## Setup Quality Questions
 
-When a command evaluates setup or rerating, MIDAS should ask:
+When a command evaluates setup or rerating, Midas should ask:
 
 - What has changed?
 - What is the market likely starting to underwrite?
@@ -242,11 +242,11 @@ Preferred language:
 ## Future Chart / Technical-Analysis Boundary
 
 A future chart-analysis agent, chart command, or technical-analysis layer may analyze technical structure, support/resistance, trend, volume, momentum, and timing context.
-MIDAS may use chart/market behavior only as separate market-context evidence when explicitly relevant.
+Midas may use chart/market behavior only as separate market-context evidence when explicitly relevant.
 
-Chart or technical signals must not determine MIDAS business quality, financial quality, thesis validity, source confidence, or filing-backed setup classification by themselves.
+Chart or technical signals must not determine Midas business quality, financial quality, thesis validity, source confidence, or filing-backed setup classification by themselves.
 
-MIDAS setup classification should remain evidence-aware and filing-first.
+Midas setup classification should remain evidence-aware and filing-first.
 
 ## Relationship to Other Rules
 

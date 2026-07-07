@@ -1,6 +1,6 @@
 # Global Rule Reference Audit Playbook
 
-Use this when the user asks for a read-only audit of MIDAS global rules, rule references, pointer accuracy, bloat, or spiderweb risk.
+Use this when the user asks for a read-only audit of Midas global rules, rule references, pointer accuracy, bloat, or spiderweb risk.
 
 ## Purpose
 

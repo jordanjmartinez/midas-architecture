@@ -10,7 +10,7 @@ metadata:
     related_skills: [research, financials, risk, earnings, full]
 ---
 
-# MIDAS Command Skill — !thesis
+# Midas Command Skill — !thesis
 
 ## Command References
 
@@ -66,7 +66,7 @@ Do not use this command when:
 - The user wants only financial-statement or metric-quality review. Use or suggest `!financials`.
 - The user wants downside-only pressure testing. Use or suggest `!risk`.
 - The user wants latest-quarter review. Use or suggest `!earnings`.
-- The user wants a complete MIDAS packet with full scoring/classification. Suggest completing `!research`, `!financials`, and `!risk` so the four core artifacts form the packet.
+- The user wants a complete Midas packet with full scoring/classification. Suggest completing `!research`, `!financials`, and `!risk` so the four core artifacts form the packet.
 - The user wants hidden-gem discovery or ranking. Use or suggest `!gems`.
 - The user asks what to buy/sell/hold, asks for a price target, or asks for position sizing. Reframe as research only.
 
@@ -283,7 +283,7 @@ Use this workflow for:
    - `updates.md`
    - `full.md`
 9. Treat workspace artifacts as secondary synthesis inputs only. Primary filings and official disclosures remain authoritative. Do not create missing workspace artifacts unless the user explicitly asks.
-10. Separate reported facts, management claims, MIDAS interpretation, and unproven assumptions.
+10. Separate reported facts, management claims, Midas interpretation, and unproven assumptions.
 11. Separate current evidence from future assumptions.
 12. Define the long-term thesis as a possibility, not a guaranteed outcome.
 13. Identify what must be true for the thesis to work.
@@ -643,7 +643,7 @@ Follow shared output standards:
 
 Default `!thesis [ticker/company]` must use the mandatory normal template in `OUTPUT.md` as the source of truth. The required section order is:
 
-1. Report title: `# 🏛 [TICKER] | [Company Name] Thesis`
+1. Report title: `# 🏛 [Display Name] ($[TICKER]) | Thesis`
 2. `## Introduction`
 3. `## Summary`
 4. `## Core Thesis`
@@ -665,7 +665,7 @@ Default `!thesis [ticker/company]` must use the mandatory normal template in `OU
 
 Default `!thesis update [ticker/company]` must use the mandatory update template in `OUTPUT.md` as the source of truth. The required section order is:
 
-1. Report title: `# 🏛 [TICKER] | [Company Name] Thesis`
+1. Report title: `# 🏛 [Display Name] ($[TICKER]) | Thesis`
 2. `## Introduction`
 3. `## Summary`
 4. `## Update Notes`
@@ -786,7 +786,7 @@ No artifact should be saved.
 - define 3–6 thesis pillars when useful,
 - separate facts from interpretations,
 - separate current evidence from future assumptions,
-- separate reported facts, management claims, MIDAS interpretation, and unproven assumptions,
+- separate reported facts, management claims, Midas interpretation, and unproven assumptions,
 - identify what must be true,
 - identify what remains unproven,
 - include catalysts or milestones,

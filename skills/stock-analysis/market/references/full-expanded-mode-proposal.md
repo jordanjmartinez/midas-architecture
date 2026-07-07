@@ -18,7 +18,7 @@ Do not include valuation multiples by default unless every denominator is cleanl
 ## Current Output Shape
 
 ```md
-[TICKER] | [Company Name] Full Market Snapshot
+[Display Name] ($[TICKER]) Full Market Snapshot
 As of: [human-readable timestamp]
 Source: [provider]
 

@@ -1,6 +1,6 @@
-# MIDAS Command Maintenance Reference
+# Midas Command Maintenance Reference
 
-Use this reference when changing MIDAS stock-analysis command wording, aliases, workspace artifact behavior, or adding a new MIDAS command skill.
+Use this reference when changing Midas stock-analysis command wording, aliases, workspace artifact behavior, or adding a new Midas command skill.
 
 ## Command menu rules
 
@@ -21,12 +21,12 @@ When the user asks for a status-only sync patch after activation or audit:
 1. Respect the scoped file list exactly. If they name only `skills/stock-analysis/commands/OUTPUT.md` and `evals/commands.eval.md`, do not edit the registry, owning command skills, tracker files, watchlists, or workspace artifacts.
 2. Patch only stale display/eval metadata such as `Draft` -> `Active`; do not change command behavior, aliases, artifact wording, lookup behavior, or menu grouping unless explicitly requested.
 3. Keep `!commands` menu-only: lookup remains deferred, `!help` remains unsupported, no research execution is added, and no artifact behavior is introduced.
-4. Verify with scoped checks: inspect the two allowed files for the expected status labels and run `git diff --check -- skills/stock-analysis/commands/OUTPUT.md evals/commands.eval.md` from the MIDAS profile root.
+4. Verify with scoped checks: inspect the two allowed files for the expected status labels and run `git diff --check -- skills/stock-analysis/commands/OUTPUT.md evals/commands.eval.md` from the Midas profile root.
 5. In the final response, report files changed, exact status-sync updates, behavior unchanged, tracker/watchlists/artifacts untouched, and the scoped `git diff --check` result.
 
 ## Adding a new stock-analysis command skill
 
-When the user asks to create a new MIDAS command skill:
+When the user asks to create a new Midas command skill:
 
 1. Create the skill under `skills/stock-analysis/[name]/SKILL.md` unless the user specifies a different path.
 2. If the supplied frontmatter description contains colons, dollar ranges, brackets, or long punctuation-heavy text, use a YAML folded scalar:
@@ -67,7 +67,7 @@ When the user asks to create a new MIDAS command skill:
 
 - Do not change watchlist storage or JSON schema unless explicitly asked.
 - Watchlist storage remains `data/midas_watchlist.json`.
-- Command wording changes like `!wl check` -> `!wl updates` should not modify `!wl add`, `!wl rm`, or `!wl show` behavior.
+- Command wording changes like `!list check` -> `!list updates` should not modify `!list add`, `!list rm`, or `!list show` behavior.
 - Watchlist update scans should stay short and should not trigger full research, financials, thesis, risk, earnings, or full memo unless explicitly asked.
 
 ## Workspace artifact commands
@@ -77,7 +77,7 @@ When the user asks to create a new MIDAS command skill:
 - Overwrite the same analysis file by default unless the user asks to preserve versions.
 - End saved-artifact responses with the short confirmation line: `Saved to: workspace/tickers/[ticker]/[file].md`.
 - Discovery artifacts such as `!gems` save under `workspace/gems/[file].md` and should remain research candidates, not recommendations.
-- `!gems` candidates must not be added to the watchlist automatically; the user chooses manually with `!wl add [ticker]`.
+- `!gems` candidates must not be added to the watchlist automatically; the user chooses manually with `!list add [ticker]`.
 
 ## Verification commands
 

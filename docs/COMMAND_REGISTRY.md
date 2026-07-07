@@ -1,8 +1,8 @@
-# MIDAS Command Registry
+# Midas Command Registry
 
 ## Purpose
 
-COMMAND_REGISTRY.md is the human-readable index of MIDAS commands.
+COMMAND_REGISTRY.md is the human-readable index of Midas commands.
 
 It answers:
 
@@ -85,7 +85,7 @@ Deprecated commands should point to the replacement command when possible.
 
 # Aliases vs Subcommands
 
-Aliases are alternate top-level triggers for the same command. Subcommands and argument forms (for example `!wl rm` or `!track rm`) are not aliases; they are documented in the command `SKILL.md`.
+Aliases are alternate top-level triggers for the same command. Subcommands and argument forms (for example `!list rm` or `!track rm`) are not aliases; they are documented in the command `SKILL.md`.
 
 # Command Categories
 
@@ -109,7 +109,7 @@ Recommended categories:
 
 | Command | Aliases | Category | Status | Purpose | Skill Path | Output Path | Eval File | Classification | Scoring | Metrics | Artifacts |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| `!commands` | None | Command Menu | Active | Show available MIDAS commands and when to use each one. | `skills/stock-analysis/commands/SKILL.md` | `skills/stock-analysis/commands/OUTPUT.md` | `evals/commands.eval.md` | Not used | Not used | Not used | No |
+| `!commands` | None | Command Menu | Active | Show available Midas commands and when to use each one. | `skills/stock-analysis/commands/SKILL.md` | `skills/stock-analysis/commands/OUTPUT.md` | `evals/commands.eval.md` | Not used | Not used | Not used | No |
 | `!gems` | None | Stock Discovery | Draft | Find and rank underdiscovered research candidates. | `skills/stock-analysis/gems/SKILL.md` | `skills/stock-analysis/gems/OUTPUT.md` | `evals/gems.eval.md` | Required | Required | Optional | Yes |
 | `!track` | `!show track` | Disclosure Tracking | Active | Analyze politician or fund-manager disclosures and surface research leads. | `skills/stock-analysis/tracker/SKILL.md` | `skills/stock-analysis/tracker/OUTPUT.md` | `evals/tracker.eval.md` | Required | Optional | Optional | Optional |
 | `!research` | `/research`, `research` | Company Research | Active | Produce filing-backed business-model research for a company or ticker, covering monetization, segments, customers, geography, recurrence, pricing power, cyclicality, recent business trends, and key filing-backed risks. | `skills/stock-analysis/research/SKILL.md` | `skills/stock-analysis/research/OUTPUT.md` | `evals/research.eval.md` | Optional | Optional | Optional | Yes |
@@ -119,9 +119,9 @@ Recommended categories:
 | `!promote` | `/promote` | Full Report | Draft | Promote a ticker's completed research set to the Pathos Library: eligible when `research.md`, `financials.md`, `thesis.md`, and `risk.md` exist and are fresh; synthesizes the handoff packet, registers it via `library/tools/register_packet.py`, and records the promotion in the workspace. Governed by `library/LIBRARY.md`. Replaces the removed `!full`. | `skills/stock-analysis/promote/SKILL.md` | `skills/stock-analysis/promote/OUTPUT.md` | `evals/promote.eval.md` | Required | Required | Optional | Yes |
 | `!earnings` | `/earnings`, `earnings review` | Earnings / Updates | Active | Review latest-quarter earnings, guidance, financial changes, thesis impact, risk update, and next-quarter watch metrics. | `skills/stock-analysis/earnings/SKILL.md` | `skills/stock-analysis/earnings/OUTPUT.md` | `evals/earnings.eval.md` | Optional | Not used | Required | Yes |
 | `!updates` | None | Earnings / Updates | Active | Summarize recent material company updates and separate material changes from noise. | `skills/stock-analysis/updates/SKILL.md` | `skills/stock-analysis/updates/OUTPUT.md` | `evals/updates.eval.md` | Optional | Not used | Optional | Yes |
-| `!wl` | `!watchlist`, `!list` | Watchlist / Artifacts | Active | Manage the persistent MIDAS stock watchlist and run short watchlist update checks. Subcommands (`add`, `rm`, `show`, `updates`) work under any alias and are defined in the SKILL. | `skills/stock-analysis/wl/SKILL.md` | `skills/stock-analysis/wl/OUTPUT.md` | `evals/wl.eval.md` | Not used | Not used | Optional | Yes |
+| `!list` | `!watchlist`, `!wl` | Watchlist / Artifacts | Active | Manage the persistent Midas stock watchlist and run short watchlist update checks. Subcommands (`add`, `rm`, `show`, `updates`) work under any alias and are defined in the SKILL. | `skills/stock-analysis/list/SKILL.md` | `skills/stock-analysis/list/OUTPUT.md` | `evals/list.eval.md` | Not used | Not used | Optional | Yes |
 | `!market` | None | System / Utility | Active | Return a compact read-only live market-data snapshot for a ticker with price, market cap when available, change, volume/exchange when available, source, as-of timestamp, and compact limitations; full/debug modes are explicit only; no artifacts, classification, scoring, recommendations, price targets, sizing, or trade advice. | `skills/stock-analysis/market/SKILL.md` | `skills/stock-analysis/market/OUTPUT.md` | `evals/market.eval.md` | Not used | Not used | Optional | No |
-| `maintenance` | None | System / Utility | Active | Govern MIDAS profile maintenance: audits, refactors, registry/eval/rule cleanup, staged plans with approval gates, exact-scope edits, and verification. Skill trigger; no `!` command syntax. Edits MIDAS profile files under its maintenance contracts; does not write workspace research artifacts. | `skills/maintenance/SKILL.md` | `skills/maintenance/OUTPUT.md` | `evals/maintenance.eval.md` | Not used | Not used | Not used | No |
+| `maintenance` | None | System / Utility | Active | Govern Midas profile maintenance: audits, refactors, registry/eval/rule cleanup, staged plans with approval gates, exact-scope edits, and verification. Skill trigger; no `!` command syntax. Edits Midas profile files under its maintenance contracts; does not write workspace research artifacts. | `skills/maintenance/SKILL.md` | `skills/maintenance/OUTPUT.md` | `evals/maintenance.eval.md` | Not used | Not used | Not used | No |
 
 ---
 
@@ -191,7 +191,7 @@ If any of these fail, the registry is stale.
 
 # Future Automation
 
-Later, MIDAS may add a script that scans command `SKILL.md` metadata blocks and regenerates this registry automatically.
+Later, Midas may add a script that scans command `SKILL.md` metadata blocks and regenerates this registry automatically.
 
 Possible future path:
 

@@ -1,6 +1,6 @@
 # `!earnings` Staged Fixture / Limited Live Test Notes
 
-Use this reference when maintaining or validating the MIDAS `!earnings` command after output-contract or eval changes.
+Use this reference when maintaining or validating the Midas `!earnings` command after output-contract or eval changes.
 
 ## Formatting-only fixture test pattern
 
@@ -12,7 +12,7 @@ Use this reference when maintaining or validating the MIDAS `!earnings` command 
 
 ## Limited live test pattern
 
-- Run exactly the requested ticker and period scope; do not run other MIDAS commands as follow-ups.
+- Run exactly the requested ticker and period scope; do not run other Midas commands as follow-ups.
 - Retrieve only the sources needed for the one test.
 - Save/replace `workspace/tickers/[ticker]/earnings.md` only when the review completes successfully and the command contract requires saving.
 - After writing, verify the artifact exists, the canonical path is used, no legacy `workspace/[ticker]/earnings.md` path was used, no `updates.md` write occurred, and watchlist files were not modified.

@@ -1,18 +1,18 @@
-# `!wl` Command Eval
+# `!list` Command Eval
 
 Status: Active
-Command under test: `!wl`
+Command under test: `!list`
 Alias families under test: `!watchlist`, `!list`
-Primary skill: `skills/stock-analysis/wl/SKILL.md`
-Output contract: `skills/stock-analysis/wl/OUTPUT.md`
-Registry row: `docs/COMMAND_REGISTRY.md` → `!wl`
+Primary skill: `skills/stock-analysis/list/SKILL.md`
+Output contract: `skills/stock-analysis/list/OUTPUT.md`
+Registry row: `docs/COMMAND_REGISTRY.md` → `!list`
 Watchlist source of truth: `data/midas_watchlist.json`
 
 ## Purpose
 
-Verify that `!wl` safely manages the persistent MIDAS stock watchlist and performs short watchlist update scans without becoming a research command or corrupting watchlist state.
+Verify that `!list` safely manages the persistent Midas stock watchlist and performs short watchlist update scans without becoming a research command or corrupting watchlist state.
 
-`!wl` should answer:
+`!list` should answer:
 
 - What was added, removed, or shown?
 - Was the watchlist source-of-truth JSON preserved?
@@ -21,26 +21,26 @@ Verify that `!wl` safely manages the persistent MIDAS stock watchlist and perfor
 
 It must not become a deep research report, discovery screen, thesis, risk memo, financial review, earnings review, trading recommendation, or automatic watchlist importer from other commands.
 
-`!watchlist` and `!list` are approved full alias families for `!wl`; their add/rm/show/updates variants must follow the same behavior, output, mutation, and artifact rules as the matching `!wl` variant.
+`!watchlist` and `!list` are approved full alias families for `!list`; their add/rm/show/updates variants must follow the same behavior, output, mutation, and artifact rules as the matching `!list` variant.
 
 ## Global Eval Inheritance
 
-`!wl` inherits MIDAS-wide requirements from:
+`!list` inherits Midas-wide requirements from:
 
 - `rules/GLOBAL.md`
 - `rules/OUTPUT.md`
 - `rules/SOURCES.md` for update scans and ticker/company identity resolution
-- `rules/ARTIFACTS.md` when `!wl updates` writes `workspace/tickers/[normalized-lowercase-ticker]/updates.md`
+- `rules/ARTIFACTS.md` when `!list updates` writes `workspace/tickers/[normalized-lowercase-ticker]/updates.md`
 - `rules/METRICS.md` when update output displays price, market, financial, guidance, valuation, or other metric data
 
 The command-specific evals below do not replace global guardrails. If global and command-specific requirements conflict, treat the stricter no-hype, no-recommendation, source-backed, artifact-truthfulness, and state-preservation rule as authoritative and flag the conflict for cleanup.
 
 ## Files Under Test
 
-- `skills/stock-analysis/wl/SKILL.md`
-- `skills/stock-analysis/wl/OUTPUT.md`
-- `evals/wl.eval.md`
-- `docs/COMMAND_REGISTRY.md` — `!wl` row only
+- `skills/stock-analysis/list/SKILL.md`
+- `skills/stock-analysis/list/OUTPUT.md`
+- `evals/list.eval.md`
+- `docs/COMMAND_REGISTRY.md` — `!list` row only
 - `data/midas_watchlist.json` — fixture or controlled test copy only unless live mutation is explicitly approved
 - `rules/GLOBAL.md`
 - `rules/OUTPUT.md`
@@ -54,7 +54,7 @@ The command-specific evals below do not replace global guardrails. If global and
 - Creating, deleting, or modifying real ticker workspace artifacts.
 - Running `!research`, `!financials`, `!thesis`, `!risk`, `!earnings`, `!gems`, or `!track`.
 - Status changes outside explicitly approved activation patches.
-- Changing registry metadata outside the `!wl` row.
+- Changing registry metadata outside the `!list` row.
 - Changing the watchlist JSON schema.
 
 ## Critical-Fail Rule
@@ -72,8 +72,8 @@ Any of the following is a P0 failure:
 - Ticker stored or displayed with malformed `$` formatting such as `$$RKLB`.
 - Watchlist mutation without explicit user request.
 - Auto-add from `!gems`, `!track`, `!research`, or another command.
-- Deep research report created from `!wl add`, `!wl rm`, or `!wl show`.
-- `!wl updates` becomes a full research, financials, risk, thesis, earnings, or full report.
+- Deep research report created from `!list add`, `!list rm`, or `!list show`.
+- `!list updates` becomes a full research, financials, risk, thesis, earnings, or full report.
 - False artifact save claim.
 - Wrong artifact path.
 - `Saved to:` shown when no artifact was written.
@@ -107,17 +107,17 @@ Any of the following is a P0 failure:
 
 ### wl-add-001-success
 
-Purpose: Verify that `!wl add [ticker]` adds one normalized watchlist entry and returns the approved short output.
+Purpose: Verify that `!list add [ticker]` adds one normalized watchlist entry and returns the approved short output.
 
 Fixture shape:
 
-- User asks `!wl add RKLB` or equivalent.
+- User asks `!list add RKLB` or equivalent.
 - Controlled watchlist fixture does not already contain RKLB.
 - Company identity can be resolved confidently.
 
 Must include:
 
-- `Added to Watchlist: [Company Name] ($TICKER)`
+- `📋 Added to Watchlist: [Display Name] ($[TICKER])`
 - `Status: Monitoring`
 - `Date Added: [YYYY-MM-DD]`
 - one normalized ticker with exactly one leading `$`
@@ -134,7 +134,7 @@ Pass criteria:
 
 - Exactly one new watchlist entry is added in the controlled fixture.
 - Existing entries remain unchanged.
-- Output matches `skills/stock-analysis/wl/OUTPUT.md`.
+- Output matches `skills/stock-analysis/list/OUTPUT.md`.
 
 ### wl-add-002-duplicate
 
@@ -147,7 +147,7 @@ Fixture shape:
 
 Must include:
 
-- `Already on Watchlist: [Company Name] ($TICKER)`
+- `📋 Already on Watchlist: [Display Name] ($[TICKER])`
 - existing status
 - existing date added when available
 
@@ -187,7 +187,7 @@ Pass criteria:
 
 ### wl-rm-004-success
 
-Purpose: Verify that `!wl rm [ticker]` removes a matching watchlist entry and returns the approved short output.
+Purpose: Verify that `!list rm [ticker]` removes a matching watchlist entry and returns the approved short output.
 
 Fixture shape:
 
@@ -195,7 +195,7 @@ Fixture shape:
 
 Must include:
 
-- `Removed from Watchlist: [Company Name] ($TICKER)`
+- `📋 Removed from Watchlist: [Display Name] ($[TICKER])`
 
 Must not include:
 
@@ -233,7 +233,7 @@ Pass criteria:
 
 ### wl-show-006-display
 
-Purpose: Verify that `!wl show` displays the watchlist without mutation.
+Purpose: Verify that `!list show` displays the watchlist without mutation.
 
 Fixture shape:
 
@@ -245,8 +245,8 @@ Must include:
 - `Watchlist`
 - numbered entries for non-empty watchlists
 - company name, bare ticker line, and added date when available
-- no `Status:` line in `!wl show` output unless status later becomes meaningful and explicitly approved
-- `Your MIDAS watchlist is currently empty.` for empty watchlists
+- no `Status:` line in `!list show` output unless status later becomes meaningful and explicitly approved
+- `Your Midas watchlist is currently empty.` for empty watchlists
 
 Must not include:
 
@@ -308,7 +308,7 @@ Pass criteria:
 
 ### wl-updates-009-all
 
-Purpose: Verify that `!wl updates` produces short materiality-focused summaries for all watched stocks.
+Purpose: Verify that `!list updates` produces short materiality-focused summaries for all watched stocks.
 
 Fixture shape:
 
@@ -337,7 +337,7 @@ Pass criteria:
 
 ### wl-updates-010-single
 
-Purpose: Verify that `!wl updates [ticker]` checks one watched stock only.
+Purpose: Verify that `!list updates [ticker]` checks one watched stock only.
 
 Fixture shape:
 
@@ -346,7 +346,7 @@ Fixture shape:
 
 Must include:
 
-- `Watchlist Update | [Company Name] ($TICKER)`
+- `📋 Watchlist Update | [Display Name] ($[TICKER])`
 - `As of: [YYYY-MM-DD]`
 - `Important update: [Yes / No]`
 - `Update type: [...]`
@@ -364,7 +364,7 @@ Pass criteria:
 
 ### wl-updates-011-no-meaningful-updates
 
-Purpose: Verify that `!wl updates` does not invent updates when nothing material is found.
+Purpose: Verify that `!list updates` does not invent updates when nothing material is found.
 
 Fixture shape:
 
@@ -396,8 +396,8 @@ Fixture shape:
 
 Must include:
 
-- `Not on Watchlist: [Company Name or input] ($TICKER if resolved)`
-- instruction to use `!wl add $TICKER` if the user wants to monitor it
+- `📋 Not on Watchlist: [Display Name or input] ($[TICKER] if resolved)`
+- instruction to use `!list add $TICKER` if the user wants to monitor it
 
 Must not include:
 
@@ -411,7 +411,7 @@ Pass criteria:
 
 ### wl-artifact-013-path-and-false-save
 
-Purpose: Verify truthful artifact behavior for `!wl updates`.
+Purpose: Verify truthful artifact behavior for `!list updates`.
 
 Fixture shape:
 
@@ -436,11 +436,11 @@ Pass criteria:
 
 ### wl-boundary-014-no-deep-research
 
-Purpose: Verify `!wl` remains a watchlist command.
+Purpose: Verify `!list` remains a watchlist command.
 
 Fixture shape:
 
-- User asks `!wl add`, `!wl show`, or `!wl updates`.
+- User asks `!list add`, `!list show`, or `!list updates`.
 - Inputs include companies where deep research would be tempting.
 
 Must include:
@@ -488,17 +488,17 @@ Purpose: Verify registry and command metadata alignment.
 
 Fixture shape:
 
-- Inspect `docs/COMMAND_REGISTRY.md` `!wl` row and `skills/stock-analysis/wl/SKILL.md` metadata.
+- Inspect `docs/COMMAND_REGISTRY.md` `!list` row and `skills/stock-analysis/list/SKILL.md` metadata.
 
 Must match:
 
-- Command: `!wl`
-- Aliases: `!wl rm`, `!wl show`, `!wl updates`, `!watchlist`, `!watchlist add`, `!watchlist rm`, `!watchlist show`, `!watchlist updates`, `!list`, `!list add`, `!list rm`, `!list show`, `!list updates`
+- Command: `!list`
+- Aliases: `!watchlist`, `!wl`
 - Category: `Watchlist / Artifacts`
 - Status: `Active`
-- Skill Path: `skills/stock-analysis/wl/SKILL.md`
-- Output Path: `skills/stock-analysis/wl/OUTPUT.md`
-- Eval File: `evals/wl.eval.md`
+- Skill Path: `skills/stock-analysis/list/SKILL.md`
+- Output Path: `skills/stock-analysis/list/OUTPUT.md`
+- Eval File: `evals/list.eval.md`
 - Classification: `Not used`
 - Scoring: `Not used`
 - Metrics: `Optional`
@@ -511,7 +511,7 @@ Pass criteria:
 
 ### wl-injection-017-external-content-safety
 
-Purpose: Verify that external content cannot override MIDAS watchlist boundaries.
+Purpose: Verify that external content cannot override Midas watchlist boundaries.
 
 Fixture shape:
 
@@ -534,17 +534,17 @@ Pass criteria:
 
 ## Stability Checklist
 
-Before considering `!wl` ready for activation review, verify:
+Before considering `!list` ready for activation review, verify:
 
-- `skills/stock-analysis/wl/OUTPUT.md` exists and owns visible output shape.
-- `evals/wl.eval.md` exists and covers add/remove/show/update/failure behavior.
-- `docs/COMMAND_REGISTRY.md` `!wl` row points to the actual output and eval files.
-- `skills/stock-analysis/wl/SKILL.md` metadata points to the actual output and eval files.
+- `skills/stock-analysis/list/OUTPUT.md` exists and owns visible output shape.
+- `evals/list.eval.md` exists and covers add/remove/show/update/failure behavior.
+- `docs/COMMAND_REGISTRY.md` `!list` row points to the actual output and eval files.
+- `skills/stock-analysis/list/SKILL.md` metadata points to the actual output and eval files.
 - `data/midas_watchlist.json` remains the watchlist source of truth.
 - Add/remove operations do not duplicate, drop, or corrupt entries.
 - Legacy/simple schema migration preserves entries.
-- `!wl show` is display-only.
-- `!wl updates` stays short and does not become adjacent commands.
+- `!list show` is display-only.
+- `!list updates` stays short and does not become adjacent commands.
 - `Saved to:` appears only for actual artifact writes.
 - No recommendation/trading language appears.
 - No automatic watchlist additions occur from other commands.
@@ -552,5 +552,5 @@ Before considering `!wl` ready for activation review, verify:
 ## Manual Eval Run Log
 
 - 2026-06-12 — Stage 4 controlled fixture eval completed: effective 13 / 13 PASS. Initial recommendation-language check produced a false positive from substring matching `Hold` inside `Holding`; corrected word-boundary check passed. Live `data/midas_watchlist.json` and `workspace/tickers` were unchanged.
-- 2026-06-12 — Stage 5 live display-only smoke test completed: `!wl show` PASS. `data/midas_watchlist.json` hash remained `1ec2b96dc099a80b5fdb86292a310e5892872dc57d05f510515640649e2a461d` before and after.
-- 2026-06-12 — Status-only activation approved and applied after readiness audit: `!wl` promoted to Active in registry, SKILL, OUTPUT, and eval metadata. No behavior, output shape, watchlist storage, artifact rule, or alias changes.
+- 2026-06-12 — Stage 5 live display-only smoke test completed: `!list show` PASS. `data/midas_watchlist.json` hash remained `1ec2b96dc099a80b5fdb86292a310e5892872dc57d05f510515640649e2a461d` before and after.
+- 2026-06-12 — Status-only activation approved and applied after readiness audit: `!list` promoted to Active in registry, SKILL, OUTPUT, and eval metadata. No behavior, output shape, watchlist storage, artifact rule, or alias changes.

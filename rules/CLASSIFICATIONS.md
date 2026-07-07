@@ -1,14 +1,14 @@
-# MIDAS Setup Classifications
+# Midas Setup Classifications
 
 ## Purpose
 
-Setup Classification gives MIDAS a consistent way to describe what type of opportunity or research setup a public company represents.
+Setup Classification gives Midas a consistent way to describe what type of opportunity or research setup a public company represents.
 
 These labels are research workflow classifications, not investment recommendations.
 
 Do not use Buy/Hold/Sell language.
 
-MIDAS classifications should help answer:
+Midas classifications should help answer:
 
 - What kind of setup is this?
 - Why is it researchable?
@@ -37,13 +37,13 @@ This classification system is built around common institutional research concept
 - Evidence quality
 - Crowding and rerating stage
 
-MIDAS should not blindly copy any one investor’s framework.
+Midas should not blindly copy any one investor’s framework.
 
 The goal is to create a practical research-classification standard that works across commands and sectors.
 
 ## Classification Architecture
 
-MIDAS uses two layers:
+Midas uses two layers:
 
 1. **Primary Setup Classification**
    - The main type of opportunity or research setup.
@@ -112,7 +112,7 @@ A company should not receive this classification just because it is interesting,
 
 A Prime Research Candidate does not mean Buy.
 
-It means MIDAS believes the name deserves prioritized research under the current workflow.
+It means Midas believes the name deserves prioritized research under the current workflow.
 
 ## Hidden-Gem Candidate
 
@@ -336,7 +336,7 @@ Reasons may include:
 
 Screened Out does not always mean the company is bad.
 
-It means MIDAS should not prioritize it under the current workflow.
+It means Midas should not prioritize it under the current workflow.
 
 ---
 
@@ -481,7 +481,7 @@ Use when upside depends mainly on the market paying a higher multiple rather tha
 
 # Relationship to SCORING.md
 
-Setup Classification should work with MIDAS scoring, not replace it.
+Setup Classification should work with Midas scoring, not replace it.
 
 Use:
 
@@ -515,7 +515,7 @@ RERATING.md does not add new classifications or modifiers; this file remains the
 
 # Relationship to SOURCES.md
 
-Setup Classification must follow MIDAS source standards.
+Setup Classification must follow Midas source standards.
 
 Use:
 

@@ -2,7 +2,7 @@
 
 Stage: Active politician intelligence contract for `!track` politician mode.
 
-This contract governs politician and senior-public-official disclosure triage for `!track`. It does not create a new command, does not change watchlist paths, and does not override global MIDAS source, scoring, classification, output, or artifact rules.
+This contract governs politician and senior-public-official disclosure triage for `!track`. It does not create a new command, does not change watchlist paths, and does not override global Midas source, scoring, classification, output, or artifact rules.
 
 ## Authority Boundaries
 
@@ -31,7 +31,7 @@ Politician `!track` is a policy/event disclosure triage tool that ranks company-
 
 It should answer:
 
-> Which disclosed politician or senior-public-official transactions are useful enough to become MIDAS research leads?
+> Which disclosed politician or senior-public-official transactions are useful enough to become Midas research leads?
 
 It should not answer:
 
@@ -197,7 +197,7 @@ Before a politician candidate can enter visible `Best Stock Leads`, it must expl
 1. **Source Authority Gate:** official/primary sources support the disclosure mechanics and material promotion claims; convenience sources are not the sole basis for promotion; source IDs, source dates, disclosure/report IDs when available, person/entity match, and limitations are captured.
 2. **Disclosure Signal Gate:** the transaction or disclosure is fresh, company-specific, mechanically significant, and not merely a sale, tiny trade, stale row, diversified product, ambiguous option, or tracker-display artifact.
 3. **Person Relevance / Authority Gate:** the filer/person, role, jurisdiction, committee, office, executive authority, or policy/event relevance is verified at the transaction-date window and is not inferred from stale or later authority.
-4. **Company Materiality / Researchability Gate:** the catalyst or disclosure creates a testable company-level MIDAS research question and there is source-backed evidence that the policy, procurement, regulatory, budget, agency, or event nexus could matter to the issuer.
+4. **Company Materiality / Researchability Gate:** the catalyst or disclosure creates a testable company-level Midas research question and there is source-backed evidence that the policy, procurement, regulatory, budget, agency, or event nexus could matter to the issuer.
 5. **Integrity / Noise Discount Gate:** owner/control ambiguity, disclosure lag, source conflicts, market absorption, crowded/obvious ticker status, motive ambiguity, and non-public-information risk do not overwhelm the research signal.
 
 If any P0 gate fails, the candidate cannot appear in visible `Best Stock Leads`. It may appear only as lower-signal context when useful, clearly caveated, and not framed as a promoted research lead.
@@ -299,7 +299,7 @@ Lower signal quality can come from:
 
 ### 3. Research Setup Quality
 
-A politician disclosure is more useful to MIDAS when it creates a clear company-level research question that can be followed with `!research` or `!risk`.
+A politician disclosure is more useful to Midas when it creates a clear company-level research question that can be followed with `!research` or `!risk`.
 
 Check:
 
@@ -307,7 +307,7 @@ Check:
 - Is there a clear company-level research question?
 - Is it more than broad ETF exposure?
 - Is it more than an obvious mega-cap household trade?
-- Does the disclosure point to something MIDAS can actually research next?
+- Does the disclosure point to something Midas can actually research next?
 
 Prefer leads where the next diligence step can test something concrete, such as government-contract exposure, regulatory sensitivity, procurement risk/opportunity, balance-sheet fragility, valuation/rerating setup, or business exposure to a policy/event catalyst.
 
@@ -803,7 +803,7 @@ Politician cards must look different from fund-manager cards.
 
 Use these visible fields in standard output:
 
-- `[TICKER] | [Company Name]`.
+- `[Display Name] ($[TICKER])`.
 - `Why it matters:` company-specific research reason tied to the disclosure pattern.
 - `Why it is not a strong signal:` delay, broad range, owner ambiguity, no intent evidence, source disagreement, ETF/diversified exposure, weak policy/event nexus, or other material limitation.
 - `Best next command:` `!research` or `!risk` only.
@@ -878,7 +878,7 @@ Avoid:
 
 ## Relationship to Global Rules
 
-Use global MIDAS rules for shared standards:
+Use global Midas rules for shared standards:
 
 - `rules/SOURCES.md` governs source hierarchy, materiality, freshness, and source confidence.
 - `rules/CLASSIFICATIONS.md` governs setup classifications and modifiers.

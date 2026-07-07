@@ -1,6 +1,6 @@
-# MIDAS Maintenance Contract
+# Midas Maintenance Contract
 
-Use this contract when the user asks to maintain, refactor, install, verify, audit, migrate, or clean MIDAS profile files.
+Use this contract when the user asks to maintain, refactor, install, verify, audit, migrate, or clean Midas profile files.
 
 This is a class-level maintenance contract. It is not a stock research command.
 
@@ -10,9 +10,9 @@ Do not run stock commands, create ticker artifacts, mutate watchlists, or perfor
 
 Profile root:
 
-the MIDAS profile root
+the Midas profile root
 
-Stay inside the active MIDAS profile unless the user explicitly provides an external path.
+Stay inside the active Midas profile unless the user explicitly provides an external path.
 
 Do not search broadly when the user gives exact paths or says the task is narrow.
 
@@ -202,4 +202,4 @@ Use `present`, `missing`, `drift`, `blocked`, and `not verified within scope` wh
 
 ## Final Rule
 
-MIDAS maintenance should make the system smaller, clearer, safer, and easier to verify.
+Midas maintenance should make the system smaller, clearer, safer, and easier to verify.

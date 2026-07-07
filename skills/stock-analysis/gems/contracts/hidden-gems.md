@@ -264,7 +264,7 @@ Negative asymmetry signals that should cap, demote, or block include:
 
 Founder-led or owner-operated status is a modifier, not standalone proof. Do not classify a company as a hidden gem merely because it is founder-led. Owner-operator alignment can improve the setup only when evidence-backed.
 
-For every candidate shown in main normal sections — `## Hidden-Gem Candidates` or `## Researchable Leads` — MIDAS should attempt a founder-led / operator-led status check.
+For every candidate shown in main normal sections — `## Hidden-Gem Candidates` or `## Researchable Leads` — Midas should attempt a founder-led / operator-led status check.
 
 Preferred sources:
 
@@ -562,7 +562,7 @@ Scores and classifications are research-prioritization tools only.
 
 `references/artifact-index.md` owns command-local artifact/index mechanics.
 
-`rules/ARTIFACTS.md` owns MIDAS artifact standards.
+`rules/ARTIFACTS.md` owns Midas artifact standards.
 
 `rules/SOURCES.md`, `rules/SCORING.md`, `rules/CLASSIFICATIONS.md`, `rules/RERATING.md`, `rules/OUTPUT.md`, and `rules/METRICS.md` remain inherited standards.
 

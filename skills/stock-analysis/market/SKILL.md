@@ -1,6 +1,6 @@
 ---
 name: market
-description: Thin read-only MIDAS utility command for `!market [ticker]` Standard Market Snapshots.
+description: Thin read-only Midas utility command for `!market [ticker]` Standard Market Snapshots.
 version: 0.2.0
 status: Active
 author: Midas / Hermes Agent
@@ -49,7 +49,7 @@ The helper lives at:
 tools/market_data_snapshot.py
 ```
 
-Other MIDAS commands should not depend on `!market` output text. If `!thesis`, `!financials`, `!risk`, or future screen/watchlist workflows need live market context, they should follow `MARKET_DATA.md` and call the canonical helper directly.
+Other Midas commands should not depend on `!market` output text. If `!thesis`, `!financials`, `!risk`, or future screen/watchlist workflows need live market context, they should follow `MARKET_DATA.md` and call the canonical helper directly.
 
 ## Mandatory Rule Inheritance
 
@@ -162,7 +162,7 @@ Do not call fallback providers solely to fill:
 
 Normal successful `!market` output is the Standard Market Snapshot:
 
-- title: `[TICKER] | [Company Name] Market Snapshot` when `company_name` is available from the helper; otherwise `[TICKER] | Market Snapshot`
+- title: `📈 [Display Name] ($[TICKER]) | Market Snapshot` when `company_name` is available from the helper; otherwise `📈 $[TICKER] | Market Snapshot`
 - human-readable as-of timestamp, e.g. `Jun 5, 2026, 1:20 AM ET`
 - one simple source line: `Source: [provider]` directly under the `As of:` timestamp
 - `Profile`

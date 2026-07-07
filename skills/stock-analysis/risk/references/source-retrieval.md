@@ -10,7 +10,7 @@ Use this when gathering sources for a bounded filing-backed company risk assessm
 - For SEC filers, start with the latest annual filing and latest interim filing when available.
 - Review material subsequent filings only when they affect risk: 8-Ks, earnings releases, acquisition or financing filings, restructuring disclosures, credit agreements, covenant amendments, legal/regulatory updates, going-concern language, auditor/restatement items, and material contract exhibits.
 - For non-SEC issuers or FPIs, use annual reports, interim reports, 20-F/6-K equivalents, exchange filings, regulator filings, and official company disclosures. State source limitations when disclosure is not comparable to U.S. SEC filers.
-- Existing same-ticker MIDAS artifacts may help context and routing, but primary filings and official disclosures remain authoritative for material risk claims.
+- Existing same-ticker Midas artifacts may help context and routing, but primary filings and official disclosures remain authoritative for material risk claims.
 
 ## Targeted risk retrieval cues
 

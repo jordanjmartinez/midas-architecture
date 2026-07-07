@@ -5,7 +5,7 @@ Use this reference when maintaining or evaluating the `!gems` user-facing chat o
 ## Visible title
 
 - Use `# Hidden Gems | [Theme]`.
-- Do not use `MIDAS Gems — [Theme]` as the visible chat/report title.
+- Do not use `Midas Gems — [Theme]` as the visible chat/report title.
 - Use a pipe separator, not an em dash.
 - Keep the theme in Title Case when possible.
 

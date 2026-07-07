@@ -1,6 +1,6 @@
 # Eval Maintenance
 
-Use this playbook when creating, editing, reviewing, or activating MIDAS eval files.
+Use this playbook when creating, editing, reviewing, or activating Midas eval files.
 
 ## Purpose
 

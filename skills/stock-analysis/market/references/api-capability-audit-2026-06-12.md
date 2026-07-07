@@ -1,6 +1,6 @@
 # `!market` API Capability Audit — 2026-06-12
 
-Use this reference when deciding whether to expand the MIDAS `!market` helper/output beyond the current compact snapshot.
+Use this reference when deciding whether to expand the Midas `!market` helper/output beyond the current compact snapshot.
 
 ## Scope
 

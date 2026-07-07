@@ -10,7 +10,7 @@ metadata:
     related_skills: [research, thesis, risk, full]
 ---
 
-# MIDAS Command Skill — !financials
+# Midas Command Skill — !financials
 
 ## Command
 
@@ -35,7 +35,7 @@ Primary Global Rules: `GLOBAL.md, COMMAND_INTERFACE.md, SOURCES.md, MARKET_DATA.
 
 `!financials` reviews a public company’s financial statements and metric quality. It helps the user understand revenue trends, margins, profitability, cash generation, balance-sheet strength, dilution, capital returns, GAAP/non-GAAP quality, segment financials, financial red flags, and the best next diligence command.
 
-This command is a filing-backed financial-statement review, not a full business-model report, thesis, downside-only risk memo, full MIDAS packet, hidden-gem ranking, price target, or buy/sell recommendation.
+This command is a filing-backed financial-statement review, not a full business-model report, thesis, downside-only risk memo, full Midas packet, hidden-gem ranking, price target, or buy/sell recommendation.
 
 ---
 
@@ -52,7 +52,7 @@ Do not use this command when:
 - The user wants a full business-model report. Use `!research`.
 - The user wants bull/base/bear cases or a thesis debate. Use `!thesis`.
 - The user wants a downside-only pressure test. Use `!risk`.
-- The user wants a complete MIDAS packet. Recommend completing `!research`, `!thesis`, and `!risk`.
+- The user wants a complete Midas packet. Recommend completing `!research`, `!thesis`, and `!risk`.
 - The user wants hidden-gem discovery or ranking. Use `!gems`.
 - The user asks for buy/sell/hold instructions, position sizing, or a price target. Reframe as financial-quality research.
 
@@ -419,7 +419,7 @@ Follow shared output standards:
 
 Normal `!financials [ticker]` must use the mandatory Standard-only template in `OUTPUT.md` as the source of truth. The required section order is:
 
-1. Report title: `# 🪙 [TICKER] | [Company Name] Financial Analysis`
+1. Report title: `# 🪙 [Display Name] ($[TICKER]) | Financial Analysis`
 2. `## Introduction`
 3. `## Summary`
 4. `## Revenue`

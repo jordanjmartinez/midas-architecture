@@ -9,9 +9,9 @@ Use this note to keep tracker roster, artifact, and no-write boundaries clean. C
 ## Roster vs stock watchlist
 
 - Normal !track may update the tracker roster only if current SKILL behavior permits it.
-- Tracker roster state is separate from the MIDAS stock watchlist.
+- Tracker roster state is separate from the Midas stock watchlist.
 - !track must not modify `data/midas_watchlist.json`.
-- !track must not auto-add disclosed tickers to the MIDAS stock watchlist.
+- !track must not auto-add disclosed tickers to the Midas stock watchlist.
 - A disclosed ticker is a research lead, not a watchlist entry, holding, or recommendation.
 
 ## Tracker artifacts

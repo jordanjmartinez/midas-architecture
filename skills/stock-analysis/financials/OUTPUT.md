@@ -72,7 +72,7 @@ Artifact policy belongs in:
 
 ## Global Output Inheritance
 
-`!financials` must follow the global MIDAS output rules in:
+`!financials` must follow the global Midas output rules in:
 
 - `rules/GLOBAL.md`
 - `rules/OUTPUT.md`
@@ -182,13 +182,13 @@ Do not show empty optional sections. If a required section is not applicable, in
 Use:
 
 ```md
-# 🪙 [TICKER] | [Company Name] Financial Analysis
+# 🪙 [Display Name] ($[TICKER]) | Financial Analysis
 ```
 
 Example:
 
 ```md
-# 🪙 HOOD | Robinhood Markets, Inc. Financial Analysis
+# 🪙 Robinhood Markets ($HOOD) | Financial Analysis
 ```
 
 ---
@@ -211,9 +211,7 @@ The introduction should be short, usually 2–4 sentences. It should explain:
 Example:
 
 ```md
-This report reviews [Company Name]’s filing-backed financial statements and metric quality using the latest reviewed annual and interim filings. It focuses on revenue trends, margins, profitability, cash flow, balance sheet strength, dilution, capital returns, GAAP/non-GAAP quality, and financial red flags. It is financials analysis, not a business-model report, full valuation, price target, or buy/sell recommendation.
 ```
-
 ---
 
 ## Source Notes
@@ -418,7 +416,7 @@ Best Next Command is optional in normal output. When useful, include it as its o
 
 - If `workspace/tickers/[ticker]/research.md` exists, preserve existing routing logic: prefer `!thesis [TICKER]` to turn the business-model and financial evidence into a thesis view, or `!risk [TICKER]` if the financial review surfaced debt, dilution, liquidity, cash-conversion, accounting, or margin fragility.
 - If `workspace/tickers/[ticker]/research.md` does not exist, prefer `!research [TICKER]` to build the business-model view behind the financials.
-- Recommend completing the remaining core artifacts only when the user wants the complete MIDAS packet.
+- Recommend completing the remaining core artifacts only when the user wants the complete Midas packet.
 - Use `!earnings [TICKER]` when latest-quarter or earnings-update work is the right next step.
 
 Normal format:
@@ -466,7 +464,7 @@ Normal output should be section-complete but bounded. It should not become a ful
 
 Normal output must use this exact section order:
 
-1. `# 🪙 [TICKER] | [Company Name] Financial Analysis`
+1. `# 🪙 [Display Name] ($[TICKER]) | Financial Analysis`
 2. `## Introduction`
 3. `## Summary`
 4. `## Revenue`
@@ -491,7 +489,7 @@ Heading-spacing rule: every Markdown section heading must be followed by one bla
 ### Standard Format
 
 ```md
-# 🪙 [TICKER] | [Company Name] Financial Analysis
+# 🪙 [Display Name] ($[TICKER]) | Financial Analysis
 
 ## Introduction
 
@@ -735,7 +733,7 @@ Do not save incomplete output as `financials.md`.
 
 Required for normal Standard-only output, in this exact order:
 
-- `# 🪙 [TICKER] | [Company Name] Financial Analysis`
+- `# 🪙 [Display Name] ($[TICKER]) | Financial Analysis`
 - `## Introduction`
 - `## Summary`
 - `## Revenue`
@@ -778,7 +776,7 @@ Prohibited by default:
 - Full business-model report
 - Bull/base/bear thesis
 - Downside-only risk report
-- Complete MIDAS packet
+- Complete Midas packet
 - Hidden-gem ranking
 - False saved claims
 - Watchlist mutation claims
@@ -842,11 +840,9 @@ Avoid:
 - `Guaranteed`, `no-brainer`, `must own`, or hype language
 - Treating adjusted metrics as GAAP
 - Treating valuation context as a recommendation
-- Personal decision language that implies MIDAS is advising what the user should do with capital
+- Personal decision language that implies Midas is advising what the user should do with capital
 
-Required caveat in Standard `## Introduction`:
-
-- State that the report is a financial-statement and metric-quality review, not a full valuation, price target, or buy/sell recommendation.
+Scope caveat: carried by the Footer Standard line per `rules/OUTPUT.md`, not by Introduction prose.
 
 ---
 

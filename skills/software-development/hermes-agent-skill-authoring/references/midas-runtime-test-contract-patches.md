@@ -1,6 +1,6 @@
-# MIDAS Runtime-Test Contract Patches
+# Midas Runtime-Test Contract Patches
 
-Use when the user reports a runtime test failure for a MIDAS command and asks to patch the command contract without rebuilding or rerunning the command.
+Use when the user reports a runtime test failure for a Midas command and asks to patch the command contract without rebuilding or rerunning the command.
 
 ## Patch scope
 
@@ -12,7 +12,7 @@ Use when the user reports a runtime test failure for a MIDAS command and asks to
 
 - Put exact output order, title format, required headings, saved-path wording, and forbidden structures in `OUTPUT.md`.
 - Mirror workflow-only logic in `SKILL.md`, especially conditional next-step behavior.
-- Keep command output contracts distinct from global MIDAS rules; do not duplicate broad source/scoring/metric standards.
+- Keep command output contracts distinct from global Midas rules; do not duplicate broad source/scoring/metric standards.
 
 ## Regression eval pattern
 
@@ -41,7 +41,7 @@ Pitfall: examples like `e.g. !financials HOOD` in failed lookup output can look 
 When a compact-mode runtime test passes structure but exposes consistency drift, patch the command `OUTPUT.md` and eval rather than broad workflow files:
 
 - Preserve compact mode as compact: do not promote it into Standard/Full, do not add default artifact saves, and do not rebuild or rerun the command unless requested.
-- Require compact evidence labels to match the command contract exactly. For MIDAS financial compact outputs, prefer `Evidence Base / As-of` over generic `Sources:` when that is the tested contract.
+- Require compact evidence labels to match the command contract exactly. For Midas financial compact outputs, prefer `Evidence Base / As-of` over generic `Sources:` when that is the tested contract.
 - Require metric-definition consistency between compact and deeper modes for the same company. If compact mode cannot support the deeper-mode metric inputs, make the compact output decline calculation explicitly rather than silently switching definitions.
 - For FCF specifically, patch both the compact output contract and compact eval to require either the same company-appropriate FCF definition/input set used by Standard/Full or a clear no-calculation sentence when required inputs are unavailable.
 - Keep reusable output contracts fully ticker-neutral. Do not include real-ticker FCF examples in command-level `OUTPUT.md` files, even when labeled as examples, because they can leak into unrelated outputs. Put ticker-specific FCF examples only in evals, runtime test notes, or fixture notes.

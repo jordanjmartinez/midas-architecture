@@ -1,6 +1,6 @@
 # Template Change Discipline
 
-Use this reference during MIDAS maintenance when a proposed stage would patch command templates or scaffolding.
+Use this reference during Midas maintenance when a proposed stage would patch command templates or scaffolding.
 
 ## Core rule
 

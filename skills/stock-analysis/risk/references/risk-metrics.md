@@ -25,7 +25,7 @@ Use metrics when available and material, especially for:
 ## Labeling discipline
 
 - Preserve period, source, unit, currency, and GAAP/non-GAAP status when relevant.
-- Label metrics as reported, adjusted, company-defined, or MIDAS-calculated when applicable.
+- Label metrics as reported, adjusted, company-defined, or Midas-calculated when applicable.
 - State when a metric is stale, unavailable, not disclosed, not meaningful, or not comparable.
 - Avoid metric dumps. Include the metric because it changes risk understanding, not because it is available.
 
