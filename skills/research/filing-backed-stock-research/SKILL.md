@@ -5,6 +5,10 @@ description: SEC filing-backed public-company stock research and business/financ
 
 # Filing-Backed Stock Research
 
+## MIDAS Routing Note
+
+In the MIDAS profile, `!research`, `!financials`, `!thesis`, and `!risk` are MIDAS commands owned by `skills/stock-analysis/` and registered in `docs/COMMAND_REGISTRY.md`. This skill must not handle those triggers or define their output shapes; the command references in this skill and its references folder are historical (including references to the removed `!full`). Use this skill only for general filing-backed research workflows when no MIDAS command applies.
+
 Use this skill when the user asks for stock research, company business-model research, financial analysis, thesis-style equity research, or asks to apply their Stock Research / Business Analysis / Financials prompt to a public company.
 
 ## Core principles

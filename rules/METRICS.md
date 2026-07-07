@@ -18,7 +18,6 @@ This file applies across commands such as:
 - `!track`
 - `!thesis`
 - `!risk`
-- `!full`
 - `!earnings`
 - `!updates`
 

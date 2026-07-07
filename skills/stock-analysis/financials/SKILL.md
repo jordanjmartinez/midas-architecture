@@ -45,14 +45,14 @@ Use this command when:
 
 - The user invokes `!financials [company or ticker]`.
 - The user asks for a company’s financial statements, margins, cash flow, FCF, balance sheet, debt, liquidity, dilution, capital returns, or metric quality.
-- The user needs financial-statement diligence before `!thesis`, `!risk`, or `!full`.
+- The user needs financial-statement diligence before `!thesis` or `!risk`.
 
 Do not use this command when:
 
 - The user wants a full business-model report. Use `!research`.
 - The user wants bull/base/bear cases or a thesis debate. Use `!thesis`.
 - The user wants a downside-only pressure test. Use `!risk`.
-- The user wants a complete MIDAS packet. Use `!full`.
+- The user wants a complete MIDAS packet. Recommend completing `!research`, `!thesis`, and `!risk`.
 - The user wants hidden-gem discovery or ranking. Use `!gems`.
 - The user asks for buy/sell/hold instructions, position sizing, or a price target. Reframe as financial-quality research.
 
@@ -114,7 +114,7 @@ Former Compact-style words such as `compact`, `quick`, `brief`, `short`, `concis
 
 Former Full/Deep-style words such as `full`, `deep`, `detailed`, `expanded`, `deep-dive`, and `deepdive` are not output modes for `!financials`.
 
-- If the request asks for a complete packet, recommend `!full [ticker]`.
+- If the request asks for a complete packet, recommend completing `!research [ticker]`, `!thesis [ticker]`, and `!risk [ticker]`.
 - If the request asks for thesis work, recommend `!thesis [ticker]`.
 - If the request asks for downside or thesis-breaking risk, recommend `!risk [ticker]`.
 - If the request asks for business-model research, recommend `!research [ticker]`.
@@ -368,7 +368,7 @@ Command-specific scoring notes:
 - Score-line formatting is output-only: use `[score]/10 - [Assessment]`, preserving the generated score and assessment without hardcoding scores, adding a new rubric, or changing scoring logic.
 - Do not add broader setup scoring, Global Research Score, overlays, or ranking by default.
 - Use broader scoring only if the user asks for scoring or if the command explicitly produces a financial-quality setup view.
-- If the user wants a full Global Research Score, suggest `!full`.
+- If the user wants a full Global Research Score, apply it per `rules/SCORING.md` on explicit request.
 - If evidence is insufficient, state the limitation rather than inventing precision.
 
 ### Metrics
@@ -556,7 +556,7 @@ This command must not:
 - Treat non-GAAP metrics as GAAP.
 - Present stale market data as current.
 - Invent unavailable or unsupported metrics.
-- Drift into `!research`, `!thesis`, `!risk`, `!full`, or `!gems`.
+- Drift into `!research`, `!thesis`, `!risk`, or `!gems`.
 - Duplicate global rules inside this skill.
 
 ### Guardrail-Style Response Language

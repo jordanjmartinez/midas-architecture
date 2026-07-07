@@ -25,7 +25,6 @@ This file applies across commands such as:
 - `!financials`
 - `!thesis`
 - `!risk`
-- `!full`
 - `!earnings`
 - `!updates`
 - `!track`
@@ -232,7 +231,6 @@ Use these canonical ticker artifact paths:
 !risk [TICKER]        -> workspace/tickers/[ticker]/risk.md
 !earnings [TICKER]    -> workspace/tickers/[ticker]/earnings.md
 !updates [TICKER]     -> workspace/tickers/[ticker]/updates.md
-!full [TICKER]        -> workspace/tickers/[ticker]/full.md
 ```
 
 Optional scorecard path:
@@ -335,13 +333,14 @@ command-local and live in the `!gems` command files
 
 # Watchlist Artifact Separation
 
-Watchlist source-of-truth data should stay separate from generated research artifacts.
+Watchlist source-of-truth data stays separate from generated research artifacts.
 
-If the existing source of truth is:
+MIDAS data stores under `data/`:
 
-`/home/jordan/.hermes/profiles/midas/data/midas_watchlist.json`
+- `/home/jordan/.hermes/profiles/midas/data/midas_watchlist.json`: the ticker watchlist source of truth, owned by `!wl`.
+- `/home/jordan/.hermes/profiles/midas/data/tracker_watchlist.json`: the tracked-entity roster for `!track`, defined in the tracker `SKILL.md`.
 
-then watchlist commands should continue using that file unless the user explicitly changes the architecture.
+No other command writes these files. Watchlist commands use `midas_watchlist.json` unless the user explicitly changes the architecture.
 
 Generated watchlist summaries or exports may live under:
 

@@ -178,7 +178,7 @@ Normal successful `!risk [ticker]` output must follow this shape:
 Saved to: workspace/tickers/[ticker]/risk.md
 ```
 
-Normal output must be filing-backed and company-risk focused. It must not become `!research`, `!financials`, `!thesis`, `!full`, `!earnings`, `!gems`, a valuation model, price-target output, recommendation output, or trading view.
+Normal output must be filing-backed and company-risk focused. It must not become `!research`, `!financials`, `!thesis`, `!earnings`, `!gems`, a valuation model, price-target output, recommendation output, or trading view.
 
 ---
 
@@ -470,7 +470,7 @@ The command should route or boundary broader requests without auto-running downs
 ### Must Include
 
 - No Full or Deep mode activation inside `!risk`.
-- Complete packet requests route to `!full [TICKER]`.
+- Complete packet requests route to completing the remaining core commands.
 - Thesis / bull-base-bear / long-term view requests route to `!thesis [TICKER]`.
 - Business-model requests route to `!research [TICKER]`.
 - Financial-statement / metric-quality requests route to `!financials [TICKER]`.
@@ -715,7 +715,7 @@ The command should perform or preserve risk-assessment scope, briefly redirect o
 - Complete MIDAS packet.
 - Hidden-gem ranking.
 - Price target or recommendation.
-- Auto-run of `!research`, `!financials`, `!thesis`, `!full`, `!earnings`, or `!gems`.
+- Auto-run of `!research`, `!financials`, `!thesis`, `!earnings`, or `!gems`.
 
 ### Pass Criteria
 
@@ -984,7 +984,7 @@ Convert the former Full-mode market-data failure eval into unsupported-mode cove
 
 ### Expected Behavior
 
-`full` must not activate Full mode. If the request is for a complete packet, route to `!full HOOD` without auto-running. If the request is specifically for valuation/rerating risk context, keep it inside normal Standard-only `!risk` and apply market-data fail-soft behavior.
+`full` must not activate Full mode. If the request is for a complete packet, recommend completing the remaining core commands for HOOD without auto-running them. If the request is specifically for valuation/rerating risk context, keep it inside normal Standard-only `!risk` and apply market-data fail-soft behavior.
 
 ### Must Not Include
 
@@ -1419,7 +1419,7 @@ Verify that `!risk` recommends the most useful next command based on both risk i
 - If `financials.md` is missing and financial fragility is surfaced, Best Next Command may recommend `` `!financials [TICKER]` ``.
 - If research and financials exist and thesis is missing, Best Next Command may recommend `` `!thesis [TICKER]` ``.
 - If thesis exists but the risk report uses materially newer evidence, Best Next Command may recommend `` `!thesis update [TICKER]` ``.
-- If research, financials, risk, and thesis exist and are current enough, Best Next Command may recommend `` `!full [TICKER]` `` only if complete packet integration is useful, or omit a next command if noisy.
+- If research, financials, risk, and thesis exist and are current enough, Best Next Command may note the core research set is complete, or omit a next command if noisy.
 
 ### Must Fail If
 

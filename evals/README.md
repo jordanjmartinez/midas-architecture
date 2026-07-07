@@ -88,7 +88,6 @@ Use this especially for:
 - `!research`
 - `!financials`
 - `!risk`
-- `!full`
 
 Example:
 
@@ -144,7 +143,6 @@ Use this especially for:
 - `!research`
 - `!gems`
 - `!risk`
-- `!full`
 
 ## 6. Classification / Scoring Eval
 
@@ -166,7 +164,6 @@ Use this especially for:
 - `!research`
 - `!thesis`
 - `!risk`
-- `!full`
 
 ## 7. Artifact Eval
 
@@ -629,17 +626,6 @@ Minimum evals:
 - Valuation/rerating risk detected
 - Weak source support affects risk view
 
-## `!full`
-
-Minimum evals:
-
-- Full report structure
-- Global Research Score used correctly
-- Setup Classification included
-- Evidence Confidence included
-- Artifact behavior correct
-- Source notes included
-
 ## `!earnings`
 
 Minimum evals:
@@ -827,10 +813,8 @@ MIDAS treats quality alone as enough to make the setup attractive.
 ## Eval: Artifact Write Must Be Explicit
 
 Command:
-`!full`
 
 User Request:
-`!full TICKER and save it`
 
 Eval Type:
 Artifact / Final Response

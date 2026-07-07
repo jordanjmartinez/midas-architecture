@@ -746,7 +746,6 @@ Do not over-explain every bucket unless the command requires a full report.
 - `!research`
 - `!thesis`
 - `!risk`
-- `!full`
 
 ## Commands that commonly use Setup Overlay Scores
 

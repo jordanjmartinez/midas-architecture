@@ -299,7 +299,7 @@ Lower signal quality can come from:
 
 ### 3. Research Setup Quality
 
-A politician disclosure is more useful to MIDAS when it creates a clear company-level research question that can be followed with `!research`, `!risk`, or `!full`.
+A politician disclosure is more useful to MIDAS when it creates a clear company-level research question that can be followed with `!research` or `!risk`.
 
 Check:
 
@@ -806,7 +806,7 @@ Use these visible fields in standard output:
 - `[TICKER] | [Company Name]`.
 - `Why it matters:` company-specific research reason tied to the disclosure pattern.
 - `Why it is not a strong signal:` delay, broad range, owner ambiguity, no intent evidence, source disagreement, ETF/diversified exposure, weak policy/event nexus, or other material limitation.
-- `Best next command:` `!research`, `!risk`, or `!full` only.
+- `Best next command:` `!research` or `!risk` only.
 
 Do not use the fund-manager `Capital-allocation signal:` or `Chase Filter:` fields for politician cards. Do not use the old politician `Signal type:`, `Policy/event nexus:`, `Why it ranks:`, or `Key caveat:` fields in standard output unless full/audit mode explicitly asks for contract/debug detail.
 

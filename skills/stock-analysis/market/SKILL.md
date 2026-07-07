@@ -49,7 +49,7 @@ The helper lives at:
 /home/jordan/.hermes/profiles/midas/tools/market_data_snapshot.py
 ```
 
-Other MIDAS commands should not depend on `!market` output text. If `!thesis`, `!financials`, `!risk`, `!full`, or future screen/watchlist workflows need live market context, they should follow `MARKET_DATA.md` and call the canonical helper directly.
+Other MIDAS commands should not depend on `!market` output text. If `!thesis`, `!financials`, `!risk`, or future screen/watchlist workflows need live market context, they should follow `MARKET_DATA.md` and call the canonical helper directly.
 
 ## Mandatory Rule Inheritance
 
@@ -249,7 +249,7 @@ Market data is context only. It is not filing-backed proof of business quality, 
 - infer investment action from price action
 - present market data as proof of business quality or thesis validity
 - replace SEC filings or company primary disclosures
-- become `!research`, `!financials`, `!thesis`, `!risk`, `!full`, or `!gems`
+- become `!research`, `!financials`, `!thesis`, `!risk`, or `!gems`
 - auto-run downstream commands
 - print, log, save, or expose API keys
 

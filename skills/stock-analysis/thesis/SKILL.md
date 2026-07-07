@@ -66,7 +66,7 @@ Do not use this command when:
 - The user wants only financial-statement or metric-quality review. Use or suggest `!financials`.
 - The user wants downside-only pressure testing. Use or suggest `!risk`.
 - The user wants latest-quarter review. Use or suggest `!earnings`.
-- The user wants a complete MIDAS packet with full scoring/classification. Use or suggest `!full`.
+- The user wants a complete MIDAS packet with full scoring/classification. Suggest completing `!research`, `!financials`, and `!risk` so the four core artifacts form the packet.
 - The user wants hidden-gem discovery or ranking. Use or suggest `!gems`.
 - The user asks what to buy/sell/hold, asks for a price target, or asks for position sizing. Reframe as research only.
 
@@ -195,9 +195,7 @@ Former full/deep words:
 
 Do not route these to Full or Deep mode.
 
-If the request asks for a complete packet, recommend:
-
-- `!full [ticker]`
+If the request asks for a complete packet, recommend completing the remaining core commands (`!research [ticker]`, `!financials [ticker]`, `!risk [ticker]`).
 
 If the request asks for business model, recommend:
 
@@ -220,7 +218,7 @@ If the request asks for a specific thesis component such as catalysts, thesis pi
 Full/deep complete-packet boundary:
 
 ```md
-!thesis is scoped to long-term thesis construction and living-thesis updates. Use !full [ticker] for a complete packet, !research [ticker] for business-model research, !financials [ticker] for financial-statement review, !risk [ticker] for downside pressure-testing, or !earnings [ticker] for latest-quarter earnings review.
+!thesis is scoped to long-term thesis construction and living-thesis updates. Use !research [ticker] for business-model research, !financials [ticker] for financial-statement review, !risk [ticker] for downside pressure-testing, or !earnings [ticker] for latest-quarter earnings review.
 ```
 
 ---
@@ -898,7 +896,7 @@ Before this command is considered Active, confirm:
 - Update audit writes nothing.
 - Market data is conditional, source/as-of labeled when used, and never proves thesis pillars or filing-backed thesis evidence.
 - Artifact path is canonical.
-- The command does not conflict with `!research`, `!financials`, `!risk`, `!earnings`, `!full`, or `!gems`.
+- The command does not conflict with `!research`, `!financials`, `!risk`, `!earnings`, or `!gems`.
 
 ## Final Rule
 

@@ -519,7 +519,7 @@ Full/deep terms do not activate Full or Deep mode inside `!thesis`.
 If the user asks for a complete packet, the command returns the boundary:
 
 ```md
-!thesis is scoped to long-term thesis construction and living-thesis updates. Use !full [ticker] for a complete packet, !research [ticker] for business-model research, !financials [ticker] for financial-statement review, !risk [ticker] for downside pressure-testing, or !earnings [ticker] for latest-quarter earnings review.
+!thesis is scoped to long-term thesis construction and living-thesis updates. Use !research [ticker] for business-model research, !financials [ticker] for financial-statement review, !risk [ticker] for downside pressure-testing, or !earnings [ticker] for latest-quarter earnings review.
 ```
 
 If the user asks for a specific thesis component, it stays inside Standard `!thesis`.

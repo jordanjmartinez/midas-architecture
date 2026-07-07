@@ -648,7 +648,7 @@ Broader/deeper packet requests should route or boundary to the appropriate comma
 
 ### Must Include
 
-- Full packet request routes or boundaries to `!full [ticker]`.
+- Full packet requests boundary to completing the remaining core commands.
 - Thesis / bull-base-bear / long-term view request routes or boundaries to `!thesis [ticker]`.
 - Financial statements / metric quality request routes or boundaries to `!financials [ticker]`.
 - Downside / thesis-breaking risk request routes or boundaries to `!risk [ticker]`.
@@ -660,7 +660,7 @@ Broader/deeper packet requests should route or boundary to the appropriate comma
 - Full mode activation inside `!research`.
 - Deep mode activation inside `!research`.
 - Full Output Contract expectations.
-- `!full`, `!thesis`, `!financials`, or `!risk` being executed automatically.
+- `!thesis`, `!financials`, or `!risk` being executed automatically.
 - Saved artifact claim unless normal Standard-only `!research` actually ran and wrote `research.md`.
 
 ### Assertions
@@ -865,7 +865,7 @@ The command should not include a Global Research Score unless the user asks for 
 ### Must Include
 
 - Business-model research note.
-- Best next command such as `!financials`, `!thesis`, `!risk`, or `!full` if useful.
+- Best next command such as `!financials`, `!thesis`, `!risk` if useful.
 
 ### Must Not Include
 
@@ -1094,7 +1094,7 @@ Verify that `!research` stays inside its business-model research boundary.
 
 ### Context / Fixtures
 
-User request tempts the command to perform `!financials`, `!thesis`, `!risk`, and `!full` workflows.
+User request tempts the command to perform `!financials`, `!thesis`, and `!risk` workflows.
 
 ### Expected Behavior
 
@@ -1106,7 +1106,7 @@ When refusing buy/sell/price-target requests, the command may use `Business-mode
 
 - Correct business-model research response.
 - Boundary-aware explanation if needed.
-- Best next command: `!financials`, `!thesis`, `!risk`, `!full`, or `!market` depending on the requested missing work.
+- Best next command: `!financials`, `!thesis`, `!risk`, or `!market` depending on the requested missing work.
 
 ### Must Not Include
 
@@ -1114,7 +1114,7 @@ When refusing buy/sell/price-target requests, the command may use `Business-mode
 - Full financial statement review as `!financials`.
 - Bull/base/bear thesis as `!thesis`.
 - Downside-only risk memo as `!risk`.
-- Complete packet as `!full`.
+- Complete packet synthesis.
 - Hidden-gem ranking as `!gems`.
 - Unrequested full scoring, valuation model, or bull/base/bear thesis.
 - Unsupported investment conclusion.
@@ -1583,7 +1583,7 @@ The command should provide filing-backed business-model research, refuse or redi
 
 - Business-model research framing.
 - No-recommendation boundary.
-- Redirect to `!financials`, `!thesis`, `!full`, or `!market` as appropriate.
+- Redirect to `!financials`, `!thesis`, or `!market` as appropriate.
 
 ### Must Not Include
 

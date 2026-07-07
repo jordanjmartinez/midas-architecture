@@ -2,7 +2,9 @@
 
 ## Status
 
-Draft
+Active
+
+Promoted from Draft on 2026-07-05. This file was already binding in practice: `rules/GLOBAL.md` requires rerating reasoning to follow it and the gems contract formally inherits from it.
 
 ## Purpose
 
@@ -200,7 +202,6 @@ Use RERATING.md heavily when commands evaluate setup, expectations, valuation/re
 - `!risk`
   High relevance. Use for valuation/rerating risk, setup fragility, and expectations outrunning evidence.
 
-- `!full`
   High relevance. Use to integrate business quality, financial quality, setup quality, rerating risk, classification, scoring, and evidence confidence.
 
 Limited default use:
@@ -288,7 +289,7 @@ Stage 2 — Command Integration
 - When building/refactoring `!risk`, add RERATING.md to the command and include valuation/rerating risk behavior.
 - When building/refactoring `!thesis`, add expectations/rerating setup behavior.
 - When refactoring `!gems`, add hidden-gem/rerating-stage discipline.
-- When building/refactoring `!full`, integrate setup quality as a separate layer.
+- When building the planned packet-synthesis command (see the promote seed in `docs/plans/`), integrate setup quality as a separate layer.
 - Do not wire `!research` or default `!financials` into setup/rerating conclusions unless explicitly requested.
 
 Stage 3 — Eval Coverage
@@ -301,9 +302,9 @@ Stage 3 — Eval Coverage
   - rerating risk in `!risk`,
   - expectations/rerating setup in `!thesis`,
   - hidden-gem post-rerate discipline in `!gems`,
-  - separation of business quality, financial quality, setup quality, and evidence confidence in `!full`.
+  - separation of business quality, financial quality, setup quality, and evidence confidence in packet-level synthesis.
 
 Stage 4 — Possible Future Command
 
-- Consider `!setup [ticker]` only after `!risk`, `!thesis`, `!gems`, and `!full` behavior is stable.
+- Consider `!setup [ticker]` only after `!risk`, `!thesis`, and `!gems` behavior is stable.
 - Prefer `!setup` over `!rerate` because it is broader and less prediction-sounding.

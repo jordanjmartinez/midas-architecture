@@ -96,7 +96,7 @@ Manage a persistent stock watchlist.
 
 Do not run deep research when a stock is added.
 
-Do not run `!research`, `!financials`, `!thesis`, `!risk`, `!earnings`, or `!full` unless the user explicitly asks.
+Do not run `!research`, `!financials`, `!thesis`, `!risk`, `!earnings` unless the user explicitly asks.
 
 ## Output Contract
 
@@ -217,7 +217,7 @@ Workflow:
 
 - Do not create a full research report.
 - Do not create a thesis.
-- Do not run `!research`, `!financials`, `!thesis`, `!risk`, `!earnings`, or `!full` unless the user explicitly asks.
+- Do not run `!research`, `!financials`, `!thesis`, `!risk`, `!earnings` unless the user explicitly asks.
 - Do not give Buy, Sell, Hold, price targets, position sizing, or trade execution advice.
 - Keep responses short.
 - Only summarize important updates.

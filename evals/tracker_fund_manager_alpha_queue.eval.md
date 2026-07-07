@@ -221,7 +221,7 @@ Must Avoid:
 - Treating audit mode as permission to promote candidates that fail source or P0 gates.
 - Saved/added/tracked/written/appended/updated claims when no approved write actually occurred.
 - Artifact, watchlist, tracker roster, workspace, schema, fixture, proof-packet, source-manifest, evidence-ledger, or JSON artifact creation from audit mode.
-- Downstream command execution such as `!research`, `!financials`, `!risk`, `!thesis`, or `!full`.
+- Downstream command execution such as `!research`, `!financials`, `!risk`, `!thesis`.
 
 Pass Criteria:
 `-audit` output is concise, verification-oriented, gate-aware, source-aware, safety-checked, and no-write by default; promotion rules remain governed by the active fund-manager contract.
@@ -385,7 +385,7 @@ Best-next-command wording appears only where a clean, researchable company-level
 Must Include:
 
 - Candidate-level `Best next command:` inside qualified `Best Stock Leads` cards when useful.
-- Diligence commands only, such as `!research`, `!financials`, `!risk`, `!thesis`, or `!full`.
+- Diligence commands only, such as `!research`, `!financials`, `!risk`, `!thesis`.
 - Routing matches the actual diligence gap.
 - Omit best-next-command wording when no researchable company-level ticker exists.
 - Do not auto-run the suggested command.
@@ -453,7 +453,7 @@ Fund-manager `!track` remains a disclosure-tracking research-lead command and do
 Must Include:
 
 - `!track` may suggest a best next diligence command when a clean company-level lead exists.
-- `!track` does not auto-run `!research`, `!financials`, `!thesis`, `!risk`, or `!full`.
+- `!track` does not auto-run `!research`, `!financials`, `!thesis`, `!risk`.
 - `!track` does not create alerts, schedules, cron jobs, monitors, or automations from a bare tracker command.
 - `!track` remains person/fund-manager based, not ticker/theme tracking.
 - If no researchable company-level ticker exists, best-next-command wording is omitted rather than forced.

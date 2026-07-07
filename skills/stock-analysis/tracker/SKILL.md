@@ -900,7 +900,7 @@ Prioritize names that are:
 - Small or mid-cap enough to offer better research asymmetry
 - Meaningfully new or increased in the filing
 - Specific companies rather than broad ETFs or unclear options exposure
-- Clear enough for MIDAS to research with !research or !full
+- Clear enough for MIDAS to research with !research
 
 Downgrade names that are:
 

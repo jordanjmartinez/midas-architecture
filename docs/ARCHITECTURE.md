@@ -703,7 +703,7 @@ Manager / insider / politician / disclosure request
 → suggest next diligence command
 ```
 
-Example: `!full`
+Example: `!thesis`
 
 ```md
 Ticker request
@@ -845,9 +845,8 @@ Recommended command refactor order:
 5. !financials
 6. !thesis
 7. !risk
-8. !full
-9. !earnings
-10. !updates
+8. !earnings
+9. !updates
 ```
 
 Why this order:
@@ -855,7 +854,7 @@ Why this order:
 - `!commands` defines user-facing command discovery.
 - `!gems` and `!track` depend heavily on classifications, scoring, and sources.
 - `!research`, `!financials`, `!thesis`, and `!risk` form the core research stack.
-- `!full` combines other workflows and should come after the pieces are stable.
+- Packet-level synthesis (the planned `!promote`) combines other workflows and should come after the pieces are stable.
 - `!earnings` and `!updates` can be lighter and may omit scoring/classification unless evaluating.
 
 ---

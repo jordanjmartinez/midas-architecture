@@ -74,7 +74,7 @@ A ticker may enter the Alpha Queue only when all gate items are satisfied:
 2. **Disclosure support:** The source supports the event type: latest 13F-HR, 13F/A, 13D/G, 13D/A or 13G/A, Form 4, fund letter, company filing, or official investor communication.
 3. **Materiality:** The event is meaningful enough to be more than noise: new, increased, concentrated, repeated, activist-related, thesis-supported, or large enough relative to the disclosed portfolio to matter.
 4. **Manager signal plausibility:** The signal fits the manager's known style or disclosed thesis, or the filing change is sufficiently unusual to merit research. Quant/index-like, factor, or ultra-diversified managers require a higher bar.
-5. **Company-level research question:** There is a specific question MIDAS can research with `!research`, `!financials`, `!risk`, `!thesis`, or `!full`.
+5. **Company-level research question:** There is a specific question MIDAS can research with `!research`, `!financials`, `!risk`, `!thesis`.
 6. **Source caveats manageable:** Source limitations do not overwhelm the signal. If the source is too stale, ambiguous, amended without clarity, options-heavy, or unmappable, demote.
 7. **Chase Filter acceptable:** Price/action/context does not require demotion. A strong filing signal can still fail as a current research lead if the market has already chased it vertically.
 8. **Consensus quality clean:** Any ownership overlap is qualified independent accumulation rather than broad crowding, hedge-fund-hotel ownership, or social hype. Broad holder count alone does not validate a lead.
@@ -465,7 +465,7 @@ alpha_queue_candidate:
     variant_view: string | Unknown
     company_research_question: string
     disconfirming_evidence_to_check: list[string]
-    best_next_command: !research | !financials | !risk | !thesis | !full | None
+    best_next_command: !research | !financials | !risk | !thesis | None
   consensus_quality:
     qualified_manager_count: number | Unknown
     qualified_manager_add_count: number | Unknown
@@ -531,7 +531,7 @@ alpha_queue_candidate:
   alpha_queue_status: Rank | Watch | Demote | Omit
   demotion_reason: string | None
   ranking_rationale: string | Unknown
-  best_next_command: !research | !financials | !risk | !thesis | !full | None
+  best_next_command: !research | !financials | !risk | !thesis | None
   source_citations: list[string]
 ```
 
@@ -729,7 +729,7 @@ thesis_linkage:
   variant_view: string | Unknown
   company_research_question: string
   disconfirming_evidence_to_check: list[string]
-  best_next_command: !research | !financials | !risk | !thesis | !full | None
+  best_next_command: !research | !financials | !risk | !thesis | None
 ```
 
 Gate rules:
@@ -752,7 +752,7 @@ Command-routing rules:
 - Use `!financials` when the gap is margin quality, cash conversion, leverage, dilution, valuation basics, or financial durability.
 - Use `!risk` when the gap is downside fragility, financing/refinancing, execution, regulatory/legal, concentration, options ambiguity, activist/event risk, or post-rerate risk.
 - Use `!thesis` when enough base research exists and the next step is scenario framing or explicit variant-view construction.
-- Use `!full` when multiple gaps require a full research packet.
+- Recommend `!research` first when multiple gaps require broad coverage, then the remaining core commands as needed.
 - Use `None` when there is no clean researchable company-level next step.
 - Follow shared best-next-command routing from `rules/OUTPUT.md` and artifact-state inputs from `rules/ARTIFACTS.md`; do not embed the `!research` workflow or force `!research` as the default.
 - The gate feeds company-level setup, manager-edge interpretation, signal score, score caps, `alpha_queue_status`, `demotion_reason`, and final Alpha Queue ranking.

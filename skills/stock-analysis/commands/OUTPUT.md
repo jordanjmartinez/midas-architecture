@@ -97,7 +97,6 @@ Aliases: `/thesis`, `thesis`
 `!risk [ticker]` — Draft — Filing-backed risk assessment. Writes artifacts.
 Aliases: `/risk`, `risk`
 
-`!full [ticker]` — Draft — Full research packet. Writes artifacts.
 Aliases: `/full`, `full analysis`
 
 ## Updates / Market

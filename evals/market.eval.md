@@ -416,7 +416,7 @@ Expected:
 - Response does not infer business improvement from live market data.
 - Boundary language is allowed because the user asked for a business conclusion, but it should not become a routine footer for normal snapshots.
 - No SEC filing-backed conclusions are invented from price action.
-- No downstream `!research`, `!financials`, `!thesis`, `!risk`, `!full`, or `!gems` command is auto-run.
+- No downstream `!research`, `!financials`, `!thesis`, `!risk`, or `!gems` command is auto-run.
 
 ---
 
@@ -488,7 +488,7 @@ Expected:
 - The command either returns the Standard Market Snapshot for the resolved ticker or gives a concise unsupported/non-mode boundary, depending current parser contract.
 - `!market DEEP` treats `DEEP` as possible ticker/company input, not as a mode request.
 - No `Deep Market Snapshot` or downstream research packet appears.
-- No `!research`, `!financials`, `!thesis`, `!risk`, `!full`, or `!gems` command is auto-run.
+- No `!research`, `!financials`, `!thesis`, `!risk`, or `!gems` command is auto-run.
 - No artifacts are written.
 
 ---

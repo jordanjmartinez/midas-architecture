@@ -295,7 +295,6 @@ Do not run these commands unless the user explicitly asks:
 * `!risk`
 * `!earnings`
 * `!updates`
-* `!full`
 * `!wl add`
 
 It is okay to suggest the best next command when `OUTPUT.md` calls for it.

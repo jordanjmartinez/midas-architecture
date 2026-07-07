@@ -384,7 +384,6 @@ Must not become:
 - `!financials`
 - `!thesis`
 - `!risk`
-- `!full`
 
 Must not include:
 

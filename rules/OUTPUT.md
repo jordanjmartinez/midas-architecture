@@ -99,7 +99,7 @@ Evidence Confidence: [A/B/C/D if applicable]
 
 ## 3. Full Research Output
 
-Use for `!full`, detailed `!research`, major thesis work, or when the user asks for a full report.
+Use for detailed `!research`, major thesis work, or when the user asks for a full report.
 
 Structure:
 
@@ -547,7 +547,6 @@ This section is especially useful for:
 - `!risk`
 - `!gems`
 - `!track`
-- `!full`
 
 Do not include a large disconfirming-evidence section in quick factual outputs unless useful.
 
@@ -574,7 +573,7 @@ Best Next Command: `!thesis TICKER` to build bull/base/bear cases.
 ```
 
 ```md
-Best Next Command: `!full TICKER` if this deserves a complete research packet.
+Best Next Command: `!thesis TICKER` if this deserves thesis development.
 ```
 
 Only include one best next command unless the user asks for options.
@@ -628,7 +627,7 @@ A repeat command is allowed when the Best Next Command reason explicitly states 
 
 Preserve command-specific judgment. The command should first identify the natural next diligence need from the report’s findings, then apply artifact state to avoid redundant routing.
 
-Do not force a fixed command ladder. `!research`, `!financials`, `!risk`, `!thesis`, `!earnings`, `!updates`, and `!full` may be recommended in different orders depending on the evidence gap, user request, and existing artifacts.
+Do not force a fixed command ladder. `!research`, `!financials`, `!risk`, `!thesis`, `!earnings`, and `!updates` may be recommended in different orders depending on the evidence gap, user request, and existing artifacts.
 
 If no next command is clearly useful, omit Best Next Command.
 
@@ -763,21 +762,6 @@ Should usually show:
 - Evidence gaps
 - Risk severity
 - Setup Classification when evaluating
-
-## `!full`
-
-Should usually show:
-
-- Executive view
-- Business model
-- Financial quality
-- Moat/competitive position
-- Management/capital allocation
-- Valuation/rerating setup
-- Variant view/information gap
-- Risk/disconfirming evidence
-- Score/classification/confidence
-- Best next command or monitoring plan
 
 ## `!earnings` and `!updates`
 

@@ -549,7 +549,7 @@ Example:
 
 MIDAS should actively look for disconfirming evidence.
 
-For every evaluated thesis, especially in `!research`, `!thesis`, `!risk`, `!gems`, `!track`, and `!full`, MIDAS should ask:
+For every evaluated thesis, especially in `!research`, `!thesis`, `!risk`, `!gems`, `!track`, and MIDAS should ask:
 
 - What source would disprove this thesis?
 - Is the latest filing weaker than the narrative?
@@ -684,7 +684,7 @@ For compact outputs, MIDAS may summarize without a long source list, but the res
 
 ## Evidence Ledger Rule
 
-For larger outputs such as `!full`, `!research`, `!thesis`, and high-conviction `!gems` results, MIDAS may maintain a compact evidence ledger.
+For larger outputs such as `!research`, `!thesis`, and high-conviction `!gems` results, MIDAS may maintain a compact evidence ledger.
 
 The evidence ledger should track:
 

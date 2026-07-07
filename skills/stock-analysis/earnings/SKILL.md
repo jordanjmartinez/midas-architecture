@@ -43,6 +43,7 @@ Uses Classification: `Optional`
 Uses Scoring: `Not used`
 Uses Metrics: `Required`
 Writes Artifacts: `Yes`
+Output Modes: `Not supported` (single standard output shape; no Compact/Full modes)
 Primary Global Rules: `GLOBAL.md, COMMAND_INTERFACE.md, SOURCES.md, METRICS.md, OUTPUT.md, ARTIFACTS.md, CLASSIFICATIONS.md`
 
 ## Critical Rules

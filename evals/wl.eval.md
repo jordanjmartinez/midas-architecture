@@ -52,7 +52,7 @@ The command-specific evals below do not replace global guardrails. If global and
 
 - Live watchlist mutation in `data/midas_watchlist.json`.
 - Creating, deleting, or modifying real ticker workspace artifacts.
-- Running `!research`, `!financials`, `!thesis`, `!risk`, `!earnings`, `!full`, `!gems`, or `!track`.
+- Running `!research`, `!financials`, `!thesis`, `!risk`, `!earnings`, `!gems`, or `!track`.
 - Status changes outside explicitly approved activation patches.
 - Changing registry metadata outside the `!wl` row.
 - Changing the watchlist JSON schema.

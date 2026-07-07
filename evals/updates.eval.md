@@ -342,7 +342,6 @@ Must not become:
 - `!risk`
 - `!thesis`
 - `!earnings`
-- `!full`
 
 Must not include:
 

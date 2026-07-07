@@ -47,7 +47,7 @@ Keep the output short, practical, and source-aware.
 - a Buy/Sell/Hold recommendation
 - a price-target, sizing, or trade-advice output
 
-Do not auto-run `!earnings`, `!research`, `!financials`, `!thesis`, `!risk`, `!full`, or any other command.
+Do not auto-run `!earnings`, `!research`, `!financials`, `!thesis`, `!risk`, or any other command.
 
 Do not modify watchlist state.
 

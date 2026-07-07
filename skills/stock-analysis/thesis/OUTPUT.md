@@ -101,7 +101,7 @@ Avoid:
 - long filing dumps,
 - full financial-statement review that belongs in `!financials`,
 - downside-only risk memo that belongs in `!risk`,
-- complete packet output that belongs in `!full`,
+- complete packet synthesis output,
 - false saved claims,
 - watchlist mutation claims,
 - downstream command auto-runs.

@@ -46,14 +46,14 @@ Use this command when:
 - The user invokes `!risk [company or ticker]`, `/risk [company or ticker]`, or `risk [company or ticker]`.
 - The user asks for a risk assessment, downside pressure test, thesis-breaking risks, bear case, fragility review, or risk monitoring checklist for a public company.
 - The user wants to know what could go wrong before building or updating a thesis.
-- A prior `!research`, `!financials`, `!thesis`, `!earnings`, or `!full` output surfaced risks that need standalone review.
+- A prior `!research`, `!financials`, `!thesis`, `!earnings` output surfaced risks that need standalone review.
 
 Do not use this command when:
 
 - The user wants business-model research. Use or recommend `!research`.
 - The user wants financial-statement and metric-quality analysis. Use or recommend `!financials`.
 - The user wants bull/base/bear thesis construction. Use or recommend `!thesis`.
-- The user wants a complete packet with scoring, classification, valuation, and integrated risks. Use or recommend `!full`.
+- The user wants a complete packet with scoring, classification, valuation, and integrated risks. Recommend completing `!research`, `!financials`, and `!thesis` so the four core artifacts form the packet.
 - The user wants latest-quarter earnings review. Use or recommend `!earnings`.
 - The user asks for buy/sell/hold instructions, position sizing, trade timing, or a price target. Reframe as risk research.
 
@@ -124,7 +124,7 @@ Former compact-style words such as `compact`, `quick`, `brief`, `short`, `concis
 
 Former full/deep-style words such as `full`, `deep`, `detailed`, `expanded`, `deep-dive`, and `deepdive` are not `!risk` modes.
 
-- If the request asks for a complete packet, recommend `!full [TICKER]`.
+- If the request asks for a complete packet, recommend completing `!research [TICKER]`, `!financials [TICKER]`, and `!thesis [TICKER]`.
 - If the request asks for thesis work, bull/base/bear framing, or a long-term view, recommend `!thesis [TICKER]`.
 - If the request asks for business-model research, recommend `!research [TICKER]`.
 - If the request asks for financial statements, metric quality, liquidity roll-forward, or full financial analysis, recommend `!financials [TICKER]`.
@@ -205,7 +205,7 @@ Follow this command-specific workflow:
 33. Before finalizing Best Next Command, perform a workspace-aware routing check for same-ticker canonical artifacts using path existence and header/source-period freshness only. Do not edit artifacts during this routing check, and do not deep-parse existing artifacts unless they were already loaded for risk analysis.
 34. Preserve issue-driven logic first: identify whether the risk review naturally points to business-model research, financial-statement work, thesis construction/update, earnings update, or full packet integration.
 35. Apply artifact state as a routing guardrail: avoid recommending a repeat command when the relevant same-ticker artifact already exists and appears current enough by header/source-period review.
-36. Use `!full [TICKER]` only when complete packet integration is useful or when the user explicitly wants the complete MIDAS packet.
+36. Recommend completing the remaining core artifacts only when packet completion is useful or when the user explicitly wants the complete MIDAS packet.
 37. Before final response, perform a ticker-consistency finalization check: requested ticker/company, resolved issuer, report title, artifact path, saved-path line, and source state must all match the current command.
 38. End normal responses with exactly one saved-path confirmation as the final line after successful artifact write verification under `ARTIFACTS.md`.
 
@@ -324,7 +324,7 @@ Command-specific scoring notes:
 - Overall Risk Level may appear when evidence is sufficient, but it is a risk-specific research label and not an investment recommendation.
 - If broader scoring is requested, risk findings may inform the Risk / Fragility / Downside Protection pillar and any score caps/gates under `SCORING.md`.
 - If evidence is insufficient, withhold precise scoring/rating language or state that evidence is insufficient.
-- If the user wants the complete scored packet, suggest `!full`.
+- If the user wants the complete scored packet, suggest completing `!research`, `!financials`, and `!thesis`.
 
 ### Metrics
 
@@ -516,7 +516,7 @@ This command must not:
 - Treat management optimism as risk reduction without reported evidence.
 - Present stale market data as current.
 - Invent unavailable or unsupported metrics.
-- Drift into `!research`, `!financials`, `!thesis`, `!full`, `!earnings`, or `!gems`.
+- Drift into `!research`, `!financials`, `!thesis`, `!earnings`, or `!gems`.
 - Use market data as proof of business-model risk, revenue risk, margin risk, cash-flow risk, filing-derived debt/liquidity risk, filing-derived dilution risk, customer concentration, supplier concentration, regulatory/legal risk, or management execution risk.
 - Treat price action as proof that a filing-backed risk is real or thesis-breaking.
 - Treat price action, market data, or narrative momentum as proof of business quality, financial quality, customer demand, revenue, margins, cash flow, or thesis validity.
@@ -585,7 +585,7 @@ Before this command is considered Active, confirm:
 - Unsupported compact/full/deep behavior passes.
 - Artifact behavior is verified.
 - Source discipline passes on more than one normal ticker.
-- The command does not conflict with `!research`, `!financials`, `!thesis`, `!full`, `!earnings`, or `!gems`.
+- The command does not conflict with `!research`, `!financials`, `!thesis`, `!earnings`, or `!gems`.
 
 ## Final Rule
 

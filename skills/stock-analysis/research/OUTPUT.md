@@ -101,7 +101,7 @@ If this file conflicts with a global rule file, the global rule file wins unless
 - Useful before it is exhaustive.
 - Thesis-driven enough to explain why the business-model evidence matters, without becoming `!thesis`.
 - Clear about what is disclosed, inferred, and not disclosed.
-- Specific enough to support deeper diligence with `!financials`, `!thesis`, `!risk`, or `!full`.
+- Specific enough to support deeper diligence with `!financials`, `!thesis`, or `!risk`.
 
 Avoid:
 
@@ -153,7 +153,7 @@ Compact-style request:
 Full/deep packet request:
 
 ```md
-`!research` is scoped to business-model research. Use `!full [ticker]` for a complete packet, `!thesis [ticker]` for thesis work, `!financials [ticker]` for financial statements, or `!risk [ticker]` for downside pressure-testing.
+`!research` is scoped to business-model research. Use `!thesis [ticker]` for thesis work, `!financials [ticker]` for financial statements, or `!risk [ticker]` for downside pressure-testing.
 ```
 
 Do not auto-run these commands.
@@ -449,7 +449,7 @@ Command-specific scoring notes:
 
 - Do not score by default.
 - Use scoring only if the user asks for a score or if the output explicitly includes setup evaluation.
-- If full scoring is needed, suggest `!full`.
+- If full scoring is needed, apply it per `rules/SCORING.md` on explicit request.
 
 If scoring is not used, omit the scoring section unless the user asked for score behavior.
 
@@ -492,7 +492,6 @@ Allowed examples:
 - `` `!financials [TICKER]` — Review financial statements, metric quality, margins, cash flow, balance sheet, and dilution. ``
 - `` `!thesis [TICKER]` — Build the long-term thesis and what would need to go right. ``
 - `` `!risk [TICKER]` — Pressure-test downside and thesis-breaking risks. ``
-- `` `!full [TICKER]` — Build a complete research packet with scoring and classification. ``
 - `` `!market [TICKER]` — Use only for a current market snapshot. ``
 
 Formatting:

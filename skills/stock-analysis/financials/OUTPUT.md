@@ -136,7 +136,6 @@ Former Compact-style words such as `compact`, `quick`, `brief`, `short`, `summar
 
 Former Full/Deep-style words such as `full`, `deep`, `detailed`, `expanded`, `deep-dive`, and `deepdive` are not `!financials` modes. Route to better commands when appropriate:
 
-- `!full [ticker]` for a complete MIDAS packet.
 - `!thesis [ticker]` for thesis work.
 - `!risk [ticker]` for downside pressure-testing.
 - `!research [ticker]` for business-model research.
@@ -155,7 +154,7 @@ Compact-style request boundary:
 Full/deep complete-packet request boundary:
 
 ```md
-!financials is scoped to financial statements and metric quality. Use !full [ticker] for a complete packet, !thesis [ticker] for thesis work, !risk [ticker] for downside pressure-testing, !research [ticker] for business-model research, or !earnings [ticker] for latest-quarter earnings review.
+!financials is scoped to financial statements and metric quality. Use !thesis [ticker] for thesis work, !risk [ticker] for downside pressure-testing, !research [ticker] for business-model research, or !earnings [ticker] for latest-quarter earnings review.
 ```
 
 Do not auto-run downstream commands.
@@ -268,7 +267,7 @@ Scoring usage: `Optional`
 
 Normal output includes the required `## Financial Quality Score` section as a concise financial-quality research prioritization score/grade when evidence supports it. This is not a full Global Research Score and must not be framed as a recommendation.
 
-If broader scoring is requested, scoring must follow `rules/SCORING.md`. If the user asks for a full Global Research Score, prefer suggesting `!full` unless the requested scope is clearly limited to financial quality.
+If broader scoring is requested, scoring must follow `rules/SCORING.md`. If the user asks for a full Global Research Score, apply it per `rules/SCORING.md` unless the requested scope is clearly limited to financial quality.
 
 Do not use a score as a recommendation.
 
@@ -419,7 +418,7 @@ Best Next Command is optional in normal output. When useful, include it as its o
 
 - If `workspace/tickers/[ticker]/research.md` exists, preserve existing routing logic: prefer `!thesis [TICKER]` to turn the business-model and financial evidence into a thesis view, or `!risk [TICKER]` if the financial review surfaced debt, dilution, liquidity, cash-conversion, accounting, or margin fragility.
 - If `workspace/tickers/[ticker]/research.md` does not exist, prefer `!research [TICKER]` to build the business-model view behind the financials.
-- Use `!full [TICKER]` only when the user wants the complete MIDAS packet.
+- Recommend completing the remaining core artifacts only when the user wants the complete MIDAS packet.
 - Use `!earnings [TICKER]` when latest-quarter or earnings-update work is the right next step.
 
 Normal format:
@@ -435,7 +434,6 @@ Examples:
 - `` `!research [TICKER]` — Build the business-model view behind these financials. ``
 - `` `!thesis [TICKER]` — Turn the existing business-model and financial evidence into a thesis view. ``
 - `` `!risk [TICKER]` — Pressure-test dilution, liquidity, cash-conversion, or accounting pressure points. ``
-- `` `!full [TICKER]` — Build the complete MIDAS packet. ``
 - `` `!earnings [TICKER]` — Review the latest-quarter earnings update. ``
 
 Do not recommend a next command when it would be noisy or unnecessary.

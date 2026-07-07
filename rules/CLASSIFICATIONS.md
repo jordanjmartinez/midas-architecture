@@ -82,7 +82,6 @@ Commands that should commonly use Setup Classification:
 - `!research`
 - `!thesis`
 - `!risk`
-- `!full`
 
 Commands that may omit Setup Classification when they are only summarizing raw data:
 

@@ -167,7 +167,7 @@ Unsupported compact-style request boundary:
 Unsupported full/deep complete-packet request boundary:
 
 ```md
-!risk is scoped to company risk assessment. Use !full [ticker] for a complete packet, !thesis [ticker] for thesis work, !research [ticker] for business-model research, !financials [ticker] for financial-statement review, or !earnings [ticker] for latest-quarter earnings review.
+!risk is scoped to company risk assessment. Use !thesis [ticker] for thesis work, !research [ticker] for business-model research, !financials [ticker] for financial-statement review, or !earnings [ticker] for latest-quarter earnings review.
 ```
 
 Do not auto-run those commands.
@@ -395,7 +395,6 @@ If the user wants a complete scored packet and Best Next Command is useful, use 
 ```md
 ## Best Next Command
 
-`!full [TICKER]` — Get the complete MIDAS score, setup classification, and research packet.
 ```
 
 ---
@@ -465,7 +464,7 @@ Common choices after workspace-aware routing:
 - `!thesis [TICKER]` when research, financials, and risk evidence exist but thesis is missing.
 - `!thesis update [TICKER]` when thesis exists but the risk report used materially newer evidence than the existing thesis.
 - `!earnings [TICKER]` when latest-quarter results are the main evidence gap.
-- `!full [TICKER]` when research, financials, risk, and thesis artifacts already exist, or the user wants the complete packet with score, classification, valuation/rerating setup, and risks integrated.
+- When research, financials, risk, and thesis artifacts all exist and are current, note that the core research set for the ticker is complete.
 
 ---
 

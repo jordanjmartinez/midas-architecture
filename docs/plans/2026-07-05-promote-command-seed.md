@@ -1,14 +1,52 @@
+# !promote Command Seed (preserved from removed !full)
+
+Status: Plan / design seed. Not runtime law. Per rules/CONTRACT_AUTHORITY.md,
+docs contain no hidden runtime rules; nothing here executes.
+
+Provenance: the `!full` command was removed on 2026-07-05 (baseline finding
+2.3, revised from deferral to removal). Its synthesis logic is preserved below
+as the design seed for the planned `!promote` pipeline command: eligible when
+the four core artifacts (research.md, financials.md, thesis.md, risk.md) exist
+and are current for a ticker; produces the handoff packet for downstream
+agents. Design constraints carried forward: no Buy/Hold/Sell framing may
+survive the handoff; eligibility is presence plus freshness, not presence
+alone; the packet shape belongs in schemas/ when built.
+
+## Former rules/OUTPUT.md section: !full output contract
+
+## `!full`
+
+Should usually show:
+
+- Executive view
+- Business model
+- Financial quality
+- Moat/competitive position
+- Management/capital allocation
+- Valuation/rerating setup
+- Variant view/information gap
+- Risk/disconfirming evidence
+- Score/classification/confidence
+- Best next command or monitoring plan
+
 ---
-name: full
-description: Use when the user invokes !full [company name or ticker], /full [company name or ticker], or asks for a full investment research memo. Internally synthesizes !research, !financials, !thesis, and !risk into one citation-backed memo without trade recommendations.
-version: 1.0.0
-author: Midas / Hermes Agent
-license: MIT
-metadata:
-  hermes:
-    tags: [stocks, equity-research, sec-filings, full-analysis, investment-memo]
-    related_skills: [research, financials, thesis, risk]
+
+## Former evals/README.md section: !full eval planning
+
+## `!full`
+
+Minimum evals:
+
+- Full report structure
+- Global Research Score used correctly
+- Setup Classification included
+- Evidence Confidence included
+- Artifact behavior correct
+- Source notes included
+
 ---
+
+## Former skills/stock-analysis/full/SKILL.md (entire body)
 
 # AI Stock Full Investment Research Prompt v1.0
 

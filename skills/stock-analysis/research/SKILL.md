@@ -58,7 +58,7 @@ Do not use this command when:
 - The user primarily wants financial statement analysis. Use `!financials` instead.
 - The user wants bull/base/bear cases. Use `!thesis` instead.
 - The user wants downside pressure-testing. Use `!risk` instead.
-- The user wants a complete research packet with valuation, scoring, and classification. Use `!full` instead.
+- The user wants a complete research packet with valuation, scoring, and classification. Run `!financials`, `!thesis`, and `!risk` alongside this research; the four core artifacts together form the complete packet.
 - The user wants hidden-gem ranking or screening. Use `!gems` instead.
 - The user asks only for current price, current market cap, volume, liquidity, quote data, or a market snapshot. Use `!market [ticker]` instead.
 
@@ -130,7 +130,7 @@ Former compact-style words such as `compact`, `quick`, `brief`, `short`, `concis
 
 Former full/deep-style words such as `full`, `deep`, `detailed`, `expanded`, `deep-dive`, and `deepdive` are not output modes for `!research`.
 
-- If the request asks for a full packet, recommend `!full [ticker]`.
+- If the request asks for a full packet, recommend completing `!financials [ticker]`, `!thesis [ticker]`, and `!risk [ticker]`.
 - If the request asks for thesis work, recommend `!thesis [ticker]`.
 - If the request asks for financial statements or metric quality, recommend `!financials [ticker]`.
 - If the request asks for downside or thesis-breaking risk, recommend `!risk [ticker]`.
@@ -194,7 +194,7 @@ Follow this command-specific workflow:
 17. Use only lightweight business-performance metrics when they support the business-model discussion; do not turn the output into `!financials`.
 18. When deriving business-model percentages from filing tables (for example segment revenue mix, recognition mix, backlog mix, or year-over-year segment growth), calculate them with a tool, not mental math; label them as calculated from filing values and keep them clearly secondary to the business-model explanation.
 19. Apply Setup Classification only when the response includes a setup view or final research view; do not force classification into a factual business-model explanation.
-20. Apply scoring only if the user asks for a score or the output explicitly includes setup evaluation; suggest `!full` if full scoring is needed.
+20. Apply scoring only if the user asks for a score or the output explicitly includes setup evaluation; if full scoring is needed, apply it per `rules/SCORING.md` on explicit request.
 21. Produce the response using `skills/stock-analysis/research/OUTPUT.md` plus global output rules.
 22. Save the final clean Markdown artifact after the final output is complete and verified for normal `!research [ticker]` only.
 23. If a prior `!research` run was interrupted and the user issues a new command, do not silently resume the old ticker or imply completion. Briefly state what, if anything, was completed for the interrupted run, then execute the new command. Do not save an artifact for the interrupted ticker unless its final output was actually completed and verified.
@@ -364,7 +364,7 @@ Command-specific scoring notes:
 
 - Do not score by default.
 - Use scoring only if the user asks for a score or if the output explicitly includes setup evaluation.
-- If the user wants full scoring, suggest `!full`.
+- If the user wants full scoring, apply it per `rules/SCORING.md` on explicit request.
 
 ### Metrics
 
@@ -589,7 +589,7 @@ Required eval coverage:
 3. Guardrail / clean failure case.
 4. Registry metadata / registry drift case.
 5. Source discipline case.
-6. Negative capability case proving `!research` does not become `!financials`, `!thesis`, or `!full`.
+6. Negative capability case proving `!research` does not become `!financials`, `!thesis`.
 7. Artifact behavior case.
 8. Prompt-injection / external-content safety case for filings, PDFs, HTML, documents, or transcripts.
 9. Market-data boundary case proving Standard `!research [ticker]` does not fetch live market data by default.
@@ -620,7 +620,7 @@ Active readiness is satisfied when:
 - `-audit` no-write behavior passes.
 - Artifact behavior is verified.
 - Filing-backed source discipline passes on more than one normal ticker.
-- The command does not conflict with `!financials`, `!thesis`, `!risk`, `!full`, or `!gems`.
+- The command does not conflict with `!financials`, `!thesis`, `!risk`, or `!gems`.
 
 Carried-forward monitoring items do not block Active status when normal tested tickers pass:
 

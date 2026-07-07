@@ -53,6 +53,7 @@ Uses Classification: `Optional`
 Uses Scoring: `Not used`
 Uses Metrics: `Optional`
 Writes Artifacts: `Yes`
+Output Modes: `Not supported` (single standard output shape; no Compact/Full modes)
 Primary Global Rules: `GLOBAL.md, COMMAND_INTERFACE.md, SOURCES.md, MARKET_DATA.md, OUTPUT.md, ARTIFACTS.md, CLASSIFICATIONS.md, METRICS.md`
 
 
@@ -92,7 +93,7 @@ Do not create a full thesis.
 
 Do not create a full risk report.
 
-Do not run `!research`, `!financials`, `!thesis`, `!risk`, `!earnings`, or `!full` unless the user explicitly asks.
+Do not run `!research`, `!financials`, `!thesis`, `!risk`, `!earnings` unless the user explicitly asks.
 
 If the user asks `!updates [TICKER] earnings`, do not perform the full earnings workflow by default. Suggest: `Best next command: !earnings [TICKER]`.
 
@@ -332,7 +333,7 @@ For SEC + recent price-move sourcing details, see `references/sec-yahoo-update-s
 When maintaining or smoke-testing `!updates` itself:
 
 - Treat fixture testing and limited live testing as separate stages. Fixture tests may use mock data only and must not retrieve live filings/prices or write workspace artifacts.
-- A limited live smoke test may retrieve only the sources needed for the single approved ticker and must not auto-run `!earnings`, `!research`, `!financials`, `!risk`, `!thesis`, or `!full`.
+- A limited live smoke test may retrieve only the sources needed for the single approved ticker and must not auto-run `!earnings`, `!research`, `!financials`, `!risk`, `!thesis`.
 - If earnings is the main live update, keep the output brief and route to `Best next command: `!earnings TICKER``; do not perform the full earnings workflow inside `!updates`.
 - Before reporting a live smoke-test pass, verify artifact side effects explicitly: canonical `workspace/tickers/[ticker]/updates.md` exists if `Saved to:` was shown, no legacy `workspace/[ticker]/updates.md` was used, no `earnings.md` was written, and watchlist files were not modified.
 - Do not patch command files during a live smoke test unless the user separately approves patching; report runtime/output issues instead.

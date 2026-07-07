@@ -65,7 +65,7 @@ Market data can support rerating context, price-performance context, liquidity, 
 
 `!market` is a thin standalone utility command and testable consumer of the helper. It is not the market-data architecture itself.
 
-Other commands should not depend on `!market` output text. When commands such as `!thesis`, `!financials`, `!risk`, `!full`, or future screen/watchlist workflows need live market context, they should follow this rule file and call the canonical helper directly.
+Other commands should not depend on `!market` output text. When commands such as `!thesis`, `!financials`, `!risk`, or future screen/watchlist workflows need live market context, they should follow this rule file and call the canonical helper directly.
 
 Architecture:
 
@@ -366,7 +366,7 @@ Detailed command workflow and display requirements live in:
 
 ### Filing-backed commands
 
-Commands such as `!thesis`, `!financials`, `!risk`, `!full`, and future screen/watchlist workflows may use market data for valuation, market-cap, liquidity, price-performance, or rerating context.
+Commands such as `!thesis`, `!financials`, `!risk`, and future screen/watchlist workflows may use market data for valuation, market-cap, liquidity, price-performance, or rerating context.
 
 They must keep market data separate from SEC filing-backed business, financial, and risk evidence.
 
