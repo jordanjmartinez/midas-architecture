@@ -231,6 +231,7 @@ Use these canonical ticker artifact paths:
 !risk [TICKER]        -> workspace/tickers/[ticker]/risk.md
 !earnings [TICKER]    -> workspace/tickers/[ticker]/earnings.md
 !updates [TICKER]     -> workspace/tickers/[ticker]/updates.md
+!promote [TICKER]     -> workspace/tickers/[ticker]/promotion.md
 ```
 
 Optional scorecard path:
@@ -328,6 +329,22 @@ Theme/subtheme normalization, index mechanics, and write behavior are
 command-local and live in the `!gems` command files
 (`skills/stock-analysis/gems/references/artifact-index.md`, `SKILL.md`,
 `OUTPUT.md`); this section defines only the canonical paths.
+
+---
+
+# Library Handoff Boundary
+
+The Pathos Library (reachable via the `library` symlink in the profile root)
+is cross-agent space governed by `library/LIBRARY.md`, which wins over this
+file for everything under the library root.
+
+- `!promote` is the only MIDAS writer into the library, and only inside
+  `library/intake/midas/`.
+- `library/registry/` is written only by `library/tools/register_packet.py`.
+  Registered packets are immutable.
+- `workspace/tickers/[ticker]/promotion.md` is the MIDAS-side promotion
+  record.
+- No MIDAS command reads or writes any other agent's library directories.
 
 ---
 

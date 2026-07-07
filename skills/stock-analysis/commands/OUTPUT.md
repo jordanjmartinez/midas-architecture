@@ -97,7 +97,8 @@ Aliases: `/thesis`, `thesis`
 `!risk [ticker]` — Draft — Filing-backed risk assessment. Writes artifacts.
 Aliases: `/risk`, `risk`
 
-Aliases: `/full`, `full analysis`
+`!promote [ticker]` — Draft — Promote a completed research set (research, financials, thesis, risk) to the Pathos Library. Writes artifacts.
+Aliases: `/promote`
 
 ## Updates / Market
 

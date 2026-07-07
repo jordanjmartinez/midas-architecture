@@ -464,7 +464,7 @@ Common choices after workspace-aware routing:
 - `!thesis [TICKER]` when research, financials, and risk evidence exist but thesis is missing.
 - `!thesis update [TICKER]` when thesis exists but the risk report used materially newer evidence than the existing thesis.
 - `!earnings [TICKER]` when latest-quarter results are the main evidence gap.
-- When research, financials, risk, and thesis artifacts all exist and are current, note that the core research set for the ticker is complete.
+- When research, financials, risk, and thesis artifacts all exist and are current, note that the core research set for the ticker is complete and `!promote [TICKER]` is eligible.
 
 ---
 

@@ -627,7 +627,7 @@ A repeat command is allowed when the Best Next Command reason explicitly states 
 
 Preserve command-specific judgment. The command should first identify the natural next diligence need from the report’s findings, then apply artifact state to avoid redundant routing.
 
-Do not force a fixed command ladder. `!research`, `!financials`, `!risk`, `!thesis`, `!earnings`, and `!updates` may be recommended in different orders depending on the evidence gap, user request, and existing artifacts.
+Do not force a fixed command ladder. `!research`, `!financials`, `!risk`, `!thesis`, `!earnings`, `!updates`, and `!promote` may be recommended in different orders depending on the evidence gap, user request, and existing artifacts.
 
 If no next command is clearly useful, omit Best Next Command.
 
