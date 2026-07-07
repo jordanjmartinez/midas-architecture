@@ -1,6 +1,6 @@
 # MIDAS Command Output Contract — !research
 
-Template source: `/home/jordan/.hermes/profiles/midas/templates/COMMAND_OUTPUT_TEMPLATE.md`
+Template source: `templates/COMMAND_OUTPUT_TEMPLATE.md`
 
 ---
 
@@ -510,7 +510,7 @@ Formatting:
 
 Artifact output must follow:
 
-`/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`
+`rules/ARTIFACTS.md`
 
 Writes artifacts:
 
@@ -520,7 +520,7 @@ Writes artifacts:
 Normal artifact behavior:
 
 - Write the canonical Markdown research artifact automatically after the final answer is complete and verified.
-- Artifact location: `/home/jordan/.hermes/profiles/midas/workspace/tickers/[ticker]/research.md`
+- Artifact location: `workspace/tickers/[ticker]/research.md`
 - User-facing relative path: `workspace/tickers/[ticker]/research.md`
 - Artifact type: `Markdown research note`
 - Saved artifacts must include the required report title and `Introduction` section.
@@ -540,7 +540,7 @@ Separate Artifact section:
 - Do not include a separate Artifact section by default.
 - Only include a separate Artifact section if there is extra artifact context beyond a normal save confirmation, such as multiple artifacts created, a versioned artifact preserved, the artifact path changed, a save failed, or the user explicitly asked for artifact details.
 
-Legacy path handling follows `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`.
+Legacy path handling follows `rules/ARTIFACTS.md`.
 
 ---
 

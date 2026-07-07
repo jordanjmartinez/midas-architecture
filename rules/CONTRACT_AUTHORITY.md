@@ -45,7 +45,7 @@ If the rule already exists in `rules/`, do not duplicate it.
 Use a short pointer instead:
 
 ```md
-Follow `/home/jordan/.hermes/profiles/midas/rules/[RULE].md`.
+Follow `rules/[RULE].md`.
 ```
 
 ### 2. Applies to multiple commands
@@ -375,13 +375,13 @@ The following do not make a file authoritative by themselves:
 
 Active MIDAS behavior must come from one of these approved locations:
 
-- `/home/jordan/.hermes/profiles/midas/rules/` for shared runtime behavior
+- `rules/` for shared runtime behavior
 - A command `SKILL.md` for command workflow, routing, inputs, and command boundaries
 - A command `OUTPUT.md` for command-specific output shape
-- `/home/jordan/.hermes/profiles/midas/evals/` for regression and behavior checks
-- `/home/jordan/.hermes/profiles/midas/docs/` for architecture explanation
-- `/home/jordan/.hermes/profiles/midas/templates/` for reusable scaffolding
-- `/home/jordan/.hermes/profiles/midas/schemas/` for structured artifact shapes
+- `evals/` for regression and behavior checks
+- `docs/` for architecture explanation
+- `templates/` for reusable scaffolding
+- `schemas/` for structured artifact shapes
 
 ### Guard Agent Role
 
@@ -416,7 +416,7 @@ For a command-local reference:
 
 For a shared rule:
 
-- It belongs under `/home/jordan/.hermes/profiles/midas/rules/`.
+- It belongs under `rules/`.
 - It changes shared runtime behavior across commands.
 - It does not duplicate the full contents of sibling rule files.
 - It references sibling rule files by path when needed.
@@ -425,7 +425,7 @@ For a shared rule:
 
 For an eval:
 
-- It belongs under `/home/jordan/.hermes/profiles/midas/evals/`.
+- It belongs under `evals/`.
 - It tests a real failure mode, regression, or guardrail.
 - It has clear pass/fail criteria.
 - It does not redefine runtime policy.
@@ -458,7 +458,7 @@ When an auto-created file is reviewed, classify it as one of:
 
 - Draft Reference — useful note, not active policy.
 - Promoted Command Reference — active command-local support file with narrow trigger.
-- Global Rule Candidate — should be moved or condensed into `/home/jordan/.hermes/profiles/midas/rules/`.
+- Global Rule Candidate — should be moved or condensed into `rules/`.
 - Eval Candidate — should become a regression or guardrail eval.
 - Docs / Template Candidate — explanatory or reusable scaffolding, not runtime policy.
 - Archive / Delete Candidate — obsolete, duplicative, over-specific, contradictory, or not durable.

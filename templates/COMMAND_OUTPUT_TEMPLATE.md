@@ -521,7 +521,7 @@ Command-specific full structure:
 
 Artifact display and failure behavior should follow:
 
-`/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`
+`rules/ARTIFACTS.md`
 
 Writes artifacts:
 

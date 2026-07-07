@@ -7,7 +7,7 @@ Purpose: Define the visible output shape for the MIDAS watchlist command.
 
 `!wl` manages the persistent MIDAS stock watchlist stored at:
 
-`/home/jordan/.hermes/profiles/midas/data/midas_watchlist.json`
+`data/midas_watchlist.json`
 
 `!watchlist` and `!list` are full alias families for `!wl`; their add/rm/show/updates variants use the same output shapes and guardrails as the corresponding `!wl` variant.
 
@@ -137,7 +137,7 @@ Watchlist Unavailable
 
 I could not read the MIDAS watchlist file.
 
-Source of truth: `/home/jordan/.hermes/profiles/midas/data/midas_watchlist.json`
+Source of truth: `data/midas_watchlist.json`
 Issue: [short explanation]
 ```
 
@@ -258,7 +258,7 @@ Do not auto-run those commands from `!wl`.
 - `!wl updates` may write `workspace/tickers/[normalized-lowercase-ticker]/updates.md` only when a meaningful update is found.
 - Show `Saved to:` only after the artifact was actually written or updated.
 - If no meaningful update was found, do not create or claim an artifact.
-- Follow `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md` for save-order and path discipline.
+- Follow `rules/ARTIFACTS.md` for save-order and path discipline.
 
 ## Source Limits
 
@@ -279,7 +279,7 @@ Watchlist Action Failed
 
 Action: [Add / Remove / Show / Updates]
 Reason: [short explanation]
-Source of truth: `/home/jordan/.hermes/profiles/midas/data/midas_watchlist.json`
+Source of truth: `data/midas_watchlist.json`
 ```
 
 Never silently overwrite, drop, or duplicate watchlist entries when storage or schema is uncertain.

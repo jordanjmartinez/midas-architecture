@@ -6,13 +6,13 @@
 
 Use this file for command-specific presentation. Do not duplicate the full global rules here. Apply these shared standards by reference:
 
-- `/home/jordan/.hermes/profiles/midas/rules/OUTPUT.md` for general MIDAS output style and market-data display.
-- `/home/jordan/.hermes/profiles/midas/rules/SOURCES.md` for source discipline.
-- `/home/jordan/.hermes/profiles/midas/rules/CLASSIFICATIONS.md` for approved setup classifications and modifiers.
-- `/home/jordan/.hermes/profiles/midas/rules/SCORING.md` for Hidden-Gem Overlay and Evidence Confidence behavior.
-- `/home/jordan/.hermes/profiles/midas/rules/RERATING.md` for rerating, post-rerate, overextension, vertical-move, consolidation, valuation-reset, market-absorption, and price-action discipline.
-- `references/artifact-index.md` for command-local artifact/index mechanics and `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md` for global artifact standards.
-- `/home/jordan/.hermes/profiles/midas/rules/METRICS.md` when financial, valuation, market-cap, enterprise-value, liquidity, or price-performance metrics appear.
+- `rules/OUTPUT.md` for general MIDAS output style and market-data display.
+- `rules/SOURCES.md` for source discipline.
+- `rules/CLASSIFICATIONS.md` for approved setup classifications and modifiers.
+- `rules/SCORING.md` for Hidden-Gem Overlay and Evidence Confidence behavior.
+- `rules/RERATING.md` for rerating, post-rerate, overextension, vertical-move, consolidation, valuation-reset, market-absorption, and price-action discipline.
+- `references/artifact-index.md` for command-local artifact/index mechanics and `rules/ARTIFACTS.md` for global artifact standards.
+- `rules/METRICS.md` when financial, valuation, market-cap, enterprise-value, liquidity, or price-performance metrics appear.
 
 ## Output Modes
 
@@ -183,7 +183,7 @@ or, when extra clarity is useful:
 Hidden-Gem Overlay Score: [score]/25
 ```
 
-Do not use legacy score labels in user-facing chat output. General scoring standards are governed by `/home/jordan/.hermes/profiles/midas/rules/SCORING.md`; command-local Hidden-Gem Overlay behavior, score caps, and promotion/demotion logic are governed by `contracts/hidden-gems.md`.
+Do not use legacy score labels in user-facing chat output. General scoring standards are governed by `rules/SCORING.md`; command-local Hidden-Gem Overlay behavior, score caps, and promotion/demotion logic are governed by `contracts/hidden-gems.md`.
 
 Score display rules:
 
@@ -210,7 +210,7 @@ In normal `!gems` output, do not show setup classification labels by default in 
 - `## Researchable Leads` means candidates are interesting enough for deeper work but not clean hidden gems.
 - `## Watch Only` means names are worth monitoring but not strong enough for the main researchable section.
 
-Use approved classifications and modifiers from `/home/jordan/.hermes/profiles/midas/rules/CLASSIFICATIONS.md`, with rerating/post-rerate modifiers and discipline inherited from `/home/jordan/.hermes/profiles/midas/rules/RERATING.md`. Do not invent recommendation-like labels.
+Use approved classifications and modifiers from `rules/CLASSIFICATIONS.md`, with rerating/post-rerate modifiers and discipline inherited from `rules/RERATING.md`. Do not invent recommendation-like labels.
 
 Classification labels may still appear in audit mode, saved artifacts, or user-requested score/classification detail. When explicitly requested, acceptable display patterns include:
 
@@ -238,7 +238,7 @@ In normal `!gems` output, do not show Evidence Confidence grades by default in c
 Confidence: [A/B/C/D]
 ```
 
-Use `/home/jordan/.hermes/profiles/midas/rules/SCORING.md` for Evidence Confidence definitions.
+Use `rules/SCORING.md` for Evidence Confidence definitions.
 
 General display expectations:
 
@@ -270,7 +270,7 @@ Rules:
 - Social/crowding sources can help discovery, but must not prove the thesis.
 - Promotional sources, influencer mentions, famous-investor ownership, or market excitement are not proof.
 - Underdiscovered status should not be assumed without evidence.
-- Market data, if displayed, must follow `/home/jordan/.hermes/profiles/midas/rules/OUTPUT.md` `Market-Data Display Rule`.
+- Market data, if displayed, must follow `rules/OUTPUT.md` `Market-Data Display Rule`.
 - Full source detail belongs in the saved artifact when needed for auditability.
 
 ## Rerating / Valuation Display
@@ -332,7 +332,7 @@ Rules:
 
 ## Artifact / Index Display
 
-Preserve the current `!gems` artifact and index behavior from `SKILL.md`, `references/artifact-index.md`, and `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`.
+Preserve the current `!gems` artifact and index behavior from `SKILL.md`, `references/artifact-index.md`, and `rules/ARTIFACTS.md`.
 
 The user-facing reply should show these lines only if the actions actually happen:
 

@@ -41,7 +41,7 @@ python3 evals/market_stage6_validation.py
 python3 skills/stock-analysis/market/scripts/verify_finnhub_supplement_mock.py
 ```
 
-Run both from `/home/jordan/.hermes/profiles/midas`.
+Run both from the MIDAS profile root.
 
 ## Stage 7 cleanup result
 

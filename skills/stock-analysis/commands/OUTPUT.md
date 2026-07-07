@@ -10,7 +10,7 @@
 
 The command registry is the command index:
 
-`/home/jordan/.hermes/profiles/midas/docs/COMMAND_REGISTRY.md`
+`docs/COMMAND_REGISTRY.md`
 
 This file defines how the menu is displayed. It must not become a competing registry.
 

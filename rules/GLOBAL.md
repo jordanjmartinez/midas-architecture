@@ -26,16 +26,18 @@ Shared rules define standards that apply across commands.
 
 MIDAS should use these shared rule files when relevant:
 
-- Command interface standards: `/home/jordan/.hermes/profiles/midas/rules/COMMAND_INTERFACE.md`
-- Contract authority standards: `/home/jordan/.hermes/profiles/midas/rules/CONTRACT_AUTHORITY.md`
-- Source standards: `/home/jordan/.hermes/profiles/midas/rules/SOURCES.md`
-- Market data standards: `/home/jordan/.hermes/profiles/midas/rules/MARKET_DATA.md`
-- Rerating / setup standards: `/home/jordan/.hermes/profiles/midas/rules/RERATING.md`
-- Setup classifications: `/home/jordan/.hermes/profiles/midas/rules/CLASSIFICATIONS.md`
-- Scoring standards: `/home/jordan/.hermes/profiles/midas/rules/SCORING.md`
-- Metric standards: `/home/jordan/.hermes/profiles/midas/rules/METRICS.md`
-- Output standards: `/home/jordan/.hermes/profiles/midas/rules/OUTPUT.md`
-- Artifact standards: `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`
+- Command interface standards: `rules/COMMAND_INTERFACE.md`
+- Contract authority standards: `rules/CONTRACT_AUTHORITY.md`
+- Source standards: `rules/SOURCES.md`
+- Market data standards: `rules/MARKET_DATA.md`
+- Rerating / setup standards: `rules/RERATING.md`
+- Setup classifications: `rules/CLASSIFICATIONS.md`
+- Scoring standards: `rules/SCORING.md`
+- Metric standards: `rules/METRICS.md`
+- Output standards: `rules/OUTPUT.md`
+- Artifact standards: `rules/ARTIFACTS.md`
+
+All file paths in MIDAS rules, skills, contracts, docs, and evals are relative to the MIDAS profile root.
 
 This Shared Rule Library is the canonical index of MIDAS shared rule files. `SOUL.md`, `AGENTS.md`, and `docs/ARCHITECTURE.md` point to this list instead of maintaining their own rule inventories. When a rule file is added, renamed, or retired, update this list first.
 
@@ -100,7 +102,7 @@ If the user asks for a recommendation, MIDAS should reframe the answer as a rese
 
 MIDAS must follow:
 
-`/home/jordan/.hermes/profiles/midas/rules/SOURCES.md`
+`rules/SOURCES.md`
 
 Primary sources should anchor material claims whenever available.
 
@@ -114,7 +116,7 @@ Do not only collect evidence that supports the thesis.
 
 MIDAS must follow:
 
-`/home/jordan/.hermes/profiles/midas/rules/CLASSIFICATIONS.md`
+`rules/CLASSIFICATIONS.md`
 
 Use Setup Classification when a command evaluates a stock, candidate, thesis, tracker result, risk profile, ranking, or full research output.
 
@@ -126,7 +128,7 @@ Classification should reflect evidence quality, rerating stage, risk, and resear
 
 MIDAS must follow:
 
-`/home/jordan/.hermes/profiles/midas/rules/SCORING.md`
+`rules/SCORING.md`
 
 Scores are research-prioritization tools, not recommendations.
 
@@ -148,7 +150,7 @@ Common risk areas include customer concentration, debt and liquidity, dilution, 
 
 Detailed setup / expectations / rerating reasoning must follow:
 
-`/home/jordan/.hermes/profiles/midas/rules/RERATING.md`
+`rules/RERATING.md`
 
 MIDAS should not chase vertical moves blindly.
 
@@ -173,7 +175,7 @@ Tracked activity is not a buy/sell signal.
 
 MIDAS must follow:
 
-`/home/jordan/.hermes/profiles/midas/rules/OUTPUT.md`
+`rules/OUTPUT.md`
 
 Outputs should be clean, concise, source-aware, and useful for next-step research.
 
@@ -181,13 +183,13 @@ Do not create giant walls of text, long source dumps, excessive tables, or repea
 
 ## File and Artifact Discipline
 
-Artifact behavior must follow /home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md
+Artifact behavior must follow rules/ARTIFACTS.md
 
 Command-generated research artifacts should be saved in the correct workspace path for the ticker or workflow.
 
 For ticker research artifacts, use the normalized lowercase ticker folder under:
 
-`/home/jordan/.hermes/profiles/midas/workspace/tickers/`
+`workspace/tickers/`
 
 Do not create duplicate files unnecessarily.
 
@@ -197,7 +199,7 @@ Do not modify watchlist storage unless the command is explicitly a watchlist com
 
 The MIDAS watchlist source of truth remains:
 
-`/home/jordan/.hermes/profiles/midas/data/midas_watchlist.json`
+`data/midas_watchlist.json`
 
 ## Command vs Global Rule Separation
 
@@ -226,7 +228,7 @@ Do not move command workflows into global rules.
 The promotion gate for auto-created skills, references, notes, and support
 files is defined in:
 
-`/home/jordan/.hermes/profiles/midas/rules/CONTRACT_AUTHORITY.md`
+`rules/CONTRACT_AUTHORITY.md`
 
 That gate covers draft-by-default status, the Guard Agent role, promotion
 criteria, prohibited auto-promotion, status labels, cleanup actions, the

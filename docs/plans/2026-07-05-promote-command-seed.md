@@ -97,7 +97,7 @@ This is not a trade recommendation.
 
 When this command produces an evaluation, ranking, final view, research lead, or setup summary, use the global Setup Classification standard:
 
-`/home/jordan/.hermes/profiles/midas/rules/CLASSIFICATIONS.md`
+`rules/CLASSIFICATIONS.md`
 
 Do not duplicate the classification definitions inside this skill.
 
@@ -325,7 +325,7 @@ Bottom line: [Answer]
 
 ## Workspace Artifact Saving
 
-Follow MIDAS-wide artifact standards in `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`.
+Follow MIDAS-wide artifact standards in `rules/ARTIFACTS.md`.
 
 After the final answer is complete and verified, save the clean final Markdown output as a workspace artifact.
 
@@ -333,11 +333,11 @@ After the final answer is complete and verified, save the clean final Markdown o
   - `HOOD` -> `hood`
   - `$RKLB` -> `rklb`
   - `KEEL` -> `keel`
-- Create the ticker folder if it does not exist: `/home/jordan/.hermes/profiles/midas/workspace/tickers/[ticker]/`.
+- Create the ticker folder if it does not exist: `workspace/tickers/[ticker]/`.
 - Save only the completed final full investment memo, not drafts, scratch work, module scratch outputs, source extracts, or incomplete analysis.
 - Overwrite the prior file for the same ticker and analysis type unless the user explicitly asks to preserve versions.
 - Save `!full [TICKER]` output to:
-  `/home/jordan/.hermes/profiles/midas/workspace/tickers/[ticker]/full.md`
+  `workspace/tickers/[ticker]/full.md`
 - The saved Markdown file must start with this header, then the full final output below it:
 
 ```md

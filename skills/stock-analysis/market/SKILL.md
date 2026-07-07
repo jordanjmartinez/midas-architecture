@@ -40,13 +40,13 @@ Primary Global Rules: `GLOBAL.md`, `SOURCES.md`, `MARKET_DATA.md`, `METRICS.md`,
 It exposes the canonical market-data helper to the user directly. It is not the market-data architecture itself; the architecture lives in:
 
 ```md
-/home/jordan/.hermes/profiles/midas/rules/MARKET_DATA.md
+rules/MARKET_DATA.md
 ```
 
 The helper lives at:
 
 ```md
-/home/jordan/.hermes/profiles/midas/tools/market_data_snapshot.py
+tools/market_data_snapshot.py
 ```
 
 Other MIDAS commands should not depend on `!market` output text. If `!thesis`, `!financials`, `!risk`, or future screen/watchlist workflows need live market context, they should follow `MARKET_DATA.md` and call the canonical helper directly.
@@ -55,18 +55,18 @@ Other MIDAS commands should not depend on `!market` output text. If `!thesis`, `
 
 Follow:
 
-- `/home/jordan/.hermes/profiles/midas/rules/GLOBAL.md`
-- `/home/jordan/.hermes/profiles/midas/rules/MARKET_DATA.md`
-- `/home/jordan/.hermes/profiles/midas/rules/SOURCES.md`
-- `/home/jordan/.hermes/profiles/midas/rules/METRICS.md` when displaying market-cap, valuation-related, calculated, or performance metrics
-- `/home/jordan/.hermes/profiles/midas/rules/OUTPUT.md`
+- `rules/GLOBAL.md`
+- `rules/MARKET_DATA.md`
+- `rules/SOURCES.md`
+- `rules/METRICS.md` when displaying market-cap, valuation-related, calculated, or performance metrics
+- `rules/OUTPUT.md`
 
 If this command skill conflicts with `MARKET_DATA.md`, `MARKET_DATA.md` controls market-data behavior.
 
 Command-specific display rules live in:
 
 ```md
-/home/jordan/.hermes/profiles/midas/skills/stock-analysis/market/OUTPUT.md
+skills/stock-analysis/market/OUTPUT.md
 ```
 
 Market references remain historical/support material only until separately cleaned up. Do not let stale reference wording reintroduce Compact, Full, Expanded, or Deep as normal modes.
@@ -121,7 +121,7 @@ Raw/debug requests are not normal market snapshot modes. They must not create ar
 3. For normal command display, call the canonical read-only helper in Standard render mode:
 
 ```bash
-python3 /home/jordan/.hermes/profiles/midas/tools/market_data_snapshot.py [TICKER] --render standard
+python3 tools/market_data_snapshot.py [TICKER] --render standard
 ```
 
 4. If a former render token such as `compact`, `full`, or `expanded` reaches the helper, treat it as a compatibility alias for the same Standard Market Snapshot, not as a separate mode.
@@ -282,7 +282,7 @@ If provider data is partial, stale, conflicting, unavailable, or rate-limited, s
 It must not create, modify, or report paths under:
 
 ```md
-/home/jordan/.hermes/profiles/midas/workspace/tickers/
+workspace/tickers/
 ```
 
 It must not create source manifests, evidence ledgers, proof packets, schemas, fixtures, market artifacts, or index/watchlist mutations.

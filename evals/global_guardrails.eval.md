@@ -10,10 +10,10 @@ They do not redefine runtime policy.
 
 Runtime policy lives in:
 
-- `/home/jordan/.hermes/profiles/midas/rules/GLOBAL.md`
-- `/home/jordan/.hermes/profiles/midas/rules/CONTRACT_AUTHORITY.md`
-- `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`
-- Other sibling rule files under `/home/jordan/.hermes/profiles/midas/rules/`
+- `rules/GLOBAL.md`
+- `rules/CONTRACT_AUTHORITY.md`
+- `rules/ARTIFACTS.md`
+- Other sibling rule files under `rules/`
 - Command `SKILL.md` files for command workflow, routing, inputs, and command boundaries
 - Command `OUTPUT.md` files for command-specific output shape
 
@@ -47,9 +47,9 @@ Supporting files:
 This eval file follows:
 
 - `evals/README.md`
-- `/home/jordan/.hermes/profiles/midas/rules/GLOBAL.md`
-- `/home/jordan/.hermes/profiles/midas/rules/CONTRACT_AUTHORITY.md`
-- `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`
+- `rules/GLOBAL.md`
+- `rules/CONTRACT_AUTHORITY.md`
+- `rules/ARTIFACTS.md`
 
 When a case involves sources, metrics, scoring, classification, or artifacts, also apply the relevant sibling rule file.
 

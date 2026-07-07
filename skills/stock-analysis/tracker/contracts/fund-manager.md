@@ -31,7 +31,7 @@ This contract does not own:
 - Registry status or eval cases.
 - Global source, metric, scoring, classification, output, artifact, or copy-trading guardrail definitions.
 
-Follow `/home/jordan/.hermes/profiles/midas/rules/CONTRACT_AUTHORITY.md` when deciding whether future additions belong here, in `SKILL.md`, in `OUTPUT.md`, in evals, in docs, in schemas, or in shared global rules. Tracked activity framing follows the no-copy-trading rule in `rules/GLOBAL.md`; this contract applies that rule and must not weaken it.
+Follow `rules/CONTRACT_AUTHORITY.md` when deciding whether future additions belong here, in `SKILL.md`, in `OUTPUT.md`, in evals, in docs, in schemas, or in shared global rules. Tracked activity framing follows the no-copy-trading rule in `rules/GLOBAL.md`; this contract applies that rule and must not weaken it.
 
 ## Purpose
 
@@ -119,7 +119,7 @@ If any P0 gate fails, the candidate cannot appear in visible `Best Stock Leads`.
 
 ## Disclosure Type Signal Matrix
 
-Use the global source rules in `/home/jordan/.hermes/profiles/midas/rules/SOURCES.md` for evidence hierarchy and citation discipline. This matrix is fund-manager-specific signal weighting for `!track` Alpha Queue triage; it does not replace global source standards.
+Use the global source rules in `rules/SOURCES.md` for evidence hierarchy and citation discipline. This matrix is fund-manager-specific signal weighting for `!track` Alpha Queue triage; it does not replace global source standards.
 
 Different disclosure types have different intelligence value. A 13D activist-style filing is not the same as a passive 13G, delayed 13F row, call option, or fund-letter mention.
 

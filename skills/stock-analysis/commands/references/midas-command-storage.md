@@ -8,15 +8,15 @@ Do not run a MIDAS command, refresh data, inspect profiles, or change files just
 
 ## Storage locations to mention
 
-- Stock research artifacts are saved under `/home/jordan/.hermes/profiles/midas/workspace/[normalized-lowercase-ticker]/`.
+- Stock research artifacts are saved under `workspace/[normalized-lowercase-ticker]/`.
   - Common files: `research.md`, `financials.md`, `thesis.md`, `risk.md`, `earnings.md`, `full.md`, `updates.md`.
 - `!gems` artifacts are saved under the MIDAS workspace gem path used by the gems skill, and should be described as research-candidate artifacts, not recommendations.
-- Person tracker artifacts are saved under `/home/jordan/.hermes/profiles/midas/workspace/tracker/[normalized-person-name].md`.
-- Person tracker watchlist state is stored in `/home/jordan/.hermes/profiles/midas/data/tracker_watchlist.json`.
-- Stock watchlist state is stored in `/home/jordan/.hermes/profiles/midas/data/midas_watchlist.json`.
+- Person tracker artifacts are saved under `workspace/tracker/[normalized-person-name].md`.
+- Person tracker watchlist state is stored in `data/tracker_watchlist.json`.
+- Stock watchlist state is stored in `data/midas_watchlist.json`.
 - Conversation transcripts/session logs may also exist in Hermes’ session database, but they are not the same as MIDAS research artifacts.
 - Persistent memories/skills are only updated when there is durable preference/procedure value or the user explicitly asks; do not imply every command becomes memory.
-- Skill-library changes are persistent files under the active profile’s skills directory, e.g. `/home/jordan/.hermes/profiles/midas/skills/`; distinguish these from normal MIDAS command outputs.
+- Skill-library changes are persistent files under the active profile’s skills directory, e.g. `skills/`; distinguish these from normal MIDAS command outputs.
 
 ## User-facing framing
 

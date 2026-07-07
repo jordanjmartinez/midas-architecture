@@ -144,18 +144,18 @@ Do not auto-run downstream commands.
 
 This command must follow:
 
-- `/home/jordan/.hermes/profiles/midas/rules/GLOBAL.md`
-- `/home/jordan/.hermes/profiles/midas/rules/COMMAND_INTERFACE.md`
-- `/home/jordan/.hermes/profiles/midas/rules/SOURCES.md`
-- `/home/jordan/.hermes/profiles/midas/rules/OUTPUT.md`
-- `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`
+- `rules/GLOBAL.md`
+- `rules/COMMAND_INTERFACE.md`
+- `rules/SOURCES.md`
+- `rules/OUTPUT.md`
+- `rules/ARTIFACTS.md`
 
 Use when applicable:
 
-- `/home/jordan/.hermes/profiles/midas/rules/CLASSIFICATIONS.md`
-- `/home/jordan/.hermes/profiles/midas/rules/SCORING.md`
-- `/home/jordan/.hermes/profiles/midas/rules/METRICS.md`
-- `/home/jordan/.hermes/profiles/midas/rules/MARKET_DATA.md` only for explicit current-market context or market-data boundary discipline.
+- `rules/CLASSIFICATIONS.md`
+- `rules/SCORING.md`
+- `rules/METRICS.md`
+- `rules/MARKET_DATA.md` only for explicit current-market context or market-data boundary discipline.
 
 Do not duplicate global rule content inside this command. Reference global rules instead.
 
@@ -265,7 +265,7 @@ No files changed — audit blocked.
 
 Default source standards come from:
 
-`/home/jordan/.hermes/profiles/midas/rules/SOURCES.md`
+`rules/SOURCES.md`
 
 Command-specific source needs:
 
@@ -293,7 +293,7 @@ If the user asks only for current price, current market cap, volume, liquidity, 
 !market [ticker]
 ```
 
-If the user asks for business-model research plus current market context, `!research` may include market data only as clearly labeled Tier 2 market context under `/home/jordan/.hermes/profiles/midas/rules/MARKET_DATA.md`.
+If the user asks for business-model research plus current market context, `!research` may include market data only as clearly labeled Tier 2 market context under `rules/MARKET_DATA.md`.
 
 When market data is truly needed inside `!research`:
 
@@ -339,7 +339,7 @@ Use Setup Classification:
 Rule:
 
 ```md
-Use `/home/jordan/.hermes/profiles/midas/rules/CLASSIFICATIONS.md`.
+Use `rules/CLASSIFICATIONS.md`.
 ```
 
 Command-specific classification notes:
@@ -357,7 +357,7 @@ Use scoring:
 Rule:
 
 ```md
-Use `/home/jordan/.hermes/profiles/midas/rules/SCORING.md`.
+Use `rules/SCORING.md`.
 ```
 
 Command-specific scoring notes:
@@ -375,7 +375,7 @@ Use financial metrics:
 Rule:
 
 ```md
-Use `/home/jordan/.hermes/profiles/midas/rules/METRICS.md`.
+Use `rules/METRICS.md`.
 ```
 
 Command-specific metric notes:
@@ -390,11 +390,11 @@ Command-specific metric notes:
 
 Follow the shared output standards:
 
-`/home/jordan/.hermes/profiles/midas/rules/OUTPUT.md`
+`rules/OUTPUT.md`
 
 Follow the command-specific output contract:
 
-`/home/jordan/.hermes/profiles/midas/skills/stock-analysis/research/OUTPUT.md`
+`skills/stock-analysis/research/OUTPUT.md`
 
 ### Required Normal Sections
 
@@ -466,13 +466,13 @@ This command writes artifacts:
 
 Follow the global artifact standards:
 
-`/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`
+`rules/ARTIFACTS.md`
 
 ### Creates / Updates
 
 Normal `!research [ticker]`:
 
-- `/home/jordan/.hermes/profiles/midas/workspace/tickers/[ticker]/research.md`
+- `workspace/tickers/[ticker]/research.md`
 
 Audit `!research [ticker] -audit`:
 
@@ -558,7 +558,7 @@ This command must not:
 Command-specific guardrails:
 
 - Do not present a full valuation model or price target.
-- When refusing buy/sell/price-target requests, provide research framing only. Do not use `I'd classify it as` or similar classification phrasing unless using an approved Setup Classification from `/home/jordan/.hermes/profiles/midas/rules/CLASSIFICATIONS.md` and explicitly outputting `Setup Classification: [approved classification]`.
+- When refusing buy/sell/price-target requests, provide research framing only. Do not use `I'd classify it as` or similar classification phrasing unless using an approved Setup Classification from `rules/CLASSIFICATIONS.md` and explicitly outputting `Setup Classification: [approved classification]`.
 - For non-classification framing, use `Business-model characterization: ...` instead of `I'd classify it as: ...`.
 - Do not perform a full financial statement analysis; redirect to `!financials`.
 - Do not build bull/base/bear cases unless the user explicitly asks and the scope is redirected to `!thesis`.
@@ -579,7 +579,7 @@ Command-specific guardrails:
 Eval file:
 
 ```bash
-/home/jordan/.hermes/profiles/midas/evals/research.eval.md
+evals/research.eval.md
 ```
 
 Required eval coverage:

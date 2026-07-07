@@ -32,12 +32,12 @@ This file applies across commands such as:
 
 This file does not replace:
 
-- `/home/jordan/.hermes/profiles/midas/rules/GLOBAL.md`
-- `/home/jordan/.hermes/profiles/midas/rules/SOURCES.md`
-- `/home/jordan/.hermes/profiles/midas/rules/CLASSIFICATIONS.md`
-- `/home/jordan/.hermes/profiles/midas/rules/SCORING.md`
-- `/home/jordan/.hermes/profiles/midas/rules/METRICS.md`
-- `/home/jordan/.hermes/profiles/midas/rules/OUTPUT.md`
+- `rules/GLOBAL.md`
+- `rules/SOURCES.md`
+- `rules/CLASSIFICATIONS.md`
+- `rules/SCORING.md`
+- `rules/METRICS.md`
+- `rules/OUTPUT.md`
 
 ---
 
@@ -96,35 +96,35 @@ Artifacts do not include:
 
 Profile root:
 
-`/home/jordan/.hermes/profiles/midas`
+the MIDAS profile root
 
 Workspace root:
 
-`/home/jordan/.hermes/profiles/midas/workspace`
+`workspace`
 
 Data root:
 
-`/home/jordan/.hermes/profiles/midas/data`
+`data`
 
 Rules root:
 
-`/home/jordan/.hermes/profiles/midas/rules`
+`rules`
 
 Command skills root:
 
-`/home/jordan/.hermes/profiles/midas/skills`
+`skills`
 
 Docs root:
 
-`/home/jordan/.hermes/profiles/midas/docs`
+`docs`
 
 Evals root:
 
-`/home/jordan/.hermes/profiles/midas/evals`
+`evals`
 
 Artifacts should normally be saved under:
 
-`/home/jordan/.hermes/profiles/midas/workspace/`
+`workspace/`
 
 Do not scatter artifacts across random folders.
 
@@ -278,7 +278,7 @@ Artifact state is a routing input, not normally a user-facing explanation. Comma
 
 Artifact filenames may be shown when the user asks about saved artifacts, the command reports a save/update/failure, the command explains why a refresh is needed, or the command explains that an existing artifact is stale, incomplete, missing material evidence, or insufficient. Do not expose artifact-state plumbing in normal Best Next Command reasons.
 
-This section defines artifact-state inputs only. User-facing Best Next Command display and general routing principles belong to `/home/jordan/.hermes/profiles/midas/rules/OUTPUT.md`. Command-specific `SKILL.md` files own command judgment and workflow.
+This section defines artifact-state inputs only. User-facing Best Next Command display and general routing principles belong to `rules/OUTPUT.md`. Command-specific `SKILL.md` files own command judgment and workflow.
 
 ---
 
@@ -337,8 +337,8 @@ Watchlist source-of-truth data stays separate from generated research artifacts.
 
 MIDAS data stores under `data/`:
 
-- `/home/jordan/.hermes/profiles/midas/data/midas_watchlist.json`: the ticker watchlist source of truth, owned by `!wl`.
-- `/home/jordan/.hermes/profiles/midas/data/tracker_watchlist.json`: the tracked-entity roster for `!track`, defined in the tracker `SKILL.md`.
+- `data/midas_watchlist.json`: the ticker watchlist source of truth, owned by `!wl`.
+- `data/tracker_watchlist.json`: the tracked-entity roster for `!track`, defined in the tracker `SKILL.md`.
 
 No other command writes these files. Watchlist commands use `midas_watchlist.json` unless the user explicitly changes the architecture.
 
@@ -469,7 +469,7 @@ Do not save a polished artifact that removes material source limitations.
 
 Follow:
 
-`/home/jordan/.hermes/profiles/midas/rules/SOURCES.md`
+`rules/SOURCES.md`
 
 Important:
 
@@ -764,7 +764,7 @@ Saved to: workspace/tickers/hood/research.md
 Avoid unnecessarily long absolute paths in normal output:
 
 ```md
-Saved to: /home/jordan/.hermes/profiles/midas/workspace/tickers/hood/research.md
+Saved to: workspace/tickers/hood/research.md
 ```
 
 Use absolute paths only when:
@@ -787,7 +787,7 @@ Rules:
 - Avoid spaces in filenames.
 - Avoid special characters unless necessary.
 - Avoid user-supplied raw strings in paths without slug normalization.
-- Avoid writing outside `/home/jordan/.hermes/profiles/midas/`.
+- Avoid writing outside ``.
 - Avoid path traversal patterns such as `../`.
 - Avoid duplicate filenames that differ only by case.
 - Avoid mixing old and new workspace path conventions.
@@ -816,7 +816,7 @@ Commands that write artifacts should have artifact eval coverage.
 
 Use:
 
-`/home/jordan/.hermes/profiles/midas/evals/README.md`
+`evals/README.md`
 
 and command-specific eval files.
 
@@ -839,7 +839,7 @@ Artifact evals should test:
 
 If a command writes artifacts, that should be reflected in:
 
-`/home/jordan/.hermes/profiles/midas/docs/COMMAND_REGISTRY.md`
+`docs/COMMAND_REGISTRY.md`
 
 Registry metadata should show:
 
@@ -857,7 +857,7 @@ Command skills should reference this file when they create, update, append, or r
 
 Use:
 
-`/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`
+`rules/ARTIFACTS.md`
 
 Command `SKILL.md` files should define command-specific artifact behavior, such as:
 
@@ -877,11 +877,11 @@ Command `OUTPUT.md` files should define how artifact information appears in the 
 
 Use:
 
-`/home/jordan/.hermes/profiles/midas/rules/OUTPUT.md`
+`rules/OUTPUT.md`
 
 and:
 
-`/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`
+`rules/ARTIFACTS.md`
 
 Command `OUTPUT.md` files should not define the entire artifact policy.
 
@@ -899,7 +899,7 @@ They should only define command-specific output behavior such as:
 
 Saved artifacts must preserve the source discipline required by:
 
-`/home/jordan/.hermes/profiles/midas/rules/SOURCES.md`
+`rules/SOURCES.md`
 
 Do not save a final research artifact that strips away material source caveats.
 
@@ -917,7 +917,7 @@ Do not save valuation metrics without source or date context.
 
 If an artifact includes financial metrics, follow:
 
-`/home/jordan/.hermes/profiles/midas/rules/METRICS.md`
+`rules/METRICS.md`
 
 Artifacts should preserve:
 
@@ -1054,7 +1054,7 @@ If it is duplicative, stale, contradictory, over-specific, or only captures a on
 
 Follow the full promotion gate in:
 
-`/home/jordan/.hermes/profiles/midas/rules/GLOBAL.md`
+`rules/GLOBAL.md`
 
 ---
 
@@ -1068,7 +1068,7 @@ defined cross-command artifact behavior.
 
 That policy now belongs here:
 
-`/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`
+`rules/ARTIFACTS.md`
 
 Any command that previously referenced:
 
@@ -1076,12 +1076,12 @@ Any command that previously referenced:
 
 should now reference:
 
-`/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`
+`rules/ARTIFACTS.md`
 
 The old reference file may be deleted or replaced with a short pointer:
 
 ```md
-This artifact policy has moved to `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`.
+This artifact policy has moved to `rules/ARTIFACTS.md`.
 ```
 
 Do not keep two active artifact policies.

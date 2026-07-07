@@ -38,7 +38,8 @@ The goal is to turn public disclosure activity into useful research candidates.
 ## Registry Metadata
 
 Command: `!track`
-Aliases: `!show track`, `!track rm`
+Aliases: `!show track`
+Subcommands: `rm` (defined in this SKILL)
 Category: `Disclosure Tracking`
 Status: `Active`
 Skill Path: `skills/stock-analysis/tracker/SKILL.md`
@@ -88,7 +89,7 @@ Shared standards remain governed by MIDAS global rules:
 
 When this command produces an evaluation, ranking, final view, research lead, or setup summary, use the global Setup Classification standard:
 
-`/home/jordan/.hermes/profiles/midas/rules/CLASSIFICATIONS.md`
+`rules/CLASSIFICATIONS.md`
 
 Do not duplicate the classification definitions inside this skill.
 
@@ -236,7 +237,7 @@ Alias: treat `!show track` as equivalent to `!track show`. When using the alias,
 
 Remove a person from:
 
-`/home/jordan/.hermes/profiles/midas/data/tracker_watchlist.json`
+`data/tracker_watchlist.json`
 
 Alias: treat `!track rm [person name]` as equivalent to `!track remove [person name]`.
 
@@ -277,8 +278,8 @@ Do not create tracker entries from uncertain names.
 
 Tracker commands persist roster information in `tracker_watchlist.json`; saved tracker report artifacts are optional and use canonical tracker artifact paths when written.
 
-1. Tracker roster / metadata: `/home/jordan/.hermes/profiles/midas/data/tracker_watchlist.json`
-2. Optional tracker report artifacts: canonical tracker paths from `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`
+1. Tracker roster / metadata: `data/tracker_watchlist.json`
+2. Optional tracker report artifacts: canonical tracker paths from `rules/ARTIFACTS.md`
 
 When the user asks whether command information is stored anywhere, answer directly with these paths and distinguish between:
 
@@ -301,7 +302,7 @@ Show a saved artifact path only when:
 
 Tracker watchlist path:
 
-`/home/jordan/.hermes/profiles/midas/data/tracker_watchlist.json`
+`data/tracker_watchlist.json`
 
 If `tracker_watchlist.json` does not exist when `!track [person name]` is used, create:
 

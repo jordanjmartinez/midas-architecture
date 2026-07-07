@@ -5,7 +5,7 @@ Use this reference when continuing `!market` upgrades after the June 2026 audit/
 Canonical plan artifact:
 
 ```md
-/home/jordan/.hermes/profiles/midas/docs/plans/2026-06-12-market-full-mode-upgrades.md
+docs/plans/2026-06-12-market-full-mode-upgrades.md
 ```
 
 ## Durable implementation lessons

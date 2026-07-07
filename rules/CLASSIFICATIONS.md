@@ -485,7 +485,7 @@ Setup Classification should work with MIDAS scoring, not replace it.
 
 Use:
 
-`/home/jordan/.hermes/profiles/midas/rules/SCORING.md`
+`rules/SCORING.md`
 
 Examples:
 
@@ -507,7 +507,7 @@ Do not let score alone override classification judgment.
 
 # Relationship to RERATING.md
 
-Use `/home/jordan/.hermes/profiles/midas/rules/RERATING.md` when reasoning about rerating stage, market expectations, crowding, overextension, and whether a setup is clean, fragile, early, or post-rerate before applying approved classifications or modifiers.
+Use `rules/RERATING.md` when reasoning about rerating stage, market expectations, crowding, overextension, and whether a setup is clean, fragile, early, or post-rerate before applying approved classifications or modifiers.
 
 RERATING.md does not add new classifications or modifiers; this file remains the authority for approved Setup Classifications and Setup Modifiers.
 
@@ -519,7 +519,7 @@ Setup Classification must follow MIDAS source standards.
 
 Use:
 
-`/home/jordan/.hermes/profiles/midas/rules/SOURCES.md`
+`rules/SOURCES.md`
 
 Classification should be more cautious when:
 

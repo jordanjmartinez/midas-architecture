@@ -2,7 +2,7 @@
 
 During a Telegram command session, the active file existed at:
 
-`/home/jordan/.hermes/profiles/midas/data/midas_watchlist.json`
+`data/midas_watchlist.json`
 
 It contained a legacy/simple schema:
 

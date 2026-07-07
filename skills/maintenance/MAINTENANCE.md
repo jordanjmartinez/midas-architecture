@@ -10,7 +10,7 @@ Do not run stock commands, create ticker artifacts, mutate watchlists, or perfor
 
 Profile root:
 
-`/home/jordan/.hermes/profiles/midas`
+the MIDAS profile root
 
 Stay inside the active MIDAS profile unless the user explicitly provides an external path.
 
@@ -43,7 +43,7 @@ When a stage completes, stop and wait for explicit approval before continuing un
 
 For rule placement, command contract cleanup, reference migration, and anti-duplication work, follow:
 
-`/home/jordan/.hermes/profiles/midas/rules/CONTRACT_AUTHORITY.md`
+`rules/CONTRACT_AUTHORITY.md`
 
 Before creating or expanding any command-local contract, check whether the behavior already exists globally or belongs globally.
 

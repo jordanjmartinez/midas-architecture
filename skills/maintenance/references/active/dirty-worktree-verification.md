@@ -22,7 +22,7 @@ Do not revert, clean, or explain unrelated dirt unless the user asks.
 Use scoped checks such as:
 
 ```bash
-git -C /home/jordan/.hermes/profiles/midas status --short -- path/to/scope
+git status --short -- path/to/scope   # run from the MIDAS profile root
 ```
 
 Prefer targeted file reads when the user requested narrow verification.

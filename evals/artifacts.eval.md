@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This eval file protects shared artifact behavior governed by `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`.
+This eval file protects shared artifact behavior governed by `rules/ARTIFACTS.md`.
 
 It is command-agnostic. Command-specific eval files should still test their own artifact paths, output sections, validation gates, and source-preservation requirements.
 

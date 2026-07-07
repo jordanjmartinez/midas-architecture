@@ -28,7 +28,7 @@ When the user asks for a status-only sync patch after activation or audit:
 
 When the user asks to create a new MIDAS command skill:
 
-1. Create the skill under `/home/jordan/.hermes/profiles/midas/skills/stock-analysis/[name]/SKILL.md` unless the user specifies a different path.
+1. Create the skill under `skills/stock-analysis/[name]/SKILL.md` unless the user specifies a different path.
 2. If the supplied frontmatter description contains colons, dollar ranges, brackets, or long punctuation-heavy text, use a YAML folded scalar:
    ```yaml
    description: >-
@@ -66,13 +66,13 @@ When the user asks to create a new MIDAS command skill:
 ## Watchlist command changes
 
 - Do not change watchlist storage or JSON schema unless explicitly asked.
-- Watchlist storage remains `/home/jordan/.hermes/profiles/midas/data/midas_watchlist.json`.
+- Watchlist storage remains `data/midas_watchlist.json`.
 - Command wording changes like `!wl check` -> `!wl updates` should not modify `!wl add`, `!wl rm`, or `!wl show` behavior.
 - Watchlist update scans should stay short and should not trigger full research, financials, thesis, risk, earnings, or full memo unless explicitly asked.
 
 ## Workspace artifact commands
 
-- Research artifact outputs save under `/home/jordan/.hermes/profiles/midas/workspace/[normalized-lowercase-ticker]/`.
+- Research artifact outputs save under `workspace/[normalized-lowercase-ticker]/`.
 - Use the normalized lowercase ticker for folder names; strip a leading `$` from user input.
 - Overwrite the same analysis file by default unless the user asks to preserve versions.
 - End saved-artifact responses with the short confirmation line: `Saved to: workspace/tickers/[ticker]/[file].md`.
@@ -84,8 +84,8 @@ When the user asks to create a new MIDAS command skill:
 Use grep-style checks after command renames:
 
 ```bash
-grep -Rni "old-command" /home/jordan/.hermes/profiles/midas/skills/stock-analysis/commands/SKILL.md || true
-grep -Rni "new-command" /home/jordan/.hermes/profiles/midas/skills/stock-analysis/commands/SKILL.md
+grep -Rni "old-command" skills/stock-analysis/commands/SKILL.md || true
+grep -Rni "new-command" skills/stock-analysis/commands/SKILL.md
 ```
 
 For watchlist command renames, also check `wl/SKILL.md` directly for stale command strings.

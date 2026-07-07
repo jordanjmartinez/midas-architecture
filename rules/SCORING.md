@@ -36,11 +36,11 @@ MIDAS uses a four-layer scoring architecture:
 
 Scoring should connect to:
 
-`/home/jordan/.hermes/profiles/midas/rules/CLASSIFICATIONS.md`
+`rules/CLASSIFICATIONS.md`
 
 Scoring must follow:
 
-`/home/jordan/.hermes/profiles/midas/rules/SOURCES.md`
+`rules/SOURCES.md`
 
 ---
 
@@ -675,7 +675,7 @@ Scoring should inform Setup Classification, not mechanically dictate it.
 
 Use:
 
-`/home/jordan/.hermes/profiles/midas/rules/CLASSIFICATIONS.md`
+`rules/CLASSIFICATIONS.md`
 
 Examples:
 
@@ -694,7 +694,7 @@ Do not let the score alone override classification judgment.
 
 # 7. Relationship to RERATING.md
 
-Use `/home/jordan/.hermes/profiles/midas/rules/RERATING.md` when interpreting valuation/rerating setup, variant-view strength, information gap, crowding, and rerating caps.
+Use `rules/RERATING.md` when interpreting valuation/rerating setup, variant-view strength, information gap, crowding, and rerating caps.
 
 RERATING.md does not add new scoring buckets, rubrics, caps, or gates; this file remains the authority for MIDAS scoring.
 

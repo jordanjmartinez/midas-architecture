@@ -139,19 +139,19 @@ Do not auto-run downstream commands.
 
 This command must follow:
 
-- `/home/jordan/.hermes/profiles/midas/rules/GLOBAL.md`
-- `/home/jordan/.hermes/profiles/midas/rules/COMMAND_INTERFACE.md`
-- `/home/jordan/.hermes/profiles/midas/rules/SOURCES.md`
-- `/home/jordan/.hermes/profiles/midas/rules/MARKET_DATA.md`
-- `/home/jordan/.hermes/profiles/midas/rules/RERATING.md`
-- `/home/jordan/.hermes/profiles/midas/rules/METRICS.md`
-- `/home/jordan/.hermes/profiles/midas/rules/OUTPUT.md`
-- `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`
+- `rules/GLOBAL.md`
+- `rules/COMMAND_INTERFACE.md`
+- `rules/SOURCES.md`
+- `rules/MARKET_DATA.md`
+- `rules/RERATING.md`
+- `rules/METRICS.md`
+- `rules/OUTPUT.md`
+- `rules/ARTIFACTS.md`
 
 Use when applicable:
 
-- `/home/jordan/.hermes/profiles/midas/rules/CLASSIFICATIONS.md`
-- `/home/jordan/.hermes/profiles/midas/rules/SCORING.md`
+- `rules/CLASSIFICATIONS.md`
+- `rules/SCORING.md`
 
 Do not duplicate global rule content inside this command. Reference global rules instead.
 
@@ -176,7 +176,7 @@ Follow this command-specific workflow:
 4. Resolve company identity: legal company name, ticker, exchange, SEC CIK if applicable, and whether it is an SEC filer.
 5. Determine whether the command has enough input to proceed. Clarify only if ambiguity remains material.
 6. For no-write audit mode, follow the No-Write Audit Rule below before any source gathering.
-7. Gather source evidence using `/home/jordan/.hermes/profiles/midas/rules/SOURCES.md` and the command-specific source needs below.
+7. Gather source evidence using `rules/SOURCES.md` and the command-specific source needs below.
 8. Identify the latest relevant annual and interim risk sources. For SEC filers, prefer the latest Form 10-K and latest Form 10-Q when available.
 9. Record filing dates, report periods, source identifiers, and source basis. Keep accession numbers and raw URLs available internally when useful, but do not require them in normal Source Notes unless needed for disambiguation, audit, source recovery, or debug context.
 10. Review material recent 8-Ks, earnings releases, credit agreements, debt/covenant filings, acquisition filings, financing filings, legal/regulatory updates, investor presentations, or transcripts when they materially affect risk.
@@ -189,7 +189,7 @@ Follow this command-specific workflow:
 17. Use risk-relevant metrics when available and material: cash, debt, liquidity, maturities, covenant risk, CFO/FCF, dilution, margin pressure, concentration, backlog/RPO, retention/churn, or other operating risk metrics.
 18. Follow `rules/METRICS.md` whenever risk metrics appear. Preserve period, source, unit, and GAAP/non-GAAP status when relevant.
 19. Avoid default live market data. Use market data only when explicitly requested or materially needed to frame valuation, rerating, liquidity/trading-volume, market-cap/scale, price-performance, or market-expectations risk.
-20. When market data is used, follow `/home/jordan/.hermes/profiles/midas/rules/MARKET_DATA.md` and keep it Tier 2 context. Do not call or parse `!market` user-facing output.
+20. When market data is used, follow `rules/MARKET_DATA.md` and keep it Tier 2 context. Do not call or parse `!market` user-facing output.
 21. Do not use market data to prove business-model risk, revenue risk, margin risk, cash-flow risk, filing-derived debt/liquidity risk, filing-derived dilution risk, customer concentration, supplier concentration, regulatory/legal risk, management execution, thesis validity, business quality, financial quality, customer demand, revenue, margins, or cash flow.
 22. If market data is unavailable, stale, incomplete, plan-limited, or not usable, complete the filing-backed risk review when possible and say the market-data-based risk was not assessed. Do not fabricate price, market cap, volume, enterprise value, valuation multiples, or price-performance data.
 23. Include disconfirming evidence where useful, especially evidence that reduces or limits the apparent risk.
@@ -197,9 +197,9 @@ Follow this command-specific workflow:
 25. Assign an Overall Risk Level only when evidence is sufficient. Allowed labels: Low, Moderate, High, Critical. Overall Risk Level is a risk-specific research label, not an investment recommendation.
 26. Apply Setup Classification only when the user asks or the output explicitly includes a setup view beyond risk level.
 27. Apply broader scoring only if the user asks or the output explicitly includes setup evaluation. Do not produce a Global Research Score by default.
-28. Produce output using `/home/jordan/.hermes/profiles/midas/skills/stock-analysis/risk/OUTPUT.md` and `/home/jordan/.hermes/profiles/midas/rules/OUTPUT.md`.
+28. Produce output using `skills/stock-analysis/risk/OUTPUT.md` and `rules/OUTPUT.md`.
 29. For normal `!risk [ticker/company]`, produce the full Standard-only report in the final response. Do not collapse it into a compact summary, completion summary, verification section, or eval checklist.
-30. Follow the global command-generated artifact save-order rule in `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md` before writing `risk.md`.
+30. Follow the global command-generated artifact save-order rule in `rules/ARTIFACTS.md` before writing `risk.md`.
 31. Before saving the normal risk artifact, run the `!risk`-specific validation checks in `OUTPUT.md`. Hard-stop and do not save or claim a save if required sections, guardrails, source support, risk discipline, or the canonical `workspace/tickers/[ticker]/risk.md` path fail validation.
 32. Save only the final clean Markdown report to `workspace/tickers/[ticker]/risk.md`.
 33. Before finalizing Best Next Command, perform a workspace-aware routing check for same-ticker canonical artifacts using path existence and header/source-period freshness only. Do not edit artifacts during this routing check, and do not deep-parse existing artifacts unless they were already loaded for risk analysis.
@@ -275,7 +275,7 @@ No files changed — audit blocked.
 
 Default source standards come from:
 
-`/home/jordan/.hermes/profiles/midas/rules/SOURCES.md`
+`rules/SOURCES.md`
 
 Command-specific source needs:
 
@@ -299,7 +299,7 @@ Use Setup Classification: `Optional`
 
 Rule:
 
-`/home/jordan/.hermes/profiles/midas/rules/CLASSIFICATIONS.md`
+`rules/CLASSIFICATIONS.md`
 
 Command-specific classification notes:
 
@@ -315,7 +315,7 @@ Use scoring: `Optional`
 
 Rule:
 
-`/home/jordan/.hermes/profiles/midas/rules/SCORING.md`
+`rules/SCORING.md`
 
 Command-specific scoring notes:
 
@@ -332,7 +332,7 @@ Use financial and operating metrics: `Required` when available and material to r
 
 Rule:
 
-`/home/jordan/.hermes/profiles/midas/rules/METRICS.md`
+`rules/METRICS.md`
 
 Command-specific metric notes:
 
@@ -350,11 +350,11 @@ Command-specific metric notes:
 
 Follow the command-specific output contract:
 
-`/home/jordan/.hermes/profiles/midas/skills/stock-analysis/risk/OUTPUT.md`
+`skills/stock-analysis/risk/OUTPUT.md`
 
 Follow shared output standards:
 
-`/home/jordan/.hermes/profiles/midas/rules/OUTPUT.md`
+`rules/OUTPUT.md`
 
 ### Required Sections in Normal Standard-Only Output
 
@@ -392,13 +392,13 @@ Audit mode writes artifacts: `No`.
 
 Follow:
 
-`/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`
+`rules/ARTIFACTS.md`
 
 ### Creates / Replaces
 
 Normal `!risk [ticker]` saves by default to:
 
-- `/home/jordan/.hermes/profiles/midas/workspace/tickers/[ticker]/risk.md`
+- `workspace/tickers/[ticker]/risk.md`
 
 Audit `!risk [ticker] -audit` writes nothing.
 
@@ -542,7 +542,7 @@ When the user asks whether to buy, sell, hold, size a position, or requests a pr
 
 Eval coverage lives in:
 
-`/home/jordan/.hermes/profiles/midas/evals/risk.eval.md`
+`evals/risk.eval.md`
 
 The eval file still needs later lean alignment after this Stage 2 patch. Future eval coverage should focus on:
 

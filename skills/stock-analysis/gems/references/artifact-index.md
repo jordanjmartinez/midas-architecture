@@ -4,7 +4,7 @@
 
 This file owns `!gems` command-local artifact/index mechanics.
 
-It is subordinate to `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`, which owns MIDAS-wide artifact standards.
+It is subordinate to `rules/ARTIFACTS.md`, which owns MIDAS-wide artifact standards.
 
 This file does not own global artifact standards.
 
@@ -18,7 +18,7 @@ This file does not create schemas, proof packets, source manifests, evidence led
 
 ## Authority Boundaries
 
-- `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md` owns cross-command artifact standards, artifact safety, path hygiene, source preservation, write-confirmation discipline, failure behavior, and global artifact/checklist rules.
+- `rules/ARTIFACTS.md` owns cross-command artifact standards, artifact safety, path hygiene, source preservation, write-confirmation discipline, failure behavior, and global artifact/checklist rules.
 - `references/artifact-index.md` owns `!gems` command-local path and index mechanics.
 - `OUTPUT.md` owns visible saved/index confirmation wording and the user-facing display of artifact write success or failure.
 - `SKILL.md` routes command-local artifact/index mechanics to this file.
@@ -218,7 +218,7 @@ No-write validation may describe the intended path, but it must not claim the pa
 
 ## Relationship to Global ARTIFACTS.md
 
-This file inherits global artifact standards from `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`.
+This file inherits global artifact standards from `rules/ARTIFACTS.md`.
 
 If this file conflicts with global `ARTIFACTS.md`, global standards win unless a command-specific exception is explicitly approved.
 
@@ -250,7 +250,7 @@ Its durable artifact/index mechanics have been migrated into this reference.
 
 This reference is now the command-local artifact/index mechanics map.
 
-Global `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md` remains the cross-command artifact authority.
+Global `rules/ARTIFACTS.md` remains the cross-command artifact authority.
 
 ## Deferred / Not Included
 

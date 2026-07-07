@@ -1,6 +1,6 @@
 # MIDAS Profile-Local Skill and Rule Authoring
 
-Use this when editing MIDAS profile-local files under `/home/jordan/.hermes/profiles/midas/`, especially `skills/stock-analysis/*/SKILL.md` and shared rules under `rules/`.
+Use this when editing MIDAS profile-local files under ``, especially `skills/stock-analysis/*/SKILL.md` and shared rules under `rules/`.
 
 ## Exact-content replacements
 
@@ -17,7 +17,7 @@ When the user says to replace a profile-local skill with exact content:
 
 When the user asks to create or replace MIDAS profile-local support files such as `SOUL.md`, `AGENTS.md`, `docs/*.md`, `templates/*.md`, `evals/*.md`, or `schemas/*.md`:
 
-1. Use the exact requested path under `/home/jordan/.hermes/profiles/midas/`.
+1. Use the exact requested path under ``.
 2. Create missing parent folders when needed.
 3. Replace the target file cleanly; do not append a new version below an older version.
 4. Do not create duplicate files with alternate names.
@@ -28,7 +28,7 @@ When the user asks to create or replace MIDAS profile-local support files such a
 
 ## Shared MIDAS rules files
 
-When the user asks to create a shared MIDAS rules file under `/home/jordan/.hermes/profiles/midas/rules/`:
+When the user asks to create a shared MIDAS rules file under `rules/`:
 
 1. Treat it as a shared vocabulary/rule document, not a command skill.
 2. Create the requested Markdown file exactly in the requested path.

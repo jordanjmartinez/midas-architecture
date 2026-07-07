@@ -58,16 +58,16 @@ This file defines output shape only. Workflow belongs in `skills/stock-analysis/
 
 `!thesis` must follow:
 
-- `/home/jordan/.hermes/profiles/midas/rules/GLOBAL.md`
-- `/home/jordan/.hermes/profiles/midas/rules/COMMAND_INTERFACE.md`
-- `/home/jordan/.hermes/profiles/midas/rules/SOURCES.md`
-- `/home/jordan/.hermes/profiles/midas/rules/METRICS.md` when metrics appear.
-- `/home/jordan/.hermes/profiles/midas/rules/MARKET_DATA.md` when market data appears.
-- `/home/jordan/.hermes/profiles/midas/rules/RERATING.md` when rerating, post-rerate, overextension, market-expectations, or valuation-setup language appears.
-- `/home/jordan/.hermes/profiles/midas/rules/OUTPUT.md`
-- `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`
-- `/home/jordan/.hermes/profiles/midas/rules/CLASSIFICATIONS.md` when classification is used.
-- `/home/jordan/.hermes/profiles/midas/rules/SCORING.md` when scoring is used.
+- `rules/GLOBAL.md`
+- `rules/COMMAND_INTERFACE.md`
+- `rules/SOURCES.md`
+- `rules/METRICS.md` when metrics appear.
+- `rules/MARKET_DATA.md` when market data appears.
+- `rules/RERATING.md` when rerating, post-rerate, overextension, market-expectations, or valuation-setup language appears.
+- `rules/OUTPUT.md`
+- `rules/ARTIFACTS.md`
+- `rules/CLASSIFICATIONS.md` when classification is used.
+- `rules/SCORING.md` when scoring is used.
 
 Do not duplicate global rulebooks in this file.
 
@@ -595,7 +595,7 @@ Writes artifacts: `Yes` for normal and update; `No` for audit.
 
 Artifact behavior follows:
 
-`/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`
+`rules/ARTIFACTS.md`
 
 Default artifact behavior:
 

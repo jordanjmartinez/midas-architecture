@@ -19,7 +19,7 @@ Do not treat archived references as active rules unless `MAINTENANCE.md`, an act
 
 Former legacy source:
 
-`/home/jordan/.hermes/profiles/midas/skills/stock-analysis/midas-maintenance/references/`
+`skills/stock-analysis/midas-maintenance/references/`
 
 The legacy maintenance folder was removed after the canonical maintenance skill, durable contract, output contract, reference manifest, active playbooks, and eval were installed.
 
@@ -98,11 +98,11 @@ When in doubt, archive the historical note and distill only the reusable lesson 
 
 The active maintenance contract is:
 
-`/home/jordan/.hermes/profiles/midas/skills/maintenance/MAINTENANCE.md`
+`skills/maintenance/MAINTENANCE.md`
 
 The skill loader is:
 
-`/home/jordan/.hermes/profiles/midas/skills/maintenance/SKILL.md`
+`skills/maintenance/SKILL.md`
 
 This README is a manifest and triage guide, not a hidden global rulebook.
 

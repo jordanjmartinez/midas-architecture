@@ -17,6 +17,7 @@ Before editing commands or behavior, read:
 When editing a specific command, also read that command’s skill folder.
 
 ## Folder Map
+All paths are relative to the MIDAS profile root.
 
 - `rules/` = shared MIDAS-wide standards
 - `skills/` = command-specific workflows

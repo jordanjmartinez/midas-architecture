@@ -23,11 +23,11 @@ This file applies across commands such as:
 
 METRICS.md does not replace:
 
-- `/home/jordan/.hermes/profiles/midas/rules/GLOBAL.md`
-- `/home/jordan/.hermes/profiles/midas/rules/SOURCES.md`
-- `/home/jordan/.hermes/profiles/midas/rules/CLASSIFICATIONS.md`
-- `/home/jordan/.hermes/profiles/midas/rules/SCORING.md`
-- `/home/jordan/.hermes/profiles/midas/rules/OUTPUT.md`
+- `rules/GLOBAL.md`
+- `rules/SOURCES.md`
+- `rules/CLASSIFICATIONS.md`
+- `rules/SCORING.md`
+- `rules/OUTPUT.md`
 
 ---
 
@@ -106,7 +106,7 @@ These are incomplete because they lack period, denominator, source, or context.
 
 Follow:
 
-`/home/jordan/.hermes/profiles/midas/rules/SOURCES.md`
+`rules/SOURCES.md`
 
 Use this priority:
 
@@ -128,7 +128,7 @@ For valuation metrics, combine:
 - Company guidance only when explicitly disclosed
 - Peer data only when comparable
 
-For current price, market cap, volume, and market-data snapshot freshness rules, follow `/home/jordan/.hermes/profiles/midas/rules/MARKET_DATA.md`.
+For current price, market cap, volume, and market-data snapshot freshness rules, follow `rules/MARKET_DATA.md`.
 
 ---
 
@@ -1687,7 +1687,7 @@ Metrics should feed scoring but not mechanically determine scoring.
 
 Use:
 
-`/home/jordan/.hermes/profiles/midas/rules/SCORING.md`
+`rules/SCORING.md`
 
 Examples:
 
@@ -1705,7 +1705,7 @@ Metrics should support Setup Classification.
 
 Use:
 
-`/home/jordan/.hermes/profiles/midas/rules/CLASSIFICATIONS.md`
+`rules/CLASSIFICATIONS.md`
 
 Examples:
 
@@ -1721,7 +1721,7 @@ Examples:
 
 Metrics should be displayed according to:
 
-`/home/jordan/.hermes/profiles/midas/rules/OUTPUT.md`
+`rules/OUTPUT.md`
 
 Rules:
 

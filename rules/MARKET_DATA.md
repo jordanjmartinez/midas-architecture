@@ -46,14 +46,14 @@ If market data conflicts with SEC filings or company primary disclosures for fin
 
 This file specializes but does not replace:
 
-- `/home/jordan/.hermes/profiles/midas/rules/GLOBAL.md`
-- `/home/jordan/.hermes/profiles/midas/rules/SOURCES.md`
-- `/home/jordan/.hermes/profiles/midas/rules/RERATING.md`
-- `/home/jordan/.hermes/profiles/midas/rules/METRICS.md`
-- `/home/jordan/.hermes/profiles/midas/rules/OUTPUT.md`
-- `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`
+- `rules/GLOBAL.md`
+- `rules/SOURCES.md`
+- `rules/RERATING.md`
+- `rules/METRICS.md`
+- `rules/OUTPUT.md`
+- `rules/ARTIFACTS.md`
 
-Market data can support rerating context, price-performance context, liquidity, valuation multiples, and crowding/recognition analysis, but `/home/jordan/.hermes/profiles/midas/rules/RERATING.md` governs setup interpretation. Market data does not prove business quality, financial quality, or thesis validity.
+Market data can support rerating context, price-performance context, liquidity, valuation multiples, and crowding/recognition analysis, but `rules/RERATING.md` governs setup interpretation. Market data does not prove business quality, financial quality, or thesis validity.
 
 ---
 
@@ -83,13 +83,13 @@ Command workflow
 Canonical helper path:
 
 ```md
-/home/jordan/.hermes/profiles/midas/tools/market_data_snapshot.py
+tools/market_data_snapshot.py
 ```
 
 Canonical invocation:
 
 ```bash
-python3 /home/jordan/.hermes/profiles/midas/tools/market_data_snapshot.py [TICKER]
+python3 tools/market_data_snapshot.py [TICKER]
 ```
 
 The helper must:
@@ -290,7 +290,7 @@ Market cap: Not available from selected provider snapshot.
 When live market data is used to calculate valuation metrics, follow:
 
 ```md
-/home/jordan/.hermes/profiles/midas/rules/METRICS.md
+rules/METRICS.md
 ```
 
 Market data may provide inputs such as:
@@ -360,9 +360,9 @@ It is read-only, writes no artifacts, performs no classification/scoring, and gi
 
 Detailed command workflow and display requirements live in:
 
-- `/home/jordan/.hermes/profiles/midas/skills/stock-analysis/market/SKILL.md`
-- `/home/jordan/.hermes/profiles/midas/skills/stock-analysis/market/OUTPUT.md`
-- `/home/jordan/.hermes/profiles/midas/evals/market.eval.md`
+- `skills/stock-analysis/market/SKILL.md`
+- `skills/stock-analysis/market/OUTPUT.md`
+- `evals/market.eval.md`
 
 ### Filing-backed commands
 

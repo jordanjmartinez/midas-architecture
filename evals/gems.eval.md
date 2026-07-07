@@ -1,6 +1,6 @@
 # MIDAS Command Eval — !gems
 
-Template source: `/home/jordan/.hermes/profiles/midas/templates/COMMAND_EVAL_TEMPLATE.md`
+Template source: `templates/COMMAND_EVAL_TEMPLATE.md`
 
 ---
 

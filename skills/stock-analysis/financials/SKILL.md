@@ -137,18 +137,18 @@ Do not auto-run downstream commands.
 
 This command must follow:
 
-- `/home/jordan/.hermes/profiles/midas/rules/GLOBAL.md`
-- `/home/jordan/.hermes/profiles/midas/rules/COMMAND_INTERFACE.md`
-- `/home/jordan/.hermes/profiles/midas/rules/SOURCES.md`
-- `/home/jordan/.hermes/profiles/midas/rules/MARKET_DATA.md` only for optional market / valuation context
-- `/home/jordan/.hermes/profiles/midas/rules/METRICS.md`
-- `/home/jordan/.hermes/profiles/midas/rules/OUTPUT.md`
-- `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`
+- `rules/GLOBAL.md`
+- `rules/COMMAND_INTERFACE.md`
+- `rules/SOURCES.md`
+- `rules/MARKET_DATA.md` only for optional market / valuation context
+- `rules/METRICS.md`
+- `rules/OUTPUT.md`
+- `rules/ARTIFACTS.md`
 
 Use when applicable:
 
-- `/home/jordan/.hermes/profiles/midas/rules/CLASSIFICATIONS.md`
-- `/home/jordan/.hermes/profiles/midas/rules/SCORING.md`
+- `rules/CLASSIFICATIONS.md`
+- `rules/SCORING.md`
 
 Do not duplicate global rule content inside this command. Reference global rules instead.
 
@@ -165,7 +165,7 @@ Follow this command-specific workflow:
 5. Resolve the company identity: legal company name, ticker, exchange, and SEC CIK where applicable. If no SEC CIK resolves or the issuer is primarily non-U.S./OTC-linked, use `references/non-sec-and-fpi.md` before gathering documents.
 6. Determine whether the command has enough input to proceed; clarify only if ambiguity remains material.
 7. For no-write audit mode, follow the No-Write Audit Rule below before any source gathering.
-8. Gather source evidence using `/home/jordan/.hermes/profiles/midas/rules/SOURCES.md` and the command-specific source needs below.
+8. Gather source evidence using `rules/SOURCES.md` and the command-specific source needs below.
 9. Identify the latest relevant annual and interim financial sources.
 10. Record filing dates, report periods, source identifiers, and source basis; keep URLs or accessions internal unless needed for disambiguation, audit/source-recovery/debug context, or user-requested source links.
 11. Extract targeted financial evidence rather than dumping full filings.
@@ -179,11 +179,11 @@ Follow this command-specific workflow:
 19. Identify financial risks/watchpoints separately from source, citation, missing-data, stale-data, and unavailable-metric limitations.
 20. Label all material metrics with period, source, unit, GAAP/non-GAAP status where applicable, and reported/adjusted/calculated status where applicable.
 21. Label missing, not disclosed, stale, unavailable, or not meaningful metrics.
-22. Include limited market / valuation context only if the user asks for valuation or current market context, or market cap / EV / liquidity is materially needed to frame financial scale. Interpret scale framing narrowly; do not use it to justify default market-data fetching in every Standard report. If market data is used, follow `/home/jordan/.hermes/profiles/midas/rules/OUTPUT.md` `Market-Data Display Rule` for chat display and `/home/jordan/.hermes/profiles/midas/rules/MARKET_DATA.md` for helper/source behavior. Call the canonical helper directly, keep the financial/valuation read-through first, show one compact provider/date line in chat, and preserve exact timestamp/timezone, provider limitations, unavailable fields, helper/tool detail if useful, and timing mismatch in the saved artifact when needed. Do not call or parse `!market` user-facing output text.
+22. Include limited market / valuation context only if the user asks for valuation or current market context, or market cap / EV / liquidity is materially needed to frame financial scale. Interpret scale framing narrowly; do not use it to justify default market-data fetching in every Standard report. If market data is used, follow `rules/OUTPUT.md` `Market-Data Display Rule` for chat display and `rules/MARKET_DATA.md` for helper/source behavior. Call the canonical helper directly, keep the financial/valuation read-through first, show one compact provider/date line in chat, and preserve exact timestamp/timezone, provider limitations, unavailable fields, helper/tool detail if useful, and timing mismatch in the saved artifact when needed. Do not call or parse `!market` user-facing output text.
 23. Apply Setup Classification only if the user asks or the output explicitly includes a final setup view.
 24. Include the required `## Financial Quality Score` as a concise financial-quality research score/grade when evidence supports it. This is not a full Global Research Score and must not become a recommendation; if evidence is insufficient, state the limitation inside that section.
-25. Produce output using `/home/jordan/.hermes/profiles/midas/skills/stock-analysis/financials/OUTPUT.md` and `/home/jordan/.hermes/profiles/midas/rules/OUTPUT.md`. In normal mode, use the mandatory Standard-only template in `OUTPUT.md`; do not invent a ticker-specific abbreviated structure.
-26. Save the final clean report to `workspace/tickers/[ticker]/financials.md` for normal `!financials [ticker]` only, according to this command’s artifact behavior and `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`.
+25. Produce output using `skills/stock-analysis/financials/OUTPUT.md` and `rules/OUTPUT.md`. In normal mode, use the mandatory Standard-only template in `OUTPUT.md`; do not invent a ticker-specific abbreviated structure.
+26. Save the final clean report to `workspace/tickers/[ticker]/financials.md` for normal `!financials [ticker]` only, according to this command’s artifact behavior and `rules/ARTIFACTS.md`.
 27. Before saving or sending normal output, run a ticker-consistency finalization check. The active user ticker/company, resolved issuer, report title, artifact path, saved-path line, and source base must all match. If multiple tickers appeared in the transcript or context was compacted/interrupted, use `references/artifact-safety.md`. If any element does not match, hard stop and regenerate for the active ticker from sources; do not patch only the title/path.
 28. If a best next command is useful, include it as `## Best Next Command` after `## Source Notes` and before the final saved-path line. If `workspace/tickers/[ticker]/research.md` exists, prefer `!thesis [TICKER]` or `!risk [TICKER]` depending on the financial issues surfaced, and if no research artifact exists, suggest `!research [TICKER]`.
 29. End normal successful responses with the required saved-path confirmation only after the artifact was actually written.
@@ -252,7 +252,7 @@ No files changed — audit blocked.
 
 Default source standards come from:
 
-`/home/jordan/.hermes/profiles/midas/rules/SOURCES.md`
+`rules/SOURCES.md`
 
 Command-specific source needs:
 
@@ -281,12 +281,12 @@ Command-local support references:
 
 Market data is optional supporting context. Use it under:
 
-`/home/jordan/.hermes/profiles/midas/rules/MARKET_DATA.md`
+`rules/MARKET_DATA.md`
 
 When market context is needed, call the canonical helper directly:
 
 ```bash
-python3 /home/jordan/.hermes/profiles/midas/tools/market_data_snapshot.py [TICKER]
+python3 tools/market_data_snapshot.py [TICKER]
 ```
 
 Do not call or parse `!market` user-facing output text.
@@ -317,14 +317,14 @@ Market data must not be used as evidence for:
 - financial-statement conclusions;
 - metric quality.
 
-If market data is used in chat, label compactly under `/home/jordan/.hermes/profiles/midas/rules/OUTPUT.md` `Market-Data Display Rule`:
+If market data is used in chat, label compactly under `rules/OUTPUT.md` `Market-Data Display Rule`:
 
 - provider/source;
 - concise as-of date.
 
 Preserve exact timestamp, timezone, limitations, unavailable fields, helper/tool detail if useful, and timing mismatch between live market data and filing-derived inputs in the saved artifact when needed.
 
-Valuation multiples must follow `/home/jordan/.hermes/profiles/midas/rules/METRICS.md`.
+Valuation multiples must follow `rules/METRICS.md`.
 
 Do not produce:
 
@@ -346,7 +346,7 @@ Use Setup Classification: `Optional`
 
 Rule:
 
-`/home/jordan/.hermes/profiles/midas/rules/CLASSIFICATIONS.md`
+`rules/CLASSIFICATIONS.md`
 
 Command-specific classification notes:
 
@@ -360,7 +360,7 @@ Use scoring: `Optional`
 
 Rule:
 
-`/home/jordan/.hermes/profiles/midas/rules/SCORING.md`
+`rules/SCORING.md`
 
 Command-specific scoring notes:
 
@@ -377,7 +377,7 @@ Use financial metrics: `Required`
 
 Rule:
 
-`/home/jordan/.hermes/profiles/midas/rules/METRICS.md`
+`rules/METRICS.md`
 
 Command-specific metric notes:
 
@@ -409,11 +409,11 @@ Command-specific metric notes:
 
 Follow the command-specific output contract:
 
-`/home/jordan/.hermes/profiles/midas/skills/stock-analysis/financials/OUTPUT.md`
+`skills/stock-analysis/financials/OUTPUT.md`
 
 Follow shared output standards:
 
-`/home/jordan/.hermes/profiles/midas/rules/OUTPUT.md`
+`rules/OUTPUT.md`
 
 ### Required Sections in Normal Standard-Only Output
 
@@ -470,13 +470,13 @@ Audit mode writes artifacts: `No`
 
 Follow:
 
-`/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`
+`rules/ARTIFACTS.md`
 
 ### Creates / Replaces
 
 Normal `!financials [ticker]` saves by default to:
 
-- `/home/jordan/.hermes/profiles/midas/workspace/tickers/[ticker]/financials.md`
+- `workspace/tickers/[ticker]/financials.md`
 
 Audit `!financials [ticker] -audit` writes nothing.
 
@@ -577,7 +577,7 @@ Guardrail wording is governed by this section and the command output contract; d
 
 Eval coverage lives in:
 
-`/home/jordan/.hermes/profiles/midas/evals/financials.eval.md`
+`evals/financials.eval.md`
 
 Required eval areas:
 

@@ -59,9 +59,9 @@ This contract does not own:
 - Schema definitions.
 - Global classification, scoring, source, output, metric, or artifact definitions.
 
-Follow `/home/jordan/.hermes/profiles/midas/rules/CONTRACT_AUTHORITY.md` when deciding whether future additions belong here, in `SKILL.md`, in `OUTPUT.md`, in evals, in docs, in schemas, or in shared global rules.
+Follow `rules/CONTRACT_AUTHORITY.md` when deciding whether future additions belong here, in `SKILL.md`, in `OUTPUT.md`, in evals, in docs, in schemas, or in shared global rules.
 
-Rerating-stage, post-rerate, overextension, vertical-move, consolidation, valuation-reset, market-absorption, and price-action discipline inherit from `/home/jordan/.hermes/profiles/midas/rules/RERATING.md`; this contract applies those standards to `!gems` candidate routing and promotion/demotion decisions without redefining them.
+Rerating-stage, post-rerate, overextension, vertical-move, consolidation, valuation-reset, market-absorption, and price-action discipline inherit from `rules/RERATING.md`; this contract applies those standards to `!gems` candidate routing and promotion/demotion decisions without redefining them.
 
 ## Source Contract
 
@@ -85,7 +85,7 @@ Material source limitations must be carried into the visible output or saved art
 
 Disconfirming evidence must be considered before a candidate is promoted.
 
-Global source standards remain inherited from `/home/jordan/.hermes/profiles/midas/rules/SOURCES.md`; this section only defines the `!gems` command-local source hierarchy and demotion effect.
+Global source standards remain inherited from `rules/SOURCES.md`; this section only defines the `!gems` command-local source hierarchy and demotion effect.
 
 ## Entity / Security Resolution Gate
 
@@ -398,7 +398,7 @@ Bad information gaps include:
 
 ## Rerating / Post-Rerate Discipline
 
-Global rerating discipline is inherited from `/home/jordan/.hermes/profiles/midas/rules/RERATING.md`; this section only describes `!gems` command-local application.
+Global rerating discipline is inherited from `rules/RERATING.md`; this section only describes `!gems` command-local application.
 
 Post-rerate names can be watch-only if the stock is already vertical or has already reflected much of the thesis.
 
@@ -468,7 +468,7 @@ Post-rerate and promotional-risk names are capped or demoted.
 
 Obvious mega-cap or consensus names cannot become clean hidden gems by score alone.
 
-Use the overlay score to discipline ranking across the existing five buckets while preserving global scoring standards from `/home/jordan/.hermes/profiles/midas/rules/SCORING.md`:
+Use the overlay score to discipline ranking across the existing five buckets while preserving global scoring standards from `rules/SCORING.md`:
 
 1. Business Quality / Validation.
 2. Underdiscovered / Non-Consensus Status.
@@ -490,7 +490,7 @@ These caps refine `!gems` ranking only; they do not create a new scoring system,
 
 ## Classification Usage
 
-Use global Setup Classification rules from `/home/jordan/.hermes/profiles/midas/rules/CLASSIFICATIONS.md`.
+Use global Setup Classification rules from `rules/CLASSIFICATIONS.md`.
 
 `Hidden-Gem Candidate` is command-relevant but must be earned.
 
@@ -500,7 +500,7 @@ Use setup modifiers for evidence quality, rerating stage, fragility, or watch-on
 
 Classification is not a recommendation.
 
-Candidate buckets and local phrases are routing/status language, not official Setup Classifications. Official Setup Classification labels must come from `/home/jordan/.hermes/profiles/midas/rules/CLASSIFICATIONS.md`, with rerating modifiers/discipline inherited from `/home/jordan/.hermes/profiles/midas/rules/RERATING.md`.
+Candidate buckets and local phrases are routing/status language, not official Setup Classifications. Official Setup Classification labels must come from `rules/CLASSIFICATIONS.md`, with rerating modifiers/discipline inherited from `rules/RERATING.md`.
 
 Local status mapping:
 
@@ -529,7 +529,7 @@ If disconfirming evidence is material and unresolved, cap, demote, or block the 
 
 ## Candidate Buckets
 
-Use these buckets to route `!gems` candidate decisions. Official Setup Classification labels must come from `/home/jordan/.hermes/profiles/midas/rules/CLASSIFICATIONS.md`.
+Use these buckets to route `!gems` candidate decisions. Official Setup Classification labels must come from `rules/CLASSIFICATIONS.md`.
 
 - Promoted hidden-gem candidate — passes gates, has primary/company-backed evidence, credible business validation, real information gap, and acceptable rerating/noise discipline.
 - Researchable candidate — interesting enough for deeper work but not clean enough for promoted hidden-gem status.
@@ -562,8 +562,8 @@ Scores and classifications are research-prioritization tools only.
 
 `references/artifact-index.md` owns command-local artifact/index mechanics.
 
-`/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md` owns MIDAS artifact standards.
+`rules/ARTIFACTS.md` owns MIDAS artifact standards.
 
-`/home/jordan/.hermes/profiles/midas/rules/SOURCES.md`, `/home/jordan/.hermes/profiles/midas/rules/SCORING.md`, `/home/jordan/.hermes/profiles/midas/rules/CLASSIFICATIONS.md`, `/home/jordan/.hermes/profiles/midas/rules/RERATING.md`, `/home/jordan/.hermes/profiles/midas/rules/OUTPUT.md`, and `/home/jordan/.hermes/profiles/midas/rules/METRICS.md` remain inherited standards.
+`rules/SOURCES.md`, `rules/SCORING.md`, `rules/CLASSIFICATIONS.md`, `rules/RERATING.md`, `rules/OUTPUT.md`, and `rules/METRICS.md` remain inherited standards.
 
 Evals test behavior only.

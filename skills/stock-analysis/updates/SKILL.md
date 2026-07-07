@@ -266,21 +266,21 @@ If no meaningful company-specific update is found, do not save or replace `updat
 
 Workspace root:
 
-`/home/jordan/.hermes/profiles/midas/workspace`
+`workspace`
 
 Use the normalized lowercase ticker as the folder name.
 
 Examples:
 
-- `HOOD` saves to `/home/jordan/.hermes/profiles/midas/workspace/tickers/hood/updates.md`
-- `$RKLB` saves to `/home/jordan/.hermes/profiles/midas/workspace/tickers/rklb/updates.md`
-- `KEEL` saves to `/home/jordan/.hermes/profiles/midas/workspace/tickers/keel/updates.md`
+- `HOOD` saves to `workspace/tickers/hood/updates.md`
+- `$RKLB` saves to `workspace/tickers/rklb/updates.md`
+- `KEEL` saves to `workspace/tickers/keel/updates.md`
 
 If the ticker folder does not exist, create it.
 
 Save to:
 
-`/home/jordan/.hermes/profiles/midas/workspace/tickers/[ticker]/updates.md`
+`workspace/tickers/[ticker]/updates.md`
 
 Overwrite the previous `updates.md` file unless the user explicitly asks to preserve versions.
 
@@ -294,7 +294,7 @@ Date: YYYY-MM-DD
 
 Then save the full final output below that header.
 
-Follow MIDAS-wide artifact standards in `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`.
+Follow MIDAS-wide artifact standards in `rules/ARTIFACTS.md`.
 
 After saving a material-update artifact, end the response with one short confirmation line:
 

@@ -5,7 +5,7 @@ Use this reference when validating future `!market` provider-policy or rendering
 ## Harness path
 
 ```bash
-/home/jordan/.hermes/profiles/midas/evals/market_stage6_validation.py
+evals/market_stage6_validation.py
 ```
 
 Run from the MIDAS profile root:

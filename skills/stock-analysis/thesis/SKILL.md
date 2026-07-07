@@ -142,7 +142,7 @@ If the company is clear enough to proceed, state the identity assumption and pro
 
 Mode routing and mode-conflict behavior inherit from:
 
-`/home/jordan/.hermes/profiles/midas/rules/COMMAND_INTERFACE.md`
+`rules/COMMAND_INTERFACE.md`
 
 Command-specific routing:
 
@@ -244,19 +244,19 @@ Supported flag:
 
 This command must follow:
 
-- `/home/jordan/.hermes/profiles/midas/rules/GLOBAL.md`
-- `/home/jordan/.hermes/profiles/midas/rules/COMMAND_INTERFACE.md`
-- `/home/jordan/.hermes/profiles/midas/rules/SOURCES.md`
-- `/home/jordan/.hermes/profiles/midas/rules/METRICS.md` when metrics appear.
-- `/home/jordan/.hermes/profiles/midas/rules/MARKET_DATA.md` when market data is used.
-- `/home/jordan/.hermes/profiles/midas/rules/RERATING.md` when rerating, post-rerate, overextension, market-expectations, or valuation-setup language is used.
-- `/home/jordan/.hermes/profiles/midas/rules/OUTPUT.md`
-- `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`
+- `rules/GLOBAL.md`
+- `rules/COMMAND_INTERFACE.md`
+- `rules/SOURCES.md`
+- `rules/METRICS.md` when metrics appear.
+- `rules/MARKET_DATA.md` when market data is used.
+- `rules/RERATING.md` when rerating, post-rerate, overextension, market-expectations, or valuation-setup language is used.
+- `rules/OUTPUT.md`
+- `rules/ARTIFACTS.md`
 
 Use when applicable:
 
-- `/home/jordan/.hermes/profiles/midas/rules/CLASSIFICATIONS.md`
-- `/home/jordan/.hermes/profiles/midas/rules/SCORING.md`
+- `rules/CLASSIFICATIONS.md`
+- `rules/SCORING.md`
 
 Do not duplicate global rule content inside this command. Reference global rules instead.
 
@@ -272,7 +272,7 @@ Use this workflow for:
 2. If resuming after context compaction, interruption, or stale tool/todo state, hard-reset command state from the latest user-visible command before doing any work.
 3. Resolve company identity: legal company name, ticker, exchange, SEC CIK if applicable, and whether it is an SEC filer.
 4. Determine whether the command has enough input to proceed. Clarify only if ambiguity remains material.
-5. Gather source evidence using `/home/jordan/.hermes/profiles/midas/rules/SOURCES.md` and the command-specific source needs below.
+5. Gather source evidence using `rules/SOURCES.md` and the command-specific source needs below.
 6. For SEC filers, identify the latest relevant annual and interim sources, usually latest Form 10-K and latest Form 10-Q when available. For non-SEC filers, identify closest primary-source equivalents.
 7. Use material 8-Ks, earnings releases, investor presentations, acquisition filings, financing filings, transcripts, or other company sources only when material to thesis pillars, catalysts, risks, thesis breakers, update direction, valuation setup, or source freshness.
 8. Review same-ticker workspace artifacts only when useful as secondary synthesis inputs:
@@ -298,8 +298,8 @@ Use this workflow for:
 22. Apply market / valuation / rerating context only under the boundary below.
 23. Apply Setup Classification only when the user asks or when the output explicitly includes a setup view beyond thesis status.
 24. Apply scoring only if the user asks or if the output explicitly includes setup evaluation. Do not produce a Global Research Score by default.
-25. Produce output using `/home/jordan/.hermes/profiles/midas/skills/stock-analysis/thesis/OUTPUT.md` and shared output rules.
-26. Before writing, follow the global command-generated artifact save-order rule in `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`: draft internally, run required command-specific validation before first write, revise the draft if validation fails, save only after validation passes, verify the saved artifact, and show saved-path confirmation only after successful write.
+25. Produce output using `skills/stock-analysis/thesis/OUTPUT.md` and shared output rules.
+26. Before writing, follow the global command-generated artifact save-order rule in `rules/ARTIFACTS.md`: draft internally, run required command-specific validation before first write, revise the draft if validation fails, save only after validation passes, verify the saved artifact, and show saved-path confirmation only after successful write.
 27. Save the final clean Markdown only to `workspace/tickers/[ticker]/thesis.md`.
 28. Before final response, perform a ticker-consistency finalization check: requested ticker/company, resolved issuer, report title, artifact path, saved-path line, source base, and action must all match the current command.
 29. End with exactly one saved-path confirmation only after successful write.
@@ -320,7 +320,7 @@ Update is a subcommand / living thesis workflow, not an output mode.
 
 Load the existing living thesis read-only first from:
 
-`/home/jordan/.hermes/profiles/midas/workspace/tickers/[ticker]/thesis.md`
+`workspace/tickers/[ticker]/thesis.md`
 
 If the file does not exist, stop and say:
 
@@ -412,7 +412,7 @@ Include `## Update Notes` near the top and then continue with the normal thesis 
 
 Overwrite only the same living thesis file after completing and validating the refreshed thesis:
 
-`/home/jordan/.hermes/profiles/midas/workspace/tickers/[ticker]/thesis.md`
+`workspace/tickers/[ticker]/thesis.md`
 
 Do not create:
 
@@ -512,7 +512,7 @@ No files changed — audit blocked.
 
 Default source standards come from:
 
-`/home/jordan/.hermes/profiles/midas/rules/SOURCES.md`
+`rules/SOURCES.md`
 
 Command-specific source needs:
 
@@ -541,7 +541,7 @@ Use market data, valuation context, or rerating-stage context only when:
 
 If market data is used:
 
-- follow `/home/jordan/.hermes/profiles/midas/rules/MARKET_DATA.md`,
+- follow `rules/MARKET_DATA.md`,
 - label provider/source and as-of date,
 - disclose concise timing mismatch versus filing-derived fundamentals when relevant,
 - keep market data as context only, not thesis proof,
@@ -574,7 +574,7 @@ Market data must not prove:
 
 When rerating, post-rerate, overextension, market-expectations, or valuation-setup language is used, follow:
 
-`/home/jordan/.hermes/profiles/midas/rules/RERATING.md`
+`rules/RERATING.md`
 
 ---
 
@@ -586,7 +586,7 @@ Use Setup Classification: `Optional`
 
 Rule:
 
-`/home/jordan/.hermes/profiles/midas/rules/CLASSIFICATIONS.md`
+`rules/CLASSIFICATIONS.md`
 
 Command-specific classification notes:
 
@@ -601,7 +601,7 @@ Use scoring: `Optional`
 
 Rule:
 
-`/home/jordan/.hermes/profiles/midas/rules/SCORING.md`
+`rules/SCORING.md`
 
 Command-specific scoring notes:
 
@@ -617,7 +617,7 @@ Use financial metrics: `Required when metrics appear`
 
 Rule:
 
-`/home/jordan/.hermes/profiles/midas/rules/METRICS.md`
+`rules/METRICS.md`
 
 Command-specific metric notes:
 
@@ -633,11 +633,11 @@ Command-specific metric notes:
 
 Follow the command-specific output contract:
 
-`/home/jordan/.hermes/profiles/midas/skills/stock-analysis/thesis/OUTPUT.md`
+`skills/stock-analysis/thesis/OUTPUT.md`
 
 Follow shared output standards:
 
-`/home/jordan/.hermes/profiles/midas/rules/OUTPUT.md`
+`rules/OUTPUT.md`
 
 ### Required Sections for Normal Standard-Only Thesis
 
@@ -693,19 +693,19 @@ This command writes artifacts: `Yes` for normal and update; `No` for audit.
 
 Follow:
 
-`/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`
+`rules/ARTIFACTS.md`
 
 ### Normal
 
 `!thesis [ticker]` saves to:
 
-`/home/jordan/.hermes/profiles/midas/workspace/tickers/[ticker]/thesis.md`
+`workspace/tickers/[ticker]/thesis.md`
 
 ### Update
 
 `!thesis update [ticker]` saves to the same path only after loading the existing baseline and completing the refreshed thesis:
 
-`/home/jordan/.hermes/profiles/midas/workspace/tickers/[ticker]/thesis.md`
+`workspace/tickers/[ticker]/thesis.md`
 
 ### Audit
 
@@ -844,7 +844,7 @@ Command-specific guardrails:
 
 Eval coverage lives in:
 
-`/home/jordan/.hermes/profiles/midas/evals/thesis.eval.md`
+`evals/thesis.eval.md`
 
 Stage 2 does not patch evals. Later lean eval alignment should cover:
 

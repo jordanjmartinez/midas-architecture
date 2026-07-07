@@ -35,7 +35,7 @@ The command registry must be updated whenever a command is:
 - Moved to a new folder
 - Changed to use scoring/classification/metrics
 - Changed to create or update artifacts
-- Changed in ways that affect `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md` compliance
+- Changed in ways that affect `rules/ARTIFACTS.md` compliance
 - Given new eval coverage
 - Materially changed in purpose or output behavior
 
@@ -83,6 +83,10 @@ Deprecated commands should point to the replacement command when possible.
 
 ---
 
+# Aliases vs Subcommands
+
+Aliases are alternate top-level triggers for the same command. Subcommands and argument forms (for example `!wl rm` or `!track rm`) are not aliases; they are documented in the command `SKILL.md`.
+
 # Command Categories
 
 Recommended categories:
@@ -107,15 +111,15 @@ Recommended categories:
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | `!commands` | None | Command Menu | Active | Show available MIDAS commands and when to use each one. | `skills/stock-analysis/commands/SKILL.md` | `skills/stock-analysis/commands/OUTPUT.md` | `evals/commands.eval.md` | Not used | Not used | Not used | No |
 | `!gems` | None | Stock Discovery | Draft | Find and rank underdiscovered research candidates. | `skills/stock-analysis/gems/SKILL.md` | `skills/stock-analysis/gems/OUTPUT.md` | `evals/gems.eval.md` | Required | Required | Optional | Yes |
-| `!track` | `!show track`, `!track rm` | Disclosure Tracking | Active | Analyze politician or fund-manager disclosures and surface research leads. | `skills/stock-analysis/tracker/SKILL.md` | `skills/stock-analysis/tracker/OUTPUT.md` | `evals/tracker.eval.md` | Required | Optional | Optional | Optional |
+| `!track` | `!show track` | Disclosure Tracking | Active | Analyze politician or fund-manager disclosures and surface research leads. | `skills/stock-analysis/tracker/SKILL.md` | `skills/stock-analysis/tracker/OUTPUT.md` | `evals/tracker.eval.md` | Required | Optional | Optional | Optional |
 | `!research` | `/research`, `research` | Company Research | Active | Produce filing-backed business-model research for a company or ticker, covering monetization, segments, customers, geography, recurrence, pricing power, cyclicality, recent business trends, and key filing-backed risks. | `skills/stock-analysis/research/SKILL.md` | `skills/stock-analysis/research/OUTPUT.md` | `evals/research.eval.md` | Optional | Optional | Optional | Yes |
 | `!financials` | None | Financial Analysis | Active | Review financial statements, margins, cash flow, balance sheet, dilution, capital returns, GAAP/non-GAAP quality, source limitations, and metric-quality red flags. | `skills/stock-analysis/financials/SKILL.md` | `skills/stock-analysis/financials/OUTPUT.md` | `evals/financials.eval.md` | Optional | Optional | Required | Yes |
 | `!thesis` | `/thesis`, `thesis` | Thesis Analysis | Draft | Build or update a filing-backed long-term investment thesis for a public company, covering thesis pillars, variant view, business and financial evidence, valuation/rerating context, catalysts, monitoring rules, thesis-breaking risks, strongest bear case, and living-thesis update behavior. | `skills/stock-analysis/thesis/SKILL.md` | `skills/stock-analysis/thesis/OUTPUT.md` | `evals/thesis.eval.md` | Optional | Optional | Required | Yes |
-| `!risk` | `/risk`, `risk` | Risk Assessment | Draft | Produce filing-backed risk assessments that identify material thesis-breaking risks, warning signs, financial fragility, valuation/rerating risk, bear case, and risk-reduction evidence. | `skills/stock-analysis/risk/SKILL.md` | `skills/stock-analysis/risk/OUTPUT.md` | `evals/risk.eval.md` | Optional | Optional | Required | Yes |
+| `!risk` | `/risk`, `risk` | Risk Analysis | Draft | Produce filing-backed risk assessments that identify material thesis-breaking risks, warning signs, financial fragility, valuation/rerating risk, bear case, and risk-reduction evidence. | `skills/stock-analysis/risk/SKILL.md` | `skills/stock-analysis/risk/OUTPUT.md` | `evals/risk.eval.md` | Optional | Optional | Required | Yes |
 | `!promote` | None | Full Report | Planned | Planned pipeline command: eligible when `research.md`, `financials.md`, `thesis.md`, and `risk.md` exist and are current for a ticker; synthesizes the handoff packet and promotes the ticker to downstream agents. Design seed: `docs/plans/2026-07-05-promote-command-seed.md`. Replaces the removed `!full`. | Not created yet | Not created yet | Not created yet | Required | Required | Required | Yes |
 | `!earnings` | `/earnings`, `earnings review` | Earnings / Updates | Active | Review latest-quarter earnings, guidance, financial changes, thesis impact, risk update, and next-quarter watch metrics. | `skills/stock-analysis/earnings/SKILL.md` | `skills/stock-analysis/earnings/OUTPUT.md` | `evals/earnings.eval.md` | Optional | Not used | Required | Yes |
 | `!updates` | None | Earnings / Updates | Active | Summarize recent material company updates and separate material changes from noise. | `skills/stock-analysis/updates/SKILL.md` | `skills/stock-analysis/updates/OUTPUT.md` | `evals/updates.eval.md` | Optional | Not used | Optional | Yes |
-| `!wl` | `!wl rm`, `!wl show`, `!wl updates`, `!watchlist`, `!watchlist add`, `!watchlist rm`, `!watchlist show`, `!watchlist updates`, `!list`, `!list add`, `!list rm`, `!list show`, `!list updates` | Watchlist / Artifacts | Active | Manage the persistent MIDAS stock watchlist and run short watchlist update checks. | `skills/stock-analysis/wl/SKILL.md` | `skills/stock-analysis/wl/OUTPUT.md` | `evals/wl.eval.md` | Not used | Not used | Optional | Yes |
+| `!wl` | `!watchlist`, `!list` | Watchlist / Artifacts | Active | Manage the persistent MIDAS stock watchlist and run short watchlist update checks. Subcommands (`add`, `rm`, `show`, `updates`) work under any alias and are defined in the SKILL. | `skills/stock-analysis/wl/SKILL.md` | `skills/stock-analysis/wl/OUTPUT.md` | `evals/wl.eval.md` | Not used | Not used | Optional | Yes |
 | `!market` | None | System / Utility | Active | Return a compact read-only live market-data snapshot for a ticker with price, market cap when available, change, volume/exchange when available, source, as-of timestamp, and compact limitations; full/debug modes are explicit only; no artifacts, classification, scoring, recommendations, price targets, sizing, or trade advice. | `skills/stock-analysis/market/SKILL.md` | `skills/stock-analysis/market/OUTPUT.md` | `evals/market.eval.md` | Not used | Not used | Optional | No |
 | `maintenance` | None | System / Utility | Active | Govern MIDAS profile maintenance: audits, refactors, registry/eval/rule cleanup, staged plans with approval gates, exact-scope edits, and verification. Skill trigger; no `!` command syntax. Edits MIDAS profile files under its maintenance contracts; does not write workspace research artifacts. | `skills/maintenance/SKILL.md` | `skills/maintenance/OUTPUT.md` | `evals/maintenance.eval.md` | Not used | Not used | Not used | No |
 
@@ -191,7 +195,7 @@ Later, MIDAS may add a script that scans command `SKILL.md` metadata blocks and 
 
 Possible future path:
 
-`/home/jordan/.hermes/profiles/midas/scripts/update_command_registry.py`
+`scripts/update_command_registry.py`
 
 Until that exists, the registry must be updated manually whenever command metadata changes.
 
@@ -217,7 +221,7 @@ Each active command should eventually have an eval file.
 
 Eval files live in:
 
-`/home/jordan/.hermes/profiles/midas/evals/`
+`evals/`
 
 Command eval status should be reflected in the registry.
 
@@ -229,13 +233,13 @@ A command without eval coverage can still be usable, but should usually remain `
 
 This registry should follow the architecture described in:
 
-`/home/jordan/.hermes/profiles/midas/docs/ARCHITECTURE.md`
+`docs/ARCHITECTURE.md`
 
 Architecture defines where things belong.
 
 This registry indexes the commands that exist inside that architecture.
 
-Artifact-writing commands should follow `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`, and their `Writes Artifacts` metadata should match the command skill, output contract, and eval file.
+Artifact-writing commands should follow `rules/ARTIFACTS.md`, and their `Writes Artifacts` metadata should match the command skill, output contract, and eval file.
 
 ---
 

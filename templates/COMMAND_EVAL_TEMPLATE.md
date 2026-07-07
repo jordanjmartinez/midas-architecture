@@ -1024,7 +1024,7 @@ The command should handle artifacts according to its command contract.
 
 ### Assertions
 
-- Artifact behavior follows `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md` and the command-specific `SKILL.md`
+- Artifact behavior follows `rules/ARTIFACTS.md` and the command-specific `SKILL.md`
 - Artifact output follows the command-specific `OUTPUT.md`
 - Artifact path follows command-specific workspace conventions
 - Response accurately reflects artifact state

@@ -86,7 +86,7 @@ It owns:
 
 `OUTPUT.md` owns visible output shape, candidate-card fields, failure/no-candidate output, source-caveat display, score/confidence display, and saved/index display lines. `OUTPUT.md` does not own intelligence logic, ranking logic, or scoring calculation.
 
-Artifact and index mechanics are governed by `references/artifact-index.md`, subject to `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`. `!gems` must not mutate watchlists unless a separate approved watchlist command is explicitly run. Saved/updated/index claims remain allowed only when the write actually succeeded.
+Artifact and index mechanics are governed by `references/artifact-index.md`, subject to `rules/ARTIFACTS.md`. `!gems` must not mutate watchlists unless a separate approved watchlist command is explicitly run. Saved/updated/index claims remain allowed only when the write actually succeeded.
 
 For intelligence logic, `contracts/hidden-gems.md` is the active authority. For artifact/index mechanics, `references/artifact-index.md` is the active command-local authority. For visible output and saved/index confirmation wording, `OUTPUT.md` is the active display authority.
 
@@ -125,14 +125,14 @@ Apply these command-local and global authorities by reference. Do not duplicate 
 * `contracts/hidden-gems.md` — active `!gems` intelligence authority for source contract, eligibility, entity/security resolution, promotion gates, demotion/blocking, scoring interaction, classification usage, disconfirming evidence, and no-clean-candidate behavior.
 * `OUTPUT.md` — visible chat/output authority for candidate cards, score/confidence display, source/evidence caveats, failure/no-candidate output, visible saved/index confirmation wording, and final response shape.
 * `references/artifact-index.md` — active `!gems` command-local artifact/index mechanics for artifact paths, theme/subtheme parsing, slug behavior, folder creation, duplicate/cross-theme handling, saved-artifact requirements, and `workspace/gems/index.md` behavior.
-* `/home/jordan/.hermes/profiles/midas/rules/GLOBAL.md` — shared MIDAS operating rules.
-* `/home/jordan/.hermes/profiles/midas/rules/SOURCES.md` — global source standards.
-* `/home/jordan/.hermes/profiles/midas/rules/CLASSIFICATIONS.md` — approved setup classifications and modifiers.
-* `/home/jordan/.hermes/profiles/midas/rules/SCORING.md` — global scoring, Evidence Confidence, Hidden-Gem Overlay, and score-cap standards.
-* `/home/jordan/.hermes/profiles/midas/rules/RERATING.md` — global rerating, post-rerate, overextension, vertical-move, consolidation, market-absorption, valuation-reset, and price-action discipline standards.
-* `/home/jordan/.hermes/profiles/midas/rules/METRICS.md` — metric definitions and calculation standards when market cap, price performance, valuation, liquidity, or financial metrics are used.
-* `/home/jordan/.hermes/profiles/midas/rules/OUTPUT.md` — shared output standards inherited by `OUTPUT.md`.
-* `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md` — global artifact standards inherited by `references/artifact-index.md`.
+* `rules/GLOBAL.md` — shared MIDAS operating rules.
+* `rules/SOURCES.md` — global source standards.
+* `rules/CLASSIFICATIONS.md` — approved setup classifications and modifiers.
+* `rules/SCORING.md` — global scoring, Evidence Confidence, Hidden-Gem Overlay, and score-cap standards.
+* `rules/RERATING.md` — global rerating, post-rerate, overextension, vertical-move, consolidation, market-absorption, valuation-reset, and price-action discipline standards.
+* `rules/METRICS.md` — metric definitions and calculation standards when market cap, price performance, valuation, liquidity, or financial metrics are used.
+* `rules/OUTPUT.md` — shared output standards inherited by `OUTPUT.md`.
+* `rules/ARTIFACTS.md` — global artifact standards inherited by `references/artifact-index.md`.
 
 Do not create new reference, helper, methodology, theme-specific `.md`, schema, proof-packet, source-manifest, evidence-ledger, or fixture files unless the user explicitly asks.
 
@@ -242,7 +242,7 @@ Audit mode does not change standard `!gems` output, artifact/index write behavio
 
 `SKILL.md` preserves artifact behavior by reference only.
 
-Use `references/artifact-index.md` plus `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md` for:
+Use `references/artifact-index.md` plus `rules/ARTIFACTS.md` for:
 
 * `workspace/gems/general.md`
 * `workspace/gems/[theme]/general.md`
@@ -256,7 +256,7 @@ Use `references/artifact-index.md` plus `/home/jordan/.hermes/profiles/midas/rul
 * index update behavior
 * artifact write mechanics
 
-`references/artifact-index.md` owns `!gems` command-local artifact/index mechanics. It is subordinate to global `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`. `OUTPUT.md` owns visible saved/index confirmation wording. `contracts/hidden-gems.md` owns intelligence logic.
+`references/artifact-index.md` owns `!gems` command-local artifact/index mechanics. It is subordinate to global `rules/ARTIFACTS.md`. `OUTPUT.md` owns visible saved/index confirmation wording. `contracts/hidden-gems.md` owns intelligence logic.
 
 Active command-local artifact/index mechanics route to `references/artifact-index.md`.
 
@@ -266,7 +266,7 @@ No artifacts, folders, index updates, or watchlist mutations happen in read-only
 
 ## Output Boundary
 
-Use `/home/jordan/.hermes/profiles/midas/skills/stock-analysis/gems/OUTPUT.md` for visible output. That file owns chat shape, candidate-card fields, score/confidence display, source/evidence caveats, no-candidate/failure output, Best Next Command behavior, saved/index display lines, and no-recommendation wording.
+Use `skills/stock-analysis/gems/OUTPUT.md` for visible output. That file owns chat shape, candidate-card fields, score/confidence display, source/evidence caveats, no-candidate/failure output, Best Next Command behavior, saved/index display lines, and no-recommendation wording.
 
 This controller must not duplicate full output templates or change visible output format.
 

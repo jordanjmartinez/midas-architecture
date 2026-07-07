@@ -8,9 +8,9 @@ MIDAS command behavior is encoded in skills, but the Midas profile memory also c
 
 ## Files to keep aligned
 
-- Command menu skill: `/home/jordan/.hermes/profiles/midas/skills/stock-analysis/commands/SKILL.md`
-- Affected command skill(s): `/home/jordan/.hermes/profiles/midas/skills/stock-analysis/<skill>/SKILL.md`
-- Midas user profile memory: `/home/jordan/.hermes/profiles/midas/memories/USER.md`
+- Command menu skill: `skills/stock-analysis/commands/SKILL.md`
+- Affected command skill(s): `skills/stock-analysis/<skill>/SKILL.md`
+- Midas user profile memory: `memories/USER.md`
 
 ## Update pattern
 

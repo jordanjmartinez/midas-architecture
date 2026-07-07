@@ -37,7 +37,8 @@ The watchlist is only for tracking stocks the user wants to monitor.
 Command: `!wl`
 
 Display contract reference: `references/watchlist-display-contract.md`
-Aliases: `!wl rm`, `!wl show`, `!wl updates`, `!watchlist`, `!watchlist add`, `!watchlist rm`, `!watchlist show`, `!watchlist updates`, `!list`, `!list add`, `!list rm`, `!list show`, `!list updates`
+Aliases: `!watchlist`, `!list`
+Subcommands: `add`, `rm`, `show`, `updates` (work under `!wl` and any alias; defined in this SKILL)
 Category: `Watchlist / Artifacts`
 Status: `Active`
 Skill Path: `skills/stock-analysis/wl/SKILL.md`
@@ -59,7 +60,7 @@ Writes Artifacts: `Yes`
 
 Store the watchlist in a persistent JSON file under the active Midas profile:
 
-`/home/jordan/.hermes/profiles/midas/data/midas_watchlist.json`
+`data/midas_watchlist.json`
 
 Use this schema:
 
@@ -194,7 +195,7 @@ Workflow:
 5. Use market/news sources only for major price movement, major company news, or reaction context.
 6. Keep each stock's result short.
 7. Do not create a full research report, thesis, risk report, financial report, earnings report, or full memo.
-8. If a meaningful update is found for a stock, save or update that ticker's `workspace/tickers/[normalized-lowercase-ticker]/updates.md` artifact and follow `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`.
+8. If a meaningful update is found for a stock, save or update that ticker's `workspace/tickers/[normalized-lowercase-ticker]/updates.md` artifact and follow `rules/ARTIFACTS.md`.
 9. Show `Saved to:` only after an artifact was actually written or updated.
 10. Respond using the applicable `!wl updates` shape from `OUTPUT.md`.
 
@@ -209,7 +210,7 @@ Workflow:
 1. Load the watchlist JSON file.
 2. Match by ticker or company name, case-insensitive.
 3. If the stock is on the watchlist, scan only that stock.
-4. If a meaningful update is found, save or update that ticker's `workspace/tickers/[normalized-lowercase-ticker]/updates.md` artifact and follow `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`.
+4. If a meaningful update is found, save or update that ticker's `workspace/tickers/[normalized-lowercase-ticker]/updates.md` artifact and follow `rules/ARTIFACTS.md`.
 5. If the stock is not on the watchlist, do not auto-add it and do not run a full update scan unless the user explicitly asks.
 6. Respond using the applicable `!wl updates [ticker or company]` shape from `OUTPUT.md`.
 

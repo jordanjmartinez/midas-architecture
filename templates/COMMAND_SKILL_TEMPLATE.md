@@ -105,22 +105,22 @@ No aliases currently defined.
 
 This command must follow:
 
-- `/home/jordan/.hermes/profiles/midas/rules/GLOBAL.md`
-- `/home/jordan/.hermes/profiles/midas/rules/SOURCES.md`
-- `/home/jordan/.hermes/profiles/midas/rules/OUTPUT.md`
+- `rules/GLOBAL.md`
+- `rules/SOURCES.md`
+- `rules/OUTPUT.md`
 
 Use when applicable:
 
-- `/home/jordan/.hermes/profiles/midas/rules/CLASSIFICATIONS.md`
-- `/home/jordan/.hermes/profiles/midas/rules/SCORING.md`
-- `/home/jordan/.hermes/profiles/midas/rules/METRICS.md`
-- `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md` when this command writes artifacts
+- `rules/CLASSIFICATIONS.md`
+- `rules/SCORING.md`
+- `rules/METRICS.md`
+- `rules/ARTIFACTS.md` when this command writes artifacts
 
 Do not duplicate global rule content inside this command.
 
 Reference global rules instead.
 
-Before adding behavior that may apply beyond this command, check `/home/jordan/.hermes/profiles/midas/rules/CONTRACT_AUTHORITY.md`. Command skills should define command-specific deltas, not hidden global law.
+Before adding behavior that may apply beyond this command, check `rules/CONTRACT_AUTHORITY.md`. Command skills should define command-specific deltas, not hidden global law.
 
 ---
 
@@ -138,7 +138,7 @@ Follow this command-specific workflow:
 8. Apply scoring if appropriate.
 9. Identify material risks, limitations, or disconfirming evidence.
 10. Produce the output using shared and command-specific output standards.
-11. Create, update, append, or skip artifacts according to this command’s artifact rules and `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`.
+11. Create, update, append, or skip artifacts according to this command’s artifact rules and `rules/ARTIFACTS.md`.
 12. Suggest the best next command only when useful.
 
 Keep the workflow specific to this command.
@@ -151,7 +151,7 @@ Do not turn this section into a copy of global rules.
 
 Default source standards come from:
 
-`/home/jordan/.hermes/profiles/midas/rules/SOURCES.md`
+`rules/SOURCES.md`
 
 Command-specific source needs:
 
@@ -188,7 +188,7 @@ Use Setup Classification:
 Rule:
 
 ```md
-Use `/home/jordan/.hermes/profiles/midas/rules/CLASSIFICATIONS.md`.
+Use `rules/CLASSIFICATIONS.md`.
 ```
 
 Command-specific classification notes:
@@ -205,7 +205,7 @@ Use scoring:
 Rule:
 
 ```md
-Use `/home/jordan/.hermes/profiles/midas/rules/SCORING.md`.
+Use `rules/SCORING.md`.
 ```
 
 Command-specific scoring notes:
@@ -222,7 +222,7 @@ Use financial metrics:
 Rule:
 
 ```md
-Use `/home/jordan/.hermes/profiles/midas/rules/METRICS.md`.
+Use `rules/METRICS.md`.
 ```
 
 Command-specific metric notes:
@@ -236,7 +236,7 @@ Command-specific metric notes:
 
 Follow the shared output standards:
 
-`/home/jordan/.hermes/profiles/midas/rules/OUTPUT.md`
+`rules/OUTPUT.md`
 
 ### Required Sections
 
@@ -273,7 +273,7 @@ Do not create giant reports for commands that are meant to be quick.
 
 If this command writes artifacts, follow:
 
-`/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`
+`rules/ARTIFACTS.md`
 
 This command writes artifacts:
 
@@ -299,7 +299,7 @@ This command writes artifacts:
 
 - Define command-specific artifact behavior here.
 - Do not duplicate the full global artifact policy.
-- Use canonical paths from `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`.
+- Use canonical paths from `rules/ARTIFACTS.md`.
 - If no artifact is written, do not pretend one was created.
 
 If this command does not write artifacts by default, write:
@@ -391,7 +391,7 @@ Additional useful evals:
 Eval files should live in:
 
 ```bash
-/home/jordan/.hermes/profiles/midas/evals/
+evals/
 ```
 
 ---

@@ -1,6 +1,6 @@
 # Contract Authority Placement Notes
 
-Archived historical note. This file preserves context from a prior maintenance cleanup and is not active routing law. The reusable template-change lesson is handled by `references/active/template-change-discipline.md`; the canonical authority rule lives in `/home/jordan/.hermes/profiles/midas/rules/CONTRACT_AUTHORITY.md`.
+Archived historical note. This file preserves context from a prior maintenance cleanup and is not active routing law. The reusable template-change lesson is handled by `references/active/template-change-discipline.md`; the canonical authority rule lives in `rules/CONTRACT_AUTHORITY.md`.
 
 Use this reference for MIDAS maintenance work that could add, move, expand, or deduplicate rules, command contracts, output contracts, templates, docs, eval requirements, or references.
 
@@ -29,7 +29,7 @@ Before patching templates or command files, ask whether the proposed language ad
 Use a short pointer such as:
 
 ```md
-Before adding behavior that may apply beyond this command, check `/home/jordan/.hermes/profiles/midas/rules/CONTRACT_AUTHORITY.md`. Command skills should define command-specific deltas, not hidden global law.
+Before adding behavior that may apply beyond this command, check `rules/CONTRACT_AUTHORITY.md`. Command skills should define command-specific deltas, not hidden global law.
 ```
 
 Do not add the full Contract Authority Check block to command templates unless repeated drift proves it necessary.

@@ -74,17 +74,17 @@ Artifact policy belongs in:
 
 `!financials` must follow the global MIDAS output rules in:
 
-- `/home/jordan/.hermes/profiles/midas/rules/GLOBAL.md`
-- `/home/jordan/.hermes/profiles/midas/rules/OUTPUT.md`
-- `/home/jordan/.hermes/profiles/midas/rules/SOURCES.md`
-- `/home/jordan/.hermes/profiles/midas/rules/MARKET_DATA.md` only for optional market / valuation context
-- `/home/jordan/.hermes/profiles/midas/rules/METRICS.md`
-- `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`
+- `rules/GLOBAL.md`
+- `rules/OUTPUT.md`
+- `rules/SOURCES.md`
+- `rules/MARKET_DATA.md` only for optional market / valuation context
+- `rules/METRICS.md`
+- `rules/ARTIFACTS.md`
 
 When classification or scoring is used, also follow:
 
-- `/home/jordan/.hermes/profiles/midas/rules/CLASSIFICATIONS.md`
-- `/home/jordan/.hermes/profiles/midas/rules/SCORING.md`
+- `rules/CLASSIFICATIONS.md`
+- `rules/SCORING.md`
 
 If this file conflicts with a global rule file, the global rule file wins unless the exception is explicitly documented here.
 
@@ -334,9 +334,9 @@ Include market / valuation context only when:
 
 If included, market data must be clearly labeled as supporting market context and must follow:
 
-- `/home/jordan/.hermes/profiles/midas/rules/OUTPUT.md` `Market-Data Display Rule` for chat display
-- `/home/jordan/.hermes/profiles/midas/rules/MARKET_DATA.md`
-- `/home/jordan/.hermes/profiles/midas/rules/METRICS.md` for valuation multiples
+- `rules/OUTPUT.md` `Market-Data Display Rule` for chat display
+- `rules/MARKET_DATA.md`
+- `rules/METRICS.md` for valuation multiples
 
 Use the canonical helper output directly. Do not call or parse `!market` user-facing output text. In chat, do not show internal tool paths, helper names, raw provider errors, unavailable-field dumps, exact timestamps with seconds, long helper metadata, or repeated provider limitations by default.
 
@@ -649,7 +649,7 @@ Writes artifacts: `Yes` for normal output; `No` for audit mode.
 
 Artifact behavior follows:
 
-`/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`
+`rules/ARTIFACTS.md`
 
 Default artifact behavior:
 

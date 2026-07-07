@@ -124,9 +124,9 @@ Use Tier 2 sources for:
 
 When possible, cross-check important market-data claims across more than one source.
 
-For live or current market-data snapshot behavior, follow `/home/jordan/.hermes/profiles/midas/rules/MARKET_DATA.md`.
+For live or current market-data snapshot behavior, follow `rules/MARKET_DATA.md`.
 
-For setup/rerating analysis, use `/home/jordan/.hermes/profiles/midas/rules/RERATING.md` when separating filing-backed evidence from market narrative, consensus expectations, price action, and social/crowding signals.
+For setup/rerating analysis, use `rules/RERATING.md` when separating filing-backed evidence from market narrative, consensus expectations, price action, and social/crowding signals.
 
 ### Tier 3 — Secondary Research / Context Only
 

@@ -15,7 +15,7 @@ This file defines the user-facing display contract for:
 
 `!market` is a thin utility command. It displays the result from the canonical helper and does not add separate research, scoring, classification, recommendation, or artifact logic.
 
-This output contract must follow `/home/jordan/.hermes/profiles/midas/rules/MARKET_DATA.md`. If this file conflicts with `MARKET_DATA.md`, `MARKET_DATA.md` controls market-data behavior.
+This output contract must follow `rules/MARKET_DATA.md`. If this file conflicts with `MARKET_DATA.md`, `MARKET_DATA.md` controls market-data behavior.
 
 ## Default Output Mode
 
@@ -111,7 +111,7 @@ Preserve helper-provided timestamp semantics; this is a rendering rule only.
 
 ## Metric Display Rules
 
-Follow `/home/jordan/.hermes/profiles/midas/rules/METRICS.md` for metric labels, units, source/as-of discipline, calculated fields, and stale-data handling.
+Follow `rules/METRICS.md` for metric labels, units, source/as-of discipline, calculated fields, and stale-data handling.
 
 Preserve:
 

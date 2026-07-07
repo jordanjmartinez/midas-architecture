@@ -279,7 +279,7 @@ Setup Modifiers: [Modifier 1]; [Modifier 2]; [Modifier 3]
 
 Use classifications from:
 
-`/home/jordan/.hermes/profiles/midas/rules/CLASSIFICATIONS.md`
+`rules/CLASSIFICATIONS.md`
 
 Do not create random new classifications unless the classification file is updated.
 
@@ -298,7 +298,7 @@ Setup Modifiers: Filing-Backed; Early Rerating; Customer-Concentration Risk
 
 When scoring is used, follow:
 
-`/home/jordan/.hermes/profiles/midas/rules/SCORING.md`
+`rules/SCORING.md`
 
 For global scoring:
 
@@ -376,7 +376,7 @@ Do not force evidence confidence into simple factual outputs unless useful.
 
 MIDAS should follow:
 
-`/home/jordan/.hermes/profiles/midas/rules/SOURCES.md`
+`rules/SOURCES.md`
 
 Use sources internally even when the final output is compact.
 
@@ -900,11 +900,11 @@ Do not scatter files across random folders.
 
 Follow file and artifact rules from:
 
-`/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`
+`rules/ARTIFACTS.md`
 
 Also follow shared operating boundaries from:
 
-`/home/jordan/.hermes/profiles/midas/rules/GLOBAL.md`
+`rules/GLOBAL.md`
 
 ---
 

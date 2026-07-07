@@ -53,7 +53,7 @@ Expected:
 - File exists.
 - Contract is the active maintenance authority.
 - Approximate length is 150–250 lines unless the user explicitly approves expansion.
-- Contains default scope rooted at `/home/jordan/.hermes/profiles/midas`.
+- Contains default scope rooted at the MIDAS profile root.
 - Requires read-first, exact-scope, evidence-backed, artifact-safe maintenance.
 - Defines authority layers for `rules/`, command `SKILL.md`, command `OUTPUT.md`, `evals/`, `docs/`, `templates/`, `schemas/`, `tools/`, and `workspace/`.
 - Points multi-stage maintenance work to `skills/maintenance/PLAN.md`.

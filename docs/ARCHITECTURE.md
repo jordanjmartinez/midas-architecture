@@ -57,7 +57,7 @@ Reusable design helpers should live in `templates/`, `evals/`, `schemas/`, and `
 Recommended MIDAS profile structure:
 
 ```bash
-/home/jordan/.hermes/profiles/midas/
+
 ├── SOUL.md
 ├── AGENTS.md
 ├── rules/
@@ -70,7 +70,6 @@ Recommended MIDAS profile structure:
 │   └── ARTIFACTS.md
 ├── docs/
 │   ├── ARCHITECTURE.md
-│   ├── BUILD_ORDER.md
 │   └── COMMAND_REGISTRY.md
 ├── templates/
 │   ├── COMMAND_SKILL_TEMPLATE.md
@@ -301,7 +300,7 @@ Instead, skills should reference global rules.
 Good skill instruction:
 
 ```md
-Use Setup Classification from `/home/jordan/.hermes/profiles/midas/rules/CLASSIFICATIONS.md`.
+Use Setup Classification from `rules/CLASSIFICATIONS.md`.
 ```
 
 Bad skill instruction:
@@ -337,18 +336,6 @@ Docs are not runtime rules unless explicitly referenced by a rule or skill.
 System map.
 
 Explains how MIDAS is organized.
-
-### `docs/BUILD_ORDER.md`
-
-Optional build plan.
-
-Can track:
-
-- What global files are complete
-- What templates are complete
-- What skills need refactoring
-- What evals need building
-- What commands are stable
 
 ### `docs/COMMAND_REGISTRY.md`
 
@@ -516,7 +503,7 @@ workspace/
     └── full/
 ```
 
-Commands should define command-specific artifact behavior in their skill file and follow `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`.
+Commands should define command-specific artifact behavior in their skill file and follow `rules/ARTIFACTS.md`.
 
 ---
 
@@ -644,16 +631,16 @@ Example:
 ```md
 This command must follow:
 
-- `/home/jordan/.hermes/profiles/midas/rules/GLOBAL.md`
-- `/home/jordan/.hermes/profiles/midas/rules/SOURCES.md`
-- `/home/jordan/.hermes/profiles/midas/rules/OUTPUT.md`
+- `rules/GLOBAL.md`
+- `rules/SOURCES.md`
+- `rules/OUTPUT.md`
 
 Use when applicable:
 
-- `/home/jordan/.hermes/profiles/midas/rules/CLASSIFICATIONS.md`
-- `/home/jordan/.hermes/profiles/midas/rules/SCORING.md`
-- `/home/jordan/.hermes/profiles/midas/rules/METRICS.md`
-- `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md` when a command writes artifacts
+- `rules/CLASSIFICATIONS.md`
+- `rules/SCORING.md`
+- `rules/METRICS.md`
+- `rules/ARTIFACTS.md` when a command writes artifacts
 ```
 
 This prevents duplication and keeps shared behavior centralized.
@@ -989,7 +976,6 @@ Possible future architecture additions:
 
 ```bash
 docs/COMMAND_REGISTRY.md
-docs/BUILD_ORDER.md
 templates/COMMAND_OUTPUT_TEMPLATE.md
 templates/COMMAND_EVAL_TEMPLATE.md
 evals/[command].eval.md

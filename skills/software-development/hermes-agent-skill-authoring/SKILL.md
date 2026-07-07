@@ -138,7 +138,7 @@ Pick the closest existing category. Don't invent new top-level categories casual
 
 ## Profile-Local MIDAS Authoring
 
-For MIDAS profile-local skill/rule edits under `/home/jordan/.hermes/profiles/midas/`, see `references/midas-profile-local-authoring.md`. It covers exact `SKILL.md` replacements, shared `rules/*.md` files, command-menu patches, tracker-skill boundaries, runtime artifact prohibitions, and exact confirmation-only responses.
+For MIDAS profile-local skill/rule edits under ``, see `references/midas-profile-local-authoring.md`. It covers exact `SKILL.md` replacements, shared `rules/*.md` files, command-menu patches, tracker-skill boundaries, runtime artifact prohibitions, and exact confirmation-only responses.
 
 For MIDAS command runtime-test failures where the user asks to patch the output contract without rebuilding the command, see `references/midas-runtime-test-contract-patches.md`.
 

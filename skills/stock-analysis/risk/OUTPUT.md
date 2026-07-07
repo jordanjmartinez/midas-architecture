@@ -89,18 +89,18 @@ This file should not answer:
 
 `!risk` must follow the global MIDAS output rules in:
 
-- `/home/jordan/.hermes/profiles/midas/rules/GLOBAL.md`
-- `/home/jordan/.hermes/profiles/midas/rules/OUTPUT.md`
-- `/home/jordan/.hermes/profiles/midas/rules/SOURCES.md`
-- `/home/jordan/.hermes/profiles/midas/rules/MARKET_DATA.md`
-- `/home/jordan/.hermes/profiles/midas/rules/RERATING.md`
-- `/home/jordan/.hermes/profiles/midas/rules/METRICS.md`
-- `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`
+- `rules/GLOBAL.md`
+- `rules/OUTPUT.md`
+- `rules/SOURCES.md`
+- `rules/MARKET_DATA.md`
+- `rules/RERATING.md`
+- `rules/METRICS.md`
+- `rules/ARTIFACTS.md`
 
 When classification or broader scoring is used, also follow:
 
-- `/home/jordan/.hermes/profiles/midas/rules/CLASSIFICATIONS.md`
-- `/home/jordan/.hermes/profiles/midas/rules/SCORING.md`
+- `rules/CLASSIFICATIONS.md`
+- `rules/SCORING.md`
 
 If this file conflicts with a global rule file, the global rule file wins unless the exception is explicitly documented here.
 
@@ -543,7 +543,7 @@ Writes artifacts: `Yes` for normal output; `No` for audit mode.
 
 Artifact behavior follows:
 
-`/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`
+`rules/ARTIFACTS.md`
 
 Normal artifact behavior:
 
@@ -572,7 +572,7 @@ Do not mutate watchlists or update indexes as part of normal artifact saving.
 
 ## Standard Pre-Save Validation
 
-Generic command-generated artifact save-order discipline is governed by `/home/jordan/.hermes/profiles/midas/rules/ARTIFACTS.md`: validate before first write, save only after validation passes, verify the saved artifact, and show the saved-path confirmation only after a successful write.
+Generic command-generated artifact save-order discipline is governed by `rules/ARTIFACTS.md`: validate before first write, save only after validation passes, verify the saved artifact, and show the saved-path confirmation only after a successful write.
 
 Hard-stop and do not save until the draft passes all checks:
 

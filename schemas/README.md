@@ -3,7 +3,7 @@
 ## Purpose
 
 `schemas/` is the authority layer for structured data and artifact shapes, as
-defined in `/home/jordan/.hermes/profiles/midas/rules/CONTRACT_AUTHORITY.md`.
+defined in `rules/CONTRACT_AUTHORITY.md`.
 
 Allowed here:
 

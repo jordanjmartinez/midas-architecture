@@ -76,7 +76,7 @@ When editing MIDAS stock-analysis command wording, command aliases, or workspace
 
 When the user asks where MIDAS command outputs are stored, whether command information is saved, or what a prior command changed, answer directly using `references/midas-command-storage.md`. Do not run a command, refresh data, or alter files unless the user explicitly asks for an action.
 
-When preferred commands or durable artifact behavior change, also see `references/midas-profile-command-memory.md` to keep `/home/jordan/.hermes/profiles/midas/memories/USER.md` aligned with the visible `!commands` menu and avoid stale preferred aliases.
+When preferred commands or durable artifact behavior change, also see `references/midas-profile-command-memory.md` to keep `memories/USER.md` aligned with the visible `!commands` menu and avoid stale preferred aliases.
 
 ## Critical Rules
 
